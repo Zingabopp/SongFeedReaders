@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
@@ -10,6 +10,7 @@
 		<Folder Include="Models\" />
 		<Folder Include="Logging\" />
 		<Folder Include="Feeds\" />
+		<Folder Include="Services\" />
 		<Folder Include="Utilities\" />
 	</ItemGroup>
 
