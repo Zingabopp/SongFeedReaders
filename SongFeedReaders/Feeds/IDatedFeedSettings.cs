@@ -10,9 +10,12 @@ namespace SongFeedReaders.Feeds
     public interface IDatedFeedSettings : IFeedSettings
     {
         /// <summary>
-        /// Start reading song
+        /// Start reading songs uploaded on or after this date.
         /// </summary>
         DateTime StartingDate { get; set; }
+        /// <summary>
+        /// Stop reading songs uploaded after this date.
+        /// </summary>
         DateTime EndingDate { get; set; }
     }
 }

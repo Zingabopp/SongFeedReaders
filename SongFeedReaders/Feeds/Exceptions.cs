@@ -33,7 +33,7 @@ namespace SongFeedReaders.Feeds
         /// A <see cref="FeedReaderFailureCode"/> associated with the exception.
         /// </summary>
         public FeedReaderFailureCode FailureCode { get; protected set; }
-
+        /// <inheritdoc/>
         public override string Message
         {
             get
@@ -45,18 +45,26 @@ namespace SongFeedReaders.Feeds
                 return base.Message;
             }
         }
-
+        /// <inheritdoc />
         public FeedReaderException()
         { }
 
+        /// <inheritdoc />
         public FeedReaderException(string message)
             : base(message)
         { }
 
+        /// <inheritdoc />
         public FeedReaderException(string message, Exception? innerException)
             : base(message, innerException)
         { }
 
+        /// <summary>
+        /// Initializes a new <see cref="FeedReaderException"/> with the given <see cref="FeedReaderFailureCode"/>.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="innerException"></param>
+        /// <param name="reason"></param>
         public FeedReaderException(string message, Exception? innerException, FeedReaderFailureCode reason)
             : base(message, innerException)
         {

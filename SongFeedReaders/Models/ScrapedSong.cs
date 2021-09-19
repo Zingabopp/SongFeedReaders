@@ -112,6 +112,7 @@ namespace SongFeedReaders.Models
         /// <param name="hash"></param>
         /// <param name="songName"></param>
         /// <param name="mapperName"></param>
+        /// <param name="songKey"></param>
         public ScrapedSong(string hash, string? songName, string? mapperName, string? songKey)
            : this(hash, songName, mapperName)
         {

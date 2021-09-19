@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SongFeedReaders</name>
+    </assembly>
+    <members>
+        <member name="T:SongFeedReaders.Feeds.InvalidFeedSettingsException">
+            <summary>
+            This exception is thrown when a method call is invalid for an object's
+            <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.InvalidFeedSettingsException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.InvalidFeedSettingsException.#ctor(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.InvalidFeedSettingsException.#ctor(System.String,System.Exception)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.FeedReaderException">
+            <summary>
+            This exception is thrown when an error occurs while reading a feed.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedReaderException.FailureCode">
+            <summary>
+            A <see cref="T:SongFeedReaders.Feeds.FeedReaderFailureCode"/> associated with the exception.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.FeedReaderFailureCode">
+            <summary>
+            Type of failure that occurred while reading a feed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedReaderFailureCode.Generic">
+            <summary>
+            Generic error.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedReaderFailureCode.SourceFailed">
+            <summary>
+            All pages failed, likely a site problem.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedReaderFailureCode.PageFailed">
+            <summary>
+            Some pages failed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedReaderFailureCode.Cancelled">
+            <summary>
+            CancellationToken was triggered before the reader finished.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.FeedAsyncEnumerator">
+            <summary>
+            Used to move forward or backward through a feed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedAsyncEnumerator.Feed">
+            <summary>
+            Feed to enumerate through.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedAsyncEnumerator.LookAhead">
+            <summary>
+            How many pages to load forward/backward. Page caching must be enabled.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedAsyncEnumerator.EnablePageCache">
+            <summary>
+            If true, page results will be stored to speed up access to previously visited pages.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedAsyncEnumerator.CanMovePrevious">
+            <summary>
+            If true, indicates there may be another page before the current one.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedAsyncEnumerator.CanMoveNext">
+            <summary>
+            If true, indicates there may be another page after the current one.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.#ctor(SongFeedReaders.Feeds.IFeed)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.FeedAsyncEnumerator"/>.
+            </summary>
+            <param name="feed"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.#ctor(SongFeedReaders.Feeds.IFeed,System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.FeedAsyncEnumerator"/>.
+            </summary>
+            <param name="feed"></param>
+            <param name="cachePages"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.MoveNextAsync(System.Threading.CancellationToken)">
+            <summary>
+            Requests the next page and returns the result.
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.MovePreviousAsync(System.Threading.CancellationToken)">
+            <summary>
+            Requests the previous page and returns the result.
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.MoveNextAsync">
+            <summary>
+            Requests the next page and returns the result.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.MovePreviousAsync">
+            <summary>
+            Requests the previous page and returns the result.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.IDatedFeed.GetUriForDate(System.DateTime)">
+            <summary>
+            Gets the feed's full URI for the specified <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="dateTime"></param>
+            <exception cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException">Thrown when the feed's settings aren't valid.</exception>
+            <returns></returns>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.IDatedFeedSettings">
+            <summary>
+            Settings for an <see cref="T:SongFeedReaders.Feeds.IDatedFeed"/>.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IDatedFeedSettings.StartingDate">
+            <summary>
+            Start reading song
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.IFeed">
+            <summary>
+            Represents a specific feed for a service.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeed.FeedId">
+            <summary>
+            Unique string ID of the feed. (Format should be 'Service.FeedName').
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeed.DisplayName">
+            <summary>
+            Display name of the feed.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeed.Description">
+            <summary>
+            Description of the feed.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeed.FeedSettings">
+            <summary>
+            Settings for the feed.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeed.HasValidSettings">
+            <summary>
+            Return true if the settings are valid for this feed.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.IFeedPageHandler">
+            <summary>
+            Handles reading content from a feed page.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.IFeedSettings">
+            <summary>
+            Settings for a feed.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeedSettings.SongsPerPage">
+            <summary>
+            Number of songs per page.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeedSettings.MaxSongs">
+            <summary>
+            Max number of songs to retrieve, 0 for unlimited.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeedSettings.StoreRawData">
+            <summary>
+            Indicates to the FeedReader that it should store the raw scraped data.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeedSettings.Filter">
+            <summary>
+            Only return songs that return true for this function.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IFeedSettings.StopWhenAny">
+            <summary>
+            If this returns true for any <see cref="T:SongFeedReaders.Models.ScrapedSong"/>, treat that page as the last.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.IPagedFeed.GetUriForPage(System.Int32)">
+            <summary>
+            Gets the feed's full URI for the specified page.
+            </summary>
+            <param name="page"></param>
+            <exception cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException">Thrown when the feed's settings aren't valid.</exception>
+            <returns></returns>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.IPagedFeedSettings.StartingPage">
+            <summary>
+            Page of the feed to start on, default is 1. 
+            For all feeds, setting '1' here is the same as starting on the first page.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.PageReadResult">
+            <summary>
+            Stores the results of a page read.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.PageReadResult.Uri">
+            <summary>
+            <see cref="T:System.Uri"/> for the page.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.PageReadResult.Songs">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.PageReadResult.FirstSong">
+            <summary>
+            First song on the unfiltered page.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.PageReadResult.LastSong">
+            <summary>
+            Last song on the unfiltered page.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.PageReadResult.SongsOnPage">
+            <summary>
+            Total unfiltered songs.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.PageReadResult.IsLastPage">
+            <summary>
+            If true, indicates there are no more pages after this one.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.PageReadResult.PageError">
+            <summary>
+            Type of error that occurred, if any.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.PageReadResult.SongCount">
+            <summary>
+            Number of songs returned by the page.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.PageReadResult.Exception">
+            <summary>
+            If an exception was thrown reading the page, it is available here.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.PageReadResult.Successful">
+            <summary>
+            If true, indicates the reading of the page was successful.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.PageReadResult.#ctor(System.Uri,System.Collections.Generic.IEnumerable{SongFeedReaders.Models.ScrapedSong},SongFeedReaders.Models.ScrapedSong,SongFeedReaders.Models.ScrapedSong,System.Int32,System.Boolean)">
+            <summary>
+            Create a new <see cref="T:SongFeedReaders.Feeds.PageReadResult"/>.
+            </summary>
+            <param name="uri"><see cref="T:System.Uri"/> for the page.</param>
+            <param name="songs">The collection of matched songs. Songs unwanted due to the settings should not be in here.</param>
+            <param name="firstSong">The first unfiltered song on the page.</param>
+            <param name="lastSong">The last unfiltered song on the page.</param>
+            <param name="songsOnPage">Number of unfiltered songs on the page.</param>
+            <param name="isLastPage">If true, ndicates there are no more pages after this one.</param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.PageReadResult.#ctor(System.Uri,System.Exception,SongFeedReaders.Feeds.PageErrorType,System.Collections.Generic.List{SongFeedReaders.Models.ScrapedSong},SongFeedReaders.Models.ScrapedSong,SongFeedReaders.Models.ScrapedSong,System.Int32,System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.PageReadResult"/> when there were error(s) reading the page.
+            </summary>
+            <param name="uri"><see cref="T:System.Uri"/> for the page.</param>
+            <param name="exception"></param>
+            <param name="pageError"></param>
+            <param name="songs">The collection of matched songs. Songs unwanted due to the settings should not be in here.</param>
+            <param name="firstSong">The first unfiltered song on the page.</param>
+            <param name="lastSong">The last unfiltered song on the page.</param>
+            <param name="songsOnPage">Number of unfiltered songs on the page.</param>
+            <param name="isLastPage">If true, ndicates there are no more pages after this one.</param>
+        </member>
+        <member name="T:SongFeedReaders.Models.ISong">
+            <summary>
+            Interface for a basic song.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ISong.Hash">
+            <summary>
+            Beat Saver hash of the song, always uppercase.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ISong.Name">
+            <summary>
+            Song name.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ISong.Key">
+            <summary>
+            Beat Saver song key.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ISong.LevelAuthorName">
+            <summary>
+            Username of the mapper.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Models.ScrapedSong">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScrapedSong.CreateFromKey(System.String,System.String,System.String,System.Uri,System.Uri,Newtonsoft.Json.Linq.JObject,System.String)">
+            <summary>
+            Creates a new ScrapedSong using the Beat Saver key as an identifier.
+            </summary>
+            <param name="key"></param>
+            <param name="songName"></param>
+            <param name="mapperName"></param>
+            <param name="downloadUri"></param>
+            <param name="sourceUri"></param>
+            <param name="jsonData"></param>
+            <param name="songHash"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="key"/> is null or empty.</exception>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScrapedSong.Hash">
+            <summary>
+            Beat Saver hash of the song, always uppercase.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScrapedSong.DownloadUri">
+            <summary>
+            Full URL to download song.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScrapedSong.SourceUri">
+            <summary>
+            What web page this song was scraped from.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScrapedSong.Key">
+            <summary>
+            Beat Saver song key, always uppercase.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScrapedSong.UploadDate">
+            <summary>
+            Upload date of the song. Uses <see cref="F:System.DateTime.MinValue"/> if not set;
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScrapedSong.RawData">
+            <summary>
+            Data this song was scraped from in JSON form.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScrapedSong.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="hash"></param>
+            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="hash"/> is null or empty.</exception>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScrapedSong.#ctor(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="hash"></param>
+            <param name="songName"></param>
+            <param name="mapperName"></param>
+            
+            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="hash"/> is null or empty.</exception>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScrapedSong.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="hash"></param>
+            <param name="songName"></param>
+            <param name="mapperName"></param>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScrapedSong.#ctor(System.String,System.String,System.String,System.Uri,System.Uri)">
+            <summary>
+            
+            </summary>
+            <param name="hash"></param>
+            <param name="songName"></param>
+            <param name="mapperName"></param>
+            <param name="downloadUri"></param>
+            <param name="sourceUri"></param>
+            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="hash"/> is null or empty.</exception>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScrapedSong.#ctor(System.String,System.String,System.String,System.Uri,System.Uri,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            
+            </summary>
+            <param name="hash"></param>
+            <param name="songName"></param>
+            <param name="mapperName"></param>
+            <param name="downloadUri"></param>
+            <param name="sourceUri"></param>
+            <param name="jsonData"></param>
+            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="hash"/> is null or empty.</exception>
+        </member>
+        <member name="M:SongFeedReaders.Services.IFeedFactory.GetFeed(SongFeedReaders.Feeds.IFeedSettings)">
+            <summary>
+            Gets a new feed for the given <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/>.
+            </summary>
+            <param name="settings"></param>
+            <returns></returns>
+            <exception cref="T:SongFeedReaders.Services.UnregisteredSettingsTypeException"></exception>
+        </member>
+        <member name="P:SongFeedReaders.Services.ISongInfoProvider.Priority">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Services.ISongInfoProvider.Available">
+            <summary>
+            Service is available.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Services.ISongInfoProvider.GetSongByHashAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="hash"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:SongFeedReaders.Services.SongInfoProviderException"></exception>
+        </member>
+        <member name="M:SongFeedReaders.Services.ISongInfoProvider.GetSongByKeyAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:SongFeedReaders.Services.SongInfoProviderException"></exception>
+        </member>
+        <member name="M:SongFeedReaders.Services.ISongInfoProvider.GetSongByHashAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="hash"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:SongFeedReaders.Services.SongInfoProviderException"></exception>
+        </member>
+        <member name="M:SongFeedReaders.Services.ISongInfoProvider.GetSongByKeyAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:SongFeedReaders.Services.SongInfoProviderException"></exception>
+        </member>
+        <member name="T:SongFeedReaders.Services.SongInfoProviderException">
+            <summary>
+            Contains Exceptions thrown by ISongInfoProvider.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Services.SongInfoProviderException.#ctor">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Services.SongInfoProviderException"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Services.SongInfoProviderException.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Services.SongInfoProviderException"/> with a message.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Services.SongInfoProviderException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Services.SongInfoProviderException"/> with a message and inner exception.
+            </summary>
+        </member>
+    </members>
+</doc>

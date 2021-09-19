@@ -1,7 +1,5 @@
 ﻿using SongFeedReaders.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SongFeedReaders.Feeds
 {
@@ -10,8 +8,15 @@ namespace SongFeedReaders.Feeds
     /// </summary>
     public interface IFeedSettings
     {
-        string FeedName { get; } // Name of the feed
-        int FeedIndex { get; } // Index of the feed 
+        /// <summary>
+        /// Unique string ID of the feed. (Format should be 'Service.FeedName').
+        /// Should match the feed that uses it. TODO: Not using this anymore?
+        /// </summary>
+        string FeedId { get; }
+        /// <summary>
+        /// Index of the feed. TODO: Not using this anymore?
+        /// </summary>
+        int FeedIndex { get; }
 
         /// <summary>
         /// Number of songs per page.

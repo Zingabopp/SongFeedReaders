@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SongFeedReaders.Feeds
 {
+    /// <summary>
+    /// A feed that pages songs based on their upload date.
+    /// </summary>
     public interface IDatedFeed
     {
         /// <summary>

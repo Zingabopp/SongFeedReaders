@@ -4,6 +4,9 @@ using System.Text;
 
 namespace SongFeedReaders.Feeds
 {
+    /// <summary>
+    /// A feed that lists songs by page.
+    /// </summary>
     public interface IPagedFeed : IFeed
     {
         /// <summary>

@@ -7,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace SongFeedReaders.Services
 {
+    /// <summary>
+    /// An object that can get song details by hash or key.
+    /// </summary>
     public interface ISongInfoProvider
     {
         /// <summary>
-        /// 
+        /// Priority of the <see cref="ISongInfoProvider"/>.
+        /// Higher priorities are queried first.
         /// </summary>
         int Priority { get; set; }
         /// <summary>
@@ -81,6 +85,7 @@ namespace SongFeedReaders.Services
 
         }
 
+        /// <inheritdoc/>
         protected SongInfoProviderException(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext)
             : base(serializationInfo, streamingContext)
         {

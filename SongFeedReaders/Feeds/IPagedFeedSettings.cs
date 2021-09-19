@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SongFeedReaders.Feeds
+﻿namespace SongFeedReaders.Feeds
 {
+    /// <summary>
+    /// Settings for a feed that lists songs by page.
+    /// </summary>
     public interface IPagedFeedSettings : IFeedSettings
     {
         /// <summary>
