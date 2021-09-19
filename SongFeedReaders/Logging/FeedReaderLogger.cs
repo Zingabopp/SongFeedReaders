@@ -10,14 +10,14 @@ namespace SongFeedReaders.Logging
         : FeedReaderLoggerBase
     {
         public FeedReaderLogger()
+            : base()
         {
 
         }
 
-        public FeedReaderLogger(LoggingController controller)
-            : this()
+        public FeedReaderLogger(ILoggerSettings loggerSettings)
+            : base(loggerSettings)
         {
-            LogController = controller;
         }
 
         public override void Log(string message, LogLevel logLevel, [CallerFilePath] string file = "", [CallerMemberName] string member = "", [CallerLineNumber] int line = 0)
@@ -30,7 +30,7 @@ namespace SongFeedReaders.Logging
             if (!ShortSource)
                 sourcePart = $"[{Path.GetFileName(file)}_{member}({line})";
             else
-                sourcePart = $"[{LoggerName}";
+                sourcePart = $"[{ModuleName}";
             if (EnableTimestamp)
                 timePart = $" @ {DateTime.Now.ToString("HH:mm")}";
             Console.WriteLine($"{sourcePart}{timePart} - {logLevel}] {message}");
@@ -46,7 +46,7 @@ namespace SongFeedReaders.Logging
             if (!ShortSource)
                 sourcePart = $"[{Path.GetFileName(file)}_{member}({line})";
             else
-                sourcePart = $"[{LoggerName}";
+                sourcePart = $"[{ModuleName}";
             if (EnableTimestamp)
                 timePart = $" @ {DateTime.Now.ToString("HH:mm")}";
             Console.WriteLine($"{sourcePart}{timePart} - {logLevel}] {e.Message}");

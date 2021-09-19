@@ -7,41 +7,37 @@ namespace SongFeedReaders.Logging
 {
     public abstract class FeedReaderLoggerBase : ILogger
     {
-        private string? _loggerName;
-        private LogLevel? _logLevel;
-        private bool? _shortSource;
-        private bool? _enableTimeStamp;
+        private ILoggerSettings l;
 
-        public string? LoggerName
+        protected FeedReaderLoggerBase()
         {
-            get { return _loggerName ?? LogController?.LoggerName; }
-            set { _loggerName = value; }
+            l = new LoggerSettings();
+        }
+
+        protected FeedReaderLoggerBase(ILoggerSettings settings)
+        {
+            l = settings ?? new LoggerSettings();
+        }
+
+        public string? ModuleName
+        {
+            get { return l.ModuleName; }
+            set { l.ModuleName = value; }
         }
         public LogLevel LogLevel
         {
-            get { return _logLevel ?? LogController?.LogLevel ?? LogLevel.Disabled; }
-            set { _logLevel = value; }
+            get { return l.LogLevel; }
+            set { l.LogLevel = value; }
         }
         public bool ShortSource
         {
-            get { return _shortSource ?? LogController?.ShortSource ?? false; }
-            set { _shortSource = value; }
+            get { return l.ShortSource; }
+            set { l.ShortSource = value; }
         }
         public bool EnableTimestamp
         {
-            get { return _enableTimeStamp ?? LogController?.EnableTimestamp ?? true; }
-            set { _enableTimeStamp = value; }
-        }
-        private LoggingController? _loggingController;
-        public LoggingController LogController
-        {
-            get { return _loggingController ?? LoggingController.DefaultLogController; }
-            set
-            {
-                if (_loggingController == value)
-                    return;
-                _loggingController = value;
-            }
+            get => l.EnableTimeStamp;
+            set => l.EnableTimeStamp = value;
         }
 
         public abstract void Log(string message, LogLevel level, string file, string member, int line);
