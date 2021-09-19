@@ -1,26 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SongFeedReaders.Utilities;
+using System;
 using System.IO;
 using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace SongFeedReaders.Logging
 {
-    public class FeedReaderLogger
-        : FeedReaderLoggerBase
+    public class FeedReaderLogger : ILogger
     {
-        public FeedReaderLogger()
-            : base()
-        {
+        protected LoggerSettings loggerSettings;
 
+        protected FeedReaderLogger()
+        {
+            loggerSettings = new LoggerSettings();
         }
 
-        public FeedReaderLogger(ILoggerSettings loggerSettings)
-            : base(loggerSettings)
+        protected FeedReaderLogger(ILoggerSettings settings)
         {
+            loggerSettings = settings as LoggerSettings ?? new LoggerSettings(settings);
         }
 
-        public override void Log(string message, LogLevel logLevel, [CallerFilePath] string file = "", [CallerMemberName] string member = "", [CallerLineNumber] int line = 0)
+        public string? ModuleName
+        {
+            get { return loggerSettings.ModuleName; }
+            set { loggerSettings.ModuleName = value; }
+        }
+        public LogLevel LogLevel
+        {
+            get { return loggerSettings.LogLevel; }
+            set { loggerSettings.LogLevel = value; }
+        }
+        public bool ShowModule
+        {
+            get { return loggerSettings.ShowModule; }
+            set { loggerSettings.ShowModule = value; }
+        }
+        public bool ShortSource
+        {
+            get { return loggerSettings.ShortSource; }
+            set { loggerSettings.ShortSource = value; }
+        }
+        public bool EnableTimestamp
+        {
+            get => loggerSettings.EnableTimeStamp;
+            set => loggerSettings.EnableTimeStamp = value;
+        }
+
+
+        public void Log(string message, LogLevel logLevel, [CallerFilePath] string file = "", [CallerMemberName] string member = "", [CallerLineNumber] int line = 0)
         {
             if (LogLevel > logLevel)
             {
@@ -32,11 +58,11 @@ namespace SongFeedReaders.Logging
             else
                 sourcePart = $"[{ModuleName}";
             if (EnableTimestamp)
-                timePart = $" @ {DateTime.Now.ToString("HH:mm")}";
+                timePart = $" @ {Util.Now:HH:mm}";
             Console.WriteLine($"{sourcePart}{timePart} - {logLevel}] {message}");
         }
 
-        public override void Log(Exception e, LogLevel logLevel, [CallerFilePath] string file = "", [CallerMemberName] string member = "", [CallerLineNumber] int line = 0)
+        public void Log(Exception e, LogLevel logLevel, [CallerFilePath] string file = "", [CallerMemberName] string member = "", [CallerLineNumber] int line = 0)
         {
             if (LogLevel > logLevel)
             {
@@ -48,9 +74,10 @@ namespace SongFeedReaders.Logging
             else
                 sourcePart = $"[{ModuleName}";
             if (EnableTimestamp)
-                timePart = $" @ {DateTime.Now.ToString("HH:mm")}";
+                timePart = $" @ {Util.Now:HH:mm}";
             Console.WriteLine($"{sourcePart}{timePart} - {logLevel}] {e.Message}");
             Console.WriteLine(e);
         }
     }
 }
+

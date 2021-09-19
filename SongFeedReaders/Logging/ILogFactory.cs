@@ -4,9 +4,9 @@ using System.Text;
 
 namespace SongFeedReaders.Logging
 {
+
     public interface ILogFactory
     {
-        ILogger GetLogger();
-        ILogger GetLogger(string moduleName);
+        ILogger GetLogger(string? moduleName = null);
     }
 }
