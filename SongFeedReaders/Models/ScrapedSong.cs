@@ -56,6 +56,7 @@ namespace SongFeedReaders.Models
         /// What web page this song was scraped from.
         /// </summary>
         public Uri? SourceUri { get; set; }
+        /// <inheritdoc/>
         public string? Name { get; set; }
         private string? _songKey;
         /// <summary>
@@ -66,6 +67,7 @@ namespace SongFeedReaders.Models
             get { return _songKey; }
             set { _songKey = value?.ToUpper(); }
         }
+        /// <inheritdoc/>
         public string? LevelAuthorName { get; set; }
 
         /// <summary>
@@ -77,9 +79,14 @@ namespace SongFeedReaders.Models
         /// Data this song was scraped from in JSON form.
         /// </summary>
         public string? RawData => JsonData?.ToString();
-
+        /// <summary>
+        /// Raw JSON data for the song.
+        /// </summary>
         public JObject? JsonData { get; protected set; }
 
+        /// <summary>
+        /// Creates an empty <see cref="ScrapedSong"/>.
+        /// </summary>
         public ScrapedSong() { }
         /// <summary>
         /// 
@@ -149,6 +156,7 @@ namespace SongFeedReaders.Models
             JsonData = jsonData;
         }
 
+        /// <inheritdoc/>
         public override string ToString()
         {
             string keyStr;

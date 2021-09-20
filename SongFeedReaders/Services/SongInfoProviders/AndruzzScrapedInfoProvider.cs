@@ -12,6 +12,10 @@ using WebUtilities.DownloadContainers;
 
 namespace SongFeedReaders.Services.SongInfoProviders
 {
+    /// <summary>
+    /// Uses Andruzz's Scrapped Data to provide song information.
+    /// <see href="https://github.com/andruzzzhka/BeatSaberScrappedData"/>
+    /// </summary>
     public class AndruzzScrapedInfoProvider : SongInfoProviderBase
     {
         private const string ScrapedDataUrl = @"https://raw.githubusercontent.com/andruzzzhka/BeatSaberScrappedData/master/songDetails2.gz";
@@ -20,24 +24,54 @@ namespace SongFeedReaders.Services.SongInfoProviders
         private Dictionary<string, ScrapedSong>? _byKey;
         private object _initializeLock = new object();
         private Task<bool>? initializeTask;
-
+        /// <summary>
+        /// Web client to use for web requests.
+        /// </summary>
         protected readonly IWebClient WebClient;
-
+        /// <summary>
+        /// Path to the local file.
+        /// </summary>
         public string? FilePath { get; set; }
+        /// <summary>
+        /// Maximum age of cached data.
+        /// </summary>
         public TimeSpan MaxAge { get; set; } = TimeSpan.FromDays(2);
+        /// <summary>
+        /// If true, allow fetching new data from the web.
+        /// </summary>
         public bool AllowWebFetch { get; set; } = true;
+        /// <summary>
+        /// If true, cache the downloaded data to disk.
+        /// </summary>
         public bool CacheToDisk { get; set; }
+        /// <summary>
+        /// Create a new <see cref="AndruzzScrapedInfoProvider"/> with a <see cref="IWebClient"/>
+        /// and <see cref="ILogFactory"/>.
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="logFactory"></param>
         public AndruzzScrapedInfoProvider(IWebClient client, ILogFactory? logFactory)
             : base(logFactory)
         {
             WebClient = client ?? throw new ArgumentNullException(nameof(client));
         }
+        /// <summary>
+        /// Create a new <see cref="AndruzzScrapedInfoProvider"/> with a location to store downloaded data,
+        /// an <see cref="IWebClient"/>, and an <see cref="ILogFactory"/>.
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="client"></param>
+        /// <param name="logFactory"></param>
         public AndruzzScrapedInfoProvider(string filePath, IWebClient client, ILogFactory? logFactory)
             : this(client, logFactory)
         {
             FilePath = filePath;
         }
-
+        /// <summary>
+        /// Fetches the latest scraped data and/or loads data from the disk.
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         protected Task<bool> InitializeData(CancellationToken cancellationToken)
         {
             lock (_initializeLock)
@@ -194,8 +228,10 @@ namespace SongFeedReaders.Services.SongInfoProviders
         }
 
         private bool _available = false;
+        /// <inheritdoc/>
         public override bool Available => _available;
 
+        /// <inheritdoc/>
         public override async Task<ScrapedSong?> GetSongByHashAsync(string hash, CancellationToken cancellationToken)
         {
             await InitializeData(cancellationToken).ConfigureAwait(false);
@@ -204,6 +240,7 @@ namespace SongFeedReaders.Services.SongInfoProviders
             return song;
         }
 
+        /// <inheritdoc/>
         public override async Task<ScrapedSong?> GetSongByKeyAsync(string key, CancellationToken cancellationToken)
         {
             await InitializeData(cancellationToken).ConfigureAwait(false);

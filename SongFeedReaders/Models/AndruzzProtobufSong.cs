@@ -5,38 +5,88 @@ using System.Text;
 
 namespace SongFeedReaders.Models
 {
+    /// <summary>
+    /// Data class to deserialize an Andruzz Scrapped Data protobuf container.
+    /// </summary>
     [ProtoContract(SkipConstructor = true)]
     public class AndruzzProtobufContainer
     {
+        /// <summary>
+        /// Format version.
+        /// </summary>
         [ProtoMember(1)]
         public readonly byte formatVersion;
+        /// <summary>
+        /// Unix time the scrape finished.
+        /// </summary>
         [ProtoMember(2)]
         public readonly uint scrapeEndedTimeUnix;
+        /// <summary>
+        /// Array of songs.
+        /// </summary>
         [ProtoMember(4)]
         public readonly AndruzzProtobufSong[] songs = null!;
-
+        /// <summary>
+        /// <see cref="DateTime"/> the scrape finished.
+        /// </summary>
         public DateTime ScrapeTime => AndruzzProtobufSong.epoch.AddSeconds(scrapeEndedTimeUnix);
+        /// <inheritdoc/>
         public override string ToString()
         {
             return $"v{formatVersion}|{ScrapeTime:g}";
         }
     }
 
+    /// <summary>
+    /// Data class to deserialize an Andruzz Scrapped Data protobuf song into.
+    /// </summary>
     [ProtoContract]
     public class AndruzzProtobufSong : ScrapedSong
     {
         internal static readonly DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, 0).ToLocalTime();
-        public enum RankedStatus : uint { Unranked, Ranked = 1, Qualified = 2 }
 
+        /// <summary>
+        /// Ranked status of a song
+        /// </summary>
+        public enum RankedStatus : uint 
+        { 
+            /// <summary>
+            /// Song is not ranked.
+            /// </summary>
+            Unranked, 
+            /// <summary>
+            /// Song is ranked.
+            /// </summary>
+            Ranked = 1, 
+            /// <summary>
+            /// Song is qualified.
+            /// </summary>
+            Qualified = 2 
+        }
+        /// <summary>
+        /// Beats per minute.
+        /// </summary>
         [ProtoMember(1)]
         public readonly float bpm;
+        /// <summary>
+        /// Number of downloads.
+        /// </summary>
         [ProtoMember(2)]
         public readonly uint downloadCount;
+        /// <summary>
+        /// Number of upvotes.
+        /// </summary>
         [ProtoMember(3)]
         public readonly uint upvotes;
+        /// <summary>
+        /// Number of downvotes.
+        /// </summary>
         [ProtoMember(4)]
         public readonly uint downvotes;
 
+        /// <summary>
+        /// Upload Unix time.
+        /// </summary>
         [ProtoMember(5)]
         public uint uploadTimeUnix
         {
@@ -49,10 +99,16 @@ namespace SongFeedReaders.Models
                 UploadDate = epoch.AddSeconds(value);
             }
         }
+        /// <summary>
+        /// Last ranked status change in Unix time.
+        /// </summary>
         [ProtoMember(14)]
         public readonly uint rankedChangeUnix;
 
         private uint _mapId;
+        /// <summary>
+        /// BeatSaver beatmap ID.
+        /// </summary>
         [ProtoMember(6)]
         public uint mapId
         {
@@ -67,10 +123,16 @@ namespace SongFeedReaders.Models
             }
         }
 
+        /// <summary>
+        /// Song duration in seconds.
+        /// </summary>
         [ProtoMember(8)]
         public readonly uint songDurationSeconds;
 
         private byte[] _hashBytes = null!;
+        /// <summary>
+        /// Beatmap hash as a byte array.
+        /// </summary>
         [ProtoMember(9, OverwriteList = true)]
         public byte[] hashBytes
         {
@@ -85,23 +147,32 @@ namespace SongFeedReaders.Models
             }
         }
 
-
+        /// <summary>
+        /// Song name.
+        /// </summary>
         [ProtoMember(10)]
         private string? songName
         {
             get => Name;
             set => Name = value;
         }
-
+        /// <summary>
+        /// Song author name.
+        /// </summary>
         [ProtoMember(11)]
         public readonly string songAuthorName = null!;
+        /// <summary>
+        /// Level author name.
+        /// </summary>
         [ProtoMember(12)]
         public string? levelAuthorName
         {
             get => LevelAuthorName;
             set => LevelAuthorName = value;
         }
-
+        /// <summary>
+        /// Ranked status.
+        /// </summary>
         [ProtoMember(15)]
         public readonly RankedStatus rankedState;
 

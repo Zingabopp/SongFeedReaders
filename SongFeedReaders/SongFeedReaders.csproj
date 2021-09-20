@@ -16,7 +16,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\WebUtilities\WebUtilities\WebUtilities.csproj" />
+		<ProjectReference Include="..\submodules\WebUtilities\WebUtilities\WebUtilities.csproj" />
 	</ItemGroup>
 
 </Project>
