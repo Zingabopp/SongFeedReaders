@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace SongFeedReadersTests
 {
@@ -8,6 +9,24 @@ namespace SongFeedReadersTests
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.ThrowsException<ArgumentNullException>(() => Method());
+        }
+
+        void Method()
+        {
+            try
+            {
+                throw new ArgumentNullException();
+            }
+            catch (ArgumentNullException)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
+                Assert.Fail();
+            }
+
         }
     }
 }

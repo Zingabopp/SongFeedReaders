@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace SongFeedReaders.Feeds
@@ -93,5 +94,31 @@ namespace SongFeedReaders.Feeds
         /// CancellationToken was triggered before the reader finished.
         /// </summary>
         Cancelled = 3
+    }
+
+    /// <summary>
+    /// This exception is thrown when there's an error parsing a page's content.
+    /// </summary>
+    public class PageParseException : Exception
+    {
+        /// <inheritdoc/>
+        public PageParseException()
+        {
+        }
+
+        /// <inheritdoc/>
+        public PageParseException(string message) : base(message)
+        {
+        }
+
+        /// <inheritdoc/>
+        public PageParseException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        /// <inheritdoc/>
+        protected PageParseException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+        }
     }
 }

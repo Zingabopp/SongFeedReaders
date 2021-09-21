@@ -22,7 +22,7 @@ namespace SongFeedReaders.Services.SongInfoProviders
         private const string dataFileName = "songDetails2.gz";
         private Dictionary<string, ScrapedSong>? _byHash;
         private Dictionary<string, ScrapedSong>? _byKey;
-        private object _initializeLock = new object();
+        private readonly object _initializeLock = new object();
         private Task<bool>? initializeTask;
         /// <summary>
         /// Web client to use for web requests.

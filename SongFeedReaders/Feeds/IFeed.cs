@@ -1,6 +1,8 @@
-﻿using System;
+﻿using SongFeedReaders.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SongFeedReaders.Feeds
 {
@@ -29,5 +31,30 @@ namespace SongFeedReaders.Feeds
         /// Return true if the settings are valid for this feed.
         /// </summary>
         bool HasValidSettings { get; }
+        /// <summary>
+        /// Returns true if the feed is currently running.
+        /// </summary>
+        bool ReadInProgress { get; }
+
+        /// <summary>
+        /// Raised when the feed has started reading.
+        /// </summary>
+        event EventHandler? FeedStarting;
+        /// <summary>
+        /// Raised when the feed has finished reading.
+        /// </summary>
+        event EventHandler<FeedResult>? FeedFinished;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        Task<FeedResult> ReadAsync();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="progress"></param>
+        /// <returns></returns>
+        Task<FeedResult> ReadAsync(IProgress<PageReadResult> progress);
     }
 }
