@@ -1,32 +1,38 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SongFeedReaders.Feeds;
+using SongFeedReaders.Feeds.BeatSaver;
+using SongFeedReaders.Logging;
 using System;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using WebUtilities;
+using WebUtilities.HttpClientWrapper;
 
 namespace SongFeedReadersTests
 {
     [TestClass]
     public class UnitTest1
     {
+        public static readonly ILogFactory? LogFactory = null;
         [TestMethod]
-        public void TestMethod1()
+        public async Task TestBeatSaver()
         {
-            Assert.ThrowsException<ArgumentNullException>(() => Method());
-        }
-
-        void Method()
-        {
-            try
+            IWebClient client = new HttpClientWrapper();
+            BeatSaverPageHandler pageHandler = new BeatSaverPageHandler();
+            BeatSaverLatestSettings feedSettings = new BeatSaverLatestSettings()
             {
-                throw new ArgumentNullException();
-            }
-            catch (ArgumentNullException)
-            {
-                throw;
-            }
-            catch (Exception)
-            {
-                Assert.Fail();
-            }
-
+                 Filter = s =>
+                 {
+                     return !s.Key.Contains("2");
+                 },
+                MaxSongs = 57
+            };
+            IFeed feed = new BeatSaverLatestFeed(feedSettings, pageHandler, client, null);
+            var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
+            Assert.IsTrue(result.Count > 0);
+            var pages = result.GetResults().ToArray();
+            var songs = result.GetSongs().ToArray();
         }
     }
 }

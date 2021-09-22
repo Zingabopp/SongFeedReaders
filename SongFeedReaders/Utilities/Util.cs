@@ -9,6 +9,8 @@ namespace SongFeedReaders.Utilities
     /// </summary>
     public static class Util
     {
+        private const string WebTimeFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'";
+
         private static bool _utcTime = false;
         /// <summary>
         /// Returns the current <see cref="DateTime"/>. Uses <see cref="DateTime.UtcNow"/>
@@ -32,5 +34,14 @@ namespace SongFeedReaders.Utilities
                 return DateTime.UtcNow;
             }
         }
+
+        /// <summary>
+        /// Converts the given <see cref="DateTime"/> to UTC web format.
+        /// Used for Beat Saver's API.
+        /// </summary>
+        /// <param name="dateTime"></param>
+        /// <returns></returns>
+        public static string ToUTCWebTime(this DateTime dateTime)
+            => dateTime.ToUniversalTime().ToString(WebTimeFormat);
     }
 }

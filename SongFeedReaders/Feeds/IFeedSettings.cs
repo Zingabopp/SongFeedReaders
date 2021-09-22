@@ -6,7 +6,7 @@ namespace SongFeedReaders.Feeds
     /// <summary>
     /// Settings for a feed.
     /// </summary>
-    public interface IFeedSettings
+    public interface IFeedSettings : ICloneable
     {
         /// <summary>
         /// Unique string ID of the feed. (Format should be 'Service.FeedName').

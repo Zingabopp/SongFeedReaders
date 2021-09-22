@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SongFeedReaders.Feeds
@@ -32,29 +33,32 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         bool HasValidSettings { get; }
         /// <summary>
-        /// Returns true if the feed is currently running.
+        /// Throws an <see cref="InvalidFeedSettingsException"/> if the settings aren't valid for this feed.
         /// </summary>
-        bool ReadInProgress { get; }
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        void EnsureValidSettings();
 
         /// <summary>
-        /// Raised when the feed has started reading.
+        /// Reads and parses a page at the given <paramref name="uri"/>.
         /// </summary>
-        event EventHandler? FeedStarting;
-        /// <summary>
-        /// Raised when the feed has finished reading.
-        /// </summary>
-        event EventHandler<FeedResult>? FeedFinished;
-
+        /// <param name="uri"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task<PageReadResult> GetPageAsync(Uri uri, CancellationToken cancellationToken);
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task<FeedResult> ReadAsync();
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        Task<FeedResult> ReadAsync(CancellationToken cancellationToken);
         /// <summary>
         /// 
         /// </summary>
         /// <param name="progress"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task<FeedResult> ReadAsync(IProgress<PageReadResult> progress);
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        Task<FeedResult> ReadAsync(IProgress<PageReadResult> progress, CancellationToken cancellationToken);
     }
 }

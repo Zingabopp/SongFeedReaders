@@ -16,7 +16,7 @@ namespace SongFeedReaders.Feeds
         /// <summary>
         /// <see cref="System.Uri"/> for the page.
         /// </summary>
-        public Uri Uri { get; private set; }
+        public Uri? Uri { get; private set; }
         /// <summary>
         /// Returns an <see cref="IEnumerable{T}"/> of the matched songs.
         /// </summary>
@@ -65,7 +65,7 @@ namespace SongFeedReaders.Feeds
         /// <param name="lastSong">The last unfiltered song on the page.</param>
         /// <param name="songsOnPage">Number of unfiltered songs on the page.</param>
         /// <param name="isLastPage">If true, ndicates there are no more pages after this one.</param>
-        public PageReadResult(Uri uri, IEnumerable<ScrapedSong>? songs, ScrapedSong? firstSong, ScrapedSong? lastSong, 
+        public PageReadResult(Uri? uri, IEnumerable<ScrapedSong>? songs, ScrapedSong? firstSong, ScrapedSong? lastSong, 
             int songsOnPage, bool isLastPage = false)
         {
             IsLastPage = isLastPage;
@@ -96,7 +96,7 @@ namespace SongFeedReaders.Feeds
         /// <param name="lastSong">The last unfiltered song on the page.</param>
         /// <param name="songsOnPage">Number of unfiltered songs on the page.</param>
         /// <param name="isLastPage">If true, ndicates there are no more pages after this one.</param>
-        public PageReadResult(Uri uri, Exception? exception, PageErrorType pageError,
+        public PageReadResult(Uri? uri, Exception? exception, PageErrorType pageError,
             List<ScrapedSong>? songs = null, ScrapedSong? firstSong = null, ScrapedSong? lastSong = null, 
             int songsOnPage = 0, bool isLastPage = false)
             : this(uri, songs, firstSong, lastSong, songsOnPage, isLastPage)
@@ -133,7 +133,7 @@ namespace SongFeedReaders.Feeds
         /// <param name="requestUri"></param>
         /// <param name="logger"></param>
         /// <returns></returns>
-        public static PageReadResult FromWebClientException(WebClientException? ex, Uri requestUri, ILogger logger)
+        public static PageReadResult FromWebClientException(WebClientException? ex, Uri requestUri, ILogger? logger)
         {
             PageErrorType pageError = PageErrorType.SiteError;
             string errorText = string.Empty;
@@ -167,7 +167,7 @@ namespace SongFeedReaders.Feeds
         /// <param name="requestUri"></param>
         /// <param name="ex"></param>
         /// <returns></returns>
-        public static PageReadResult CancelledResult(Uri requestUri, OperationCanceledException ex)
+        public static PageReadResult CancelledResult(Uri? requestUri, OperationCanceledException ex)
         {
             return new PageReadResult(requestUri, ex, PageErrorType.Cancelled);
         }
@@ -177,7 +177,7 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         /// <param name="requestUri"></param>
         /// <returns></returns>
-        public static PageReadResult CancelledResult(Uri requestUri)
+        public static PageReadResult CancelledResult(Uri? requestUri)
         {
             return new PageReadResult(requestUri, new OperationCanceledException(), PageErrorType.Cancelled);
         }

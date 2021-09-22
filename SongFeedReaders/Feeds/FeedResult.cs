@@ -38,7 +38,7 @@ namespace SongFeedReaders.Feeds
         public int Count => songs.Count;
 
 
-        public FeedResult(IEnumerable<PageReadResult> pageReadResults)
+        public FeedResult(IEnumerable<PageReadResult> pageReadResults, IFeedSettings feedSettings)
         {
             songs = new Dictionary<string, ScrapedSong>();
             if (pageReadResults != null)
@@ -53,6 +53,8 @@ namespace SongFeedReaders.Feeds
                         {
                             songs[songHash] = song;
                         }
+                        if (feedSettings.MaxSongs > 0 && songs.Count >= feedSettings.MaxSongs)
+                            break;
                     }
                 }
             }

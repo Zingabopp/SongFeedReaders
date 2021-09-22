@@ -4,6 +4,201 @@
         <name>SongFeedReaders</name>
     </assembly>
     <members>
+        <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed">
+            <summary>
+            Base class for Beat Saver feeds.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.#ctor(SongFeedReaders.Feeds.IFeedSettings,SongFeedReaders.Feeds.IFeedPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Initializes a new <see cref="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed"/>.
+            </summary>
+            <param name="feedSettings"></param>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.ParseSongsFromPage(System.String,System.Uri)">
+            <summary>
+            Parses out a List of ScrapedSongs from the given page text. Also works if the page is for a single song.
+            </summary>
+            <param name="pageText"></param>
+            <param name="sourceUrl"></param>
+            <returns></returns>
+            <exception cref="T:SongFeedReaders.Feeds.PageParseException"></exception>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.ParseSongsFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,System.Boolean)">
+            <summary>
+            Parses out a List of ScrapedSongs from the json. Also works if the page is for a single song.
+            </summary>
+            <param name="result"></param>
+            <param name="sourceUrl"></param>
+            <param name="storeRawData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.ParseSongFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,System.Boolean)">
+            <summary>
+            Creates a SongInfo from a JObject.
+            </summary>
+            <param name="song"></param>
+            <param name="sourceUri"></param>
+            <param name="storeRawData"></param>
+            <exception cref="T:System.ArgumentException">Thrown when a hash can't be found for the given song JObject.</exception>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.GetLatestSongVersion(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Parses the latest version from a Beat Saver song's JSON.
+            </summary>
+            <param name="song"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings">
+            <summary>
+            Base class for Beat Saver feed settings.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.FeedIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.SongsPerPage">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.MaxSongs">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.StoreRawData">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.Filter">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.StopWhenAny">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed">
+            <summary>
+            Base class for Beat Saver feeds.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.#ctor(SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings,SongFeedReaders.Feeds.BeatSaver.IBeatSaverPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Initializes a new <see cref="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed"/>.
+            </summary>
+            <param name="feedSettings"></param>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.DisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.Description">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.GetUriForDate(SongFeedReaders.Feeds.FeedDate)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.AreSettingsValid(SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.GetAsyncEnumerator(SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings">
+            <summary>
+            Settings for the Beat Saver Latest feed.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings.FeedIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings.SongsPerPage">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler">
+            <summary>
+            Handles parsing the page content from Beat Saver.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.Logger">
+            <summary>
+            Logger used by this instance.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.#ctor">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.#ctor(SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler"/> with a logger.
+            </summary>
+            <param name="logFactory"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.Parse(System.String,System.Uri,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.ParseSongsFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,System.Boolean)">
+            <summary>
+            Parses out a List of ScrapedSongs from the json. Also works if the page is for a single song.
+            </summary>
+            <param name="result"></param>
+            <param name="sourceUri"></param>
+            <param name="storeRawData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.ParseSongFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,System.Boolean)">
+            <summary>
+            Creates a SongInfo from a JObject.
+            </summary>
+            <param name="song"></param>
+            <param name="sourceUri"></param>
+            <param name="storeRawData"></param>
+            <exception cref="T:System.ArgumentException">Thrown when a hash can't be found for the given song JObject.</exception>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.GetLatestSongVersion(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            
+            </summary>
+            <param name="song"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeatSaver.IBeatSaverPageHandler">
+            <summary>
+            Handles reading content from a Beat Saver page.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.ProcessResult(SongFeedReaders.Feeds.PageReadResult,SongFeedReaders.Feeds.DateDirection)">
+            <summary>
+            Process the result to update enumerator's state.
+            </summary>
+            <param name="result"></param>
+            <param name="dateDirection"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.MoveNextAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.MovePreviousAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
         <member name="T:SongFeedReaders.Feeds.InvalidFeedSettingsException">
             <summary>
             This exception is thrown when a method call is invalid for an object's
@@ -74,6 +269,23 @@
             CancellationToken was triggered before the reader finished.
             </summary>
         </member>
+        <member name="T:SongFeedReaders.Feeds.PageParseException">
+            <summary>
+            This exception is thrown when there's an error parsing a page's content.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.PageParseException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.PageParseException.#ctor(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.PageParseException.#ctor(System.String,System.Exception)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.PageParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <inheritdoc/>
+        </member>
         <member name="T:SongFeedReaders.Feeds.FeedAsyncEnumerator">
             <summary>
             Used to move forward or backward through a feed.
@@ -143,16 +355,133 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:SongFeedReaders.Feeds.FeedBase">
+            <summary>
+            Base class for an <see cref="T:SongFeedReaders.Feeds.IFeed"/>.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedBase.Logger">
+            <summary>
+            <see cref="T:SongFeedReaders.Logging.ILogger"/> used by this instance.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedBase.PageHandler">
+            <summary>
+            Parses the contents of Beat Saver pages.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedBase.WebClient">
+            <summary>
+            Web client used by the feed.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedBase.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedBase.DisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedBase.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedBase.FeedSettings">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedBase.HasValidSettings">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.EnsureValidSettings">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.#ctor(SongFeedReaders.Feeds.IFeedSettings,SongFeedReaders.Feeds.IFeedPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Initializes a new <see cref="T:SongFeedReaders.Feeds.FeedBase"/>.
+            </summary>
+            <param name="feedSettings"></param>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.GetPageAsync(System.Uri,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.ReadAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.ReadAsync(System.IProgress{SongFeedReaders.Feeds.PageReadResult},System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.GetAsyncEnumerator(SongFeedReaders.Feeds.IFeedSettings)">
+            <summary>
+            Gets a <see cref="T:SongFeedReaders.Feeds.FeedAsyncEnumerator"/> for this feed.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.AreSettingsValid(SongFeedReaders.Feeds.IFeedSettings)">
+            <summary>
+            Returns true if the settings are valid for this feed.
+            </summary>
+            <param name="settings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.ParseSongsFromPage(System.String,System.Uri)">
+            <summary>
+            Parses the given page text into a list of <see cref="T:SongFeedReaders.Models.ScrapedSong"/>.
+            </summary>
+            <param name="pageText"></param>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.CreateResult(System.Uri,System.Collections.Generic.IEnumerable{SongFeedReaders.Models.ScrapedSong})">
+            <summary>
+            Creates a <see cref="T:SongFeedReaders.Feeds.PageReadResult"/> from a collection of songs.
+            </summary>
+            <param name="uri"></param>
+            <param name="pageSongs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.FeedResult">
+            <summary>
+            Stores the results of a feed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedResult.songs">
+            <summary>
+            Dictionary of songs that were read from the feed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedResult.pageResults">
+            <summary>
+            Array of page results.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedResult.GetSongs">
+            <summary>
+            Returns the songs from the result.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedResult.GetResults">
+            <summary>
+            Returns the page results.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedResult.Count">
+            <summary>
+            Number of songs in the result.
+            </summary>
+        </member>
         <member name="T:SongFeedReaders.Feeds.IDatedFeed">
             <summary>
             A feed that pages songs based on their upload date.
             </summary>
         </member>
-        <member name="M:SongFeedReaders.Feeds.IDatedFeed.GetUriForDate(System.DateTime)">
+        <member name="M:SongFeedReaders.Feeds.IDatedFeed.GetUriForDate(SongFeedReaders.Feeds.FeedDate)">
             <summary>
-            Gets the feed's full URI for the specified <see cref="T:System.DateTime"/>.
+            Gets the feed's full URI for the specified <see cref="T:SongFeedReaders.Feeds.FeedDate"/>.
             </summary>
-            <param name="dateTime"></param>
+            <param name="feedDate"></param>
             <exception cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException">Thrown when the feed's settings aren't valid.</exception>
             <returns></returns>
         </member>
@@ -201,10 +530,54 @@
             Return true if the settings are valid for this feed.
             </summary>
         </member>
+        <member name="M:SongFeedReaders.Feeds.IFeed.EnsureValidSettings">
+            <summary>
+            Throws an <see cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException"/> if the settings aren't valid for this feed.
+            </summary>
+            <exception cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException"></exception>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.IFeed.GetPageAsync(System.Uri,System.Threading.CancellationToken)">
+            <summary>
+            Reads and parses a page at the given <paramref name="uri"/>.
+            </summary>
+            <param name="uri"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.IFeed.ReadAsync(System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException"></exception>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.IFeed.ReadAsync(System.IProgress{SongFeedReaders.Feeds.PageReadResult},System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="progress"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException"></exception>
+        </member>
         <member name="T:SongFeedReaders.Feeds.IFeedPageHandler">
             <summary>
             Handles reading content from a feed page.
+            <see cref="T:SongFeedReaders.Feeds.IFeed"/> implementations should use an interface or base class specific
+            to their service in their constructors.
             </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.IFeedPageHandler.Parse(System.String,System.Uri,System.Boolean)">
+            <summary>
+            Parse's the page's content and returns a list of <see cref="T:SongFeedReaders.Models.ScrapedSong"/>.
+            </summary>
+            <param name="content"></param>
+            <param name="pageUri"></param>
+            <param name="storeRawData"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:SongFeedReaders.Feeds.PageParseException"></exception>
         </member>
         <member name="T:SongFeedReaders.Feeds.IFeedSettings">
             <summary>
@@ -757,6 +1130,124 @@
             cloning the values from another <see cref="T:SongFeedReaders.Logging.ILoggerSettings"/>.
             </summary>
         </member>
+        <member name="T:SongFeedReaders.Models.AndruzzProtobufContainer">
+            <summary>
+            Data class to deserialize an Andruzz Scrapped Data protobuf container.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufContainer.formatVersion">
+            <summary>
+            Format version.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufContainer.scrapeEndedTimeUnix">
+            <summary>
+            Unix time the scrape finished.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufContainer.songs">
+            <summary>
+            Array of songs.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.AndruzzProtobufContainer.ScrapeTime">
+            <summary>
+            <see cref="T:System.DateTime"/> the scrape finished.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.AndruzzProtobufContainer.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Models.AndruzzProtobufSong">
+            <summary>
+            Data class to deserialize an Andruzz Scrapped Data protobuf song into.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Models.AndruzzProtobufSong.RankedStatus">
+            <summary>
+            Ranked status of a song
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.RankedStatus.Unranked">
+            <summary>
+            Song is not ranked.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.RankedStatus.Ranked">
+            <summary>
+            Song is ranked.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.RankedStatus.Qualified">
+            <summary>
+            Song is qualified.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.bpm">
+            <summary>
+            Beats per minute.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.downloadCount">
+            <summary>
+            Number of downloads.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.upvotes">
+            <summary>
+            Number of upvotes.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.downvotes">
+            <summary>
+            Number of downvotes.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.AndruzzProtobufSong.uploadTimeUnix">
+            <summary>
+            Upload Unix time.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.rankedChangeUnix">
+            <summary>
+            Last ranked status change in Unix time.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.AndruzzProtobufSong.mapId">
+            <summary>
+            BeatSaver beatmap ID.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.songDurationSeconds">
+            <summary>
+            Song duration in seconds.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.AndruzzProtobufSong.hashBytes">
+            <summary>
+            Beatmap hash as a byte array.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.AndruzzProtobufSong.songName">
+            <summary>
+            Song name.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.songAuthorName">
+            <summary>
+            Song author name.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.AndruzzProtobufSong.levelAuthorName">
+            <summary>
+            Level author name.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Models.AndruzzProtobufSong.rankedState">
+            <summary>
+            Ranked status.
+            </summary>
+        </member>
         <member name="T:SongFeedReaders.Models.ISong">
             <summary>
             Interface for a basic song.
@@ -816,10 +1307,16 @@
             What web page this song was scraped from.
             </summary>
         </member>
+        <member name="P:SongFeedReaders.Models.ScrapedSong.Name">
+            <inheritdoc/>
+        </member>
         <member name="P:SongFeedReaders.Models.ScrapedSong.Key">
             <summary>
             Beat Saver song key, always uppercase.
             </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScrapedSong.LevelAuthorName">
+            <inheritdoc/>
         </member>
         <member name="P:SongFeedReaders.Models.ScrapedSong.UploadDate">
             <summary>
@@ -829,6 +1326,16 @@
         <member name="P:SongFeedReaders.Models.ScrapedSong.RawData">
             <summary>
             Data this song was scraped from in JSON form.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScrapedSong.JsonData">
+            <summary>
+            Raw JSON data for the song.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScrapedSong.#ctor">
+            <summary>
+            Creates an empty <see cref="T:SongFeedReaders.Models.ScrapedSong"/>.
             </summary>
         </member>
         <member name="M:SongFeedReaders.Models.ScrapedSong.#ctor(System.String)">
@@ -879,6 +1386,9 @@
             <param name="sourceUri"></param>
             <param name="jsonData"></param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="hash"/> is null or empty.</exception>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScrapedSong.ToString">
+            <inheritdoc/>
         </member>
         <member name="T:SongFeedReaders.Services.IFeedFactory">
             <summary>
@@ -1028,6 +1538,70 @@
         <member name="M:SongFeedReaders.Services.SongInfoProviderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <inheritdoc/>
         </member>
+        <member name="T:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider">
+            <summary>
+            Uses Andruzz's Scrapped Data to provide song information.
+            <see href="https://github.com/andruzzzhka/BeatSaberScrappedData"/>
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.WebClient">
+            <summary>
+            Web client to use for web requests.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.FilePath">
+            <summary>
+            Path to the local file.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.MaxAge">
+            <summary>
+            Maximum age of cached data.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.AllowWebFetch">
+            <summary>
+            If true, allow fetching new data from the web.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.CacheToDisk">
+            <summary>
+            If true, cache the downloaded data to disk.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.#ctor(WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Create a new <see cref="T:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider"/> with a <see cref="T:WebUtilities.IWebClient"/>
+            and <see cref="T:SongFeedReaders.Logging.ILogFactory"/>.
+            </summary>
+            <param name="client"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="M:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.#ctor(System.String,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Create a new <see cref="T:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider"/> with a location to store downloaded data,
+            an <see cref="T:WebUtilities.IWebClient"/>, and an <see cref="T:SongFeedReaders.Logging.ILogFactory"/>.
+            </summary>
+            <param name="filePath"></param>
+            <param name="client"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="M:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.InitializeData(System.Threading.CancellationToken)">
+            <summary>
+            Fetches the latest scraped data and/or loads data from the disk.
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.Available">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.GetSongByHashAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Services.SongInfoProviders.AndruzzScrapedInfoProvider.GetSongByKeyAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
         <member name="T:SongFeedReaders.Services.SongInfoProviders.SongInfoProviderBase">
             <summary>
             Base class for an <see cref="T:SongFeedReaders.Services.ISongInfoProvider"/>.
@@ -1062,6 +1636,57 @@
         <member name="M:SongFeedReaders.Services.SongInfoProviders.SongInfoProviderBase.GetSongByKeyAsync(System.String)">
             <inheritdoc/>
         </member>
+        <member name="T:SongFeedReaders.Utilities.BeatSaverHelper">
+            <summary>
+            Helpers for interacting with Beat Saver.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Utilities.BeatSaverHelper.BeatSaverUri">
+            <summary>
+            Beat Saver's URI. Default is <see href="https://beatsaver.com"/>.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Utilities.BeatSaverHelper.BeatSaverApiUri">
+            <summary>
+            URI for Beat Saver's API.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Utilities.BeatSaverHelper.BeatSaverDownloadUri">
+            <summary>
+            Base URI for Beat Saver downloads.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Utilities.BeatSaverHelper.BeatSaverDetailsFromKeyBaseUrl">
+            <summary>
+            Base URI for Beat Saver song details using a key identifier.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Utilities.BeatSaverHelper.BeatSaverDetailsFromHashBaseUrl">
+            <summary>
+            Base URI for Beat Saver song details using a hash identifier.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.BeatSaverHelper.GetDownloadUriByHash(System.String)">
+            <summary>
+            Returns a Beat Saver beatmap download URI using the beatmap's hash.
+            </summary>
+            <param name="hash"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.BeatSaverHelper.GetBeatSaverDetailsByKey(System.String)">
+            <summary>
+            Returns a URI for requesting a beatmap's details by key.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.BeatSaverHelper.GetBeatSaverDetailsByHash(System.String)">
+            <summary>
+            Returns a URI for requesting a beatmap's details by hash.
+            </summary>
+            <param name="hash"></param>
+            <returns></returns>
+        </member>
         <member name="T:SongFeedReaders.Utilities.Util">
             <summary>
             Useful static utilities.
@@ -1072,6 +1697,14 @@
             Returns the current <see cref="T:System.DateTime"/>. Uses <see cref="P:System.DateTime.UtcNow"/>
             if <see cref="P:System.DateTime.Now"/> fails (can happen on certain Mono runtimes with certain locales apparently).
             </summary>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.Util.ToUTCWebTime(System.DateTime)">
+            <summary>
+            Converts the given <see cref="T:System.DateTime"/> to UTC web format.
+            Used for Beat Saver's API.
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>
