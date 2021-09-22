@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SongFeedReaders.Logging;
 using SongFeedReaders.Models;
 using SongFeedReaders.Utilities;
@@ -44,6 +45,12 @@ namespace SongFeedReaders.Feeds.BeatSaver
             catch (PageParseException)
             {
                 throw;
+            }
+            catch(JsonReaderException ex)
+            {
+                string message = $"Failed to parse JSON from '{pageUri}'";
+                Logger?.Debug(message);
+                throw new PageParseException(message, ex);
             }
             catch(Exception ex)
             {
@@ -105,22 +112,26 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <param name="storeRawData"></param>
         /// <exception cref="ArgumentException">Thrown when a hash can't be found for the given song JObject.</exception>
         /// <returns></returns>
-        public static ScrapedSong ParseSongFromJson(JToken song, Uri? sourceUri, bool storeRawData)
+        public ScrapedSong ParseSongFromJson(JToken song, Uri? sourceUri, bool storeRawData)
         {
             if (song == null)
                 throw new ArgumentNullException(nameof(song), "song cannot be null for BeatSaverReader.ParseSongFromJson.");
             if (song["versions"] is JArray versions && versions.Count > 0)
             {
-                JObject latest = GetLatestSongVersion(song);
-                //JSONObject song = (JSONObject) aKeyValue;
+                JObject latestVersion = GetLatestSongVersion(song);
                 string? songKey = song["id"]?.Value<string>();
-                string? songHash = latest["hash"]?.Value<string>().ToUpper();
+                string? songHash = latestVersion["hash"]?.Value<string>().ToUpper();
                 string? songName = song["metadata"]?["songName"]?.Value<string>();
                 string? mapperName = song["uploader"]?["name"]?.Value<string>();
                 DateTime uploadDate = song["uploaded"]?.Value<DateTime>() ?? DateTime.MinValue;
                 if (songHash == null || songHash.Length == 0)
                     throw new ArgumentException("Unable to find hash for the provided song, is this a valid song JObject?");
-                Uri downloadUri = BeatSaverHelper.GetDownloadUriByHash(songHash);
+                Uri downloadUri;
+                if (!Uri.TryCreate(latestVersion["downloadURL"]?.Value<string>(), UriKind.Absolute, out downloadUri))
+                {
+                    Logger?.Debug($"Failed to get download URI from JSON, calculating using hash.");
+                    downloadUri = BeatSaverHelper.GetDownloadUriByHash(songHash);
+                }
                 ScrapedSong newSong = new ScrapedSong(
                     hash: songHash, 
                     songName: songName,
@@ -137,11 +148,14 @@ namespace SongFeedReaders.Feeds.BeatSaver
             else
                 throw new ArgumentException("Song does not appear to have any versions available.", nameof(song));
         }
+
         /// <summary>
-        /// 
+        /// Parses the latest version from a Beat Saver song's JSON.
         /// </summary>
         /// <param name="song"></param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException">Thrown if the song doesn't have any published versions available.</exception>
         public static JObject GetLatestSongVersion(JToken song)
         {
             if (song == null)
@@ -151,7 +165,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
                 // take latest version
                 if (versions.Where(VersionIsPublished).LastOrDefault() is JObject latest)
                     return latest;
-                throw new Exception("Song has no published versions.");
+                throw new ArgumentException("Song has no published versions.");
             }
             else
                 throw new ArgumentException("Song does not appear to have any versions available.", nameof(song));

@@ -145,7 +145,8 @@ namespace SongFeedReaders.Feeds
         /// <param name="pageText"></param>
         /// <param name="uri"></param>
         /// <returns></returns>
-        protected abstract List<ScrapedSong> ParseSongsFromPage(string pageText, Uri uri);
+        protected virtual List<ScrapedSong> ParseSongsFromPage(string pageText, Uri uri)
+            => PageHandler.Parse(pageText, uri, FeedSettings.StoreRawData);
 
         /// <summary>
         /// Creates a <see cref="PageReadResult"/> from a collection of songs.
