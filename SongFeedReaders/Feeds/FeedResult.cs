@@ -53,6 +53,10 @@ namespace SongFeedReaders.Feeds
                         {
                             songs[songHash] = song;
                         }
+                        else
+                        {
+                            Console.WriteLine($"Song has no hash: {song}");
+                        }
                         if (feedSettings.MaxSongs > 0 && songs.Count >= feedSettings.MaxSongs)
                             break;
                     }

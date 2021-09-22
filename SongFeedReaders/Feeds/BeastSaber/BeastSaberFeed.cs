@@ -14,6 +14,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
     {
         private const string MIME_XML = "text/xml";
         private const string MIME_JSON = "application/json";
+        protected static readonly Uri BaseUri = new Uri("https://bsaber.com/");
 
         /// <summary>
         /// Initializes a new <see cref="BeastSaberFeed"/>.
@@ -26,12 +27,6 @@ namespace SongFeedReaders.Feeds.BeastSaber
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
-        }
-
-        /// <inheritdoc/>
-        protected override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
-        {
-            throw new NotImplementedException();
         }
 
         /// <inheritdoc/>

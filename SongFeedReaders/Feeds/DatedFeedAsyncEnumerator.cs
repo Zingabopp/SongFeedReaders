@@ -27,7 +27,7 @@ namespace SongFeedReaders.Feeds
 
         private Uri? LastFetchedUri;
         /// <summary>
-        /// Create a new <see cref="FeedAsyncEnumerator"/> using a default <see cref="FeedDate"/>
+        /// Creates a new <see cref="FeedAsyncEnumerator"/> using a default <see cref="FeedDate"/>
         /// (starts at the latest song and moves backward).
         /// </summary>
         /// <param name="datedFeed"></param>
@@ -36,7 +36,7 @@ namespace SongFeedReaders.Feeds
             : this(datedFeed, FeedDate.Default, cachePages) { }
 
         /// <summary>
-        /// Create a new <see cref="FeedAsyncEnumerator"/>.
+        /// Creates a new <see cref="FeedAsyncEnumerator"/>.
         /// </summary>
         /// <param name="datedFeed"></param>
         /// <param name="feedDate"></param>

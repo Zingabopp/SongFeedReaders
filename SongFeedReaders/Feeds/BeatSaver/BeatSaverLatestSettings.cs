@@ -12,7 +12,7 @@
         public override int FeedIndex => 0;
 
         /// <inheritdoc/>
-        public override int SongsPerPage => 50;
+        public override int SongsPerPage => 20;
 
         /// <inheritdoc/>
         public override object Clone()

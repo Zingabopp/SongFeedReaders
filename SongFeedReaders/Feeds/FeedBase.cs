@@ -118,6 +118,8 @@ namespace SongFeedReaders.Feeds
             EnsureValidSettings();
             FeedAsyncEnumerator asyncEnumerator = GetAsyncEnumerator(settings);
             List<PageReadResult> pageResults = new List<PageReadResult>();
+            int dictInitialSize = settings.MaxSongs > 0 ? settings.MaxSongs : 20;
+            Dictionary<string, ScrapedSong> acceptedSongs = new Dictionary<string, ScrapedSong>(dictInitialSize);
             int songCount = 0;
             PageReadResult? lastResult = null;
             while (asyncEnumerator.CanMoveNext && !(lastResult?.IsLastPage ?? false))
@@ -131,9 +133,16 @@ namespace SongFeedReaders.Feeds
                 {
                     return new FeedResult(pageResults, settings);
                 }
-                if (settings.MaxSongs > 0 && songCount >= settings.MaxSongs)
+                foreach (var song in lastResult.Songs())
+                {
+                    string? songHash = song.Hash;
+                    if (songHash != null && songHash.Length > 0)
+                        acceptedSongs[songHash] = song;
+                }
+                if (settings.MaxSongs > 0 && acceptedSongs.Count >= settings.MaxSongs)
                     break;
             }
+            // TODO: pass the already created acceptedSongs.
             FeedResult result = new FeedResult(pageResults, settings);
             return result;
         }

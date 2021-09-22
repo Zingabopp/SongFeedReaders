@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SongFeedReaders.Logging;
 using SongFeedReaders.Models;
 using SongFeedReaders.Utilities;
@@ -44,24 +45,67 @@ namespace SongFeedReaders.Feeds.BeastSaber
         /// <inheritdoc/>
         public List<ScrapedSong> Parse(PageContent content, Uri? pageUri, IFeedSettings settings)
         {
-            throw new NotImplementedException();
+            if (content.ContentId == PageContent.ContentId_JSON)
+                return ParseJsonPage(content.Content, pageUri, settings);
+            else
+                return ParseXMLPage(content.Content, pageUri, settings);
         }
 
         /// <summary>
-        /// Most of this yoinked from Brian's SyncSaber.
-        /// https://github.com/brian91292/SyncSaber/blob/master/SyncSaber/SyncSaber.cs#L259
+        /// Parses a list of <see cref="ScrapedSong"/> from the given JSON <paramref name="pageText"/>.
         /// </summary>
         /// <param name="pageText"></param>
         /// <param name="sourceUri"></param>
-        /// <param name="storeRawData"></param>
-        /// <exception cref="XmlException"></exception>
+        /// <param name="settings"></param>
+        /// <exception cref="PageParseException">Thrown when the page text is unable to parsed.</exception>
         /// <returns></returns>
-        public List<ScrapedSong> ParseXMLPage(string pageText, Uri? sourceUri, bool storeRawData)
+        public virtual List<ScrapedSong> ParseJsonPage(string pageText, Uri? sourceUri, IFeedSettings settings)
+        {
+            var songsOnPage = new List<ScrapedSong>();
+            JObject result;
+            try
+            {
+                result = JObject.Parse(pageText);
+            }
+            catch (JsonReaderException ex)
+            {
+                throw new PageParseException($"Unable to parse JSON from '{sourceUri}'.", ex);
+            }
+            bool storeRawData = settings.StoreRawData;
+            var songs = result["songs"] ?? throw new PageParseException($"Page at '{sourceUri}' did not contain a 'songs' property");
+            foreach (JObject bSong in songs)
+            {
+                // Try to get the song hash from BeastSaber
+                string? songHash = bSong["hash"]?.Value<string>();
+                string? songKey = bSong["song_key"]?.Value<string>();
+                string? songName = bSong["title"]?.Value<string>();
+                string? mapperName = bSong["level_author_name"]?.Value<string>();
+                Uri? downloadUri;
+
+                if (songHash != null && songHash.Length > 0)
+                {
+                    downloadUri = BeatSaverHelper.GetDownloadUriByHash(songHash);
+                    songsOnPage.Add(new ScrapedSong(songHash, songName, mapperName, downloadUri, sourceUri, storeRawData ? bSong : null) { Key = songKey });
+                }
+            }
+            return songsOnPage;
+        }
+
+        /// <summary>
+        /// Parses a list of <see cref="ScrapedSong"/> from the given XML <paramref name="pageText"/>.
+        /// </summary>
+        /// <param name="pageText"></param>
+        /// <param name="sourceUri"></param>
+        /// <param name="settings"></param>
+        /// <returns></returns>
+        /// <exception cref="PageParseException"></exception>
+        public virtual List<ScrapedSong> ParseXMLPage(string pageText, Uri? sourceUri, IFeedSettings settings)
         {
             if (string.IsNullOrEmpty(pageText))
                 return new List<ScrapedSong>();
             bool retry = false;
             var songsOnPage = new List<ScrapedSong>();
+            bool storeRawData = settings.StoreRawData;
             XmlDocument? xmlDocument = null;
             do
             {
@@ -79,9 +123,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
                 {
                     if (retry == true)
                     {
-                        // TODO: Probably don't need logging here.
-                        Logger?.Exception(ex);
-                        throw;
+                        throw new PageParseException($"Unable to parse XML page from '${sourceUri}'.", ex);
                     }
                     else
                     {
@@ -92,14 +134,16 @@ namespace SongFeedReaders.Feeds.BeastSaber
                     //File.WriteAllText("ErrorText.xml", pageText);
                 }
             } while (retry == true);
-            if (xmlDocument == null) throw new XmlException($"xmlDocument was null for '{sourceUri}'.");
+            if (xmlDocument == null)
+                throw new PageParseException($"xmlDocument was null for '{sourceUri}'.");
             XmlNodeList xmlNodeList = xmlDocument.DocumentElement.SelectNodes("/rss/channel/item");
-            foreach (object obj in xmlNodeList)
+            int nodeCount = xmlNodeList.Count;
+            for (int i = 0; i < nodeCount; i++)
             {
-                XmlNode node = (XmlNode)obj;
+                XmlNode node = xmlNodeList[i];
                 if (node["DownloadURL"] == null || node["SongTitle"] == null)
                 {
-                    Logger?.Debug("Not a song! Skipping!");
+                    Logger?.Debug($"XML node '{i}' is not a song! Skipping! ({sourceUri})");
                 }
                 else
                 {
@@ -124,12 +168,14 @@ namespace SongFeedReaders.Feeds.BeastSaber
                             JObject? jObject = null;
                             if (storeRawData)
                             {
-                                jObject = new JObject();
-                                jObject.Add(XML_TITLE_KEY, songName);
-                                jObject.Add(XML_DOWNLOADURL_KEY, downloadUrl);
-                                jObject.Add(XML_HASH_KEY, hash);
-                                jObject.Add(XML_AUTHOR_KEY, mapperName);
-                                jObject.Add(XML_SONGKEY_KEY, songKey);
+                                jObject = new JObject
+                                {
+                                    { XML_TITLE_KEY, songName },
+                                    { XML_DOWNLOADURL_KEY, downloadUrl },
+                                    { XML_HASH_KEY, hash },
+                                    { XML_AUTHOR_KEY, mapperName },
+                                    { XML_SONGKEY_KEY, songKey }
+                                };
                             }
                             Uri? downloadUri;
                             if (!Uri.TryCreate(downloadUrl, UriKind.Absolute, out downloadUri))
