@@ -18,41 +18,6 @@
             <param name="webClient"></param>
             <param name="logFactory"></param>
         </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.ParseSongsFromPage(System.String,System.Uri)">
-            <summary>
-            Parses out a List of ScrapedSongs from the given page text. Also works if the page is for a single song.
-            </summary>
-            <param name="pageText"></param>
-            <param name="sourceUrl"></param>
-            <returns></returns>
-            <exception cref="T:SongFeedReaders.Feeds.PageParseException"></exception>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.ParseSongsFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,System.Boolean)">
-            <summary>
-            Parses out a List of ScrapedSongs from the json. Also works if the page is for a single song.
-            </summary>
-            <param name="result"></param>
-            <param name="sourceUrl"></param>
-            <param name="storeRawData"></param>
-            <returns></returns>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.ParseSongFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,System.Boolean)">
-            <summary>
-            Creates a SongInfo from a JObject.
-            </summary>
-            <param name="song"></param>
-            <param name="sourceUri"></param>
-            <param name="storeRawData"></param>
-            <exception cref="T:System.ArgumentException">Thrown when a hash can't be found for the given song JObject.</exception>
-            <returns></returns>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.GetLatestSongVersion(Newtonsoft.Json.Linq.JToken)">
-            <summary>
-            Parses the latest version from a Beat Saver song's JSON.
-            </summary>
-            <param name="song"></param>
-            <returns></returns>
-        </member>
         <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings">
             <summary>
             Base class for Beat Saver feed settings.
@@ -176,10 +141,12 @@
         </member>
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.GetLatestSongVersion(Newtonsoft.Json.Linq.JToken)">
             <summary>
-            
+            Parses the latest version from a Beat Saver song's JSON.
             </summary>
             <param name="song"></param>
             <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException">Thrown if the song doesn't have any published versions available.</exception>
         </member>
         <member name="T:SongFeedReaders.Feeds.BeatSaver.IBeatSaverPageHandler">
             <summary>
@@ -439,6 +406,67 @@
             <param name="uri"></param>
             <param name="pageSongs"></param>
             <returns></returns>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.FeedDate">
+            <summary>
+            Defines a <see cref="T:System.DateTime"/> and <see cref="T:SongFeedReaders.Feeds.DateDirection"/> to move in a feed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedDate.Default">
+            <summary>
+            Default value starting from latest and moving back.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedDate.Date">
+            <summary>
+            DateTime to move from in the feed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.FeedDate.Direction">
+            <summary>
+            Direction to move in the feed.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedDate.#ctor(System.DateTime,SongFeedReaders.Feeds.DateDirection)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.FeedDate"/>.
+            </summary>
+            <param name="dateTime"></param>
+            <param name="direction"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedDate.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedDate.Equals(SongFeedReaders.Feeds.FeedDate)">
+            <summary>
+            Returns true if if <paramref name="other"/> is the same as this instance.
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedDate.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedDate.op_Equality(SongFeedReaders.Feeds.FeedDate,SongFeedReaders.Feeds.FeedDate)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedDate.op_Inequality(SongFeedReaders.Feeds.FeedDate,SongFeedReaders.Feeds.FeedDate)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.DateDirection">
+            <summary>
+            Direction to move from a date.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.DateDirection.Before">
+            <summary>
+            Move back in time.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.DateDirection.After">
+            <summary>
+            Move forward in time.
+            </summary>
         </member>
         <member name="T:SongFeedReaders.Feeds.FeedResult">
             <summary>

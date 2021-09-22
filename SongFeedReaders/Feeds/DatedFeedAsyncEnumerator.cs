@@ -6,18 +6,41 @@ using System.Threading.Tasks;
 
 namespace SongFeedReaders.Feeds
 {
+    /// <summary>
+    /// A <see cref="FeedAsyncEnumerator"/> for feeds that page by DateTime.
+    /// </summary>
     public class DatedFeedAsyncEnumerator : FeedAsyncEnumerator
     {
         private SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+        /// <summary>
+        /// The feed associated with this object.
+        /// </summary>
         public IDatedFeed DatedFeed { get; }
+        /// <summary>
+        /// Current page's earliest song upload DateTime.
+        /// </summary>
         public DateTime CurrentEarliest { get; protected set; }
+        /// <summary>
+        /// Current page's latest song upload DateTime.
+        /// </summary>
         public DateTime CurrentLatest { get; protected set; }
 
         private Uri? LastFetchedUri;
-
+        /// <summary>
+        /// Create a new <see cref="FeedAsyncEnumerator"/> using a default <see cref="FeedDate"/>
+        /// (starts at the latest song and moves backward).
+        /// </summary>
+        /// <param name="datedFeed"></param>
+        /// <param name="cachePages"></param>
         public DatedFeedAsyncEnumerator(IDatedFeed datedFeed, bool cachePages = false)
             : this(datedFeed, FeedDate.Default, cachePages) { }
 
+        /// <summary>
+        /// Create a new <see cref="FeedAsyncEnumerator"/>.
+        /// </summary>
+        /// <param name="datedFeed"></param>
+        /// <param name="feedDate"></param>
+        /// <param name="cachePages"></param>
         public DatedFeedAsyncEnumerator(IDatedFeed datedFeed, FeedDate feedDate, bool cachePages = false)
             : base(datedFeed, cachePages)
         {
@@ -40,8 +63,9 @@ namespace SongFeedReaders.Feeds
             }
             else if (result.SongsOnPage > 0)
             {
-                CurrentLatest = result.FirstSong.UploadDate;
-                CurrentEarliest = result.LastSong.UploadDate;
+                // First/Last song should never be null if SongsOnPage > 0.
+                CurrentLatest = result.FirstSong!.UploadDate;
+                CurrentEarliest = result.LastSong!.UploadDate;
                 if (dateDirection == DateDirection.Before)
                     CanMoveNext = true;
                 else

@@ -48,8 +48,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <inheritdoc/>
         protected override bool AreSettingsValid(IFeedSettings settings)
         {
-            BeatSaverLatestSettings? latest = settings as BeatSaverLatestSettings;
-            if (latest == null)
+            if (!(settings is BeatSaverLatestSettings latest))
                 return false;
 
             return true;

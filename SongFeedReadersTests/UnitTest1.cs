@@ -24,7 +24,7 @@ namespace SongFeedReadersTests
             {
                  Filter = s =>
                  {
-                     return !s.Key.Contains("2");
+                     return !s.Key?.Contains("2") ?? throw new Exception("Null song key");
                  },
                 MaxSongs = 57
             };
