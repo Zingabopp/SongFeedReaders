@@ -9,7 +9,7 @@
             Base class for Beat Saver feeds.
             </summary>
         </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.#ctor(SongFeedReaders.Feeds.IFeedSettings,SongFeedReaders.Feeds.IFeedPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.#ctor(SongFeedReaders.Feeds.IFeedSettings,SongFeedReaders.Feeds.BeatSaver.IBeatSaverPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
             <summary>
             Initializes a new <see cref="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed"/>.
             </summary>
@@ -117,25 +117,25 @@
             </summary>
             <param name="logFactory"></param>
         </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.Parse(System.String,System.Uri,System.Boolean)">
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.Parse(System.String,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.ParseSongsFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,System.Boolean)">
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.ParseSongsFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
             <summary>
             Parses out a List of ScrapedSongs from the json. Also works if the page is for a single song.
             </summary>
             <param name="result"></param>
             <param name="sourceUri"></param>
-            <param name="storeRawData"></param>
+            <param name="settings"></param>
             <returns></returns>
         </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.ParseSongFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,System.Boolean)">
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.ParseSongFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
             <summary>
             Creates a SongInfo from a JObject.
             </summary>
             <param name="song"></param>
             <param name="sourceUri"></param>
-            <param name="storeRawData"></param>
+            <param name="settings"></param>
             <exception cref="T:System.ArgumentException">Thrown when a hash can't be found for the given song JObject.</exception>
             <returns></returns>
         </member>
@@ -152,6 +152,42 @@
             <summary>
             Handles reading content from a Beat Saver page.
             </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator">
+            <summary>
+            A <see cref="T:SongFeedReaders.Feeds.FeedAsyncEnumerator"/> for feeds that page by DateTime.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.DatedFeed">
+            <summary>
+            The feed associated with this object.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.CurrentEarliest">
+            <summary>
+            Current page's earliest song upload DateTime.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.CurrentLatest">
+            <summary>
+            Current page's latest song upload DateTime.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.#ctor(SongFeedReaders.Feeds.IDatedFeed,System.Boolean)">
+            <summary>
+            Create a new <see cref="T:SongFeedReaders.Feeds.FeedAsyncEnumerator"/> using a default <see cref="T:SongFeedReaders.Feeds.FeedDate"/>
+            (starts at the latest song and moves backward).
+            </summary>
+            <param name="datedFeed"></param>
+            <param name="cachePages"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.#ctor(SongFeedReaders.Feeds.IDatedFeed,SongFeedReaders.Feeds.FeedDate,System.Boolean)">
+            <summary>
+            Create a new <see cref="T:SongFeedReaders.Feeds.FeedAsyncEnumerator"/>.
+            </summary>
+            <param name="datedFeed"></param>
+            <param name="feedDate"></param>
+            <param name="cachePages"></param>
         </member>
         <member name="M:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.ProcessResult(SongFeedReaders.Feeds.PageReadResult,SongFeedReaders.Feeds.DateDirection)">
             <summary>
@@ -596,13 +632,13 @@
             to their service in their constructors.
             </summary>
         </member>
-        <member name="M:SongFeedReaders.Feeds.IFeedPageHandler.Parse(System.String,System.Uri,System.Boolean)">
+        <member name="M:SongFeedReaders.Feeds.IFeedPageHandler.Parse(System.String,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
             <summary>
-            Parse's the page's content and returns a list of <see cref="T:SongFeedReaders.Models.ScrapedSong"/>.
+            Parse's the page's content and returns a list of every <see cref="T:SongFeedReaders.Models.ScrapedSong"/> on the page.
             </summary>
             <param name="content"></param>
             <param name="pageUri"></param>
-            <param name="storeRawData"></param>
+            <param name="settings"></param>
             <returns></returns>
             <exception cref="T:System.ArgumentNullException"></exception>
             <exception cref="T:SongFeedReaders.Feeds.PageParseException"></exception>

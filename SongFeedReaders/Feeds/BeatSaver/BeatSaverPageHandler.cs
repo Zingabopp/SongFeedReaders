@@ -33,14 +33,14 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
-        public List<ScrapedSong> Parse(string content, Uri? pageUri, bool storeRawData)
+        public List<ScrapedSong> Parse(string content, Uri? pageUri, IFeedSettings settings)
         {
             if (string.IsNullOrWhiteSpace(content))
                 throw new ArgumentNullException(nameof(content));
             try
             {
                 JObject? jObj = JObject.Parse(content);
-                return ParseSongsFromJson(jObj, pageUri, storeRawData);
+                return ParseSongsFromJson(jObj, pageUri, settings);
             }
             catch (PageParseException)
             {
@@ -63,9 +63,9 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// </summary>
         /// <param name="result"></param>
         /// <param name="sourceUri"></param>
-        /// <param name="storeRawData"></param>
+        /// <param name="settings"></param>
         /// <returns></returns>
-        public List<ScrapedSong> ParseSongsFromJson(JToken result, Uri? sourceUri, bool storeRawData)
+        public List<ScrapedSong> ParseSongsFromJson(JToken result, Uri? sourceUri, IFeedSettings settings)
         {
 
             List<ScrapedSong> songs = new List<ScrapedSong>();
@@ -76,7 +76,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
             {
                 if (result["id"] != null)
                 {
-                    newSong = ParseSongFromJson(result, sourceUri, storeRawData);
+                    newSong = ParseSongFromJson(result, sourceUri, settings);
                     if (newSong != null)
                     {
                         songs.Add(newSong);
@@ -96,7 +96,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
 
             foreach (JObject song in songJSONAry)
             {
-                newSong = ParseSongFromJson(song, sourceUri, storeRawData);
+                newSong = ParseSongFromJson(song, sourceUri, settings);
                 if (newSong != null)
                     songs.Add(newSong);
             }
@@ -109,10 +109,10 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// </summary>
         /// <param name="song"></param>
         /// <param name="sourceUri"></param>
-        /// <param name="storeRawData"></param>
+        /// <param name="settings"></param>
         /// <exception cref="ArgumentException">Thrown when a hash can't be found for the given song JObject.</exception>
         /// <returns></returns>
-        public ScrapedSong ParseSongFromJson(JToken song, Uri? sourceUri, bool storeRawData)
+        public ScrapedSong ParseSongFromJson(JToken song, Uri? sourceUri, IFeedSettings settings)
         {
             if (song == null)
                 throw new ArgumentNullException(nameof(song), "song cannot be null for BeatSaverReader.ParseSongFromJson.");
@@ -138,7 +138,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
                     mapperName: mapperName, 
                     downloadUri: downloadUri,
                     sourceUri: sourceUri, 
-                    jsonData: storeRawData ? song as JObject : null)
+                    jsonData: settings.StoreRawData ? song as JObject : null)
                 {
                     Key = songKey,
                     UploadDate = uploadDate

@@ -22,7 +22,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        protected BeatSaverFeed(IFeedSettings feedSettings, IFeedPageHandler pageHandler,
+        protected BeatSaverFeed(IFeedSettings feedSettings, IBeatSaverPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
