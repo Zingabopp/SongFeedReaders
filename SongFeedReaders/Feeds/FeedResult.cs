@@ -37,7 +37,7 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         public int Count => songs.Count;
 
-
+        // TODO: More constructors/parameters.
         public FeedResult(IEnumerable<PageReadResult> pageReadResults, IFeedSettings feedSettings)
         {
             songs = new Dictionary<string, ScrapedSong>();

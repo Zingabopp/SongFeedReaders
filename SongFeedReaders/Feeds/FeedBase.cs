@@ -119,6 +119,12 @@ namespace SongFeedReaders.Feeds
                 lastResult = await asyncEnumerator.MoveNextAsync(cancellationToken).ConfigureAwait(false);
                 songCount += lastResult.SongCount;
                 pageResults.Add(lastResult);
+                // TODO: Repeated pages with no songs should break the loop.
+                progress?.Report(lastResult);
+                if (!lastResult.Successful)
+                {
+                    return new FeedResult(pageResults, settings);
+                }
                 if (settings.MaxSongs > 0 && songCount >= settings.MaxSongs)
                     break;
             }
