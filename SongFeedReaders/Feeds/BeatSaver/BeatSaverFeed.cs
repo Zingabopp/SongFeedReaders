@@ -6,6 +6,7 @@ using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using WebUtilities;
 
 namespace SongFeedReaders.Feeds.BeatSaver
@@ -26,6 +27,12 @@ namespace SongFeedReaders.Feeds.BeatSaver
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
+        }
+        /// <inheritdoc/>
+        protected override async Task<PageContent> GetPageContent(IWebResponseContent responseContent)
+        {
+            string pageText = await responseContent.ReadAsStringAsync().ConfigureAwait(false);
+            return new PageContent(PageContent.ContentId_JSON, pageText);
         }
     }
 }

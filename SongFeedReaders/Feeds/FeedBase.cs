@@ -60,6 +60,12 @@ namespace SongFeedReaders.Feeds
             WebClient = webClient ?? throw new ArgumentNullException(nameof(webClient));
             Logger = logFactory?.GetLogger();
         }
+        /// <summary>
+        /// Returns a <see cref="PageContent"/> from <paramref name="responseContent"/>.
+        /// </summary>
+        /// <param name="responseContent"></param>
+        /// <returns></returns>
+        protected abstract Task<PageContent> GetPageContent(IWebResponseContent responseContent);
 
         /// <inheritdoc/>
         public virtual async Task<PageReadResult> GetPageAsync(Uri uri, CancellationToken cancellationToken)
@@ -71,8 +77,8 @@ namespace SongFeedReaders.Feeds
                 IWebResponseContent? content = response.Content;
                 if (content == null)
                     throw new WebClientException("Content was null even though the response succeeded...");
-                string pageText = await content.ReadAsStringAsync();
-                List<ScrapedSong> pageSongs = ParseSongsFromPage(pageText, uri);
+                PageContent pageContent = await GetPageContent(content).ConfigureAwait(false);
+                List<ScrapedSong> pageSongs = ParseSongsFromPage(pageContent, uri);
 
                 return CreateResult(uri, pageSongs);
             }
@@ -148,11 +154,11 @@ namespace SongFeedReaders.Feeds
         /// <summary>
         /// Parses the given page text into a list of <see cref="ScrapedSong"/>.
         /// </summary>
-        /// <param name="pageText"></param>
+        /// <param name="content"></param>
         /// <param name="uri"></param>
         /// <returns></returns>
-        protected virtual List<ScrapedSong> ParseSongsFromPage(string pageText, Uri uri)
-            => PageHandler.Parse(pageText, uri, FeedSettings);
+        protected virtual List<ScrapedSong> ParseSongsFromPage(PageContent content, Uri uri)
+            => PageHandler.Parse(content, uri, FeedSettings);
 
         /// <summary>
         /// Creates a <see cref="PageReadResult"/> from a collection of songs.

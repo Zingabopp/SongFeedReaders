@@ -4,6 +4,91 @@
         <name>SongFeedReaders</name>
     </assembly>
     <members>
+        <member name="T:SongFeedReaders.Feeds.BeastSaber.BeastSaberFeed">
+            <summary>
+            Base class for Beast Saber feeds.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberFeed.#ctor(SongFeedReaders.Feeds.BeastSaber.BeastSaberFeedSettings,SongFeedReaders.Feeds.BeastSaber.IBeastSaberPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Initializes a new <see cref="T:SongFeedReaders.Feeds.BeastSaber.BeastSaberFeed"/>.
+            </summary>
+            <param name="feedSettings"></param>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberFeed.GetAsyncEnumerator(SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberFeed.GetPageContent(WebUtilities.IWebResponseContent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeastSaber.BeastSaberFeedSettings">
+            <summary>
+            Base class for Beast Saber feed settings
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler">
+            <summary>
+            Handles reading content from a Beast Saber feed page.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.Logger">
+            <summary>
+            Logger used by this instance.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.#ctor">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.#ctor(SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler"/> with a logger.
+            </summary>
+            <param name="logFactory"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.Parse(SongFeedReaders.Feeds.PageContent,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.ParseXMLPage(System.String,System.Uri,System.Boolean)">
+            <summary>
+            Most of this yoinked from Brian's SyncSaber.
+            https://github.com/brian91292/SyncSaber/blob/master/SyncSaber/SyncSaber.cs#L259
+            </summary>
+            <param name="pageText"></param>
+            <param name="sourceUri"></param>
+            <param name="storeRawData"></param>
+            <exception cref="T:System.Xml.XmlException"></exception>
+            <returns></returns>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.ContentType">
+            <summary>
+            Content type for a Beast Saber page.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.ContentType.Unknown">
+            <summary>
+            Unknown content.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.ContentType.XML">
+            <summary>
+            XML content.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.ContentType.JSON">
+            <summary>
+            JSON content.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeastSaber.IBeastSaberPageHandler">
+            <summary>
+            Handles reading content from a Beast Saber feed page.
+            </summary>
+        </member>
         <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed">
             <summary>
             Base class for Beat Saver feeds.
@@ -18,34 +103,13 @@
             <param name="webClient"></param>
             <param name="logFactory"></param>
         </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeed.GetPageContent(WebUtilities.IWebResponseContent)">
+            <inheritdoc/>
+        </member>
         <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings">
             <summary>
             Base class for Beat Saver feed settings.
             </summary>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.FeedId">
-            <inheritdoc/>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.FeedIndex">
-            <inheritdoc/>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.SongsPerPage">
-            <inheritdoc/>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.MaxSongs">
-            <inheritdoc/>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.StoreRawData">
-            <inheritdoc/>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.Filter">
-            <inheritdoc/>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.StopWhenAny">
-            <inheritdoc/>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverFeedSettings.Clone">
-            <inheritdoc/>
         </member>
         <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed">
             <summary>
@@ -117,7 +181,7 @@
             </summary>
             <param name="logFactory"></param>
         </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.Parse(System.String,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.Parse(SongFeedReaders.Feeds.PageContent,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.ParseSongsFromJson(Newtonsoft.Json.Linq.JToken,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
@@ -405,6 +469,13 @@
             <param name="webClient"></param>
             <param name="logFactory"></param>
         </member>
+        <member name="M:SongFeedReaders.Feeds.FeedBase.GetPageContent(WebUtilities.IWebResponseContent)">
+            <summary>
+            Returns a <see cref="T:SongFeedReaders.Feeds.PageContent"/> from <paramref name="responseContent"/>.
+            </summary>
+            <param name="responseContent"></param>
+            <returns></returns>
+        </member>
         <member name="M:SongFeedReaders.Feeds.FeedBase.GetPageAsync(System.Uri,System.Threading.CancellationToken)">
             <inheritdoc/>
         </member>
@@ -427,11 +498,11 @@
             <param name="settings"></param>
             <returns></returns>
         </member>
-        <member name="M:SongFeedReaders.Feeds.FeedBase.ParseSongsFromPage(System.String,System.Uri)">
+        <member name="M:SongFeedReaders.Feeds.FeedBase.ParseSongsFromPage(SongFeedReaders.Feeds.PageContent,System.Uri)">
             <summary>
             Parses the given page text into a list of <see cref="T:SongFeedReaders.Models.ScrapedSong"/>.
             </summary>
-            <param name="pageText"></param>
+            <param name="content"></param>
             <param name="uri"></param>
             <returns></returns>
         </member>
@@ -536,6 +607,35 @@
             Number of songs in the result.
             </summary>
         </member>
+        <member name="T:SongFeedReaders.Feeds.FeedSettingsBase">
+            <summary>
+            Base class for basic feed settings.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedSettingsBase.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedSettingsBase.FeedIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedSettingsBase.SongsPerPage">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedSettingsBase.MaxSongs">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedSettingsBase.StoreRawData">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedSettingsBase.Filter">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.FeedSettingsBase.StopWhenAny">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedSettingsBase.Clone">
+            <inheritdoc/>
+        </member>
         <member name="T:SongFeedReaders.Feeds.IDatedFeed">
             <summary>
             A feed that pages songs based on their upload date.
@@ -632,7 +732,7 @@
             to their service in their constructors.
             </summary>
         </member>
-        <member name="M:SongFeedReaders.Feeds.IFeedPageHandler.Parse(System.String,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
+        <member name="M:SongFeedReaders.Feeds.IFeedPageHandler.Parse(SongFeedReaders.Feeds.PageContent,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
             <summary>
             Parse's the page's content and returns a list of every <see cref="T:SongFeedReaders.Models.ScrapedSong"/> on the page.
             </summary>
@@ -707,6 +807,48 @@
             Page of the feed to start on, default is 1. 
             For all feeds, setting '1' here is the same as starting on the first page.
             </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.PageContent">
+            <summary>
+            Container for page content and its type.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.PageContent.ContentId_Unknown">
+            <summary>
+            ContentId for when it's unrecognized.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.PageContent.ContentId_NotSpecified">
+            <summary>
+            ContentId for when it's not specified.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.PageContent.ContentId_XML">
+            <summary>
+            <see cref="F:SongFeedReaders.Feeds.PageContent.ContentId"/> for XML.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.PageContent.ContentId_JSON">
+            <summary>
+            <see cref="F:SongFeedReaders.Feeds.PageContent.ContentId"/> for JSON.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.PageContent.ContentId">
+            <summary>
+            Type of content on the page.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.PageContent.Content">
+            <summary>
+            Page content.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.PageContent.#ctor(System.String,System.String)">
+            <summary>
+            Constructs a <see cref="T:SongFeedReaders.Feeds.PageContent"/>.
+            </summary>
+            <param name="contentId"></param>
+            <param name="content"></param>
         </member>
         <member name="T:SongFeedReaders.Feeds.PageReadResult">
             <summary>

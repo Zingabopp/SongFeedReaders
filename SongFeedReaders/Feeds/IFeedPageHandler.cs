@@ -21,6 +21,7 @@ namespace SongFeedReaders.Feeds
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="PageParseException"></exception>
-        List<ScrapedSong> Parse(string content, Uri? pageUri, IFeedSettings settings);
+        List<ScrapedSong> Parse(PageContent content, Uri? pageUri, IFeedSettings settings);
     }
+
 }

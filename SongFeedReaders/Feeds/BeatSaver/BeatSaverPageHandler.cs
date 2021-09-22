@@ -33,13 +33,13 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
-        public List<ScrapedSong> Parse(string content, Uri? pageUri, IFeedSettings settings)
+        public List<ScrapedSong> Parse(PageContent content, Uri? pageUri, IFeedSettings settings)
         {
-            if (string.IsNullOrWhiteSpace(content))
+            if (string.IsNullOrWhiteSpace(content.Content))
                 throw new ArgumentNullException(nameof(content));
             try
             {
-                JObject? jObj = JObject.Parse(content);
+                JObject? jObj = JObject.Parse(content.Content);
                 return ParseSongsFromJson(jObj, pageUri, settings);
             }
             catch (PageParseException)
