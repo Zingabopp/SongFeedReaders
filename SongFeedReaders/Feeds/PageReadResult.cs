@@ -246,6 +246,10 @@ namespace SongFeedReaders.Feeds
         /// <summary>
         /// A page was requested that is out of range.
         /// </summary>
-        PageOutOfRange = 6
+        PageOutOfRange = 6,
+        /// <summary>
+        /// An error occurred while filtering songs.
+        /// </summary>
+        FilterError = 7
     }
 }

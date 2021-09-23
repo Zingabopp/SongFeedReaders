@@ -28,7 +28,7 @@ namespace SongFeedReaders.Services.SongInfoProviders
         /// <param name="logFactory"></param>
         protected SongInfoProviderBase(ILogFactory? logFactory)
         {
-            Logger = logFactory?.GetLogger();
+            Logger = logFactory?.GetLogger(GetType().Name);
         }
 
         /// <inheritdoc/>

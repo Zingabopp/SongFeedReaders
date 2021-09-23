@@ -15,6 +15,7 @@ namespace SongFeedReaders.Feeds
     /// </summary>
     public abstract class FeedBase : IFeed
     {
+        private static readonly Task<bool> CompletedInitialization = Task.FromResult(true);
         /// <summary>
         /// <see cref="ILogger"/> used by this instance.
         /// </summary>
@@ -33,6 +34,8 @@ namespace SongFeedReaders.Feeds
         public abstract string DisplayName { get; }
         /// <inheritdoc/>
         public abstract string Description { get; }
+        /// <inheritdoc/>
+        public virtual bool Initialized => true;
         /// <inheritdoc/>
         public IFeedSettings FeedSettings { get; protected set; }
         /// <inheritdoc/>
@@ -58,7 +61,7 @@ namespace SongFeedReaders.Feeds
             FeedSettings = feedSettings?.Clone() as IFeedSettings ?? throw new ArgumentNullException(nameof(feedSettings));
             PageHandler = pageHandler ?? throw new ArgumentNullException(nameof(pageHandler));
             WebClient = webClient ?? throw new ArgumentNullException(nameof(webClient));
-            Logger = logFactory?.GetLogger();
+            Logger = logFactory?.GetLogger(GetType().Name);
         }
         /// <summary>
         /// Returns a <see cref="PageContent"/> from <paramref name="responseContent"/>.
@@ -66,6 +69,10 @@ namespace SongFeedReaders.Feeds
         /// <param name="responseContent"></param>
         /// <returns></returns>
         protected abstract Task<PageContent> GetPageContent(IWebResponseContent responseContent);
+
+        /// <inheritdoc/>
+        public virtual Task InitializeAsync(CancellationToken cancellationToken)
+            => CompletedInitialization;
 
         /// <inheritdoc/>
         public virtual async Task<PageReadResult> GetPageAsync(Uri uri, CancellationToken cancellationToken)
@@ -78,9 +85,7 @@ namespace SongFeedReaders.Feeds
                 if (content == null)
                     throw new WebClientException("Content was null even though the response succeeded...");
                 PageContent pageContent = await GetPageContent(content).ConfigureAwait(false);
-                List<ScrapedSong> pageSongs = ParseSongsFromPage(pageContent, uri);
-
-                return CreateResult(uri, pageSongs);
+                return ParseSongsFromPage(pageContent, uri);
             }
             catch (OperationCanceledException ex)
             {
@@ -116,35 +121,76 @@ namespace SongFeedReaders.Feeds
         {
             IFeedSettings settings = FeedSettings;
             EnsureValidSettings();
-            FeedAsyncEnumerator asyncEnumerator = GetAsyncEnumerator(settings);
-            List<PageReadResult> pageResults = new List<PageReadResult>();
-            int dictInitialSize = settings.MaxSongs > 0 ? settings.MaxSongs : 20;
-            Dictionary<string, ScrapedSong> acceptedSongs = new Dictionary<string, ScrapedSong>(dictInitialSize);
-            int songCount = 0;
-            PageReadResult? lastResult = null;
-            while (asyncEnumerator.CanMoveNext && !(lastResult?.IsLastPage ?? false))
+            try
             {
-                lastResult = await asyncEnumerator.MoveNextAsync(cancellationToken).ConfigureAwait(false);
-                songCount += lastResult.SongCount;
-                pageResults.Add(lastResult);
-                // TODO: Repeated pages with no songs should break the loop.
-                progress?.Report(lastResult);
-                if (!lastResult.Successful)
+                if (!Initialized)
                 {
-                    return new FeedResult(pageResults, settings);
+                    await InitializeAsync(cancellationToken).ConfigureAwait(false);
                 }
-                foreach (var song in lastResult.Songs())
+                FeedAsyncEnumerator asyncEnumerator = GetAsyncEnumerator(settings);
+                List<PageReadResult> pageResults = new List<PageReadResult>();
+                int dictInitialSize = settings.MaxSongs > 0 ? settings.MaxSongs : 20;
+                Dictionary<string, ScrapedSong> acceptedSongs = new Dictionary<string, ScrapedSong>(dictInitialSize);
+                int maxSongs = settings.MaxSongs > 0 ? settings.MaxSongs : int.MaxValue;
+                int songCount = 0;
+                int resultsWithZeroSongs = 0;
+                PageReadResult? lastResult = null;
+                bool breakWhile = false;
+                while (!breakWhile && asyncEnumerator.CanMoveNext && !(lastResult?.IsLastPage ?? false))
                 {
-                    string? songHash = song.Hash;
-                    if (songHash != null && songHash.Length > 0)
-                        acceptedSongs[songHash] = song;
+                    lastResult = await asyncEnumerator.MoveNextAsync(cancellationToken).ConfigureAwait(false);
+                    songCount += lastResult.SongCount;
+                    pageResults.Add(lastResult);
+                    // TODO: Repeated pages with no songs should break the loop.
+                    progress?.Report(lastResult);
+                    if (!lastResult.Successful)
+                    {
+                        return new FeedResult(acceptedSongs, pageResults, lastResult.Exception, FeedResultErrorLevel.Error);
+                    }
+                    if (lastResult.SongsOnPage == 0)
+                    {
+                        resultsWithZeroSongs++;
+                    }
+                    int acceptedFromPage = 0;
+                    foreach (var song in lastResult.Songs())
+                    {
+                        string? songHash = song.Hash;
+                        if (songHash != null && songHash.Length > 0)
+                        {
+                            if (!acceptedSongs.ContainsKey(songHash))
+                            {
+                                acceptedSongs[songHash] = song;
+                                acceptedFromPage++;
+                            }
+                            if (acceptedSongs.Count >= maxSongs)
+                            {
+                                breakWhile = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (lastResult.SongsOnPage > 0)
+                        Logger?.Debug($"Accepted {acceptedFromPage}/{lastResult.SongsOnPage} songs from '{lastResult.Uri}'");
+                    else
+                        Logger?.Debug($"Zero songs on page '{lastResult.Uri}'");
+                    if (acceptedSongs.Count >= maxSongs)// || lastResult.IsLastPage)
+                        break;
+                    if (resultsWithZeroSongs > 2)
+                    {
+                        Logger?.Warning($"More than two feed pages had zero songs on the page, this should've been handled earlier. Ending loop for safety.");
+                        break;
+                    }
                 }
-                if (settings.MaxSongs > 0 && acceptedSongs.Count >= settings.MaxSongs)
-                    break;
+
+                FeedResult result = new FeedResult(acceptedSongs, pageResults);
+                return result;
             }
-            // TODO: pass the already created acceptedSongs.
-            FeedResult result = new FeedResult(pageResults, settings);
-            return result;
+            catch (Exception ex)
+            {
+                return new FeedResult(null, null,
+                    new FeedReaderException($"An unhandled exception occurred reading feed '{FeedId}'.", ex, FeedReaderFailureCode.Generic),
+                    FeedResultErrorLevel.Error);
+            }
         }
 
         /// <summary>
@@ -166,43 +212,8 @@ namespace SongFeedReaders.Feeds
         /// <param name="content"></param>
         /// <param name="uri"></param>
         /// <returns></returns>
-        protected virtual List<ScrapedSong> ParseSongsFromPage(PageContent content, Uri uri)
+        protected virtual PageReadResult ParseSongsFromPage(PageContent content, Uri uri)
             => PageHandler.Parse(content, uri, FeedSettings);
 
-        /// <summary>
-        /// Creates a <see cref="PageReadResult"/> from a collection of songs.
-        /// </summary>
-        /// <param name="uri"></param>
-        /// <param name="pageSongs"></param>
-        /// <returns></returns>
-        protected virtual PageReadResult CreateResult(Uri uri, IEnumerable<ScrapedSong> pageSongs)
-        {
-            bool isLastPage = false;
-            Func<ScrapedSong, bool>? stopWhenAny = FeedSettings.StopWhenAny;
-            Func<ScrapedSong, bool>? filter = FeedSettings.Filter;
-            int totalSongs = pageSongs.Count();
-            List<ScrapedSong> songs = new List<ScrapedSong>(totalSongs);
-            foreach (ScrapedSong? song in pageSongs)
-            {
-                if (stopWhenAny != null && stopWhenAny(song))
-                {
-                    isLastPage = true;
-                    break;
-                }
-                // TODO: filter could throw exception here.
-                if (filter == null || filter(song))
-                    songs.Add(song);
-            }
-
-            // TODO: Check more things for isLastPage?
-            return new PageReadResult(
-                uri: uri,
-                songs: songs,
-                firstSong: pageSongs.FirstOrDefault(),
-                lastSong: pageSongs.LastOrDefault(),
-                songsOnPage: totalSongs,
-                isLastPage: isLastPage);
-
-        }
     }
 }

@@ -17,8 +17,9 @@ namespace SongFeedReadersTests
     {
         public static readonly ILogFactory? LogFactory = null;
         [TestMethod]
-        public async Task TestBeatSaver()
+        public async Task TestBeatSaverLatest()
         {
+            ILogFactory logFactory = Utilities.DefaultLogFactory;
             IWebClient client = new HttpClientWrapper();
             BeatSaverPageHandler pageHandler = new BeatSaverPageHandler();
             BeatSaverLatestSettings feedSettings = new BeatSaverLatestSettings()
@@ -29,7 +30,29 @@ namespace SongFeedReadersTests
                  },
                 MaxSongs = 57
             };
-            IFeed feed = new BeatSaverLatestFeed(feedSettings, pageHandler, client, null);
+            IFeed feed = new BeatSaverLatestFeed(feedSettings, pageHandler, client, logFactory);
+            var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
+            Assert.IsTrue(result.Count > 0);
+            var pages = result.GetResults().ToArray();
+            var songs = result.GetSongs().ToArray();
+        }
+
+        [TestMethod]
+        public async Task TestBeatSaverMapper()
+        {
+            ILogFactory logFactory = Utilities.DefaultLogFactory;
+            IWebClient client = new HttpClientWrapper();
+            BeatSaverPageHandler pageHandler = new BeatSaverPageHandler();
+            BeatSaverMapperSettings feedSettings = new BeatSaverMapperSettings()
+            {
+                Filter = s =>
+                {
+                    return !s.Key?.Contains("2") ?? throw new Exception("Null song key");
+                },
+                MaxSongs = 57,
+                MapperName = "rustic"
+            };
+            IFeed feed = new BeatSaverMapperFeed(feedSettings, pageHandler, client, logFactory);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();
@@ -39,6 +62,7 @@ namespace SongFeedReadersTests
         [TestMethod]
         public async Task TestBeastSaber_Follows()
         {
+            ILogFactory logFactory = Utilities.DefaultLogFactory;
             IWebClient client = new HttpClientWrapper();
             BeastSaberPageHandler pageHandler = new BeastSaberPageHandler();
             BeastSaberFollowsSettings feedSettings = new BeastSaberFollowsSettings()
@@ -46,7 +70,7 @@ namespace SongFeedReadersTests
                 Username = "Zingabopp",
                 MaxSongs = 57
             };
-            IFeed feed = new BeastSaberFollowsFeed(feedSettings, pageHandler, client, null);
+            IFeed feed = new BeastSaberFollowsFeed(feedSettings, pageHandler, client, logFactory);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();
@@ -55,13 +79,14 @@ namespace SongFeedReadersTests
         [TestMethod]
         public async Task TestBeastSaber_Curator()
         {
+            ILogFactory logFactory = Utilities.DefaultLogFactory;
             IWebClient client = new HttpClientWrapper();
             BeastSaberPageHandler pageHandler = new BeastSaberPageHandler();
             BeastSaberCuratorSettings feedSettings = new BeastSaberCuratorSettings()
             {
                 MaxSongs = 57
             };
-            IFeed feed = new BeastSaberCuratorFeed(feedSettings, pageHandler, client, null);
+            IFeed feed = new BeastSaberCuratorFeed(feedSettings, pageHandler, client, logFactory);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();
@@ -70,6 +95,7 @@ namespace SongFeedReadersTests
         [TestMethod]
         public async Task TestBeastSaber_Bookmarks()
         {
+            ILogFactory logFactory = Utilities.DefaultLogFactory;
             IWebClient client = new HttpClientWrapper();
             BeastSaberPageHandler pageHandler = new BeastSaberPageHandler();
             BeastSaberBookmarksSettings feedSettings = new BeastSaberBookmarksSettings()
@@ -77,7 +103,7 @@ namespace SongFeedReadersTests
                 Username = "Zingabopp",
                 MaxSongs = 57
             };
-            IFeed feed = new BeastSaberBookmarksFeed(feedSettings, pageHandler, client, null);
+            IFeed feed = new BeastSaberBookmarksFeed(feedSettings, pageHandler, client, logFactory);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();

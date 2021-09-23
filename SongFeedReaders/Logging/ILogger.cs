@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace SongFeedReaders.Logging
 {
@@ -16,7 +17,8 @@ namespace SongFeedReaders.Logging
         /// <param name="file"></param>
         /// <param name="member"></param>
         /// <param name="line"></param>
-        void Log(string message, LogLevel level, string file, string member, int line);
+        void Log(string message, LogLevel level, [CallerFilePath] string? file = null, 
+            [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0);
         /// <summary>
         /// Logs an <see cref="Exception"/> at the given level.
         /// </summary>
@@ -25,7 +27,8 @@ namespace SongFeedReaders.Logging
         /// <param name="file"></param>
         /// <param name="member"></param>
         /// <param name="line"></param>
-        void Log(Exception e, LogLevel level, string file, string member, int line);
+        void Log(Exception e, LogLevel level, [CallerFilePath] string? file = null,
+            [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0);
     }
     /// <summary>
     /// Logging level of a message.

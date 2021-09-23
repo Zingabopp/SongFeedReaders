@@ -13,7 +13,7 @@ namespace SongFeedReaders.Feeds
     public interface IFeedPageHandler
     {
         /// <summary>
-        /// Parse's the page's content and returns a list of every <see cref="ScrapedSong"/> on the page.
+        /// Parse's the page's content and returns a <see cref="PageReadResult"/>.
         /// </summary>
         /// <param name="content"></param>
         /// <param name="pageUri"></param>
@@ -21,7 +21,7 @@ namespace SongFeedReaders.Feeds
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="PageParseException"></exception>
-        List<ScrapedSong> Parse(PageContent content, Uri? pageUri, IFeedSettings settings);
+        PageReadResult Parse(PageContent content, Uri? pageUri, IFeedSettings settings);
     }
 
 }

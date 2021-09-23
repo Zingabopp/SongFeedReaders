@@ -14,6 +14,9 @@ namespace SongFeedReaders.Feeds.BeastSaber
     {
         private const string MIME_XML = "text/xml";
         private const string MIME_JSON = "application/json";
+        /// <summary>
+        /// Base URI for bsaber.com
+        /// </summary>
         protected static readonly Uri BaseUri = new Uri("https://bsaber.com/");
 
         /// <summary>

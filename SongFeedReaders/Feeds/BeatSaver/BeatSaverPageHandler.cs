@@ -13,7 +13,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
     /// <summary>
     /// Handles parsing the page content from Beat Saver.
     /// </summary>
-    public class BeatSaverPageHandler : IBeatSaverPageHandler
+    public class BeatSaverPageHandler : FeedPageHandlerBase, IBeatSaverPageHandler
     {
         /// <summary>
         /// Logger used by this instance.
@@ -29,18 +29,19 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <param name="logFactory"></param>
         public BeatSaverPageHandler(ILogFactory? logFactory)
         {
-            Logger = logFactory?.GetLogger();
+            Logger = logFactory?.GetLogger(nameof(BeatSaverPageHandler));
         }
 
         /// <inheritdoc/>
-        public List<ScrapedSong> Parse(PageContent content, Uri? pageUri, IFeedSettings settings)
+        public override PageReadResult Parse(PageContent content, Uri? pageUri, IFeedSettings settings)
         {
             if (string.IsNullOrWhiteSpace(content.Content))
                 throw new ArgumentNullException(nameof(content));
             try
             {
                 JObject? jObj = JObject.Parse(content.Content);
-                return ParseSongsFromJson(jObj, pageUri, settings);
+                List<ScrapedSong> songs = ParseSongsFromJson(jObj, pageUri, settings);
+                return CreateResult(songs, pageUri, settings);
             }
             catch (PageParseException)
             {
@@ -175,6 +176,34 @@ namespace SongFeedReaders.Feeds.BeatSaver
         {
             JToken? state = v["state"];
             return state != null && state.Value<string>().Equals("Published", StringComparison.OrdinalIgnoreCase);
+        }
+
+        /// <inheritdoc/>
+        public string ParseUserIdFromPage(string pageText)
+        {
+            string? mapperId = string.Empty;
+            try
+            {
+                JObject result = JObject.Parse(pageText);
+
+                if (result != null && result["id"] is JToken idProp)
+                {
+                    int mapperIdInt = idProp.Value<int>();
+                    if (mapperIdInt > 0)
+                    {
+                        mapperId = idProp.Value<string>();
+                    }
+                }
+            }
+            catch(PageParseException)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw new PageParseException(ex.Message, ex);
+            }
+            return mapperId;
         }
     }
 }

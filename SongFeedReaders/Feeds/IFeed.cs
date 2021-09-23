@@ -25,6 +25,10 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         string Description { get; }
         /// <summary>
+        /// Returns true if the feed has been initialized.
+        /// </summary>
+        bool Initialized { get; }
+        /// <summary>
         /// Settings for the feed.
         /// </summary>
         IFeedSettings FeedSettings { get; }
@@ -37,7 +41,14 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         /// <exception cref="InvalidFeedSettingsException"></exception>
         void EnsureValidSettings();
-
+        /// <summary>
+        /// Performs any work needed to initialize the feed.
+        /// Implementing feeds should gracefully handle repeated calls.
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        /// <exception cref="FeedInitializationException"></exception>
+        Task InitializeAsync(CancellationToken cancellationToken);
         /// <summary>
         /// Reads and parses a page at the given <paramref name="uri"/>.
         /// </summary>

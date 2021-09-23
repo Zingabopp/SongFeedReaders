@@ -6,6 +6,7 @@ using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Xml;
 
@@ -14,7 +15,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
     /// <summary>
     /// Handles reading content from a Beast Saber feed page.
     /// </summary>
-    public class BeastSaberPageHandler : IBeastSaberPageHandler
+    public class BeastSaberPageHandler : FeedPageHandlerBase, IBeastSaberPageHandler
     {
         private const string XML_TITLE_KEY = "SongTitle";
         private const string XML_DOWNLOADURL_KEY = "DownloadURL";
@@ -43,12 +44,32 @@ namespace SongFeedReaders.Feeds.BeastSaber
         }
 
         /// <inheritdoc/>
-        public List<ScrapedSong> Parse(PageContent content, Uri? pageUri, IFeedSettings settings)
+        public override PageReadResult Parse(PageContent content, Uri? pageUri, IFeedSettings settings)
         {
-            if (content.ContentId == PageContent.ContentId_JSON)
-                return ParseJsonPage(content.Content, pageUri, settings);
-            else
-                return ParseXMLPage(content.Content, pageUri, settings);
+            if (string.IsNullOrWhiteSpace(content.Content))
+            {
+                return new PageReadResult(pageUri,
+                    new PageParseException($"The page text was empty for '{pageUri}'"),
+                    PageErrorType.SiteError);
+            }
+            try
+            {
+                List<ScrapedSong> songs;
+                if (content.ContentId == PageContent.ContentId_JSON)
+                    songs = ParseJsonPage(content.Content, pageUri, settings);
+                else
+                    songs = ParseXMLPage(content.Content, pageUri, settings);
+
+                return CreateResult(songs, pageUri, settings);
+            }
+            catch (PageParseException ex)
+            {
+                return new PageReadResult(pageUri, ex, PageErrorType.ParsingError);
+            }
+            catch(Exception ex)
+            {
+                return new PageReadResult(pageUri, ex, PageErrorType.Unknown);
+            }
         }
 
         /// <summary>
@@ -58,9 +79,14 @@ namespace SongFeedReaders.Feeds.BeastSaber
         /// <param name="sourceUri"></param>
         /// <param name="settings"></param>
         /// <exception cref="PageParseException">Thrown when the page text is unable to parsed.</exception>
+        /// <exception cref="ArgumentNullException">Thrown when <paramref name="pageText"/> or <paramref name="settings"/> is null.</exception>
         /// <returns></returns>
         public virtual List<ScrapedSong> ParseJsonPage(string pageText, Uri? sourceUri, IFeedSettings settings)
         {
+            if (string.IsNullOrWhiteSpace(pageText))
+                throw new ArgumentNullException(nameof(pageText));
+            if (settings == null)
+                throw new ArgumentNullException(nameof(pageText));
             var songsOnPage = new List<ScrapedSong>();
             JObject result;
             try
@@ -73,6 +99,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
             }
             bool storeRawData = settings.StoreRawData;
             var songs = result["songs"] ?? throw new PageParseException($"Page at '{sourceUri}' did not contain a 'songs' property");
+
             foreach (JObject bSong in songs)
             {
                 // Try to get the song hash from BeastSaber
@@ -101,8 +128,10 @@ namespace SongFeedReaders.Feeds.BeastSaber
         /// <exception cref="PageParseException"></exception>
         public virtual List<ScrapedSong> ParseXMLPage(string pageText, Uri? sourceUri, IFeedSettings settings)
         {
-            if (string.IsNullOrEmpty(pageText))
-                return new List<ScrapedSong>();
+            if (string.IsNullOrWhiteSpace(pageText))
+                throw new ArgumentNullException(nameof(pageText));
+            if (settings == null)
+                throw new ArgumentNullException(nameof(pageText));
             bool retry = false;
             var songsOnPage = new List<ScrapedSong>();
             bool storeRawData = settings.StoreRawData;

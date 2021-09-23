@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SongFeedReaders.Feeds
 {
     /// <summary>
-    /// 
+    /// Iterates through feed pages by their page number.
     /// </summary>
     public class PagedFeedAsyncEnumerator : FeedAsyncEnumerator
     {
@@ -70,6 +70,8 @@ namespace SongFeedReaders.Feeds
                     throw new FeedReaderException($"URL '{pageUri}' was previously read, aborting to avoid possible infinite loop.");
                 }
                 result = await PagedFeed.GetPageAsync(pageUri, cancellationToken).ConfigureAwait(false);
+                //if (result.IsLastPage)
+                //    CanMoveNext = false;
                 LastFetchedUri = pageUri;
             }
             catch (OperationCanceledException ex)

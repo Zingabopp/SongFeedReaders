@@ -11,14 +11,23 @@ namespace SongFeedReaders.Feeds
     /// </summary>
     public class InvalidFeedSettingsException : InvalidOperationException
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InvalidFeedSettingsException"/> class.
+        /// </summary>
         public InvalidFeedSettingsException()
             : base() { }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InvalidFeedSettingsException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
         public InvalidFeedSettingsException(string message)
             : base(message) { }
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InvalidFeedSettingsException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="innerException"></param>
         public InvalidFeedSettingsException(string message, Exception innerException)
             : base(message, innerException) { }
     }
@@ -46,16 +55,36 @@ namespace SongFeedReaders.Feeds
                 return base.Message;
             }
         }
-        /// <inheritdoc />
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedReaderException"/> class.
+        /// </summary>
         public FeedReaderException()
         { }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedReaderException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
         public FeedReaderException(string message)
             : base(message)
         { }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedReaderException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="reason"></param>
+        public FeedReaderException(string message, FeedReaderFailureCode reason)
+            : base(message)
+        {
+            FailureCode = reason;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedReaderException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="innerException"></param>
         public FeedReaderException(string message, Exception? innerException)
             : base(message, innerException)
         { }
@@ -70,6 +99,31 @@ namespace SongFeedReaders.Feeds
             : base(message, innerException)
         {
             FailureCode = reason;
+        }
+    }
+
+    /// <summary>
+    /// This exception is thrown when an error occurs filtering songs in a feed.
+    /// </summary>
+    public class FeedFilterException : FeedReaderException
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedReaderException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        public FeedFilterException(string message)
+            : base(message, FeedReaderFailureCode.FilterFailed)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedReaderException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="innerException"></param>
+        public FeedFilterException(string message, Exception? innerException)
+            : base(message, innerException, FeedReaderFailureCode.FilterFailed)
+        {
         }
     }
 
@@ -93,7 +147,11 @@ namespace SongFeedReaders.Feeds
         /// <summary>
         /// CancellationToken was triggered before the reader finished.
         /// </summary>
-        Cancelled = 3
+        Cancelled = 3,
+        /// <summary>
+        /// Exception thrown during song filtering.
+        /// </summary>
+        FilterFailed = 4
     }
 
     /// <summary>
@@ -101,24 +159,125 @@ namespace SongFeedReaders.Feeds
     /// </summary>
     public class PageParseException : Exception
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PageParseException"/> class.
+        /// </summary>
         public PageParseException()
         {
         }
 
-        /// <inheritdoc/>
-        public PageParseException(string message) : base(message)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PageParseException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        public PageParseException(string message) 
+            : base(message)
         {
         }
 
-        /// <inheritdoc/>
-        public PageParseException(string message, Exception innerException) : base(message, innerException)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PageParseException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="innerException"></param>
+        public PageParseException(string message, Exception innerException) 
+            : base(message, innerException)
         {
         }
 
-        /// <inheritdoc/>
-        protected PageParseException(SerializationInfo info, StreamingContext context) : base(info, context)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PageParseException"/> class with serialized data.
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
+        protected PageParseException(SerializationInfo info, StreamingContext context) 
+            : base(info, context)
         {
         }
     }
+
+    /// <summary>
+    /// This exception is thrown when a feed initialization fails.
+    /// </summary>
+    public class FeedInitializationException : Exception
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedInitializationException"/> class.
+        /// </summary>
+        public FeedInitializationException()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedInitializationException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        public FeedInitializationException(string message)
+            : base(message)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedInitializationException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="innerException"></param>
+        public FeedInitializationException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedInitializationException"/> class with serialized data.
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
+        protected FeedInitializationException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+        }
+    }
+
+    /// <summary>
+    /// This exception is thrown when attempting to use an uninitialized feed.
+    /// </summary>
+    public class FeedUninitializedException : InvalidOperationException
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedUninitializedException"/> class.
+        /// </summary>
+        public FeedUninitializedException()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedUninitializedException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        public FeedUninitializedException(string message) 
+            : base(message)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedUninitializedException"/> class.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="innerException"></param>
+        public FeedUninitializedException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FeedUninitializedException"/> class with serialized data.
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
+        protected FeedUninitializedException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+        }
+    }
+
 }
