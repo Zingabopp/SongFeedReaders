@@ -8,7 +8,7 @@ using WebUtilities;
 namespace SongFeedReaders.Feeds.BeatSaver
 {
     /// <summary>
-    /// Base class for Beat Saver feeds.
+    /// This feed returns the latest songs uploaded to Beat Saver.
     /// </summary>
     public class BeatSaverLatestFeed : BeatSaverFeed, IDatedFeed
     {

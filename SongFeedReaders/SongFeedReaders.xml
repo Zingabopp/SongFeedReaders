@@ -286,7 +286,7 @@
         </member>
         <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed">
             <summary>
-            Base class for Beat Saver feeds.
+            This feed returns the latest songs uploaded to Beat Saver.
             </summary>
         </member>
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.#ctor(SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings,SongFeedReaders.Feeds.BeatSaver.IBeatSaverPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
@@ -1144,6 +1144,13 @@
         <member name="M:SongFeedReaders.Feeds.FeedSettingsBase.Clone">
             <inheritdoc/>
         </member>
+        <member name="M:SongFeedReaders.Feeds.FeedSettingsBase.CopyTo``1(``0)">
+            <summary>
+            Copies the values from this instance to <paramref name="target"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="target"></param>
+        </member>
         <member name="T:SongFeedReaders.Feeds.IDatedFeed">
             <summary>
             A feed that pages songs based on their upload date.
@@ -1586,10 +1593,90 @@
             Base class for ScoreSaber feeds.
             </summary>
         </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.PAGENUMKEY">
+            <summary>
+            Replace with page number in <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.URL_TEMPLATE"/>.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.CATKEY">
+            <summary>
+            Replace with a <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.FeedNumber"/> in <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.URL_TEMPLATE"/>.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.RANKEDKEY">
+            <summary>
+            Replace with '0' to show all songs or '1' to show only ranked songs in <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.URL_TEMPLATE"/>.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.LIMITKEY">
+            <summary>
+            Replace with number of songs to return per page in <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.URL_TEMPLATE"/>.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.URL_TEMPLATE">
+            <summary>
+            URL template to append on <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.BaseUri"/>.
+            Must string replace <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.CATKEY"/>, <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.PAGENUMKEY"/>, <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.RANKEDKEY"/>, 
+            and <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.LIMITKEY"/> with the appropriate values.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.FeedStartingPage">
+            <summary>
+            ScoreSaber API pages start at 1.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.FeedNumber">
+            <summary>
+            ScoreSaber feed number. Replaces <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.CATKEY"/> in <see cref="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.URL_TEMPLATE"/>.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.FeedNumber.Trending">
+            <summary>
+            Trending feed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.FeedNumber.LatestRanked">
+            <summary>
+            Latest ranked feed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.FeedNumber.TopPlayed">
+            <summary>
+            Top played feed.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.FeedNumber.TopRanked">
+            <summary>
+            Top ranked feed.
+            </summary>
+        </member>
         <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.BaseUri">
             <summary>
             Base URI for bsaber.com
             </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.Feed">
+            <summary>
+            The <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.FeedNumber"/> associated with this <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed"/>.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.ScoreSaberSettings">
+            <summary>
+            Settings for the feed.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.GetUriForPage(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.CreateUri(SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.FeedNumber,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Creates a ScoreSaber feed <see cref="T:System.Uri"/> for the given inputs.
+            </summary>
+            <param name="feedNumber"></param>
+            <param name="pageNum"></param>
+            <param name="rankedOnly"></param>
+            <param name="songsPerPage"></param>
+            <returns></returns>
         </member>
         <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.#ctor(SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeedSettings,SongFeedReaders.Feeds.ScoreSaber.IScoreSaberPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
             <summary>
@@ -1603,6 +1690,116 @@
         <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.GetPageContent(WebUtilities.IWebResponseContent)">
             <inheritdoc/>
         </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.AreSettingsValid(SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.GetAsyncEnumerator(SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed">
+            <summary>
+            This feed returns the songs that are trending on ScoreSaber.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed.#ctor(SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingSettings,SongFeedReaders.Feeds.ScoreSaber.IScoreSaberPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed"/>.
+            </summary>
+            <param name="feedSettings"></param>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed.DisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed.Feed">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestFeed">
+            <summary>
+            This feed returns the songs that were recently ranked on ScoreSaber.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestFeed.#ctor(SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestSettings,SongFeedReaders.Feeds.ScoreSaber.IScoreSaberPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestFeed"/>.
+            </summary>
+            <param name="feedSettings"></param>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestFeed.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestFeed.DisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestFeed.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestFeed.Feed">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedFeed">
+            <summary>
+            This feed returns the songs that are the most played on ScoreSaber.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedFeed.#ctor(SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedSettings,SongFeedReaders.Feeds.ScoreSaber.IScoreSaberPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedFeed"/>.
+            </summary>
+            <param name="feedSettings"></param>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedFeed.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedFeed.DisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedFeed.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedFeed.Feed">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedFeed">
+            <summary>
+            This feed returns the songs that are highest ranked on ScoreSaber.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedFeed.#ctor(SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedSettings,SongFeedReaders.Feeds.ScoreSaber.IScoreSaberPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedFeed"/>.
+            </summary>
+            <param name="feedSettings"></param>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedFeed.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedFeed.DisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedFeed.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedFeed.Feed">
+            <inheritdoc/>
+        </member>
         <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeedSettings">
             <summary>
             Base class for ScoreSaber feed settings
@@ -1614,6 +1811,90 @@
             Throws an <see cref="T:System.ArgumentOutOfRangeException"/> when set to less than 1.
             </summary>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when set to less than 1.</exception>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeedSettings.RankedOnly">
+            <summary>
+             If true, only return songs with a ranked difficulty.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeedSettings.CopyTo``1(``0)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingSettings">
+            <summary>
+            Settings for the <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed"/>.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingSettings.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingSettings.FeedIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingSettings.SongsPerPage">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingSettings.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestSettings">
+            <summary>
+            Settings for the <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed"/>.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestSettings.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestSettings.FeedIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestSettings.SongsPerPage">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberLatestSettings.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedSettings">
+            <summary>
+            Settings for the <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed"/>.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedSettings.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedSettings.FeedIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedSettings.SongsPerPage">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopPlayedSettings.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedSettings">
+            <summary>
+            Settings for the <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTrendingFeed"/>.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedSettings.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedSettings.FeedIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedSettings.SongsPerPage">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberTopRankedSettings.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberPageHandler">
+            <summary>
+            Handles parsing the page content from ScoreSaber.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberPageHandler.Parse(SongFeedReaders.Feeds.PageContent,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
         </member>
         <member name="T:SongFeedReaders.Logging.FeedReaderLogger">
             <summary>

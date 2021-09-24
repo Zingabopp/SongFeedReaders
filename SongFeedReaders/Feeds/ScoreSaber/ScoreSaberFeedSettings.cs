@@ -23,5 +23,108 @@ namespace SongFeedReaders.Feeds.ScoreSaber
                 _startingPage = value;
             }
         }
+        /// <summary>
+        ///  If true, only return songs with a ranked difficulty.
+        /// </summary>
+        public bool RankedOnly { get; set; }
+
+        /// <inheritdoc/>
+        protected override void CopyTo<T>(T target)
+        {
+            base.CopyTo(target);
+            if(target is ScoreSaberFeedSettings settings)
+            {
+                settings.RankedOnly = RankedOnly;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Settings for the <see cref="ScoreSaberTrendingFeed"/>.
+    /// </summary>
+    public class ScoreSaberTrendingSettings : ScoreSaberFeedSettings
+    {
+        /// <inheritdoc/>
+        public override string FeedId => "ScoreSaber.Trending";
+
+        /// <inheritdoc/>
+        public override int FeedIndex => 0;
+
+        /// <inheritdoc/>
+        public override int SongsPerPage => 50;
+
+        /// <inheritdoc/>
+        public override object Clone()
+        {
+            var clone = new ScoreSaberTrendingSettings();
+            CopyTo(clone);
+            return clone;
+        }
+    }
+    /// <summary>
+    /// Settings for the <see cref="ScoreSaberTrendingFeed"/>.
+    /// </summary>
+    public class ScoreSaberLatestSettings : ScoreSaberFeedSettings
+    {
+        /// <inheritdoc/>
+        public override string FeedId => "ScoreSaber.LatestRanked";
+
+        /// <inheritdoc/>
+        public override int FeedIndex => 1;
+
+        /// <inheritdoc/>
+        public override int SongsPerPage => 50;
+
+        /// <inheritdoc/>
+        public override object Clone()
+        {
+            var clone = new ScoreSaberLatestSettings();
+            CopyTo(clone);
+            return clone;
+        }
+    }
+    /// <summary>
+    /// Settings for the <see cref="ScoreSaberTrendingFeed"/>.
+    /// </summary>
+    public class ScoreSaberTopPlayedSettings : ScoreSaberFeedSettings
+    {
+        /// <inheritdoc/>
+        public override string FeedId => "ScoreSaber.TopPlayed";
+
+        /// <inheritdoc/>
+        public override int FeedIndex => 2;
+
+        /// <inheritdoc/>
+        public override int SongsPerPage => 50;
+
+        /// <inheritdoc/>
+        public override object Clone()
+        {
+            var clone = new ScoreSaberTopPlayedSettings();
+            CopyTo(clone);
+            return clone;
+        }
+    }
+    /// <summary>
+    /// Settings for the <see cref="ScoreSaberTrendingFeed"/>.
+    /// </summary>
+    public class ScoreSaberTopRankedSettings : ScoreSaberFeedSettings
+    {
+        /// <inheritdoc/>
+        public override string FeedId => "ScoreSaber.TopRanked";
+
+        /// <inheritdoc/>
+        public override int FeedIndex => 3;
+
+        /// <inheritdoc/>
+        public override int SongsPerPage => 50;
+
+        /// <inheritdoc/>
+        public override object Clone()
+        {
+            var clone = new ScoreSaberTopRankedSettings();
+            CopyTo(clone);
+            return clone;
+        }
     }
 }

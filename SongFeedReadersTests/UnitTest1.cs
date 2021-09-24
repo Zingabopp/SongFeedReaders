@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using WebUtilities;
 using WebUtilities.HttpClientWrapper;
+using SongFeedReaders.Feeds.ScoreSaber;
 
 namespace SongFeedReadersTests
 {
@@ -16,6 +17,38 @@ namespace SongFeedReadersTests
     public class UnitTest1
     {
         public static readonly ILogFactory? LogFactory = null;
+
+        [TestMethod]
+        public void ScoreSaberFeed_CreateUri()
+        {
+            var feedNumber = ScoreSaberFeed.FeedNumber.LatestRanked;
+            int songsPerPage = 50;
+            int pageNum = 1;
+            bool rankedOnly = true;
+
+            Uri uri = ScoreSaberFeed.CreateUri(feedNumber, pageNum, rankedOnly, songsPerPage);
+            string str = uri.ToString();
+        }
+
+
+        [TestMethod]
+        public async Task TestScoreSaberLatest()
+        {
+            ILogFactory logFactory = Utilities.DefaultLogFactory;
+            IWebClient client = new HttpClientWrapper();
+            ScoreSaberPageHandler pageHandler = new ScoreSaberPageHandler();
+            ScoreSaberLatestSettings feedSettings = new ScoreSaberLatestSettings()
+            {
+                MaxSongs = 57,
+                RankedOnly = true
+            };
+            IFeed feed = new ScoreSaberLatestFeed(feedSettings, pageHandler, client, logFactory);
+            var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
+            Assert.IsTrue(result.Count > 0);
+            var pages = result.GetResults().ToArray();
+            var songs = result.GetSongs().ToArray();
+        }
+
         [TestMethod]
         public async Task TestBeatSaverLatest()
         {

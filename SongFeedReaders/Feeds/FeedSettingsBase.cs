@@ -27,5 +27,18 @@ namespace SongFeedReaders.Feeds
 
         /// <inheritdoc/>
         public abstract object Clone();
+
+        /// <summary>
+        /// Copies the values from this instance to <paramref name="target"/>.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="target"></param>
+        protected virtual void CopyTo<T>(T target) where T : FeedSettingsBase
+        {
+            target.MaxSongs = MaxSongs;
+            target.StoreRawData = StoreRawData;
+            target.Filter = Filter;
+            target.StopWhenAny = StopWhenAny;
+        }
     }
 }
