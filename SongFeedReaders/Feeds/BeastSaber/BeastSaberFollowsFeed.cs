@@ -36,7 +36,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
         {
             EnsureValidSettings();
             BeastSaberFollowsSettings s = (BeastSaberFollowsSettings)FeedSettings;
-            return new Uri(BaseUri, $"members/{s.Username}/wall/followings/feed/?acpage={page}");
+            return new Uri(BaseUri, $"https://bsaber.com/wp-json/bsaber-api/songs/?followed_by={s.Username}&count=50&page={page}");
         }
 
         /// <inheritdoc/>
