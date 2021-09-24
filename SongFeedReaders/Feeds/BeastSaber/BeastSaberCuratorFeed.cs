@@ -35,14 +35,13 @@ namespace SongFeedReaders.Feeds.BeastSaber
         public Uri GetUriForPage(int page)
         {
             EnsureValidSettings();
-            BeastSaberCuratorSettings s = (BeastSaberCuratorSettings)FeedSettings;
             return new Uri(BaseUri, $"wp-json/bsaber-api/songs/?bookmarked_by=curatorrecommended&page={page}");
         }
 
         /// <inheritdoc/>
         protected override bool AreSettingsValid(IFeedSettings settings)
         {
-            if (settings is BeastSaberCuratorSettings bSettings)
+            if (settings is BeastSaberCuratorSettings)
             {
                 return true;
             }

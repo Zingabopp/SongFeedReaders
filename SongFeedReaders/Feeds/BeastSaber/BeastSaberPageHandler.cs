@@ -206,8 +206,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
                                     { XML_SONGKEY_KEY, songKey }
                                 };
                             }
-                            Uri? downloadUri;
-                            if (!Uri.TryCreate(downloadUrl, UriKind.Absolute, out downloadUri))
+                            if (!Uri.TryCreate(downloadUrl, UriKind.Absolute, out Uri? downloadUri))
                             {
                                 Logger?.Debug($"Could not create a URI from '{downloadUrl}' with song '{songName} by {mapperName}.");
                                 if (!string.IsNullOrWhiteSpace(hash))

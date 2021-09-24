@@ -4,24 +4,6 @@
         <name>SongFeedReaders</name>
     </assembly>
     <members>
-        <member name="T:SongFeedReaders.FeedPageHandlerBase">
-            <summary>
-            Base class for an <see cref="T:SongFeedReaders.Feeds.IFeedPageHandler"/>.
-            </summary>
-        </member>
-        <member name="M:SongFeedReaders.FeedPageHandlerBase.Parse(SongFeedReaders.Feeds.PageContent,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
-            <inheritdoc/>
-        </member>
-        <member name="M:SongFeedReaders.FeedPageHandlerBase.AcceptSong(SongFeedReaders.Models.ScrapedSong,SongFeedReaders.Feeds.IFeedSettings)">
-            <summary>
-            Filters songs according to the generic filterable settings in <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/>.
-            </summary>
-            <param name="song"></param>
-            <param name="settings"></param>
-            <returns></returns>
-            <exception cref="T:SongFeedReaders.Feeds.FeedFilterException"></exception>
-            <exception cref="T:System.ArgumentNullException"></exception>
-        </member>
         <member name="T:SongFeedReaders.Feeds.BeastSaber.BeastSaberBookmarksFeed">
             <summary>
             A feed that reads songs bookmarked by a bsaber.com user.
@@ -390,7 +372,7 @@
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverMapperFeed.InitializeAsync(System.Threading.CancellationToken)">
             <inheritdoc/>
         </member>
-        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverMapperFeed._initializeWait(System.Threading.CancellationToken)">
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverMapperFeed.InitializeWaitAsync(System.Threading.CancellationToken)">
             <summary>
             Waits for an existing Initialization task allowing for a separate cancellation token.
             </summary>
@@ -986,6 +968,33 @@
             Move forward in time.
             </summary>
         </member>
+        <member name="T:SongFeedReaders.Feeds.FeedPageHandlerBase">
+            <summary>
+            Base class for an <see cref="T:SongFeedReaders.Feeds.IFeedPageHandler"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedPageHandlerBase.Parse(SongFeedReaders.Feeds.PageContent,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedPageHandlerBase.CreateResult(System.Collections.Generic.List{SongFeedReaders.Models.ScrapedSong},System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
+            <summary>
+            Creates a basic <see cref="T:SongFeedReaders.Feeds.PageReadResult"/> from the given songs, pageUri, and settings.
+            </summary>
+            <param name="songs"></param>
+            <param name="pageUri"></param>
+            <param name="settings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.FeedPageHandlerBase.AcceptSong(SongFeedReaders.Models.ScrapedSong,SongFeedReaders.Feeds.IFeedSettings)">
+            <summary>
+            Filters songs according to the generic filterable settings in <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/>.
+            </summary>
+            <param name="song"></param>
+            <param name="settings"></param>
+            <returns></returns>
+            <exception cref="T:SongFeedReaders.Feeds.FeedFilterException"></exception>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
         <member name="T:SongFeedReaders.Feeds.FeedResult">
             <summary>
             Stores the results of a feed.
@@ -1367,7 +1376,7 @@
         </member>
         <member name="T:SongFeedReaders.Feeds.PagedFeedAsyncEnumerator">
             <summary>
-            
+            Iterates through feed pages by their page number.
             </summary>
         </member>
         <member name="F:SongFeedReaders.Feeds.PagedFeedAsyncEnumerator.PagedFeed">
@@ -1566,6 +1575,45 @@
             <summary>
             An error occurred while filtering songs.
             </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.IScoreSaberPageHandler">
+            <summary>
+            Handles reading content from a ScoreSaber feed page.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed">
+            <summary>
+            Base class for ScoreSaber feeds.
+            </summary>
+        </member>
+        <member name="F:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.BaseUri">
+            <summary>
+            Base URI for bsaber.com
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.#ctor(SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeedSettings,SongFeedReaders.Feeds.ScoreSaber.IScoreSaberPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Initializes a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed"/>.
+            </summary>
+            <param name="feedSettings"></param>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.GetPageContent(WebUtilities.IWebResponseContent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeedSettings">
+            <summary>
+            Base class for ScoreSaber feed settings
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeedSettings.StartingPage">
+            <summary>
+            Page of the feed to start on, default is 1. Setting '1' here is the same as starting on the first page.
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> when set to less than 1.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when set to less than 1.</exception>
         </member>
         <member name="T:SongFeedReaders.Logging.FeedReaderLogger">
             <summary>

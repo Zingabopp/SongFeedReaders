@@ -11,7 +11,7 @@ namespace SongFeedReaders.Feeds
     /// </summary>
     public class DatedFeedAsyncEnumerator : FeedAsyncEnumerator
     {
-        private SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
         /// <summary>
         /// The feed associated with this object.
         /// </summary>

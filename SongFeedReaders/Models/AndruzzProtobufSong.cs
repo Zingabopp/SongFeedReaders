@@ -11,6 +11,8 @@ namespace SongFeedReaders.Models
     [ProtoContract(SkipConstructor = true)]
     public class AndruzzProtobufContainer
     {
+#pragma warning disable IDE1006 // Naming Styles
+#pragma warning disable IDE0051 // Remove unused private members
         /// <summary>
         /// Format version.
         /// </summary>
@@ -179,6 +181,8 @@ namespace SongFeedReaders.Models
         //[ProtoMember(13, OverwriteList = true)]
         //internal readonly AndruzzProtobufDiff[] difficulties = null!;
 
+#pragma warning restore IDE0051 // Remove unused private members
+#pragma warning restore IDE1006 // Naming Styles
         AndruzzProtobufSong()
         {
             songDurationSeconds = 1;

@@ -15,7 +15,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
     /// </summary>
     public class BeatSaverMapperFeed : BeatSaverFeed, IPagedFeed
     {
-        private BeatSaverMapperSettings mapperFeedSettings => (BeatSaverMapperSettings)FeedSettings;
+        private BeatSaverMapperSettings MapperFeedSettings => (BeatSaverMapperSettings)FeedSettings;
         private readonly object _initializeLock = new object();
         /// <summary>
         /// A dictionary with Beat Saver username keys mapped to author IDs.
@@ -49,7 +49,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         public override string FeedId => "BeatSaver.Mapper";
 
         /// <inheritdoc/>
-        public override string DisplayName => $"Beat Saver Mapper: {mapperFeedSettings.MapperName}";
+        public override string DisplayName => $"Beat Saver Mapper: {MapperFeedSettings.MapperName}";
 
         /// <inheritdoc/>
         public override string Description => "Songs uploaded by a specific mapper";
@@ -70,11 +70,11 @@ namespace SongFeedReaders.Feeds.BeatSaver
             {
                 if(_initializeTask == null || (_initializeTask.IsCompleted && !Initialized))
                 {
-                    _initializeTask = GetAuthorIDAsync(mapperFeedSettings.MapperName, cancellationToken);
+                    _initializeTask = GetAuthorIDAsync(MapperFeedSettings.MapperName, cancellationToken);
                     return _initializeTask;
                 }
             }
-            return _initializeWait(cancellationToken);
+            return InitializeWaitAsync(cancellationToken);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        private async Task _initializeWait(CancellationToken cancellationToken)
+        private async Task InitializeWaitAsync(CancellationToken cancellationToken)
         {
             TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
             using var reg = cancellationToken.Register(() => tcs.TrySetCanceled());

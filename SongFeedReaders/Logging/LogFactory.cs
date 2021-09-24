@@ -10,9 +10,9 @@ namespace SongFeedReaders.Logging
     /// <summary>
     /// A basic <see cref="ILogFactory"/>.
     /// </summary>
-    public class LogFactory : ILogFactory
+    public sealed class LogFactory : ILogFactory
     {
-        Func<string?, ILogger> Factory;
+        private readonly Func<string?, ILogger> Factory;
         /// <summary>
         /// Creates a new <see cref="LogFactory"/>.
         /// </summary>

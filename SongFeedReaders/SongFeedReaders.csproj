@@ -19,8 +19,4 @@
 		<ProjectReference Include="..\submodules\WebUtilities\WebUtilities\WebUtilities.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Feeds\ScoreSaber\" />
-	</ItemGroup>
-
 </Project>

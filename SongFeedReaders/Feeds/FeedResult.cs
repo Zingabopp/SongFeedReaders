@@ -28,7 +28,7 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         public FeedReaderException? Exception { get; private set; }
 
-        private bool _successful;
+        private readonly bool _successful;
         /// <summary>
         /// True if the feed reading was successful.
         /// </summary>

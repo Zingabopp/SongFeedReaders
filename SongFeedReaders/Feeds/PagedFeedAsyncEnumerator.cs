@@ -11,7 +11,7 @@ namespace SongFeedReaders.Feeds
     /// </summary>
     public class PagedFeedAsyncEnumerator : FeedAsyncEnumerator
     {
-        private SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
         /// <summary>
         /// <see cref="IPagedFeed"/> used by this instance.
         /// </summary>

@@ -51,7 +51,7 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         public FeedReaderException? Exception { get; private set; }
 
-        private bool _successful;
+        private readonly bool _successful;
         /// <summary>
         /// If true, indicates the reading of the page was successful.
         /// </summary>
@@ -195,23 +195,18 @@ namespace SongFeedReaders.Feeds
         /// <returns></returns>
         public static string ErrorToString(this PageErrorType pageError)
         {
-            switch (pageError)
+            return pageError switch
             {
-                case PageErrorType.None:
-                    return string.Empty;
-                case PageErrorType.Timeout:
-                    return "Timeout";
-                case PageErrorType.SiteError:
-                    return "Site Error";
-                case PageErrorType.ParsingError:
-                    return "Parsing Error";
-                case PageErrorType.PageOutOfRange:
-                    return "Page out of range";
-                case PageErrorType.Unknown:
-                    return "Unknown Error";
-                default:
-                    return "Unknown Error";
-            }
+                PageErrorType.None => string.Empty,
+                PageErrorType.Timeout => "Timeout",
+                PageErrorType.SiteError => "Site Error",
+                PageErrorType.ParsingError => "Parsing Error",
+                PageErrorType.PageOutOfRange => "Page out of range",
+                PageErrorType.Unknown => "Unknown Error",
+                PageErrorType.Cancelled => "Operation cancelled",
+                PageErrorType.FilterError => "Error in filter",
+                _ => "Unknown Error",
+            };
         }
     }
     /// <summary>

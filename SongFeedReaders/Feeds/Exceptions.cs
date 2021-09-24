@@ -32,12 +32,10 @@ namespace SongFeedReaders.Feeds
             : base(message, innerException) { }
     }
 
-#pragma warning disable CA2237 // Mark ISerializable types with serializable
     /// <summary>
     /// This exception is thrown when an error occurs while reading a feed.
     /// </summary>
     public class FeedReaderException : Exception
-#pragma warning restore CA2237 // Mark ISerializable types with serializable
     {
         /// <summary>
         /// A <see cref="FeedReaderFailureCode"/> associated with the exception.

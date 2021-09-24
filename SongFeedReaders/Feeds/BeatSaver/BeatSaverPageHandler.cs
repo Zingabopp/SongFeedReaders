@@ -127,8 +127,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
                 DateTime uploadDate = song["uploaded"]?.Value<DateTime>() ?? DateTime.MinValue;
                 if (songHash == null || songHash.Length == 0)
                     throw new ArgumentException("Unable to find hash for the provided song, is this a valid song JObject?");
-                Uri downloadUri;
-                if (!Uri.TryCreate(latestVersion["downloadURL"]?.Value<string>(), UriKind.Absolute, out downloadUri))
+                if (!Uri.TryCreate(latestVersion["downloadURL"]?.Value<string>(), UriKind.Absolute, out Uri downloadUri))
                 {
                     Logger?.Debug($"Failed to get download URI from JSON, calculating using hash.");
                     downloadUri = BeatSaverHelper.GetDownloadUriByHash(songHash);

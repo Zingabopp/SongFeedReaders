@@ -8,16 +8,16 @@ namespace SongFeedReadersTests
 {
     internal static class Utilities
     {
-        public static ILogFactory DefaultLogFactory => new LogFactory(logFactory);
+        public static ILogFactory DefaultLogFactory => new LogFactory(LogFactory);
 
-        private static ILogger logFactory(string? moduleName)
+        private static ILogger LogFactory(string? moduleName)
         {
             return new TestConsoleLogger(moduleName);
         }
 
         private class TestConsoleLogger : ILogger
         {
-            private string? ModuleName;
+            private readonly string? ModuleName;
             public TestConsoleLogger(string? moduleName)
             {
                 ModuleName = moduleName;
