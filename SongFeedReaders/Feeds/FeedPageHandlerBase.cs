@@ -1,4 +1,5 @@
 ﻿using SongFeedReaders.Feeds;
+using SongFeedReaders.Logging;
 using SongFeedReaders.Models;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,30 @@ namespace SongFeedReaders.Feeds
     /// </summary>
     public abstract class FeedPageHandlerBase : IFeedPageHandler
     {
+        /// <summary>
+        /// Logger used by this instance.
+        /// </summary>
+        protected readonly ILogger? Logger;
+        /// <summary>
+        /// Creates a new <see cref="FeedPageHandlerBase"/>
+        /// </summary>
+        protected FeedPageHandlerBase()
+        { }
+        /// <summary>
+        /// Creates a new <see cref="FeedPageHandlerBase"/>
+        /// </summary>
+        protected FeedPageHandlerBase(ILogger? logger)
+        {
+            Logger = logger;
+        }
+        /// <summary>
+        /// Creates a new <see cref="FeedPageHandlerBase"/>
+        /// </summary>
+        protected FeedPageHandlerBase(ILogFactory? logFactory)
+        {
+            Logger = logFactory?.GetLogger(GetType().Name);
+        }
+
         /// <inheritdoc/>
         public abstract PageReadResult Parse(PageContent content, Uri? pageUri, IFeedSettings settings);
 

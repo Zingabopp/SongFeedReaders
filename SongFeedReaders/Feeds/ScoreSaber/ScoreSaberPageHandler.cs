@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SongFeedReaders.Logging;
 using SongFeedReaders.Models;
 using SongFeedReaders.Utilities;
 using System;
@@ -14,6 +15,20 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// </summary>
     public class ScoreSaberPageHandler : FeedPageHandlerBase, IScoreSaberPageHandler
     {
+        /// <summary>
+        /// Creates a new <see cref="ScoreSaberPageHandler"/>.
+        /// </summary>
+        public ScoreSaberPageHandler()
+        { }
+        /// <summary>
+        /// Creates a new <see cref="ScoreSaberPageHandler"/>.
+        /// </summary>
+        /// <param name="logFactory"></param>
+        public ScoreSaberPageHandler(ILogFactory? logFactory)
+            : base(logFactory)
+        {
+        }
+
         /// <inheritdoc/>
         public override PageReadResult Parse(PageContent content, Uri? pageUri, IFeedSettings settings)
         {
@@ -35,25 +50,40 @@ namespace SongFeedReaders.Feeds.ScoreSaber
             }
             foreach (JObject jSong in songJSONAry)
             {
-                string? hash = jSong["id"]?.Value<string>();
+                ScrapedSong song = CreateSong(jSong, settings.StoreRawData);
+                song.SourceUri = pageUri;
+                string? hash = song.Hash;
                 if (hash == null || hash.Length == 0)
                 {
                     // TODO: Log something or throw here?
                     continue;
                 }
-                string? songName = jSong["name"]?.Value<string>();
-                string? mapperName = jSong["levelAuthorName"]?.Value<string>();
-                ScrapedSong song = new ScrapedSong(
-                    hash: hash,
-                    songName: songName,
-                    mapperName: mapperName,
-                    downloadUri: BeatSaverHelper.GetDownloadUriByHash(hash),
-                    sourceUri: pageUri,
-                    jsonData: settings.StoreRawData ? jSong : null);
                 if (!string.IsNullOrEmpty(hash))
                     songsOnPage.Add(song);
             }
             return CreateResult(songsOnPage, pageUri, settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="ScrapedSong"/> from a ScoreSaber <see cref="JObject"/>.
+        /// </summary>
+        /// <param name="jSong"></param>
+        /// <param name="storeRawData"></param>
+        /// <returns></returns>
+        public static ScrapedSong CreateSong(JObject jSong, bool storeRawData)
+        {
+            ScrapedSong? song = jSong.ToObject<ScoreSaberSong>()
+                ?? new ScrapedSong();
+            string? hash = jSong["id"]?.Value<string>();
+            song.Hash = hash;
+
+            song.Name = jSong["name"]?.Value<string>();
+            song.LevelAuthorName = jSong["levelAuthorName"]?.Value<string>();
+            if (!string.IsNullOrWhiteSpace(hash))
+                song.DownloadUri = BeatSaverHelper.GetDownloadUriByHash(hash!);
+            if (storeRawData)
+                song.JsonData = jSong;
+            return song;
         }
     }
 }

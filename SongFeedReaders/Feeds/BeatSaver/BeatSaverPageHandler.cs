@@ -16,10 +16,6 @@ namespace SongFeedReaders.Feeds.BeatSaver
     public class BeatSaverPageHandler : FeedPageHandlerBase, IBeatSaverPageHandler
     {
         /// <summary>
-        /// Logger used by this instance.
-        /// </summary>
-        protected readonly ILogger? Logger;
-        /// <summary>
         /// Creates a new <see cref="BeatSaverPageHandler"/>.
         /// </summary>
         public BeatSaverPageHandler() { }
@@ -28,8 +24,8 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// </summary>
         /// <param name="logFactory"></param>
         public BeatSaverPageHandler(ILogFactory? logFactory)
+            : base(logFactory)
         {
-            Logger = logFactory?.GetLogger(nameof(BeatSaverPageHandler));
         }
 
         /// <inheritdoc/>

@@ -22,7 +22,7 @@ namespace SongFeedReaders.Models
         /// <param name="songHash"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="key"/> is null or empty.</exception>
-        public static ScrapedSong CreateFromKey(string key, string songName, string mapperName, 
+        public static ScrapedSong CreateFromKey(string key, string songName, string mapperName,
             Uri downloadUri, Uri sourceUri, JObject? jsonData = null, string? songHash = null)
         {
             if (string.IsNullOrEmpty(key))
@@ -82,7 +82,7 @@ namespace SongFeedReaders.Models
         /// <summary>
         /// Raw JSON data for the song.
         /// </summary>
-        public JObject? JsonData { get; protected set; }
+        public JObject? JsonData { get; set; }
 
         /// <summary>
         /// Creates an empty <see cref="ScrapedSong"/>.
@@ -167,6 +167,29 @@ namespace SongFeedReaders.Models
             return $"{keyStr}{Name} by {LevelAuthorName}";
         }
 
+        /// <summary>
+        /// Updates this object with information from <paramref name="other"/>.
+        /// Only updates data from <paramref name="other"/> if it exists (does not copy null data).
+        /// </summary>
+        /// <param name="other"></param>
+        /// <param name="updateJson"></param>
+        public virtual void UpdateFrom(ScrapedSong other, bool updateJson = true)
+        {
+            if (!string.IsNullOrWhiteSpace(other.Hash))
+                Hash = other.Hash;
+            if (DownloadUri != null)
+                DownloadUri = other.DownloadUri;
+            if (!string.IsNullOrWhiteSpace(other.Key))
+                Key = other.Key;
+            if (!string.IsNullOrWhiteSpace(other.Name))
+                Name = other.Name;
+            if (!string.IsNullOrWhiteSpace(other.LevelAuthorName))
+                Name = other.LevelAuthorName;
+            if (other.UploadDate > UploadDate)
+                UploadDate = other.UploadDate;
+            if (updateJson)
+                JsonData = other.JsonData;
+        }
         ///// <summary>
         ///// Copies the values from another ScrapedSong into this one.
         ///// </summary>

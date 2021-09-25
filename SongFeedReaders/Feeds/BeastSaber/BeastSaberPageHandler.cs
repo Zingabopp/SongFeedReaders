@@ -25,11 +25,6 @@ namespace SongFeedReaders.Feeds.BeastSaber
 
 
         /// <summary>
-        /// Logger used by this instance.
-        /// </summary>
-        protected readonly ILogger? Logger;
-
-        /// <summary>
         /// Creates a new <see cref="BeastSaberPageHandler"/>.
         /// </summary>
         public BeastSaberPageHandler() { }
@@ -39,8 +34,8 @@ namespace SongFeedReaders.Feeds.BeastSaber
         /// </summary>
         /// <param name="logFactory"></param>
         public BeastSaberPageHandler(ILogFactory? logFactory)
+            : base(logFactory)
         {
-            Logger = logFactory?.GetLogger();
         }
 
         /// <inheritdoc/>
@@ -57,8 +52,13 @@ namespace SongFeedReaders.Feeds.BeastSaber
                 List<ScrapedSong> songs;
                 if (content.ContentId == PageContent.ContentId_JSON)
                     songs = ParseJsonPage(content.Content, pageUri, settings);
-                else
+                else if (content.ContentId == PageContent.ContentId_XML)
                     songs = ParseXMLPage(content.Content, pageUri, settings);
+                else
+                {
+                    Logger?.Warning($"Unrecognized ContentId ({content.ContentId}), trying JSON");
+                    songs = ParseJsonPage(content.Content, pageUri, settings);
+                }
 
                 return CreateResult(songs, pageUri, settings);
             }

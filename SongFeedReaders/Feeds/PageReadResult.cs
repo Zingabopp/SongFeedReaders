@@ -123,7 +123,7 @@ namespace SongFeedReaders.Feeds
         /// <inheritdoc/>
         public override string ToString()
         {
-            return $"{Uri} | {_songs.Length.ToString() ?? "<NULL>"}";
+            return $"{_songs.Length.ToString() ?? "<NULL>"} | {Uri}";
         }
 
         /// <summary>
