@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SongFeedReaders.Logging;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using WebUtilities;
@@ -14,7 +15,10 @@ namespace SongFeedReaders.Feeds
         /// Feed to enumerate through.
         /// </summary>
         protected readonly IFeed Feed;
-
+        /// <summary>
+        /// Logger used by this object.
+        /// </summary>
+        protected readonly ILogger? Logger;
         /// <summary>
         /// How many pages to load forward/backward. Page caching must be enabled.
         /// </summary>
@@ -35,9 +39,11 @@ namespace SongFeedReaders.Feeds
         /// Creates a new <see cref="FeedAsyncEnumerator"/>.
         /// </summary>
         /// <param name="feed"></param>
-        protected FeedAsyncEnumerator(IFeed feed)
+        /// <param name="logger"></param>
+        protected FeedAsyncEnumerator(IFeed feed, ILogger? logger = null)
         {
             Feed = feed ?? throw new ArgumentNullException(nameof(feed));
+            Logger = logger;
             CanMoveNext = true;
         }
         /// <summary>
@@ -45,8 +51,9 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         /// <param name="feed"></param>
         /// <param name="cachePages"></param>
-        protected FeedAsyncEnumerator(IFeed feed, bool cachePages)
-            : this(feed)
+        /// <param name="logger"></param>
+        protected FeedAsyncEnumerator(IFeed feed, bool cachePages, ILogger? logger = null)
+            : this(feed, logger)
         {
             EnablePageCache = cachePages;
         }

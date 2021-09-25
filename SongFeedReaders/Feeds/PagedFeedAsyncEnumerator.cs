@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SongFeedReaders.Logging;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -29,8 +30,10 @@ namespace SongFeedReaders.Feeds
         /// <param name="feed"></param>
         /// <param name="feedFirstPage"></param>
         /// <param name="startingPage"></param>
-        public PagedFeedAsyncEnumerator(IPagedFeed feed, int startingPage, int feedFirstPage)
-            : this(feed, startingPage, feedFirstPage, false)
+        /// <param name="logger"></param>
+        public PagedFeedAsyncEnumerator(IPagedFeed feed, int startingPage,
+            int feedFirstPage, ILogger? logger = null)
+            : this(feed, startingPage, feedFirstPage, false, logger)
         {
         }
         /// <summary>
@@ -40,8 +43,10 @@ namespace SongFeedReaders.Feeds
         /// <param name="startingPage"></param>
         /// <param name="feedFirstPage"></param>
         /// <param name="cachePages"></param>
-        public PagedFeedAsyncEnumerator(IPagedFeed feed, int startingPage, int feedFirstPage, bool cachePages)
-            : base(feed, cachePages)
+        /// <param name="logger"></param>
+        public PagedFeedAsyncEnumerator(IPagedFeed feed, int startingPage, 
+            int feedFirstPage, bool cachePages, ILogger? logger = null)
+            : base(feed, cachePages, logger)
         {
             if (startingPage < feedFirstPage)
                 throw new ArgumentException($"startingPage '{startingPage}' can't be less than the feed's first page '{feedFirstPage}'");

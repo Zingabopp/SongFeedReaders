@@ -53,7 +53,8 @@ namespace SongFeedReaders.Feeds.BeastSaber
         {
             EnsureValidSettings();
             BeastSaberCuratorSettings s = (BeastSaberCuratorSettings)settings;
-            return new PagedFeedAsyncEnumerator(this, s.StartingPage, FeedStartingPage);
+            return new PagedFeedAsyncEnumerator(this, s.StartingPage, FeedStartingPage,
+                Logger);
         }
     }
 }

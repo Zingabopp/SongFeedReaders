@@ -1,0 +1,70 @@
+﻿{
+  "id": "1c82c",
+  "name": "Ghost but bad",
+  "description": "Ez",
+  "uploader": {
+    "id": 4230987,
+    "name": "codfish1738",
+    "uniqueSet": true,
+    "hash": "60df69cccd73ba00060db192",
+    "avatar": "https://www.gravatar.com/avatar/60df69cccd73ba00060db192?d=retro",
+    "type": "SIMPLE"
+  },
+  "metadata": {
+    "bpm": 220.0,
+    "duration": 351,
+    "songName": "Ghost",
+    "songSubName": "",
+    "songAuthorName": "Camellia",
+    "levelAuthorName": "Codfish1738"
+  },
+  "stats": {
+    "plays": 0,
+    "downloads": 203,
+    "upvotes": 0,
+    "downvotes": 1,
+    "score": 0.4058
+  },
+  "uploaded": "2021-09-25T00:37:29.885139Z",
+  "automapper": false,
+  "ranked": false,
+  "qualified": false,
+  "versions": [
+    {
+      "hash": "1cf39eea882ec6bd02dcd2ee889139fbac2a6076",
+      "state": "Published",
+      "createdAt": "2021-09-25T00:36:41.878314Z",
+      "sageScore": 3,
+      "diffs": [
+        {
+          "njs": 18.0,
+          "offset": 0.0,
+          "notes": 2287,
+          "bombs": 269,
+          "obstacles": 266,
+          "nps": 6.746,
+          "length": 1243.0,
+          "characteristic": "OneSaber",
+          "difficulty": "ExpertPlus",
+          "events": 1,
+          "chroma": false,
+          "me": false,
+          "ne": false,
+          "cinema": false,
+          "seconds": 339.0,
+          "paritySummary": {
+            "errors": 43,
+            "warns": 131,
+            "resets": 31
+          }
+        }
+      ],
+      "downloadURL": "https://na.cdn.beatsaver.com/1cf39eea882ec6bd02dcd2ee889139fbac2a6076.zip",
+      "coverURL": "https://na.cdn.beatsaver.com/1cf39eea882ec6bd02dcd2ee889139fbac2a6076.jpg",
+      "previewURL": "https://na.cdn.beatsaver.com/1cf39eea882ec6bd02dcd2ee889139fbac2a6076.mp3"
+    }
+  ],
+  "createdAt": "2021-09-25T00:36:41.878314Z",
+  "updatedAt": "2021-09-25T00:37:29.885139Z",
+  "lastPublishedAt": "2021-09-25T00:37:29.885139Z"
+}

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SongFeedReaders.Logging;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -32,8 +33,10 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         /// <param name="datedFeed"></param>
         /// <param name="cachePages"></param>
-        public DatedFeedAsyncEnumerator(IDatedFeed datedFeed, bool cachePages = false)
-            : this(datedFeed, FeedDate.Default, cachePages) { }
+        /// <param name="logger"></param>
+        public DatedFeedAsyncEnumerator(IDatedFeed datedFeed, bool cachePages = false,
+            ILogger? logger = null)
+            : this(datedFeed, FeedDate.Default, cachePages, logger) { }
 
         /// <summary>
         /// Creates a new <see cref="FeedAsyncEnumerator"/>.
@@ -41,8 +44,10 @@ namespace SongFeedReaders.Feeds
         /// <param name="datedFeed"></param>
         /// <param name="feedDate"></param>
         /// <param name="cachePages"></param>
-        public DatedFeedAsyncEnumerator(IDatedFeed datedFeed, FeedDate feedDate, bool cachePages = false)
-            : base(datedFeed, cachePages)
+        /// <param name="logger"></param>
+        public DatedFeedAsyncEnumerator(IDatedFeed datedFeed, FeedDate feedDate,
+            bool cachePages = false, ILogger? logger = null)
+            : base(datedFeed, cachePages, logger)
         {
             CurrentEarliest = feedDate.Date;
             CurrentLatest = feedDate.Date;
@@ -66,10 +71,18 @@ namespace SongFeedReaders.Feeds
                 // First/Last song should never be null if SongsOnPage > 0.
                 CurrentLatest = result.FirstSong!.UploadDate;
                 CurrentEarliest = result.LastSong!.UploadDate;
+                //Logger?.Debug($"Latest: {result.FirstSong?.Key}: {CurrentLatest.ToLocalTime()}");
+                //Logger?.Debug($"Earliest: {result.LastSong?.Key}: {CurrentEarliest.ToLocalTime()}");
                 if (dateDirection == DateDirection.Before)
+                {
                     CanMoveNext = true;
+                    CanMovePrevious = CurrentLatest < Utilities.Util.Now;
+                }
                 else
-                    CanMovePrevious = true;
+                {
+                    CanMoveNext = true;
+                    CanMovePrevious = CurrentLatest < Utilities.Util.Now; ;
+                }
             }
             else
             {
@@ -79,17 +92,56 @@ namespace SongFeedReaders.Feeds
                     CanMovePrevious = false;
             }
         }
+
         /// <inheritdoc/>
         public override async Task<PageReadResult> MoveNextAsync(CancellationToken cancellationToken)
         {
             PageReadResult? result = null;
-            Uri? pageUri = null;
-            FeedDate feedDate = default;
-            bool criticalFailure = false;
             try
             {
                 await _semaphore.WaitAsync(cancellationToken);
-                feedDate = new FeedDate(CurrentEarliest, DateDirection.Before);
+                FeedDate feedDate = new FeedDate(CurrentEarliest, DateDirection.Before);
+                result = await MoveAsync(feedDate, cancellationToken);
+            }
+            catch (OperationCanceledException ex)
+            {
+                result = PageReadResult.CancelledResult(null, ex);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+            return result;
+        }
+
+        /// <inheritdoc/>
+        public override async Task<PageReadResult> MovePreviousAsync(CancellationToken cancellationToken)
+        {
+            PageReadResult? result = null;
+            try
+            {
+                await _semaphore.WaitAsync(cancellationToken);
+                FeedDate feedDate = new FeedDate(CurrentLatest, DateDirection.After);
+                result = await MoveAsync(feedDate, cancellationToken);
+            }
+            catch (OperationCanceledException ex)
+            {
+                result = PageReadResult.CancelledResult(null, ex);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+            return result;
+        }
+
+        private async Task<PageReadResult> MoveAsync(FeedDate feedDate, CancellationToken cancellationToken)
+        {
+            PageReadResult? result = null;
+            Uri? pageUri = null;
+            bool criticalFailure = false;
+            try
+            {
                 pageUri = DatedFeed.GetUriForDate(feedDate);
                 if (pageUri == LastFetchedUri)
                 {
@@ -116,18 +168,10 @@ namespace SongFeedReaders.Feeds
             finally
             {
                 ProcessResult(result, feedDate.Direction);
-                _semaphore.Release();
             }
 
             return result;
         }
-
-        /// <inheritdoc/>
-        public override Task<PageReadResult> MovePreviousAsync(CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 
 

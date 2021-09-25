@@ -115,7 +115,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
                 throw new InvalidFeedSettingsException();
             if(!Initialized)
                 throw new FeedUninitializedException("The feed must be initialized before this operation can be performed.");
-            return new PagedFeedAsyncEnumerator(this, 1, 0);
+            return new PagedFeedAsyncEnumerator(this, 1, 0, Logger);
         }
 
 

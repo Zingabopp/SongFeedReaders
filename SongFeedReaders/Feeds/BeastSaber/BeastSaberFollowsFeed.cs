@@ -54,7 +54,8 @@ namespace SongFeedReaders.Feeds.BeastSaber
         {
             EnsureValidSettings();
             BeastSaberFollowsSettings s = (BeastSaberFollowsSettings)settings;
-            return new PagedFeedAsyncEnumerator(this, s.StartingPage, FeedStartingPage);
+            return new PagedFeedAsyncEnumerator(this, s.StartingPage, 
+                FeedStartingPage, Logger);
         }
     }
 }

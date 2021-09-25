@@ -59,7 +59,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         {
             if (!AreSettingsValid(settings))
                 throw new InvalidFeedSettingsException();
-            return new DatedFeedAsyncEnumerator(this, false);
+            return new DatedFeedAsyncEnumerator(this, false, Logger);
         }
     }
 }

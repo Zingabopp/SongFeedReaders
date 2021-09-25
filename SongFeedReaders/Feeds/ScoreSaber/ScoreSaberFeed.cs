@@ -141,7 +141,8 @@ namespace SongFeedReaders.Feeds.ScoreSaber
             EnsureValidSettings();
             if(this is IPagedFeed pagedFeed)
             {
-                return new PagedFeedAsyncEnumerator(pagedFeed, ScoreSaberSettings.StartingPage, FeedStartingPage);
+                return new PagedFeedAsyncEnumerator(pagedFeed, 
+                    ScoreSaberSettings.StartingPage, FeedStartingPage, Logger);
             }
             throw new NotImplementedException($"{FeedId} is not an IPagedFeed, this feed my override GetAsyncEnumerator.");
         }

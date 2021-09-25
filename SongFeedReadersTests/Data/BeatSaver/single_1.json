@@ -1,0 +1,72 @@
+﻿{
+  "id": "1",
+  "name": "succducc - me & u",
+  "description": "Hard Only / ~330 notes / Event Lighting! / https://soundcloud.com/succducc/me-n-u",
+  "uploader": {
+    "id": 48853,
+    "name": "datkami",
+    "uniqueSet": true,
+    "hash": "5cff0b7298cc5a672c84e8a3",
+    "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8a3?d=retro",
+    "type": "SIMPLE"
+  },
+  "metadata": {
+    "bpm": 160.0,
+    "duration": 144,
+    "songName": "me & u",
+    "songSubName": "",
+    "songAuthorName": "succducc",
+    "levelAuthorName": "datkami"
+  },
+  "stats": {
+    "plays": 0,
+    "downloads": 1217,
+    "upvotes": 534,
+    "downvotes": 106,
+    "score": 0.7866
+  },
+  "uploaded": "2018-05-08T14:28:56Z",
+  "automapper": false,
+  "ranked": true,
+  "qualified": false,
+  "versions": [
+    {
+      "hash": "fda568fc27c20d21f8dc6f3709b49b5cc96723be",
+      "key": "1",
+      "state": "Published",
+      "createdAt": "2018-05-08T14:28:56Z",
+      "sageScore": 4,
+      "diffs": [
+        {
+          "njs": 10.0,
+          "offset": 0.0,
+          "notes": 337,
+          "bombs": 28,
+          "obstacles": 11,
+          "nps": 2.422,
+          "length": 185.5,
+          "characteristic": "Standard",
+          "difficulty": "Hard",
+          "events": 81,
+          "chroma": false,
+          "me": false,
+          "ne": false,
+          "cinema": false,
+          "seconds": 69.563,
+          "paritySummary": {
+            "errors": 45,
+            "warns": 57,
+            "resets": 1
+          },
+          "stars": 2.81
+        }
+      ],
+      "downloadURL": "https://na.cdn.beatsaver.com/fda568fc27c20d21f8dc6f3709b49b5cc96723be.zip",
+      "coverURL": "https://na.cdn.beatsaver.com/fda568fc27c20d21f8dc6f3709b49b5cc96723be.jpg",
+      "previewURL": "https://na.cdn.beatsaver.com/fda568fc27c20d21f8dc6f3709b49b5cc96723be.mp3"
+    }
+  ],
+  "createdAt": "2018-05-08T14:28:56Z",
+  "updatedAt": "2018-05-08T14:28:56Z",
+  "lastPublishedAt": "2018-05-08T14:28:56Z"
+}
