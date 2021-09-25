@@ -6,7 +6,6 @@ using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace SongFeedReaders.Feeds.ScoreSaber
 {
@@ -32,24 +31,26 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <inheritdoc/>
         public override PageReadResult Parse(PageContent content, Uri? pageUri, IFeedSettings settings)
         {
-            JObject result;
+            JObject json;
             List<ScrapedSong> songsOnPage = new List<ScrapedSong>();
             try
             {
-                result = JObject.Parse(content.Content);
+                json = JObject.Parse(content.Content);
             }
             catch (JsonReaderException ex)
             {
                 throw new PageParseException($"Error reading JSON from page '{pageUri}'", ex);
             }
-            JToken[]? songJSONAry = result["songs"]?.ToArray();
+            JToken[]? songJSONAry = json["songs"]?.ToArray();
             if (songJSONAry == null)
             {
                 string message = "Invalid page text: 'songs' field not found.";
                 throw new PageParseException(message);
             }
+            int songCount = 0;
             foreach (JObject jSong in songJSONAry)
             {
+                songCount++;
                 ScrapedSong song = CreateSong(jSong, settings.StoreRawData);
                 song.SourceUri = pageUri;
                 string? hash = song.Hash;
@@ -61,7 +62,9 @@ namespace SongFeedReaders.Feeds.ScoreSaber
                 if (!string.IsNullOrEmpty(hash))
                     songsOnPage.Add(song);
             }
-            return CreateResult(songsOnPage, pageUri, settings);
+            bool isLastPage = songCount < settings.SongsPerPage;
+            PageReadResult result = CreateResult(songsOnPage, pageUri, settings, isLastPage);
+            return result;
         }
 
         /// <summary>

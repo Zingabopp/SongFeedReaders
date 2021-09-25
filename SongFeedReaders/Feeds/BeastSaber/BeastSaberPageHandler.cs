@@ -6,8 +6,6 @@ using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Xml;
 
 namespace SongFeedReaders.Feeds.BeastSaber
@@ -50,23 +48,24 @@ namespace SongFeedReaders.Feeds.BeastSaber
             try
             {
                 List<ScrapedSong> songs;
+                bool isLastPage = false;
                 if (content.ContentId == PageContent.ContentId_JSON)
-                    songs = ParseJsonPage(content.Content, pageUri, settings);
+                    songs = ParseJsonPage(content.Content, pageUri, settings, out isLastPage);
                 else if (content.ContentId == PageContent.ContentId_XML)
                     songs = ParseXMLPage(content.Content, pageUri, settings);
                 else
                 {
                     Logger?.Warning($"Unrecognized ContentId ({content.ContentId}), trying JSON");
-                    songs = ParseJsonPage(content.Content, pageUri, settings);
+                    songs = ParseJsonPage(content.Content, pageUri, settings, out isLastPage);
                 }
-
-                return CreateResult(songs, pageUri, settings);
+                PageReadResult result = CreateResult(songs, pageUri, settings, isLastPage);
+                return result;
             }
             catch (PageParseException ex)
             {
                 return new PageReadResult(pageUri, ex, PageErrorType.ParsingError);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return new PageReadResult(pageUri, ex, PageErrorType.Unknown);
             }
@@ -78,16 +77,18 @@ namespace SongFeedReaders.Feeds.BeastSaber
         /// <param name="pageText"></param>
         /// <param name="sourceUri"></param>
         /// <param name="settings"></param>
+        /// <param name="isLastPage"></param>
         /// <exception cref="PageParseException">Thrown when the page text is unable to parsed.</exception>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="pageText"/> or <paramref name="settings"/> is null.</exception>
         /// <returns></returns>
-        public virtual List<ScrapedSong> ParseJsonPage(string pageText, Uri? sourceUri, IFeedSettings settings)
+        public virtual List<ScrapedSong> ParseJsonPage(string pageText, Uri? sourceUri, IFeedSettings settings, out bool isLastPage)
         {
+            isLastPage = false;
             if (string.IsNullOrWhiteSpace(pageText))
                 throw new ArgumentNullException(nameof(pageText));
             if (settings == null)
                 throw new ArgumentNullException(nameof(pageText));
-            var songsOnPage = new List<ScrapedSong>();
+            List<ScrapedSong>? songsOnPage = new List<ScrapedSong>();
             JObject result;
             try
             {
@@ -98,7 +99,10 @@ namespace SongFeedReaders.Feeds.BeastSaber
                 throw new PageParseException($"Unable to parse JSON from '{sourceUri}'.", ex);
             }
             bool storeRawData = settings.StoreRawData;
-            var songs = result["songs"] ?? throw new PageParseException($"Page at '{sourceUri}' did not contain a 'songs' property");
+            JToken? songs = result["songs"] ?? throw new PageParseException($"Page at '{sourceUri}' did not contain a 'songs' property");
+            JToken? nextPage = result["next_page"];
+            if (nextPage != null && !nextPage.Value<int?>().HasValue)
+                isLastPage = true;
 
             foreach (JObject bSong in songs)
             {
@@ -133,7 +137,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
             if (settings == null)
                 throw new ArgumentNullException(nameof(pageText));
             bool retry = false;
-            var songsOnPage = new List<ScrapedSong>();
+            List<ScrapedSong>? songsOnPage = new List<ScrapedSong>();
             bool storeRawData = settings.StoreRawData;
             XmlDocument? xmlDocument = null;
             do
@@ -141,8 +145,8 @@ namespace SongFeedReaders.Feeds.BeastSaber
                 try
                 {
                     xmlDocument = new XmlDocument() { XmlResolver = null };
-                    var sr = new StringReader(pageText);
-                    using (var reader = XmlReader.Create(sr, new XmlReaderSettings() { XmlResolver = null }))
+                    StringReader? sr = new StringReader(pageText);
+                    using (XmlReader? reader = XmlReader.Create(sr, new XmlReaderSettings() { XmlResolver = null }))
                     {
                         xmlDocument.Load(reader);
                     }

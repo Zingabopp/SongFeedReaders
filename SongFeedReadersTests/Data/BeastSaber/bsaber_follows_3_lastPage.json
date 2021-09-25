@@ -1,0 +1,86 @@
+﻿{
+  "songs": [
+    {
+      "title": "Don't Stop the Party - Pitbull",
+      "song_key": "d7b",
+      "hash": "a7c9b5213eb616503dbd51c71c19d8bba319d2a6",
+      "level_author_name": "fafurion"
+    },
+    {
+      "title": "New Rules by Dua Lipa (Benny Original™)",
+      "song_key": "bd3",
+      "hash": "674b1b540ac5851c92c8cde7dd456698f5a733c4",
+      "level_author_name": "bennydabeast",
+      "curated_by": "curatorrecommended"
+    },
+    {
+      "title": "Otter Pop (feat. Hollis) by Shawn Wasabi",
+      "song_key": "83b",
+      "hash": "c7e15a9eaeaae0fe9dd8e4ad62cfd849e3cc6cc7",
+      "level_author_name": "bennydabeast",
+      "curated_by": "elliotttate"
+    },
+    {
+      "title": "Technologic - Daft Punk (Update)",
+      "song_key": "747",
+      "hash": "831247d7d02e948e5d03622748bb130b5057023d",
+      "level_author_name": "awfulnaut",
+      "curated_by": "agoza"
+    },
+    {
+      "title": "Cajsa Siik - Higher &lbrack;Lakechild Remix&rsqb;",
+      "song_key": "893",
+      "hash": "3d08f8b820a5c9a1b1d021b24e4ad6d07375bdbb",
+      "level_author_name": "ruckus"
+    },
+    {
+      "title": "NSP - Cookies!",
+      "song_key": "763",
+      "hash": "20e3a98005b0c45f0b60584fef1f6c55cd38c88f",
+      "level_author_name": "saladserver"
+    },
+    {
+      "title": "Mr. Blue Sky - Electric Light Orchestra",
+      "song_key": "570",
+      "hash": "236173d5ba7dc379d480b9cb5fb6b4fa5abe77da",
+      "level_author_name": "greatyazer",
+      "curated_by": "thelessergatsby"
+    },
+    {
+      "title": "Prototyperaptor - Awe",
+      "song_key": "65",
+      "hash": "f16443de4216fc5f9435f103d77a6919423edb8a",
+      "level_author_name": "rustic",
+      "curated_by": "teroc"
+    },
+    {
+      "title": "CAN'T STOP THE FEELING -Justin Timberlake",
+      "song_key": "45e",
+      "hash": "91ba25c089d50e93154e2c7920c46d4730f22569",
+      "level_author_name": "bennydabeast",
+      "curated_by": "teroc"
+    },
+    {
+      "title": "NSP - Cool Patrol",
+      "song_key": "19a",
+      "hash": "c87de9a5e4e8aa91d57403bde711033770b3c4a8",
+      "level_author_name": "calijor",
+      "curated_by": "elliotttate"
+    },
+    {
+      "title": "Believer - Imagine Dragons",
+      "song_key": "b",
+      "hash": "19f2879d11a91b51a5c090d63471c3e8d9b7aee3",
+      "level_author_name": "rustic",
+      "curated_by": "elliotttate"
+    },
+    {
+      "title": "Midnight City - M83 (Update)",
+      "song_key": "155",
+      "hash": "fbd8b9338bffb98555a10c69887234fac959d83d",
+      "level_author_name": "bennydabeast",
+      "curated_by": "curatorrecommended"
+    }
+  ],
+  "next_page": null
+}

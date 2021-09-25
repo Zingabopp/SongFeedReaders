@@ -46,12 +46,12 @@ namespace SongFeedReaders.Feeds
         /// <param name="songs"></param>
         /// <param name="pageUri"></param>
         /// <param name="settings"></param>
+        /// <param name="isLastPage"></param>
         /// <returns></returns>
-        protected virtual PageReadResult CreateResult(List<ScrapedSong> songs, Uri? pageUri, IFeedSettings settings)
+        protected virtual PageReadResult CreateResult(List<ScrapedSong> songs, Uri? pageUri, IFeedSettings settings, bool isLastPage = false)
         {
             try
             {
-                bool isLastPage = false;
                 Func<ScrapedSong, bool>? stopWhenAny = settings.StopWhenAny;
                 ScrapedSong? firstSong = songs.FirstOrDefault();
                 ScrapedSong? lastSong = songs.LastOrDefault();

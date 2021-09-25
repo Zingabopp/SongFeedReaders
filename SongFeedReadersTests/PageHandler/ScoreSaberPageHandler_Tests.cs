@@ -1,18 +1,18 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SongFeedReaders.Feeds;
 using SongFeedReaders.Feeds.ScoreSaber;
+using SongFeedReaders.Models;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace SongFeedReadersTests.PageHandler
 {
     [TestClass]
     public class ScoreSaberPageHandler_Tests
     {
-        readonly string DataPath = Path.GetFullPath(Path.Combine("Data", "ScoreSaber"));
-        string GetFilePath(string fileName) => Path.Combine(DataPath, fileName);
+        private readonly string DataPath = Path.GetFullPath(Path.Combine("Data", "ScoreSaber"));
+
+        private string GetFilePath(string fileName) => Path.Combine(DataPath, fileName);
         [TestMethod]
         public void StandardPage()
         {
@@ -39,7 +39,7 @@ namespace SongFeedReadersTests.PageHandler
             Assert.AreEqual(expectedIsLastPage, result.IsLastPage);
             Assert.AreEqual(expectedSongs, result.SongCount);
             Assert.AreEqual(expectedSongsOnPage, result.SongsOnPage);
-            foreach (var song in result.Songs())
+            foreach (SongFeedReaders.Models.ScrapedSong? song in result.Songs())
             {
                 Assert.IsFalse(string.IsNullOrWhiteSpace(song.Hash), "Hash is empty");
                 Assert.IsFalse(string.IsNullOrWhiteSpace(song.LevelAuthorName), "LevelAuthorName is empty");

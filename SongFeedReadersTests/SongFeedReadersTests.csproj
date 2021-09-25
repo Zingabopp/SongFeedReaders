@@ -21,6 +21,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Update="Data\BeastSaber\bsaber_follows_3_lastPage.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Data\BeastSaber\bsaber_follows_2.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	  <None Update="Data\BeastSaber\bsaber_follows_1.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>

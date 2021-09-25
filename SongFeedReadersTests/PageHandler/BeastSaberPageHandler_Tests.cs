@@ -50,5 +50,43 @@ namespace SongFeedReadersTests.PageHandler
                     $"{song.DownloadUri}");
             }
         }
+
+        [TestMethod]
+        public void LastPage()
+        {
+            int expectedSongs = 12;
+            int expectedSongsOnPage = 12;
+            PageErrorType expectedPageError = PageErrorType.None;
+            bool expectedIsLastPage = true;
+
+            Uri uri = new Uri(@"https://bsaber.com/wp-json/bsaber-api/songs/?followed_by=Zingabopp&count=50&page=3");
+            string contentType = PageContent.ContentId_JSON;
+            string json = File.ReadAllText(GetFilePath("bsaber_follows_3_lastPage.json"));
+            PageContent content = new PageContent(contentType, json);
+
+            BeastSaberPageHandler pageHandler = new BeastSaberPageHandler(Utilities.DefaultLogFactory);
+            BeastSaberFollowsSettings settings = new BeastSaberFollowsSettings()
+            {
+                StoreRawData = true
+            };
+            PageReadResult result = pageHandler.Parse(content, uri, settings);
+
+            Assert.IsTrue(result.Successful);
+            Assert.IsNull(result.Exception);
+            Assert.AreEqual(expectedPageError, result.PageError);
+            Assert.AreEqual(expectedIsLastPage, result.IsLastPage);
+            Assert.AreEqual(expectedSongs, result.SongCount);
+            Assert.AreEqual(expectedSongsOnPage, result.SongsOnPage);
+            foreach (var song in result.Songs())
+            {
+                Assert.IsFalse(string.IsNullOrWhiteSpace(song.Hash), "Hash is empty");
+                Assert.IsFalse(string.IsNullOrWhiteSpace(song.Key), "Key is empty");
+                Assert.IsFalse(string.IsNullOrWhiteSpace(song.LevelAuthorName), "LevelAuthorName is empty");
+                Assert.IsFalse(string.IsNullOrWhiteSpace(song.RawData), "RawData is empty");
+                Assert.AreEqual(uri.ToString(), song.SourceUri?.ToString());
+                Assert.IsTrue(song.DownloadUri?.ToString().ToUpper().Contains(song.Hash!),
+                    $"{song.DownloadUri}");
+            }
+        }
     }
 }

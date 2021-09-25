@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 using SongFeedReaders.Models;
 using System;
 
-namespace SongFeedReaders.Feeds.ScoreSaber
+namespace SongFeedReaders.Models
 {
     /// <summary>
     /// Holds the data for a ScoreSaber song.
