@@ -48,11 +48,11 @@ namespace SongFeedReaders.Feeds
         /// <param name="settings"></param>
         /// <param name="isLastPage"></param>
         /// <returns></returns>
-        protected virtual PageReadResult CreateResult(List<ScrapedSong> songs, Uri? pageUri, IFeedSettings settings, bool isLastPage = false)
+        protected virtual PageReadResult CreateResult(List<ScrapedSong> songs, Uri? pageUri, IFeedSettings? settings, bool isLastPage = false)
         {
             try
             {
-                Func<ScrapedSong, bool>? stopWhenAny = settings.StopWhenAny;
+                Func<ScrapedSong, bool>? stopWhenAny = settings?.StopWhenAny;
                 ScrapedSong? firstSong = songs.FirstOrDefault();
                 ScrapedSong? lastSong = songs.LastOrDefault();
                 int songsOnPage = songs.Count;
@@ -99,12 +99,12 @@ namespace SongFeedReaders.Feeds
         /// <returns></returns>
         /// <exception cref="FeedFilterException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        protected virtual bool AcceptSong(ScrapedSong song, IFeedSettings settings)
+        protected virtual bool AcceptSong(ScrapedSong song, IFeedSettings? settings)
         {
             if (song == null)
                 throw new ArgumentNullException(nameof(song));
             if (settings == null)
-                throw new ArgumentNullException(nameof(settings));
+                return true;
             Func<ScrapedSong, bool>? filter = settings.Filter;
             try
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SongFeedReaders.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -18,5 +19,16 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <returns></returns>
         /// <exception cref="PageParseException"></exception>
         string ParseUserIdFromPage(string pageText);
+
+        /// <summary>
+        /// Parses a single song from a Beat Saver song details page.
+        /// </summary>
+        /// <param name="pageText"></param>
+        /// <param name="sourceUri"></param>
+        /// <param name="storeRawData"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="PageParseException"></exception>
+        ScrapedSong ParseSingle(string pageText, Uri? sourceUri, bool storeRawData);
     }
 }

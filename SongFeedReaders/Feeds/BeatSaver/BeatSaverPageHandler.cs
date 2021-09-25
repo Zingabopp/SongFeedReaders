@@ -73,7 +73,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
             {
                 if (result["id"] != null)
                 {
-                    newSong = ParseSongFromJson(result, sourceUri, settings);
+                    newSong = ParseSongFromJson(result, sourceUri, settings.StoreRawData);
                     if (newSong != null)
                     {
                         songs.Add(newSong);
@@ -93,23 +93,42 @@ namespace SongFeedReaders.Feeds.BeatSaver
 
             foreach (JObject song in songJSONAry)
             {
-                newSong = ParseSongFromJson(song, sourceUri, settings);
+                newSong = ParseSongFromJson(song, sourceUri, settings.StoreRawData);
                 if (newSong != null)
                     songs.Add(newSong);
             }
             return songs;
         }
 
+        /// <inheritdoc/>
+        public ScrapedSong ParseSingle(string pageText, Uri? sourceUri, bool storeRawData)
+        {
+            if (string.IsNullOrWhiteSpace(pageText))
+                throw new ArgumentNullException(nameof(pageText));
+            try
+            {
+                var jSong = JObject.Parse(pageText);
+                return ParseSongFromJson(jSong, sourceUri, storeRawData);
+            }
+            catch(PageParseException)
+            {
+                throw;
+            }
+            catch(Exception ex)
+            {
+                throw new PageParseException(ex.Message, ex);
+            }
+        }
 
         /// <summary>
         /// Creates a SongInfo from a JObject.
         /// </summary>
         /// <param name="song"></param>
         /// <param name="sourceUri"></param>
-        /// <param name="settings"></param>
+        /// <param name="storeRawData"></param>
         /// <exception cref="ArgumentException">Thrown when a hash can't be found for the given song JObject.</exception>
         /// <returns></returns>
-        public ScrapedSong ParseSongFromJson(JToken song, Uri? sourceUri, IFeedSettings settings)
+        public ScrapedSong ParseSongFromJson(JToken song, Uri? sourceUri, bool storeRawData)
         {
             if (song == null)
                 throw new ArgumentNullException(nameof(song), "song cannot be null for BeatSaverReader.ParseSongFromJson.");
@@ -134,7 +153,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
                     mapperName: mapperName, 
                     downloadUri: downloadUri,
                     sourceUri: sourceUri, 
-                    jsonData: settings.StoreRawData ? song as JObject : null)
+                    jsonData: storeRawData ? song as JObject : null)
                 {
                     Key = songKey,
                     UploadDate = uploadDate

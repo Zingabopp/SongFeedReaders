@@ -211,13 +211,14 @@
         <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.Parse(SongFeedReaders.Feeds.PageContent,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
-        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.ParseJsonPage(System.String,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
+        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberPageHandler.ParseJsonPage(System.String,System.Uri,SongFeedReaders.Feeds.IFeedSettings,System.Boolean@)">
             <summary>
             Parses a list of <see cref="T:SongFeedReaders.Models.ScrapedSong"/> from the given JSON <paramref name="pageText"/>.
             </summary>
             <param name="pageText"></param>
             <param name="sourceUri"></param>
             <param name="settings"></param>
+            <param name="isLastPage"></param>
             <exception cref="T:SongFeedReaders.Feeds.PageParseException">Thrown when the page text is unable to parsed.</exception>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="pageText"/> or <paramref name="settings"/> is null.</exception>
             <returns></returns>
@@ -986,13 +987,14 @@
         <member name="M:SongFeedReaders.Feeds.FeedPageHandlerBase.Parse(SongFeedReaders.Feeds.PageContent,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
-        <member name="M:SongFeedReaders.Feeds.FeedPageHandlerBase.CreateResult(System.Collections.Generic.List{SongFeedReaders.Models.ScrapedSong},System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
+        <member name="M:SongFeedReaders.Feeds.FeedPageHandlerBase.CreateResult(System.Collections.Generic.List{SongFeedReaders.Models.ScrapedSong},System.Uri,SongFeedReaders.Feeds.IFeedSettings,System.Boolean)">
             <summary>
             Creates a basic <see cref="T:SongFeedReaders.Feeds.PageReadResult"/> from the given songs, pageUri, and settings.
             </summary>
             <param name="songs"></param>
             <param name="pageUri"></param>
             <param name="settings"></param>
+            <param name="isLastPage"></param>
             <returns></returns>
         </member>
         <member name="M:SongFeedReaders.Feeds.FeedPageHandlerBase.AcceptSong(SongFeedReaders.Models.ScrapedSong,SongFeedReaders.Feeds.IFeedSettings)">
@@ -1917,78 +1919,13 @@
         <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberPageHandler.Parse(SongFeedReaders.Feeds.PageContent,System.Uri,SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
-        <member name="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong">
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberPageHandler.CreateSong(Newtonsoft.Json.Linq.JObject,System.Boolean)">
             <summary>
-            Holds the data for a ScoreSaber song.
+            Creates a <see cref="T:SongFeedReaders.Models.ScrapedSong"/> from a ScoreSaber <see cref="T:Newtonsoft.Json.Linq.JObject"/>.
             </summary>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.#ctor">
-            <summary>
-            Creates a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong"/>.
-            </summary>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.#ctor(System.String)">
-            <summary>
-            Creates a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong"/>.
-            </summary>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.#ctor(System.String,System.String,System.String)">
-            <summary>
-            Creates a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong"/>.
-            </summary>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.#ctor(System.String,System.String,System.String,System.Uri,System.Uri)">
-            <summary>
-            Creates a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong"/>.
-            </summary>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.#ctor(System.String,System.String,System.String,System.Uri,System.Uri,Newtonsoft.Json.Linq.JObject)">
-            <summary>
-            Creates a new <see cref="T:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong"/>.
-            </summary>
-        </member>
-        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.UpdateFrom(SongFeedReaders.Models.ScrapedSong,System.Boolean)">
-            <inheritdoc/>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.ScoreSaberId">
-            <summary>
-            ScoreSaber UID for the difficulty.
-            </summary>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.SongAuthorName">
-            <summary>
-            Song artist.
-            </summary>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.BPM">
-            <summary>
-            Beats Per Minute.
-            </summary>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.Difficulty">
-            <summary>
-            Difficulty and characteristic (ScoreSaber).
-            </summary>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.Scores">
-            <summary>
-            Number of scores set.
-            </summary>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.ScoresPerDay">
-            <summary>
-            Scores set today?
-            </summary>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.Ranked">
-            <summary>
-            True if the song (difficulty) is ranked.
-            </summary>
-        </member>
-        <member name="P:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberSong.Stars">
-            <summary>
-            ScoreSaber star rating.
-            </summary>
+            <param name="jSong"></param>
+            <param name="storeRawData"></param>
+            <returns></returns>
         </member>
         <member name="T:SongFeedReaders.Logging.FeedReaderLogger">
             <summary>
@@ -2473,6 +2410,79 @@
         <member name="P:SongFeedReaders.Models.ISong.LevelAuthorName">
             <summary>
             Username of the mapper.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Models.ScoreSaberSong">
+            <summary>
+            Holds the data for a ScoreSaber song.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScoreSaberSong.#ctor">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Models.ScoreSaberSong"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScoreSaberSong.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Models.ScoreSaberSong"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScoreSaberSong.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Models.ScoreSaberSong"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScoreSaberSong.#ctor(System.String,System.String,System.String,System.Uri,System.Uri)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Models.ScoreSaberSong"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScoreSaberSong.#ctor(System.String,System.String,System.String,System.Uri,System.Uri,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Models.ScoreSaberSong"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Models.ScoreSaberSong.UpdateFrom(SongFeedReaders.Models.ScrapedSong,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScoreSaberSong.ScoreSaberId">
+            <summary>
+            ScoreSaber UID for the difficulty.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScoreSaberSong.SongAuthorName">
+            <summary>
+            Song artist.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScoreSaberSong.BPM">
+            <summary>
+            Beats Per Minute.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScoreSaberSong.Difficulty">
+            <summary>
+            Difficulty and characteristic (ScoreSaber).
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScoreSaberSong.Scores">
+            <summary>
+            Number of scores set.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScoreSaberSong.ScoresPerDay">
+            <summary>
+            Scores set today?
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScoreSaberSong.Ranked">
+            <summary>
+            True if the song (difficulty) is ranked.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Models.ScoreSaberSong.Stars">
+            <summary>
+            ScoreSaber star rating.
             </summary>
         </member>
         <member name="T:SongFeedReaders.Models.ScrapedSong">
