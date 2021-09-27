@@ -3,6 +3,7 @@ using SongFeedReaders.Feeds;
 using SongFeedReaders.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
 namespace SongFeedReaders.TestClient.ViewModels
@@ -35,12 +36,12 @@ namespace SongFeedReaders.TestClient.ViewModels
                 NotifyPropertyChanged();
                 RefreshActions();
                 if (value != null && value.Successful)
-                    Songs = value.Songs();
+                    Songs = value.Songs().ToArray();
                 NotifyPropertyChanged(nameof(Songs));
             }
         }
 
-        public IEnumerable<ScrapedSong>? Songs { get; protected set; }
+        public ScrapedSong[]? Songs { get; protected set; }
 
         public bool CanMoveNext => feedEnumerator?.CanMoveNext ?? false;
         public bool CanMovePrevious => feedEnumerator?.CanMovePrevious ?? false;
