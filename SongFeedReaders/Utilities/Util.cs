@@ -9,7 +9,7 @@ namespace SongFeedReaders.Utilities
     /// </summary>
     public static class Util
     {
-        private const string WebTimeFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'";
+        private const string WebTimeFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'ffffff'Z'";
 
         private static bool _utcTime = false;
         /// <summary>
