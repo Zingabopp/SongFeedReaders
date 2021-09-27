@@ -1,4 +1,5 @@
 ﻿using SongFeedReaders.Logging;
+using SongFeedReaders.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -119,6 +120,19 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         {
         }
 
+        /// <summary>
+        /// Initializes a new <see cref="ScoreSaberFeed"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        public ScoreSaberFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
+        {
+        }
+
         /// <inheritdoc/>
         protected override async Task<PageContent> GetPageContent(IWebResponseContent responseContent)
         {
@@ -136,7 +150,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         }
 
         /// <inheritdoc/>
-        protected override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
         {
             EnsureValidSettings();
             if(this is IPagedFeed pagedFeed)

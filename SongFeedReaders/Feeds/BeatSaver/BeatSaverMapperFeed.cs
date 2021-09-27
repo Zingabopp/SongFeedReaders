@@ -1,4 +1,5 @@
 ﻿using SongFeedReaders.Logging;
+using SongFeedReaders.Services;
 using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Concurrent;
@@ -42,6 +43,19 @@ namespace SongFeedReaders.Feeds.BeatSaver
         public BeatSaverMapperFeed(BeatSaverMapperSettings feedSettings, IBeatSaverPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="BeatSaverMapperFeed"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        public BeatSaverMapperFeed(ISettingsFactory settingsFactory, IBeatSaverPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
 
@@ -109,7 +123,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
-        protected override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
         {
             if (!AreSettingsValid(settings))
                 throw new InvalidFeedSettingsException();

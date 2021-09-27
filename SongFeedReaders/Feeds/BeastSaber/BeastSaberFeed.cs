@@ -1,4 +1,5 @@
 ﻿using SongFeedReaders.Logging;
+using SongFeedReaders.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -29,6 +30,19 @@ namespace SongFeedReaders.Feeds.BeastSaber
         public BeastSaberFeed(BeastSaberFeedSettings feedSettings, IBeastSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new <see cref="BeastSaberFeed"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        public BeastSaberFeed(ISettingsFactory settingsFactory, IBeastSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
 

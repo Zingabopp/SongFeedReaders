@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using SongFeedReaders.Logging;
 using SongFeedReaders.Models;
+using SongFeedReaders.Services;
 using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Generic;
@@ -23,9 +24,22 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        protected BeatSaverFeed(IFeedSettings feedSettings, IBeatSaverPageHandler pageHandler,
+        protected BeatSaverFeed(BeatSaverFeedSettings feedSettings, IBeatSaverPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new <see cref="BeatSaverFeed"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        protected BeatSaverFeed(ISettingsFactory settingsFactory, IBeatSaverPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
         /// <inheritdoc/>

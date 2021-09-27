@@ -1,4 +1,5 @@
 ﻿using SongFeedReaders.Logging;
+using SongFeedReaders.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,6 +22,18 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         public ScoreSaberTrendingFeed(ScoreSaberTrendingSettings feedSettings, IScoreSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
+        {
+        }
+        /// <summary>
+        /// Creates a new <see cref="ScoreSaberTrendingFeed"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        public ScoreSaberTrendingFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
         /// <inheritdoc/>
@@ -54,6 +67,19 @@ namespace SongFeedReaders.Feeds.ScoreSaber
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="ScoreSaberLatestFeed"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        public ScoreSaberLatestFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
+        {
+        }
         /// <inheritdoc/>
         public override string FeedId => "ScoreSaber.LatestRanked";
 
@@ -85,6 +111,18 @@ namespace SongFeedReaders.Feeds.ScoreSaber
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
+        /// <summary>
+        /// Creates a new <see cref="ScoreSaberTopPlayedFeed"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        public ScoreSaberTopPlayedFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
+        {
+        }
         /// <inheritdoc/>
         public override string FeedId => "ScoreSaber.TopPlayed";
 
@@ -114,6 +152,18 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         public ScoreSaberTopRankedFeed(ScoreSaberTopRankedSettings feedSettings, IScoreSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
+        {
+        }
+        /// <summary>
+        /// Creates a new <see cref="ScoreSaberTopRankedFeed"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        public ScoreSaberTopRankedFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
         /// <inheritdoc/>

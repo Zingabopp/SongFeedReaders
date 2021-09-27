@@ -121,7 +121,7 @@ namespace SongFeedReaders.Feeds
             try
             {
                 await _semaphore.WaitAsync(cancellationToken);
-                FeedDate feedDate = new FeedDate(CurrentLatest, DateDirection.After);
+                FeedDate feedDate = new FeedDate(CurrentLatest + TimeSpan.FromMilliseconds(1), DateDirection.After);
                 result = await MoveAsync(feedDate, cancellationToken);
             }
             catch (OperationCanceledException ex)

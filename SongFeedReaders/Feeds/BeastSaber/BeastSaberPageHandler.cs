@@ -81,7 +81,8 @@ namespace SongFeedReaders.Feeds.BeastSaber
         /// <exception cref="PageParseException">Thrown when the page text is unable to parsed.</exception>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="pageText"/> or <paramref name="settings"/> is null.</exception>
         /// <returns></returns>
-        public virtual List<ScrapedSong> ParseJsonPage(string pageText, Uri? sourceUri, IFeedSettings settings, out bool isLastPage)
+        public virtual List<ScrapedSong> ParseJsonPage(string pageText, Uri? sourceUri,
+            IFeedSettings settings, out bool isLastPage)
         {
             isLastPage = false;
             if (string.IsNullOrWhiteSpace(pageText))

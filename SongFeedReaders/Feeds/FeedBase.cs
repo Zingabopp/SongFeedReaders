@@ -1,5 +1,6 @@
 ﻿using SongFeedReaders.Logging;
 using SongFeedReaders.Models;
+using SongFeedReaders.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,11 +38,11 @@ namespace SongFeedReaders.Feeds
         /// <inheritdoc/>
         public virtual bool Initialized => true;
         /// <inheritdoc/>
-        public IFeedSettings FeedSettings { get; protected set; }
+        public IFeedSettings FeedSettings { get; set; }
         /// <inheritdoc/>
         public bool HasValidSettings => AreSettingsValid(FeedSettings);
         /// <inheritdoc/>
-        public void EnsureValidSettings()
+        public virtual void EnsureValidSettings()
         {
             if (!AreSettingsValid(FeedSettings))
                 throw new InvalidFeedSettingsException();
@@ -55,10 +56,29 @@ namespace SongFeedReaders.Feeds
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         protected FeedBase(IFeedSettings feedSettings, IFeedPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory)
         {
-            FeedSettings = feedSettings?.Clone() as IFeedSettings ?? throw new ArgumentNullException(nameof(feedSettings));
+            FeedSettings = feedSettings ?? throw new ArgumentNullException(nameof(pageHandler));
+            PageHandler = pageHandler ?? throw new ArgumentNullException(nameof(pageHandler));
+            WebClient = webClient ?? throw new ArgumentNullException(nameof(webClient));
+            Logger = logFactory?.GetLogger(GetType().Name);
+        }
+
+        /// <summary>
+        /// Initializes a new <see cref="FeedBase"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentNullException"></exception>
+        protected FeedBase(ISettingsFactory settingsFactory, IFeedPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+        {
+            FeedSettings = settingsFactory.GetSettings(FeedId) ?? throw new ArgumentException($"Settings factory doesn't have settings registered with feed ID '{FeedId}'");
             PageHandler = pageHandler ?? throw new ArgumentNullException(nameof(pageHandler));
             WebClient = webClient ?? throw new ArgumentNullException(nameof(webClient));
             Logger = logFactory?.GetLogger(GetType().Name);
@@ -193,11 +213,15 @@ namespace SongFeedReaders.Feeds
             }
         }
 
-        /// <summary>
-        /// Gets a <see cref="FeedAsyncEnumerator"/> for this feed.
-        /// </summary>
-        /// <returns></returns>
-        protected abstract FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings);
+        /// <inheritdoc/>
+        public abstract FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings);
+
+        /// <inheritdoc/>
+        public virtual FeedAsyncEnumerator GetAsyncEnumerator()
+        {
+            EnsureValidSettings();
+            return GetAsyncEnumerator(FeedSettings);
+        }
 
         /// <summary>
         /// Returns true if the settings are valid for this feed.
@@ -212,8 +236,12 @@ namespace SongFeedReaders.Feeds
         /// <param name="content"></param>
         /// <param name="uri"></param>
         /// <returns></returns>
+        /// <exception cref="InvalidFeedSettingsException"></exception>
         protected virtual PageReadResult ParseSongsFromPage(PageContent content, Uri uri)
-            => PageHandler.Parse(content, uri, FeedSettings);
+        {
+            EnsureValidSettings();
+            return PageHandler.Parse(content, uri, FeedSettings);
+        }
 
     }
 }

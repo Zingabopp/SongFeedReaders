@@ -18,7 +18,7 @@ namespace SongFeedReaders.Logging
         /// <summary>
         /// Creates a new <see cref="FeedReaderLogger"/>.
         /// </summary>
-        protected FeedReaderLogger()
+        public FeedReaderLogger()
         {
             loggerSettings = new LoggerSettings();
         }
@@ -26,7 +26,7 @@ namespace SongFeedReaders.Logging
         /// Creates a new <see cref="FeedReaderLogger"/>.
         /// </summary>
         /// <param name="settings"></param>
-        protected FeedReaderLogger(ILoggerSettings settings)
+        public FeedReaderLogger(ILoggerSettings settings)
         {
             loggerSettings = settings as LoggerSettings ?? new LoggerSettings(settings);
         }

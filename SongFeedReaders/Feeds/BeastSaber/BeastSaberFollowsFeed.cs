@@ -1,4 +1,5 @@
 ﻿using SongFeedReaders.Logging;
+using SongFeedReaders.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +16,13 @@ namespace SongFeedReaders.Feeds.BeastSaber
         public BeastSaberFollowsFeed(BeastSaberFollowsSettings feedSettings, IBeastSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
+        {
+        }
+
+        /// <inheritdoc/>
+        public BeastSaberFollowsFeed(ISettingsFactory settingsFactory, IBeastSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
 
@@ -40,6 +48,23 @@ namespace SongFeedReaders.Feeds.BeastSaber
         }
 
         /// <inheritdoc/>
+        public override void EnsureValidSettings()
+        {
+            IFeedSettings feedSettings = FeedSettings;
+            if (feedSettings == null)
+                throw new InvalidFeedSettingsException("Feed Settings is null.");
+
+            if (!(FeedSettings is BeastSaberFollowsSettings bSettings))
+            {
+                throw new InvalidFeedSettingsException($"Feed settings '{feedSettings.GetType().Name}' is the wrong type for {GetType().Name}");
+            }
+            if (string.IsNullOrWhiteSpace(bSettings.Username))
+            {
+                throw new InvalidFeedSettingsException("No Beast Saber username specified in settings.");
+            }
+        }
+
+        /// <inheritdoc/>
         protected override bool AreSettingsValid(IFeedSettings settings)
         {
             if (settings is BeastSaberFollowsSettings bSettings)
@@ -50,7 +75,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
         }
 
         /// <inheritdoc/>
-        protected override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
         {
             EnsureValidSettings();
             BeastSaberFollowsSettings s = (BeastSaberFollowsSettings)settings;

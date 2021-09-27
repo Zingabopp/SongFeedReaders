@@ -1,4 +1,5 @@
 ﻿using SongFeedReaders.Logging;
+using SongFeedReaders.Services;
 using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,20 @@ namespace SongFeedReaders.Feeds.BeatSaver
 
         }
 
+        /// <summary>
+        /// Initializes a new <see cref="BeatSaverLatestFeed"/>.
+        /// </summary>
+        /// <param name="settingsFactory"></param>
+        /// <param name="pageHandler"></param>
+        /// <param name="webClient"></param>
+        /// <param name="logFactory"></param>
+        public BeatSaverLatestFeed(ISettingsFactory settingsFactory, IBeatSaverPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
+        {
+
+        }
+
         /// <inheritdoc/>
         public override string FeedId => "BeatSaver.Latest";
 
@@ -46,7 +61,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
-        protected override bool AreSettingsValid(IFeedSettings settings)
+        protected override bool AreSettingsValid(IFeedSettings? settings)
         {
             if (!(settings is BeatSaverLatestSettings))
                 return false;
@@ -55,7 +70,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
-        protected override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
         {
             if (!AreSettingsValid(settings))
                 throw new InvalidFeedSettingsException();

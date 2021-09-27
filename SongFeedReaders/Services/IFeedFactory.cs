@@ -24,18 +24,27 @@ namespace SongFeedReaders.Services
         /// Registers a factory to generate a feed for a given <see cref="IFeedSettings"/> type.
         /// </summary>
         /// <typeparam name="TSettings"></typeparam>
-        /// <typeparam name="TFeed"></typeparam>
         /// <param name="factory"></param>
-        void Register<TSettings, TFeed>(Func<TSettings, TFeed> factory)
-            where TSettings : IFeedSettings
-            where TFeed : class, IFeed;
+        /// <exception cref="ArgumentNullException"></exception>
+        void Register<TSettings>(Func<IFeedSettings, IFeed> factory);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="settingsType"></param>
+        /// <param name="factory"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        void Register(Type settingsType, Func<IFeedSettings, IFeed> factory);
 
         /// <summary>
         /// Gets a new feed for the given <see cref="IFeedSettings"/>.
         /// </summary>
         /// <param name="settings"></param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="UnregisteredSettingsTypeException"></exception>
+        /// <exception cref="FeedFactoryExecuteException"></exception>
         IFeed GetFeed(IFeedSettings settings);
         /// <summary>
         /// Returns true if the specified <see cref="IFeedSettings"/> is registered.
@@ -50,6 +59,7 @@ namespace SongFeedReaders.Services
         /// <typeparam name="TSettings"></typeparam>
         /// <param name="settings"></param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         bool SettingsTypeRegistered<TSettings>(TSettings settings)
             where TSettings : IFeedSettings;
     }
@@ -57,25 +67,28 @@ namespace SongFeedReaders.Services
     /// <summary>
     /// Base <see cref="Exception"/> for errors thrown by <see cref="IFeedFactory"/>.
     /// </summary>
-    public abstract class FeedFactoryException : Exception
+    public class FeedFactoryException : Exception
     {
         /// <inheritdoc/>
-        protected FeedFactoryException()
+        public FeedFactoryException()
         {
         }
 
         /// <inheritdoc/>
-        protected FeedFactoryException(string message) : base(message)
+        public FeedFactoryException(string message)
+            : base(message)
         {
         }
 
         /// <inheritdoc/>
-        protected FeedFactoryException(SerializationInfo info, StreamingContext context) : base(info, context)
+        public FeedFactoryException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
         {
         }
 
         /// <inheritdoc/>
-        protected FeedFactoryException(string message, Exception innerException) : base(message, innerException)
+        public FeedFactoryException(string message, Exception innerException)
+            : base(message, innerException)
         {
         }
     }
@@ -105,6 +118,35 @@ namespace SongFeedReaders.Services
 
         /// <inheritdoc/>
         public UnregisteredSettingsTypeException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
+    }
+
+    /// <summary>
+    /// This exception is thrown when any <see cref="Exception"/> is thrown when executing a factory.
+    /// </summary>
+    public class FeedFactoryExecuteException : FeedFactoryException
+    {
+        /// <inheritdoc/>
+        public FeedFactoryExecuteException()
+        {
+        }
+
+        /// <inheritdoc/>
+        public FeedFactoryExecuteException(string message)
+            : base(message)
+        {
+        }
+
+        /// <inheritdoc/>
+        public FeedFactoryExecuteException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+        }
+
+        /// <inheritdoc/>
+        public FeedFactoryExecuteException(string message, Exception innerException)
             : base(message, innerException)
         {
         }

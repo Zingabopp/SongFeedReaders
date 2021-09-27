@@ -75,8 +75,8 @@ namespace SongFeedReaders.Feeds
                     throw new FeedReaderException($"URL '{pageUri}' was previously read, aborting to avoid possible infinite loop.");
                 }
                 result = await PagedFeed.GetPageAsync(pageUri, cancellationToken).ConfigureAwait(false);
-                //if (result.IsLastPage)
-                //    CanMoveNext = false;
+                if (result.IsLastPage)
+                    CanMoveNext = false;
                 LastFetchedUri = pageUri;
             }
             catch (OperationCanceledException ex)
@@ -122,6 +122,7 @@ namespace SongFeedReaders.Feeds
                 }
                 result = await PagedFeed.GetPageAsync(pageUri, cancellationToken).ConfigureAwait(false);
                 LastFetchedUri = pageUri;
+                CanMoveNext = true;
             }
             catch (OperationCanceledException ex)
             {

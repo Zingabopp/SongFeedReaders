@@ -23,6 +23,27 @@ namespace SongFeedReaders.Feeds.ScoreSaber
                 _startingPage = value;
             }
         }
+        private int _songsPerPage = 50;
+
+        /// <inheritdoc/>
+        public override int SongsPerPage
+        {
+            get => _songsPerPage;
+        }
+
+        /// <summary>
+        /// Sets the number of songs per page.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public void SetSongsPerPage(int value)
+        {
+            if (value > 0)
+                _songsPerPage = value;
+            else
+                throw new ArgumentOutOfRangeException(nameof(value));
+        }
+
         /// <summary>
         ///  If true, only return songs with a ranked difficulty.
         /// </summary>
@@ -32,9 +53,10 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         protected override void CopyTo<T>(T target)
         {
             base.CopyTo(target);
-            if(target is ScoreSaberFeedSettings settings)
+            if (target is ScoreSaberFeedSettings settings)
             {
                 settings.RankedOnly = RankedOnly;
+                settings.SetSongsPerPage(SongsPerPage);
             }
         }
     }
@@ -50,8 +72,6 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <inheritdoc/>
         public override int FeedIndex => 0;
 
-        /// <inheritdoc/>
-        public override int SongsPerPage => 50;
 
         /// <inheritdoc/>
         public override object Clone()
@@ -72,8 +92,6 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <inheritdoc/>
         public override int FeedIndex => 1;
 
-        /// <inheritdoc/>
-        public override int SongsPerPage => 50;
 
         /// <inheritdoc/>
         public override object Clone()
@@ -94,8 +112,6 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <inheritdoc/>
         public override int FeedIndex => 2;
 
-        /// <inheritdoc/>
-        public override int SongsPerPage => 50;
 
         /// <inheritdoc/>
         public override object Clone()
@@ -116,8 +132,6 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <inheritdoc/>
         public override int FeedIndex => 3;
 
-        /// <inheritdoc/>
-        public override int SongsPerPage => 50;
 
         /// <inheritdoc/>
         public override object Clone()

@@ -1,4 +1,5 @@
 ﻿using SongFeedReaders.Logging;
+using SongFeedReaders.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +16,13 @@ namespace SongFeedReaders.Feeds.BeastSaber
         public BeastSaberCuratorFeed(BeastSaberCuratorSettings feedSettings, IBeastSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory)
             : base(feedSettings, pageHandler, webClient, logFactory)
+        {
+        }
+
+        /// <inheritdoc/>
+        public BeastSaberCuratorFeed(ISettingsFactory settingsFactory, IBeastSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory)
+            : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
 
@@ -49,7 +57,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
         }
 
         /// <inheritdoc/>
-        protected override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
         {
             EnsureValidSettings();
             BeastSaberCuratorSettings s = (BeastSaberCuratorSettings)settings;

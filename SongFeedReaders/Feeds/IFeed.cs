@@ -71,5 +71,21 @@ namespace SongFeedReaders.Feeds
         /// <returns></returns>
         /// <exception cref="InvalidFeedSettingsException"></exception>
         Task<FeedResult> ReadAsync(IProgress<PageReadResult> progress, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Gets a <see cref="FeedAsyncEnumerator"/> for this feed.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        /// <exception cref="FeedUninitializedException"></exception>
+        public FeedAsyncEnumerator GetAsyncEnumerator();
+
+        /// <summary>
+        /// Gets a <see cref="FeedAsyncEnumerator"/> for this feed using custom settings.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        /// <exception cref="FeedUninitializedException"></exception>
+        public FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings);
     }
 }
