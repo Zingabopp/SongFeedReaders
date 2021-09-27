@@ -59,8 +59,11 @@ namespace SongFeedReaders.Utilities
         /// </summary>
         /// <param name="hash"></param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public static Uri GetDownloadUriByHash(string hash)
         {
+            if (string.IsNullOrWhiteSpace(hash))
+                throw new ArgumentNullException(nameof(hash));
             return new Uri(BeatSaverDownloadUri, hash.ToLower() + ".zip");
         }
 
@@ -69,8 +72,11 @@ namespace SongFeedReaders.Utilities
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public static Uri GetBeatSaverDetailsByKey(string key)
         {
+            if (string.IsNullOrWhiteSpace(key))
+                throw new ArgumentNullException(nameof(key));
             return new Uri(BeatSaverDetailsFromKeyBaseUrl + key.ToLower());
         }
 
@@ -79,8 +85,11 @@ namespace SongFeedReaders.Utilities
         /// </summary>
         /// <param name="hash"></param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public static Uri GetBeatSaverDetailsByHash(string hash)
         {
+            if (string.IsNullOrWhiteSpace(hash))
+                throw new ArgumentNullException(nameof(hash));
             return new Uri(BeatSaverDetailsFromHashBaseUrl + hash.ToLower());
         }
     }

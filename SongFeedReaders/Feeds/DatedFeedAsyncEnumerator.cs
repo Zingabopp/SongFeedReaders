@@ -135,7 +135,13 @@ namespace SongFeedReaders.Feeds
             }
             return result;
         }
-
+        /// <summary>
+        /// Moves to the specified <see cref="FeedDate"/>.
+        /// </summary>
+        /// <param name="feedDate"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        /// <exception cref="FeedReaderException"></exception>
         private async Task<PageReadResult> MoveAsync(FeedDate feedDate, CancellationToken cancellationToken)
         {
             PageReadResult? result = null;

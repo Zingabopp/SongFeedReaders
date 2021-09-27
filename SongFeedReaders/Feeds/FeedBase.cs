@@ -193,7 +193,7 @@ namespace SongFeedReaders.Feeds
                         Logger?.Debug($"Accepted {acceptedFromPage}/{lastResult.SongsOnPage} songs from '{lastResult.Uri}'");
                     else
                         Logger?.Debug($"Zero songs on page '{lastResult.Uri}'");
-                    if (acceptedSongs.Count >= maxSongs)// || lastResult.IsLastPage)
+                    if (acceptedSongs.Count >= maxSongs)
                         break;
                     if (resultsWithZeroSongs > 2)
                     {

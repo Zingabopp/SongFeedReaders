@@ -1,7 +1,4 @@
-﻿using SongFeedReaders.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -48,6 +45,7 @@ namespace SongFeedReaders.Feeds
         /// <param name="cancellationToken"></param>
         /// <exception cref="InvalidFeedSettingsException"></exception>
         /// <exception cref="FeedInitializationException"></exception>
+        /// <exception cref="OperationCanceledException"></exception>
         Task InitializeAsync(CancellationToken cancellationToken);
         /// <summary>
         /// Reads and parses a page at the given <paramref name="uri"/>.

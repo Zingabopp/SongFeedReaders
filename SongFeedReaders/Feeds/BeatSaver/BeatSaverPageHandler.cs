@@ -62,6 +62,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <param name="sourceUri"></param>
         /// <param name="settings"></param>
         /// <returns></returns>
+        /// <exception cref="PageParseException"></exception>
         public List<ScrapedSong> ParseSongsFromJson(JToken result, Uri? sourceUri, IFeedSettings settings)
         {
 
@@ -189,7 +190,8 @@ namespace SongFeedReaders.Feeds.BeatSaver
         private static bool VersionIsPublished(JToken v)
         {
             JToken? state = v["state"];
-            return state != null && state.Value<string>().Equals("Published", StringComparison.OrdinalIgnoreCase);
+            string? stateValue = state?.Value<string>();
+            return stateValue != null && stateValue.Equals("Published", StringComparison.OrdinalIgnoreCase);
         }
 
         /// <inheritdoc/>

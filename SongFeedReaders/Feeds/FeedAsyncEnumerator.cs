@@ -40,6 +40,7 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         /// <param name="feed"></param>
         /// <param name="logger"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         protected FeedAsyncEnumerator(IFeed feed, ILogger? logger = null)
         {
             Feed = feed ?? throw new ArgumentNullException(nameof(feed));
@@ -52,6 +53,7 @@ namespace SongFeedReaders.Feeds
         /// <param name="feed"></param>
         /// <param name="cachePages"></param>
         /// <param name="logger"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         protected FeedAsyncEnumerator(IFeed feed, bool cachePages, ILogger? logger = null)
             : this(feed, logger)
         {
@@ -63,6 +65,7 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        /// <exception cref="FeedReaderException"></exception>
         public abstract Task<PageReadResult> MoveNextAsync(CancellationToken cancellationToken);
 
         /// <summary>
@@ -70,6 +73,7 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        /// <exception cref="FeedReaderException"></exception>
         public abstract Task<PageReadResult> MovePreviousAsync(CancellationToken cancellationToken);
 
         /// <summary>
