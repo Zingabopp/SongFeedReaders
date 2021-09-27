@@ -55,14 +55,15 @@ namespace SongFeedReaders.Feeds
         /// <returns></returns>
         Task<PageReadResult> GetPageAsync(Uri uri, CancellationToken cancellationToken);
         /// <summary>
-        /// 
+        /// Reads the feed according to the current settings and returns a <see cref="FeedResult"/>.
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="InvalidFeedSettingsException"></exception>
         Task<FeedResult> ReadAsync(CancellationToken cancellationToken);
         /// <summary>
-        /// 
+        /// Reads the feed according to the current settings with progress reports after every page
+        /// and returns a <see cref="FeedResult"/>.
         /// </summary>
         /// <param name="progress"></param>
         /// <param name="cancellationToken"></param>

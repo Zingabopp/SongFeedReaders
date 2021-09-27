@@ -41,7 +41,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public BeatSaverMapperFeed(BeatSaverMapperSettings feedSettings, IBeatSaverPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
@@ -54,7 +54,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public BeatSaverMapperFeed(ISettingsFactory settingsFactory, IBeatSaverPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }

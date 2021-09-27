@@ -115,7 +115,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberFeed(ScoreSaberFeedSettings feedSettings, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
@@ -128,7 +128,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }

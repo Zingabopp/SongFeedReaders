@@ -1,10 +1,8 @@
-﻿using SongFeedReaders.Feeds;
-using SongFeedReaders.Logging;
+﻿using SongFeedReaders.Logging;
 using SongFeedReaders.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace SongFeedReaders.Feeds
 {
@@ -42,6 +40,7 @@ namespace SongFeedReaders.Feeds
 
         /// <summary>
         /// Creates a basic <see cref="PageReadResult"/> from the given songs, pageUri, and settings.
+        /// TODO: Should return a Builder class.
         /// </summary>
         /// <param name="songs"></param>
         /// <param name="pageUri"></param>
@@ -59,7 +58,7 @@ namespace SongFeedReaders.Feeds
                 List<ScrapedSong> filteredSongs = new List<ScrapedSong>(songsOnPage);
                 try
                 {
-                    foreach (var song in songs)
+                    foreach (ScrapedSong? song in songs)
                     {
                         if (stopWhenAny != null && stopWhenAny(song))
                         {

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31717.71
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SongFeedReaders", "SongFeedReaders\SongFeedReaders.csproj", "{28489D2A-2598-4894-A4E6-7D98765701D9}"
 EndProject
@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUtilities", "submodules\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SongFeedReadersTests", "SongFeedReadersTests\SongFeedReadersTests.csproj", "{D3FCB6AF-A923-4516-B45F-D9928A700FA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongFeedReaders.TestClient", "SongFeedReaders.TestClient\SongFeedReaders.TestClient.csproj", "{B6A2ECAB-3097-4B48-BC8B-F2E82BB10E63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SongFeedReaders.TestClient", "SongFeedReaders.TestClient\SongFeedReaders.TestClient.csproj", "{B6A2ECAB-3097-4B48-BC8B-F2E82BB10E63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{CCE168B6-251F-49B0-8507-FB7E0D7B88AA}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

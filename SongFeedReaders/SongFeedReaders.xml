@@ -495,6 +495,7 @@
             <param name="sourceUri"></param>
             <param name="settings"></param>
             <returns></returns>
+            <exception cref="T:SongFeedReaders.Feeds.PageParseException"></exception>
         </member>
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.ParseSingle(System.String,System.Uri,System.Boolean)">
             <inheritdoc/>
@@ -597,6 +598,15 @@
         </member>
         <member name="M:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.MovePreviousAsync(System.Threading.CancellationToken)">
             <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.DatedFeedAsyncEnumerator.MoveAsync(SongFeedReaders.Feeds.FeedDate,System.Threading.CancellationToken)">
+            <summary>
+            Moves to the specified <see cref="T:SongFeedReaders.Feeds.FeedDate"/>.
+            </summary>
+            <param name="feedDate"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:SongFeedReaders.Feeds.FeedReaderException"></exception>
         </member>
         <member name="T:SongFeedReaders.Feeds.InvalidFeedSettingsException">
             <summary>
@@ -847,6 +857,7 @@
             </summary>
             <param name="feed"></param>
             <param name="logger"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.#ctor(SongFeedReaders.Feeds.IFeed,System.Boolean,SongFeedReaders.Logging.ILogger)">
             <summary>
@@ -855,6 +866,7 @@
             <param name="feed"></param>
             <param name="cachePages"></param>
             <param name="logger"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.MoveNextAsync(System.Threading.CancellationToken)">
             <summary>
@@ -862,6 +874,7 @@
             </summary>
             <param name="cancellationToken"></param>
             <returns></returns>
+            <exception cref="T:SongFeedReaders.Feeds.FeedReaderException"></exception>
         </member>
         <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.MovePreviousAsync(System.Threading.CancellationToken)">
             <summary>
@@ -869,6 +882,7 @@
             </summary>
             <param name="cancellationToken"></param>
             <returns></returns>
+            <exception cref="T:SongFeedReaders.Feeds.FeedReaderException"></exception>
         </member>
         <member name="M:SongFeedReaders.Feeds.FeedAsyncEnumerator.MoveNextAsync">
             <summary>
@@ -1328,6 +1342,7 @@
             <param name="cancellationToken"></param>
             <exception cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException"></exception>
             <exception cref="T:SongFeedReaders.Feeds.FeedInitializationException"></exception>
+            <exception cref="T:System.OperationCanceledException"></exception>
         </member>
         <member name="M:SongFeedReaders.Feeds.IFeed.GetPageAsync(System.Uri,System.Threading.CancellationToken)">
             <summary>
@@ -3315,6 +3330,7 @@
             </summary>
             <param name="hash"></param>
             <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="M:SongFeedReaders.Utilities.BeatSaverHelper.GetBeatSaverDetailsByKey(System.String)">
             <summary>
@@ -3322,6 +3338,7 @@
             </summary>
             <param name="key"></param>
             <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="M:SongFeedReaders.Utilities.BeatSaverHelper.GetBeatSaverDetailsByHash(System.String)">
             <summary>
@@ -3329,6 +3346,7 @@
             </summary>
             <param name="hash"></param>
             <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="T:SongFeedReaders.Utilities.Util">
             <summary>

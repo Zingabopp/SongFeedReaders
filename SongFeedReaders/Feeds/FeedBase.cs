@@ -58,7 +58,7 @@ namespace SongFeedReaders.Feeds
         /// <param name="logFactory"></param>
         /// <exception cref="ArgumentNullException"></exception>
         protected FeedBase(IFeedSettings feedSettings, IFeedPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
         {
             FeedSettings = feedSettings ?? throw new ArgumentNullException(nameof(pageHandler));
             PageHandler = pageHandler ?? throw new ArgumentNullException(nameof(pageHandler));
@@ -76,7 +76,7 @@ namespace SongFeedReaders.Feeds
         /// <exception cref="ArgumentException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
         protected FeedBase(ISettingsFactory settingsFactory, IFeedPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
         {
             FeedSettings = settingsFactory.GetSettings(FeedId) ?? throw new ArgumentException($"Settings factory doesn't have settings registered with feed ID '{FeedId}'");
             PageHandler = pageHandler ?? throw new ArgumentNullException(nameof(pageHandler));

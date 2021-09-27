@@ -20,7 +20,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberTrendingFeed(ScoreSaberTrendingSettings feedSettings, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
@@ -32,7 +32,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberTrendingFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
@@ -63,7 +63,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberLatestFeed(ScoreSaberLatestSettings feedSettings, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
@@ -76,7 +76,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberLatestFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
@@ -107,7 +107,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberTopPlayedFeed(ScoreSaberTopPlayedSettings feedSettings, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
@@ -119,7 +119,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberTopPlayedFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
@@ -150,7 +150,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberTopRankedFeed(ScoreSaberTopRankedSettings feedSettings, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
@@ -162,7 +162,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public ScoreSaberTopRankedFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }

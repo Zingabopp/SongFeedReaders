@@ -14,14 +14,14 @@ namespace SongFeedReaders.Feeds.BeastSaber
     {
         /// <inheritdoc/>
         public BeastSaberCuratorFeed(BeastSaberCuratorSettings feedSettings, IBeastSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
 
         /// <inheritdoc/>
         public BeastSaberCuratorFeed(ISettingsFactory settingsFactory, IBeastSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }

@@ -28,7 +28,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public BeastSaberFeed(BeastSaberFeedSettings feedSettings, IBeastSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(feedSettings, pageHandler, webClient, logFactory)
         {
         }
@@ -41,7 +41,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         public BeastSaberFeed(ISettingsFactory settingsFactory, IBeastSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory)
+            IWebClient webClient, ILogFactory? logFactory = null)
             : base(settingsFactory, pageHandler, webClient, logFactory)
         {
         }
