@@ -1,0 +1,27 @@
+﻿<Window x:Class="SongFeedReaders.TestClient.Views.NavigationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SongFeedReaders.TestClient.Views"
+        xmlns:vm="clr-namespace:SongFeedReaders.TestClient.ViewModels"
+        mc:Ignorable="d"
+        Title="NavigationView" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance vm:NavigationViewModel, IsDesignTimeCreatable=False}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" BorderThickness="1" BorderBrush="Black"/>
+        <Border Grid.Column="1" BorderThickness="1" BorderBrush="Black"/>
+        <ListView Grid.Column="0" ItemsSource="{Binding Feeds}" SelectedItem="{Binding SelectedFeed}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding DisplayName}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <local:FeedView Grid.Column="1" DataContext="{Binding FeedViewModel}"/>
+    </Grid>
+</Window>
