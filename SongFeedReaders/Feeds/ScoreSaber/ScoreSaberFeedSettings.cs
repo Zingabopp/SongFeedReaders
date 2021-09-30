@@ -5,7 +5,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// <summary>
     /// Base class for ScoreSaber feed settings
     /// </summary>
-    public abstract class ScoreSaberFeedSettings : FeedSettingsBase
+    public abstract class ScoreSaberFeedSettings : FeedSettingsBase, IPagedFeedSettings
     {
         private int _startingPage = 1;
         /// <summary>

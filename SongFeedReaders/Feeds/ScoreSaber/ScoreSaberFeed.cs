@@ -150,6 +150,19 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         }
 
         /// <inheritdoc/>
+        public override void EnsureValidSettings()
+        {
+            if (FeedSettings == null)
+                throw new InvalidFeedSettingsException("FeedSettings is null.");
+            if (!(FeedSettings is ScoreSaberFeedSettings settings))
+            {
+                throw new InvalidFeedSettingsException($"Settings is the wrong type ({FeedSettings?.GetType().Name}), "
+                    + $"should be {nameof(ScoreSaberFeedSettings)}");
+
+            }
+        }
+
+        /// <inheritdoc/>
         public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
         {
             EnsureValidSettings();
@@ -158,7 +171,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
                 return new PagedFeedAsyncEnumerator(pagedFeed, 
                     ScoreSaberSettings.StartingPage, FeedStartingPage, Logger);
             }
-            throw new NotImplementedException($"{FeedId} is not an IPagedFeed, this feed my override GetAsyncEnumerator.");
+            throw new NotImplementedException($"{FeedId} is not an IPagedFeed, this feed must override GetAsyncEnumerator.");
         }
     }
 }

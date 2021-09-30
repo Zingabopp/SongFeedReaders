@@ -5,7 +5,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
     /// <summary>
     /// Base class for Beast Saber feed settings
     /// </summary>
-    public abstract class BeastSaberFeedSettings : FeedSettingsBase
+    public abstract class BeastSaberFeedSettings : FeedSettingsBase, IPagedFeedSettings
     {
         private int _startingPage = 1;
         /// <summary>

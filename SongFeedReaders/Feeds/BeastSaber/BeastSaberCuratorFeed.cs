@@ -57,6 +57,19 @@ namespace SongFeedReaders.Feeds.BeastSaber
         }
 
         /// <inheritdoc/>
+        public override void EnsureValidSettings()
+        {
+            if (FeedSettings == null)
+                throw new InvalidFeedSettingsException("FeedSettings is null.");
+            if (!(FeedSettings is BeastSaberCuratorSettings settings))
+            {
+                throw new InvalidFeedSettingsException($"Settings is the wrong type ({FeedSettings?.GetType().Name}), "
+                    + $"should be {nameof(BeastSaberCuratorSettings)}");
+
+            }
+        }
+
+        /// <inheritdoc/>
         public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
         {
             EnsureValidSettings();

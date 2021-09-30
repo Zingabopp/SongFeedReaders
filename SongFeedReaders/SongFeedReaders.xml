@@ -94,6 +94,9 @@
         <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberCuratorFeed.AreSettingsValid(SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
+        <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberCuratorFeed.EnsureValidSettings">
+            <inheritdoc/>
+        </member>
         <member name="M:SongFeedReaders.Feeds.BeastSaber.BeastSaberCuratorFeed.GetAsyncEnumerator(SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
@@ -351,6 +354,9 @@
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.AreSettingsValid(SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.EnsureValidSettings">
+            <inheritdoc/>
+        </member>
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed.GetAsyncEnumerator(SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
@@ -366,6 +372,12 @@
             <inheritdoc/>
         </member>
         <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings.SongsPerPage">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings.StartingDate">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings.EndingDate">
             <inheritdoc/>
         </member>
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings.Clone">
@@ -432,6 +444,9 @@
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverMapperFeed.AreSettingsValid(SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverMapperFeed.EnsureValidSettings">
+            <inheritdoc/>
+        </member>
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverMapperFeed.GetAsyncEnumerator(SongFeedReaders.Feeds.IFeedSettings)">
             <inheritdoc/>
         </member>
@@ -464,6 +479,13 @@
             <summary>
             Beat Saver username of the mapper.
             </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverMapperSettings.StartingPage">
+            <summary>
+            Page of the feed to start on, default is 1. Setting '1' here is the same as starting on the first page.
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> when set to less than 1.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when set to less than 1.</exception>
         </member>
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverMapperSettings.Clone">
             <inheritdoc/>
@@ -1091,6 +1113,7 @@
         <member name="M:SongFeedReaders.Feeds.FeedPageHandlerBase.CreateResult(System.Collections.Generic.List{SongFeedReaders.Models.ScrapedSong},System.Uri,SongFeedReaders.Feeds.IFeedSettings,System.Boolean)">
             <summary>
             Creates a basic <see cref="T:SongFeedReaders.Feeds.PageReadResult"/> from the given songs, pageUri, and settings.
+            TODO: Should return a Builder class.
             </summary>
             <param name="songs"></param>
             <param name="pageUri"></param>
@@ -1354,7 +1377,7 @@
         </member>
         <member name="M:SongFeedReaders.Feeds.IFeed.ReadAsync(System.Threading.CancellationToken)">
             <summary>
-            
+            Reads the feed according to the current settings and returns a <see cref="T:SongFeedReaders.Feeds.FeedResult"/>.
             </summary>
             <param name="cancellationToken"></param>
             <returns></returns>
@@ -1362,7 +1385,8 @@
         </member>
         <member name="M:SongFeedReaders.Feeds.IFeed.ReadAsync(System.IProgress{SongFeedReaders.Feeds.PageReadResult},System.Threading.CancellationToken)">
             <summary>
-            
+            Reads the feed according to the current settings with progress reports after every page
+            and returns a <see cref="T:SongFeedReaders.Feeds.FeedResult"/>.
             </summary>
             <param name="progress"></param>
             <param name="cancellationToken"></param>
@@ -1832,6 +1856,9 @@
             <inheritdoc/>
         </member>
         <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.AreSettingsValid(SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.EnsureValidSettings">
             <inheritdoc/>
         </member>
         <member name="M:SongFeedReaders.Feeds.ScoreSaber.ScoreSaberFeed.GetAsyncEnumerator(SongFeedReaders.Feeds.IFeedSettings)">

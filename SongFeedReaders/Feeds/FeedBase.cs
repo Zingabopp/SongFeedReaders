@@ -42,12 +42,7 @@ namespace SongFeedReaders.Feeds
         /// <inheritdoc/>
         public bool HasValidSettings => AreSettingsValid(FeedSettings);
         /// <inheritdoc/>
-        public virtual void EnsureValidSettings()
-        {
-            if (!AreSettingsValid(FeedSettings))
-                throw new InvalidFeedSettingsException();
-        }
-
+        public abstract void EnsureValidSettings();
 
         /// <summary>
         /// Initializes a new <see cref="FeedBase"/>.

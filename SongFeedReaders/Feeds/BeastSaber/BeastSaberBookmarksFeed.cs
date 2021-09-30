@@ -1,4 +1,5 @@
-﻿using SongFeedReaders.Logging;
+﻿using SongFeedReaders.Attributes;
+using SongFeedReaders.Logging;
 using SongFeedReaders.Services;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
     /// <summary>
     /// A feed that reads songs bookmarked by a bsaber.com user.
     /// </summary>
+    [Feed(typeof(BeastSaberBookmarksSettings))]
     public class BeastSaberBookmarksFeed : BeastSaberFeed, IPagedFeed
     {
         /// <inheritdoc/>

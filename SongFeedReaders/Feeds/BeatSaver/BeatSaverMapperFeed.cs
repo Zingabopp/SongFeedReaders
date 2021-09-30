@@ -123,6 +123,20 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
+        public override void EnsureValidSettings()
+        {
+            if (FeedSettings == null)
+                throw new InvalidFeedSettingsException("FeedSettings is null.");
+            if (!(FeedSettings is BeatSaverMapperSettings settings))
+            {
+                throw new InvalidFeedSettingsException($"Settings is the wrong type ({FeedSettings?.GetType().Name}), "
+                    + $"should be {nameof(BeatSaverMapperSettings)}");
+            }
+            if (string.IsNullOrWhiteSpace(settings.MapperName))
+                throw new InvalidFeedSettingsException($"{nameof(BeatSaverMapperSettings)} must have a {nameof(settings.MapperName)}");
+        }
+
+        /// <inheritdoc/>
         public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
         {
             if (!AreSettingsValid(settings))

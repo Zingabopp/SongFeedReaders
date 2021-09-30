@@ -63,10 +63,32 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <inheritdoc/>
         protected override bool AreSettingsValid(IFeedSettings? settings)
         {
-            if (!(settings is BeatSaverLatestSettings))
+            if (!(settings is BeatSaverLatestSettings castSettings))
+            {
                 return false;
 
+            }
+            if (castSettings.StartingDate > castSettings.EndingDate)
+            {
+                return false;
+            }
             return true;
+        }
+
+        /// <inheritdoc/>
+        public override void EnsureValidSettings()
+        {
+            if (FeedSettings == null)
+                throw new InvalidFeedSettingsException("FeedSettings is null.");
+            if (!(FeedSettings is BeatSaverLatestSettings settings))
+            {
+                throw new InvalidFeedSettingsException($"Settings is the wrong type ({FeedSettings?.GetType().Name}), "
+                    + $"should be {nameof(BeatSaverLatestSettings)}");
+            }
+            if (settings.StartingDate > settings.EndingDate)
+            {
+                throw new InvalidFeedSettingsException($"StartingDate cannot be greater than the EndingDate.");
+            }
         }
 
         /// <inheritdoc/>
@@ -76,5 +98,6 @@ namespace SongFeedReaders.Feeds.BeatSaver
                 throw new InvalidFeedSettingsException();
             return new DatedFeedAsyncEnumerator(this, false, Logger);
         }
+
     }
 }
