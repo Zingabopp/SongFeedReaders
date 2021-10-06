@@ -29,7 +29,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
         }
 
         /// <inheritdoc/>
-        public override string FeedId => "BeastSaber.Bookmarks";
+        public override string FeedId => $"{ServiceId}.Bookmarks";
 
         /// <inheritdoc/>
         public override string DisplayName => "BeastSaber Bookmarks";

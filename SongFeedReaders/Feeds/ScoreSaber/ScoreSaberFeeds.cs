@@ -37,7 +37,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         {
         }
         /// <inheritdoc/>
-        public override string FeedId => "ScoreSaber.Trending";
+        public override string FeedId => $"{ServiceId}.Trending";
 
         /// <inheritdoc/>
         public override string DisplayName => "ScoreSaber Trending";
@@ -81,7 +81,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         {
         }
         /// <inheritdoc/>
-        public override string FeedId => "ScoreSaber.LatestRanked";
+        public override string FeedId => $"{ServiceId}.LatestRanked";
 
         /// <inheritdoc/>
         public override string DisplayName => "ScoreSaber Latest Ranked";
@@ -124,7 +124,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         {
         }
         /// <inheritdoc/>
-        public override string FeedId => "ScoreSaber.TopPlayed";
+        public override string FeedId => $"{ServiceId}.TopPlayed";
 
         /// <inheritdoc/>
         public override string DisplayName => "ScoreSaber Top Played";
@@ -167,7 +167,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         {
         }
         /// <inheritdoc/>
-        public override string FeedId => "ScoreSaber.TopRanked";
+        public override string FeedId => $"{ServiceId}.TopRanked";
 
         /// <inheritdoc/>
         public override string DisplayName => "ScoreSaber Top Ranked";

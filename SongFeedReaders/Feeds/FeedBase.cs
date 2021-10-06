@@ -32,6 +32,8 @@ namespace SongFeedReaders.Feeds
         /// <inheritdoc/>
         public abstract string FeedId { get; }
         /// <inheritdoc/>
+        public abstract string ServiceId { get; }
+        /// <inheritdoc/>
         public abstract string DisplayName { get; }
         /// <inheritdoc/>
         public abstract string Description { get; }

@@ -27,7 +27,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
         }
 
         /// <inheritdoc/>
-        public override string FeedId => "BeastSaber.Follows";
+        public override string FeedId => $"{ServiceId}.Follows";
 
         /// <inheritdoc/>
         public override string DisplayName => "BeastSaber Follows";

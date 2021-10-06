@@ -27,7 +27,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
         }
 
         /// <inheritdoc/>
-        public override string FeedId => "BeastSaber.CuratorRecommended";
+        public override string FeedId => $"{ServiceId}.CuratorRecommended";
 
         /// <inheritdoc/>
         public override string DisplayName => "BeastSaber Curator Recommended";

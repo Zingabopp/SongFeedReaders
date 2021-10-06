@@ -15,6 +15,8 @@ namespace SongFeedReaders.Feeds.BeastSaber
     {
         private const string MIME_XML = "text/xml";
         private const string MIME_JSON = "application/json";
+        /// <inheritdoc/>
+        public override string ServiceId => "BeastSaber";
         /// <summary>
         /// Base URI for bsaber.com
         /// </summary>

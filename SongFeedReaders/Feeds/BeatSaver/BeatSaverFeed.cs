@@ -17,6 +17,9 @@ namespace SongFeedReaders.Feeds.BeatSaver
     /// </summary>
     public abstract class BeatSaverFeed : FeedBase
     {
+        /// <inheritdoc/>
+        public override string ServiceId => "BeatSaver";
+
         /// <summary>
         /// Initializes a new <see cref="BeatSaverFeed"/>.
         /// </summary>

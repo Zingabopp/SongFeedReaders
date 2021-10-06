@@ -14,6 +14,10 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         string FeedId { get; }
         /// <summary>
+        /// Unique string iD of the service. (i.e. 'BeatSaver').
+        /// </summary>
+        string ServiceId { get; }
+        /// <summary>
         /// Display name of the feed.
         /// </summary>
         string DisplayName { get; }

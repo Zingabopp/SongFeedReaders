@@ -60,7 +60,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
-        public override string FeedId => "BeatSaver.Mapper";
+        public override string FeedId => $"{ServiceId}.Mapper";
 
         /// <inheritdoc/>
         public override string DisplayName => $"Beat Saver Mapper: {MapperFeedSettings.MapperName}";

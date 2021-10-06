@@ -69,6 +69,8 @@ namespace SongFeedReaders.Feeds.ScoreSaber
             /// </summary>
             TopRanked = 3
         }
+        /// <inheritdoc/>
+        public override string ServiceId => "ScoreSaber";
         /// <summary>
         /// Base URI for bsaber.com
         /// </summary>

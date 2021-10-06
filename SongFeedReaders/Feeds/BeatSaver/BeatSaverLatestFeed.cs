@@ -42,7 +42,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
-        public override string FeedId => "BeatSaver.Latest";
+        public override string FeedId => $"{ServiceId}.Latest";
 
         /// <inheritdoc/>
         public override string DisplayName => "Beat Saver Latest";
