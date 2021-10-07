@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace SongFeedReaders.Feeds
 {
@@ -32,9 +31,15 @@ namespace SongFeedReaders.Feeds
         /// <summary>
         /// True if the feed reading was successful.
         /// </summary>
-        public bool Successful { get { return _successful 
-                    && ErrorLevel != FeedResultErrorLevel.Error 
-                    && ErrorLevel != FeedResultErrorLevel.Cancelled; } }
+        public bool Successful
+        {
+            get
+            {
+                return _successful
+&& ErrorLevel != FeedResultErrorLevel.Error
+&& ErrorLevel != FeedResultErrorLevel.Cancelled;
+            }
+        }
         /// <summary>
         /// Number of pages checked.
         /// </summary>
@@ -74,7 +79,7 @@ namespace SongFeedReaders.Feeds
             {
                 pageResults = pageReadResults.ToArray();
                 int pagesWithErrors = 0;
-                foreach (var page in pageReadResults)
+                foreach (PageReadResult? page in pageReadResults)
                 {
                     SongsCheckedCount += page.SongsOnPage;
                     if (page.Exception != null)

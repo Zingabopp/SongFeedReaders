@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using SongFeedReaders.Models;
 using System;
 
 namespace SongFeedReaders.Models
@@ -121,7 +120,7 @@ namespace SongFeedReaders.Models
             get => Scores.ToString();
             set
             {
-                if (int.TryParse(value, 
+                if (int.TryParse(value,
                     System.Globalization.NumberStyles.Number,
                     System.Globalization.NumberFormatInfo.CurrentInfo,
                     out int scores))

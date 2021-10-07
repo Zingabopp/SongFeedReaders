@@ -76,7 +76,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <inheritdoc/>
         public override object Clone()
         {
-            var clone = new ScoreSaberTrendingSettings();
+            ScoreSaberTrendingSettings? clone = new ScoreSaberTrendingSettings();
             CopyTo(clone);
             return clone;
         }
@@ -96,7 +96,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <inheritdoc/>
         public override object Clone()
         {
-            var clone = new ScoreSaberLatestSettings();
+            ScoreSaberLatestSettings? clone = new ScoreSaberLatestSettings();
             CopyTo(clone);
             return clone;
         }
@@ -116,7 +116,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <inheritdoc/>
         public override object Clone()
         {
-            var clone = new ScoreSaberTopPlayedSettings();
+            ScoreSaberTopPlayedSettings? clone = new ScoreSaberTopPlayedSettings();
             CopyTo(clone);
             return clone;
         }
@@ -136,7 +136,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <inheritdoc/>
         public override object Clone()
         {
-            var clone = new ScoreSaberTopRankedSettings();
+            ScoreSaberTopRankedSettings? clone = new ScoreSaberTopRankedSettings();
             CopyTo(clone);
             return clone;
         }

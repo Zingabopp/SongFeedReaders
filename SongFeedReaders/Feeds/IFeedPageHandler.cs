@@ -1,7 +1,4 @@
-﻿using SongFeedReaders.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace SongFeedReaders.Feeds
 {

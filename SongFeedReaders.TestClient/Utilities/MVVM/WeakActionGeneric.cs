@@ -16,7 +16,6 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 // ReSharper disable RedundantUsingDirective
-using System.Reflection;
 
 // ReSharper restore RedundantUsingDirective
 
@@ -186,7 +185,7 @@ namespace MVVM
                 && ActionReference.Target != null
                 && !keepTargetAlive)
             {
-                var type = ActionReference.Target.GetType();
+                Type type = ActionReference.Target.GetType();
 
                 if (type.Name.StartsWith("<>")
                     && type.Name.Contains("DisplayClass"))
@@ -220,7 +219,7 @@ namespace MVVM
                 return;
             }
 
-            var actionTarget = ActionTarget;
+            object actionTarget = ActionTarget;
 
             if (IsAlive)
             {
@@ -256,7 +255,7 @@ namespace MVVM
         /// being casted to T.</param>
         public void ExecuteWithObject(object parameter)
         {
-            var parameterCasted = (T)parameter;
+            T parameterCasted = (T)parameter;
             Execute(parameterCasted);
         }
 

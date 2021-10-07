@@ -65,7 +65,7 @@ namespace SongFeedReaders.Feeds
         /// <param name="lastSong">The last unfiltered song on the page.</param>
         /// <param name="songsOnPage">Number of unfiltered songs on the page.</param>
         /// <param name="isLastPage">If true, ndicates there are no more pages after this one.</param>
-        public PageReadResult(Uri? uri, IEnumerable<ScrapedSong>? songs, ScrapedSong? firstSong, ScrapedSong? lastSong, 
+        public PageReadResult(Uri? uri, IEnumerable<ScrapedSong>? songs, ScrapedSong? firstSong, ScrapedSong? lastSong,
             int songsOnPage, bool isLastPage = false)
         {
             IsLastPage = isLastPage;
@@ -97,7 +97,7 @@ namespace SongFeedReaders.Feeds
         /// <param name="songsOnPage">Number of unfiltered songs on the page.</param>
         /// <param name="isLastPage">If true, ndicates there are no more pages after this one.</param>
         public PageReadResult(Uri? uri, Exception? exception, PageErrorType pageError,
-            List<ScrapedSong>? songs = null, ScrapedSong? firstSong = null, ScrapedSong? lastSong = null, 
+            List<ScrapedSong>? songs = null, ScrapedSong? firstSong = null, ScrapedSong? lastSong = null,
             int songsOnPage = 0, bool isLastPage = false)
             : this(uri, songs, firstSong, lastSong, songsOnPage, isLastPage)
         {

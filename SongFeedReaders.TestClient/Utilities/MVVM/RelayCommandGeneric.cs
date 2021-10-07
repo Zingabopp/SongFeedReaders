@@ -206,7 +206,7 @@ namespace MVVM
         /// to be passed, this object can be set to a null reference</param>
         public virtual void Execute(object parameter)
         {
-            var val = parameter;
+            object val = parameter;
 
 #if !NETFX_CORE
             if (parameter != null

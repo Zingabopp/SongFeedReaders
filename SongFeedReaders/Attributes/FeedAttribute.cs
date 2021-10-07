@@ -1,7 +1,5 @@
 ﻿using SongFeedReaders.Feeds;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SongFeedReaders.Attributes
 {
@@ -11,7 +9,7 @@ namespace SongFeedReaders.Attributes
     [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
     public sealed class FeedAttribute : Attribute
     {
-        readonly Type settingsType;
+        private readonly Type settingsType;
 
         /// <summary>
         /// Identifies a class as an <see cref="IFeed"/> and specifies the <see cref="IFeedSettings"/> type.

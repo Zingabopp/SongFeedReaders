@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using SongFeedReaders.Feeds;
 using SongFeedReaders.Feeds.BeastSaber;
 using SongFeedReaders.Feeds.BeatSaver;
@@ -14,6 +7,7 @@ using SongFeedReaders.Logging;
 using SongFeedReaders.Services;
 using SongFeedReaders.TestClient.ViewModels;
 using SongFeedReaders.TestClient.Views;
+using System.Windows;
 using WebUtilities;
 using WebUtilities.HttpClientWrapper;
 
@@ -65,7 +59,7 @@ namespace SongFeedReaders.TestClient
 
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            var mainWindow = serviceProvider.GetRequiredService<NavigationView>();
+            NavigationView? mainWindow = serviceProvider.GetRequiredService<NavigationView>();
             mainWindow.Show();
         }
 
@@ -77,7 +71,7 @@ namespace SongFeedReaders.TestClient
             factory.RegisterSetting<BeastSaberBookmarksSettings>(new BeastSaberBookmarksSettings() { Username = "Zingabopp" });
             factory.RegisterSetting<BeastSaberFollowsSettings>(new BeastSaberFollowsSettings() { Username = "Zingabopp" });
             factory.RegisterSetting<BeastSaberCuratorSettings>();
-            var ssLS = new ScoreSaberLatestSettings();
+            ScoreSaberLatestSettings? ssLS = new ScoreSaberLatestSettings();
             ssLS.SetSongsPerPage(501);
             factory.RegisterSetting<ScoreSaberLatestSettings>(ssLS);
             factory.RegisterSetting<ScoreSaberTrendingSettings>();

@@ -2,17 +2,16 @@
 using SongFeedReaders.Feeds;
 using SongFeedReaders.Feeds.BeastSaber;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace SongFeedReadersTests.PageHandler
 {
     [TestClass]
     public class BeastSaberPageHandler_Tests
     {
-        readonly string DataPath = Path.GetFullPath(Path.Combine("Data", "BeastSaber"));
-        string GetFilePath(string fileName) => Path.Combine(DataPath, fileName);
+        private readonly string DataPath = Path.GetFullPath(Path.Combine("Data", "BeastSaber"));
+
+        private string GetFilePath(string fileName) => Path.Combine(DataPath, fileName);
         [TestMethod]
         public void StandardPage()
         {
@@ -39,7 +38,7 @@ namespace SongFeedReadersTests.PageHandler
             Assert.AreEqual(expectedIsLastPage, result.IsLastPage);
             Assert.AreEqual(expectedSongs, result.SongCount);
             Assert.AreEqual(expectedSongsOnPage, result.SongsOnPage);
-            foreach (var song in result.Songs())
+            foreach (SongFeedReaders.Models.ScrapedSong? song in result.Songs())
             {
                 Assert.IsFalse(string.IsNullOrWhiteSpace(song.Hash), "Hash is empty");
                 Assert.IsFalse(string.IsNullOrWhiteSpace(song.Key), "Key is empty");
@@ -77,7 +76,7 @@ namespace SongFeedReadersTests.PageHandler
             Assert.AreEqual(expectedIsLastPage, result.IsLastPage);
             Assert.AreEqual(expectedSongs, result.SongCount);
             Assert.AreEqual(expectedSongsOnPage, result.SongsOnPage);
-            foreach (var song in result.Songs())
+            foreach (SongFeedReaders.Models.ScrapedSong? song in result.Songs())
             {
                 Assert.IsFalse(string.IsNullOrWhiteSpace(song.Hash), "Hash is empty");
                 Assert.IsFalse(string.IsNullOrWhiteSpace(song.Key), "Key is empty");

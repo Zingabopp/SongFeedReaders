@@ -229,7 +229,7 @@ namespace MVVM
                 && ActionReference.Target != null
                 && !keepTargetAlive)
             {
-                var type = ActionReference.Target.GetType();
+                Type type = ActionReference.Target.GetType();
 
                 if (type.Name.StartsWith("<>")
                     && type.Name.Contains("DisplayClass"))
@@ -332,7 +332,7 @@ namespace MVVM
                 return;
             }
 
-            var actionTarget = ActionTarget;
+            object actionTarget = ActionTarget;
 
             if (IsAlive)
             {

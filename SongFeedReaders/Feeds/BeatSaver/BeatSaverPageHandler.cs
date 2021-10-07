@@ -6,7 +6,6 @@ using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace SongFeedReaders.Feeds.BeatSaver
 {
@@ -43,13 +42,13 @@ namespace SongFeedReaders.Feeds.BeatSaver
             {
                 throw;
             }
-            catch(JsonReaderException ex)
+            catch (JsonReaderException ex)
             {
                 string message = $"Failed to parse JSON from '{pageUri}'";
                 Logger?.Debug(message);
                 throw new PageParseException(message, ex);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new PageParseException(ex.Message, ex);
             }
@@ -108,14 +107,14 @@ namespace SongFeedReaders.Feeds.BeatSaver
                 throw new ArgumentNullException(nameof(pageText));
             try
             {
-                var jSong = JObject.Parse(pageText);
+                JObject? jSong = JObject.Parse(pageText);
                 return ParseSongFromJson(jSong, sourceUri, storeRawData);
             }
-            catch(PageParseException)
+            catch (PageParseException)
             {
                 throw;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new PageParseException(ex.Message, ex);
             }
@@ -149,11 +148,11 @@ namespace SongFeedReaders.Feeds.BeatSaver
                     downloadUri = BeatSaverHelper.GetDownloadUriByHash(songHash);
                 }
                 ScrapedSong newSong = new ScrapedSong(
-                    hash: songHash, 
+                    hash: songHash,
                     songName: songName,
-                    mapperName: mapperName, 
+                    mapperName: mapperName,
                     downloadUri: downloadUri,
-                    sourceUri: sourceUri, 
+                    sourceUri: sourceUri,
                     jsonData: storeRawData ? song as JObject : null)
                 {
                     Key = songKey,
@@ -211,7 +210,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
                     }
                 }
             }
-            catch(PageParseException)
+            catch (PageParseException)
             {
                 throw;
             }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SongFeedReaders.Logging
+﻿namespace SongFeedReaders.Logging
 {
     /// <summary>
     /// Basic implemenation of <see cref="ILoggerSettings"/>.

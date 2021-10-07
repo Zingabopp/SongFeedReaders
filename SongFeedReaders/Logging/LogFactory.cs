@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace SongFeedReaders.Logging
 {
@@ -26,7 +23,7 @@ namespace SongFeedReaders.Logging
         /// <inheritdoc/>
         public ILogger GetLogger(string? moduleName = null)
         {
-            if(moduleName == null)
+            if (moduleName == null)
             {
                 StackFrame frame = new StackFrame(1, false);
                 MethodBase method = frame.GetMethod();

@@ -17,7 +17,6 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 
 // ReSharper disable RedundantUsingDirective
-using System.Reflection;
 // ReSharper restore RedundantUsingDirective
 
 #nullable disable
@@ -187,7 +186,7 @@ namespace MVVM
                 && FuncReference.Target != null
                 && !keepTargetAlive)
             {
-                var type = FuncReference.Target.GetType();
+                Type type = FuncReference.Target.GetType();
 
                 if (type.Name.StartsWith("<>")
                     && type.Name.Contains("DisplayClass"))
@@ -222,7 +221,7 @@ namespace MVVM
                 return _staticFunc(parameter);
             }
 
-            var funcTarget = FuncTarget;
+            object funcTarget = FuncTarget;
 
             if (IsAlive)
             {
@@ -261,7 +260,7 @@ namespace MVVM
         /// <returns>The result of the execution as object, to be casted to T.</returns>
         public object ExecuteWithObject(object parameter)
         {
-            var parameterCasted = (T)parameter;
+            T parameterCasted = (T)parameter;
             return Execute(parameterCasted);
         }
 

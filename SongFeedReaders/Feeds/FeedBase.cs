@@ -1,10 +1,7 @@
 ﻿using SongFeedReaders.Logging;
 using SongFeedReaders.Models;
-using SongFeedReaders.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using WebUtilities;
@@ -85,7 +82,7 @@ namespace SongFeedReaders.Feeds
         {
             if (feedSettings == null)
                 throw new ArgumentNullException(nameof(feedSettings));
-            if(feedSettings is TFeedSettings settings)
+            if (feedSettings is TFeedSettings settings)
             {
                 return InitializeAsync(settings, cancellationToken);
             }
@@ -170,7 +167,7 @@ namespace SongFeedReaders.Feeds
                         resultsWithZeroSongs++;
                     }
                     int acceptedFromPage = 0;
-                    foreach (var song in lastResult.Songs())
+                    foreach (ScrapedSong? song in lastResult.Songs())
                     {
                         string? songHash = song.Hash;
                         if (songHash != null && songHash.Length > 0)

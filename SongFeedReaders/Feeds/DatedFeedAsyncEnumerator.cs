@@ -1,7 +1,5 @@
 ﻿using SongFeedReaders.Logging;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -121,7 +119,7 @@ namespace SongFeedReaders.Feeds
             try
             {
                 await _semaphore.WaitAsync(cancellationToken);
-                                                               // TODO: Workaround for a Beat Saver bug
+                // TODO: Workaround for a Beat Saver bug
                 FeedDate feedDate = new FeedDate(CurrentLatest, DateDirection.After);
                 result = await MoveAsync(feedDate, cancellationToken);
             }

@@ -72,9 +72,9 @@ namespace SongFeedReaders.Logging
             set => loggerSettings.EnableTimeStamp = value;
         }
         /// <inheritdoc/>
-        public void Log(string message, LogLevel logLevel, 
-            [CallerFilePath] string? file = "", 
-            [CallerMemberName] string? member = "", 
+        public void Log(string message, LogLevel logLevel,
+            [CallerFilePath] string? file = "",
+            [CallerMemberName] string? member = "",
             [CallerLineNumber] int line = 0)
         {
             if (LogLevel > logLevel)
@@ -91,9 +91,9 @@ namespace SongFeedReaders.Logging
             Console.WriteLine($"{sourcePart}{timePart} - {logLevel}] {message}");
         }
         /// <inheritdoc/>
-        public void Log(Exception e, LogLevel logLevel, 
-            [CallerFilePath] string? file = "", 
-            [CallerMemberName] string? member = "", 
+        public void Log(Exception e, LogLevel logLevel,
+            [CallerFilePath] string? file = "",
+            [CallerMemberName] string? member = "",
             [CallerLineNumber] int line = 0)
         {
             if (LogLevel > logLevel)

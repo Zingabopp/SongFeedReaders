@@ -1,7 +1,5 @@
 ﻿using ProtoBuf;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SongFeedReaders.Models
 {
@@ -50,20 +48,20 @@ namespace SongFeedReaders.Models
         /// <summary>
         /// Ranked status of a song
         /// </summary>
-        public enum RankedStatus : uint 
-        { 
+        public enum RankedStatus : uint
+        {
             /// <summary>
             /// Song is not ranked.
             /// </summary>
-            Unranked, 
+            Unranked,
             /// <summary>
             /// Song is ranked.
             /// </summary>
-            Ranked = 1, 
+            Ranked = 1,
             /// <summary>
             /// Song is qualified.
             /// </summary>
-            Qualified = 2 
+            Qualified = 2
         }
         /// <summary>
         /// Beats per minute.
@@ -183,7 +181,7 @@ namespace SongFeedReaders.Models
 
 #pragma warning restore IDE0051 // Remove unused private members
 #pragma warning restore IDE1006 // Naming Styles
-        AndruzzProtobufSong()
+        private AndruzzProtobufSong()
         {
             songDurationSeconds = 1;
             rankedState = RankedStatus.Unranked;

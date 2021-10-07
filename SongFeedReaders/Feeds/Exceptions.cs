@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace SongFeedReaders.Feeds
 {
@@ -172,7 +170,7 @@ namespace SongFeedReaders.Feeds
         /// Initializes a new instance of the <see cref="PageParseException"/> class.
         /// </summary>
         /// <param name="message"></param>
-        public PageParseException(string message) 
+        public PageParseException(string message)
             : base(message)
         {
         }
@@ -182,7 +180,7 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         /// <param name="message"></param>
         /// <param name="innerException"></param>
-        public PageParseException(string message, Exception innerException) 
+        public PageParseException(string message, Exception innerException)
             : base(message, innerException)
         {
         }
@@ -192,7 +190,7 @@ namespace SongFeedReaders.Feeds
         /// </summary>
         /// <param name="info"></param>
         /// <param name="context"></param>
-        protected PageParseException(SerializationInfo info, StreamingContext context) 
+        protected PageParseException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }
@@ -256,7 +254,7 @@ namespace SongFeedReaders.Feeds
         /// Initializes a new instance of the <see cref="FeedUninitializedException"/> class.
         /// </summary>
         /// <param name="message"></param>
-        public FeedUninitializedException(string message) 
+        public FeedUninitializedException(string message)
             : base(message)
         {
         }

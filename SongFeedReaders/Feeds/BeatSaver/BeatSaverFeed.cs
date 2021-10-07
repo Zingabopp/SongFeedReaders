@@ -1,12 +1,5 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using SongFeedReaders.Logging;
-using SongFeedReaders.Models;
-using SongFeedReaders.Services;
-using SongFeedReaders.Utilities;
+﻿using SongFeedReaders.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using WebUtilities;
 

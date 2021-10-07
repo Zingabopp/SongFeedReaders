@@ -1,8 +1,6 @@
 ﻿using SongFeedReaders.Logging;
 using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace SongFeedReadersTests
 {
@@ -23,17 +21,17 @@ namespace SongFeedReadersTests
                 ModuleName = moduleName;
             }
 
-            public void Log(string message, LogLevel level, 
-                [CallerFilePath] string? file = null, 
-                [CallerMemberName] string? member = null, 
+            public void Log(string message, LogLevel level,
+                [CallerFilePath] string? file = null,
+                [CallerMemberName] string? member = null,
                 [CallerLineNumber] int line = 0)
             {
                 Console.WriteLine(GetPrefix(level, file, member, line) + message);
             }
 
-            public void Log(Exception e, LogLevel level, 
-                [CallerFilePath] string? file = null, 
-                [CallerMemberName] string? member = null, 
+            public void Log(Exception e, LogLevel level,
+                [CallerFilePath] string? file = null,
+                [CallerMemberName] string? member = null,
                 [CallerLineNumber] int line = 0)
             {
                 Console.WriteLine(GetPrefix(level, file, member, line) + e.ToString());

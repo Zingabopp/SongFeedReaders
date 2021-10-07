@@ -17,7 +17,7 @@ namespace SongFeedReaders.Logging
         /// <param name="file"></param>
         /// <param name="member"></param>
         /// <param name="line"></param>
-        void Log(string message, LogLevel level, [CallerFilePath] string? file = null, 
+        void Log(string message, LogLevel level, [CallerFilePath] string? file = null,
             [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0);
         /// <summary>
         /// Logs an <see cref="Exception"/> at the given level.

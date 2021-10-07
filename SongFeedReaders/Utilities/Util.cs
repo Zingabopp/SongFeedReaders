@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SongFeedReaders.Utilities
 {
@@ -20,7 +18,7 @@ namespace SongFeedReaders.Utilities
         {
             get
             {
-                if(!_utcTime)
+                if (!_utcTime)
                 {
                     try
                     {

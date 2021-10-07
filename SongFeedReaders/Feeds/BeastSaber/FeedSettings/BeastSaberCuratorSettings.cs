@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SongFeedReaders.Feeds.BeastSaber
+﻿namespace SongFeedReaders.Feeds.BeastSaber
 {
     /// <summary>
     /// Settings for the Beast Saber Curator Recommended feed.

@@ -20,7 +20,7 @@ namespace SongFeedReaders.TestClient.ViewModels
                 _selectedFeed = value;
                 if (value != null)
                 {
-                    var settings = _settingsFactory.GetSettings(value.FeedId);
+                    IFeedSettings? settings = _settingsFactory.GetSettings(value.FeedId);
                     FeedViewModel = new FeedViewModel(value, settings);
                 }
                 else

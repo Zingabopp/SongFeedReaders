@@ -225,7 +225,7 @@ namespace MVVM
                 && FuncReference.Target != null
                 && !keepTargetAlive)
             {
-                var type = FuncReference.Target.GetType();
+                Type type = FuncReference.Target.GetType();
 
                 if (type.Name.StartsWith("<>")
                     && type.Name.Contains("DisplayClass"))
@@ -331,7 +331,7 @@ namespace MVVM
                 return _staticFunc();
             }
 
-            var funcTarget = FuncTarget;
+            object funcTarget = FuncTarget;
 
             if (IsAlive)
             {

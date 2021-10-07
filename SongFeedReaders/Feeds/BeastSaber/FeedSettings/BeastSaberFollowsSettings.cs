@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SongFeedReaders.Feeds.BeastSaber
+﻿namespace SongFeedReaders.Feeds.BeastSaber
 {
     /// <summary>
-    /// Settings for the Beast Saber Bookmarks feed.
+    /// Settings for the Beast Saber Follows feed.
     /// </summary>
-    public class BeastSaberBookmarksSettings : BeastSaberFeedSettings
+    public class BeastSaberFollowsSettings : BeastSaberFeedSettings
     {
 
         /// <inheritdoc/>
-        public override string FeedId => "BeastSaber.Bookmarks";
+        public override string FeedId => "BeastSaber.Follows";
 
         /// <inheritdoc/>
-        public override int FeedIndex => 0;
+        public override int FeedIndex => 1;
         /// <inheritdoc/>
         public override int SongsPerPage => 100; // TODO: Not correct, should this even be here?
 
@@ -26,7 +22,7 @@ namespace SongFeedReaders.Feeds.BeastSaber
         /// <inheritdoc/>
         public override object Clone()
         {
-            return new BeastSaberBookmarksSettings()
+            return new BeastSaberFollowsSettings()
             {
                 MaxSongs = this.MaxSongs,
                 Filter = this.Filter,

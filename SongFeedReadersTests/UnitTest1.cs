@@ -1,7 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SongFeedReaders.Feeds;
-using SongFeedReaders.Feeds.BeatSaver;
 using SongFeedReaders.Feeds.BeastSaber;
+using SongFeedReaders.Feeds.BeatSaver;
+using SongFeedReaders.Feeds.ScoreSaber;
 using SongFeedReaders.Logging;
 using System;
 using System.Linq;
@@ -9,7 +10,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using WebUtilities;
 using WebUtilities.HttpClientWrapper;
-using SongFeedReaders.Feeds.ScoreSaber;
 
 namespace SongFeedReadersTests
 {
@@ -19,7 +19,7 @@ namespace SongFeedReadersTests
         [TestMethod]
         public void ScoreSaberFeed_CreateUri()
         {
-            var feedNumber = FeedNumber.LatestRanked;
+            FeedNumber feedNumber = FeedNumber.LatestRanked;
             int songsPerPage = 50;
             int pageNum = 1;
             bool rankedOnly = true;
@@ -43,12 +43,12 @@ namespace SongFeedReadersTests
                 MaxSongs = maxSongs,
                 RankedOnly = true
             };
-            var feed = new ScoreSaberLatestFeed(pageHandler, client, logFactory);
+            ScoreSaberLatestFeed? feed = new ScoreSaberLatestFeed(pageHandler, client, logFactory);
             await feed.InitializeAsync(feedSettings, CancellationToken.None);
-            var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
+            FeedResult? result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
-            var pages = result.GetResults().ToArray();
-            var songs = result.GetSongs().ToArray();
+            PageReadResult[]? pages = result.GetResults().ToArray();
+            SongFeedReaders.Models.ScrapedSong[]? songs = result.GetSongs().ToArray();
             Assert.IsTrue(pages.Length > 0);
             Assert.AreEqual(maxSongs, songs.Length);
         }
@@ -62,18 +62,18 @@ namespace SongFeedReadersTests
             BeatSaverPageHandler pageHandler = new BeatSaverPageHandler();
             BeatSaverLatestSettings feedSettings = new BeatSaverLatestSettings()
             {
-                 Filter = s =>
-                 {
-                     return !s.Key?.Contains("2") ?? throw new Exception("Null song key");
-                 },
+                Filter = s =>
+                {
+                    return !s.Key?.Contains("2") ?? throw new Exception("Null song key");
+                },
                 MaxSongs = maxSongs
             };
-            var feed = new BeatSaverLatestFeed(pageHandler, client, logFactory);
+            BeatSaverLatestFeed? feed = new BeatSaverLatestFeed(pageHandler, client, logFactory);
             await feed.InitializeAsync(feedSettings, CancellationToken.None);
-            var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
+            FeedResult? result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
-            var pages = result.GetResults().ToArray();
-            var songs = result.GetSongs().ToArray();
+            PageReadResult[]? pages = result.GetResults().ToArray();
+            SongFeedReaders.Models.ScrapedSong[]? songs = result.GetSongs().ToArray();
             Assert.IsTrue(pages.Length > 0);
             Assert.AreEqual(maxSongs, songs.Length);
         }
@@ -94,12 +94,12 @@ namespace SongFeedReadersTests
                 MaxSongs = maxSongs,
                 MapperName = "rustic"
             };
-            var feed = new BeatSaverMapperFeed(pageHandler, client, logFactory);
+            BeatSaverMapperFeed? feed = new BeatSaverMapperFeed(pageHandler, client, logFactory);
             await feed.InitializeAsync(feedSettings, CancellationToken.None);
-            var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
+            FeedResult? result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
-            var pages = result.GetResults().ToArray();
-            var songs = result.GetSongs().ToArray();
+            PageReadResult[]? pages = result.GetResults().ToArray();
+            SongFeedReaders.Models.ScrapedSong[]? songs = result.GetSongs().ToArray();
             Assert.IsTrue(pages.Length > 0);
             Assert.IsTrue(songs.Length <= maxSongs);
         }
@@ -116,12 +116,12 @@ namespace SongFeedReadersTests
                 Username = "Zingabopp",
                 MaxSongs = maxSongs
             };
-            var feed = new BeastSaberFollowsFeed(pageHandler, client, logFactory);
+            BeastSaberFollowsFeed? feed = new BeastSaberFollowsFeed(pageHandler, client, logFactory);
             await feed.InitializeAsync(feedSettings, CancellationToken.None);
-            var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
+            FeedResult? result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
-            var pages = result.GetResults().ToArray();
-            var songs = result.GetSongs().ToArray();
+            PageReadResult[]? pages = result.GetResults().ToArray();
+            SongFeedReaders.Models.ScrapedSong[]? songs = result.GetSongs().ToArray();
             Assert.IsTrue(pages.Length > 0);
             Assert.AreEqual(maxSongs, songs.Length);
         }
@@ -136,12 +136,12 @@ namespace SongFeedReadersTests
             {
                 MaxSongs = maxSongs
             };
-            var feed = new BeastSaberCuratorFeed(pageHandler, client, logFactory);
+            BeastSaberCuratorFeed? feed = new BeastSaberCuratorFeed(pageHandler, client, logFactory);
             await feed.InitializeAsync(feedSettings, CancellationToken.None);
-            var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
+            FeedResult? result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
-            var pages = result.GetResults().ToArray();
-            var songs = result.GetSongs().ToArray();
+            PageReadResult[]? pages = result.GetResults().ToArray();
+            SongFeedReaders.Models.ScrapedSong[]? songs = result.GetSongs().ToArray();
             Assert.IsTrue(pages.Length > 0);
             Assert.AreEqual(maxSongs, songs.Length);
         }
@@ -157,12 +157,12 @@ namespace SongFeedReadersTests
                 Username = "Zingabopp",
                 MaxSongs = maxSongs
             };
-            var feed = new BeastSaberBookmarksFeed(pageHandler, client, logFactory);
+            BeastSaberBookmarksFeed? feed = new BeastSaberBookmarksFeed(pageHandler, client, logFactory);
             await feed.InitializeAsync(feedSettings, CancellationToken.None);
-            var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
+            FeedResult? result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
-            var pages = result.GetResults().ToArray();
-            var songs = result.GetSongs().ToArray();
+            PageReadResult[]? pages = result.GetResults().ToArray();
+            SongFeedReaders.Models.ScrapedSong[]? songs = result.GetSongs().ToArray();
             Assert.IsTrue(pages.Length > 0);
             Assert.AreEqual(maxSongs, songs.Length);
         }
