@@ -44,7 +44,7 @@
             <Button Content="_Refresh" Command="{Binding Refresh}" Margin="10, 5, 10, 5"></Button>
             <Button Content="_Previous Page" Command="{Binding PreviousPage}" Margin="10, 5, 10, 5"/>
             <Button Content="_Next Page" Command="{Binding NextPage}" Margin="10, 5, 10, 5"/>
-            <TextBox Text="{Binding CurrentResult.Uri, Mode=OneWay}"/>
+            <TextBox Text="{Binding CurrentResult.Uri, Mode=OneWay}" VerticalContentAlignment="Center" Padding="10, 0, 10, 0"/>
         </StackPanel>
     </Grid>
 </UserControl>

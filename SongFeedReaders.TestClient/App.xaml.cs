@@ -60,7 +60,6 @@ namespace SongFeedReaders.TestClient
             services.AddTransient<IFeed, ScoreSaberTopPlayedFeed>();
             services.AddTransient<IFeed, ScoreSaberTopRankedFeed>();
             services.AddTransient<NavigationViewModel>();
-            services.AddTransient<FeedViewModel>();
             services.AddTransient<NavigationView>();
         }
 

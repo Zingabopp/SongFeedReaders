@@ -10,30 +10,17 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// <summary>
     /// This feed returns the songs that are trending on ScoreSaber.
     /// </summary>
-    public class ScoreSaberTrendingFeed : ScoreSaberFeed, IPagedFeed
+    public class ScoreSaberTrendingFeed : ScoreSaberPagedFeed<ScoreSaberTrendingSettings>
     {
         /// <summary>
         /// Creates a new <see cref="ScoreSaberTrendingFeed"/>.
         /// </summary>
-        /// <param name="feedSettings"></param>
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        public ScoreSaberTrendingFeed(ScoreSaberTrendingSettings feedSettings, IScoreSaberPageHandler pageHandler,
+        public ScoreSaberTrendingFeed(IScoreSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
-        {
-        }
-        /// <summary>
-        /// Creates a new <see cref="ScoreSaberTrendingFeed"/>.
-        /// </summary>
-        /// <param name="settingsFactory"></param>
-        /// <param name="pageHandler"></param>
-        /// <param name="webClient"></param>
-        /// <param name="logFactory"></param>
-        public ScoreSaberTrendingFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
         }
         /// <inheritdoc/>
@@ -53,31 +40,17 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// <summary>
     /// This feed returns the songs that were recently ranked on ScoreSaber.
     /// </summary>
-    public class ScoreSaberLatestFeed : ScoreSaberFeed, IPagedFeed
+    public class ScoreSaberLatestFeed : ScoreSaberPagedFeed<ScoreSaberLatestSettings>
     {
         /// <summary>
         /// Creates a new <see cref="ScoreSaberLatestFeed"/>.
         /// </summary>
-        /// <param name="feedSettings"></param>
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        public ScoreSaberLatestFeed(ScoreSaberLatestSettings feedSettings, IScoreSaberPageHandler pageHandler,
+        public ScoreSaberLatestFeed(IScoreSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
-        {
-        }
-
-        /// <summary>
-        /// Creates a new <see cref="ScoreSaberLatestFeed"/>.
-        /// </summary>
-        /// <param name="settingsFactory"></param>
-        /// <param name="pageHandler"></param>
-        /// <param name="webClient"></param>
-        /// <param name="logFactory"></param>
-        public ScoreSaberLatestFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
         }
         /// <inheritdoc/>
@@ -97,31 +70,19 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// <summary>
     /// This feed returns the songs that are the most played on ScoreSaber.
     /// </summary>
-    public class ScoreSaberTopPlayedFeed : ScoreSaberFeed, IPagedFeed
+    public class ScoreSaberTopPlayedFeed : ScoreSaberPagedFeed<ScoreSaberTopPlayedSettings>
     {
         /// <summary>
         /// Creates a new <see cref="ScoreSaberTopPlayedFeed"/>.
         /// </summary>
-        /// <param name="feedSettings"></param>
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        public ScoreSaberTopPlayedFeed(ScoreSaberTopPlayedSettings feedSettings, IScoreSaberPageHandler pageHandler,
+        public ScoreSaberTopPlayedFeed(IScoreSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
-        }
-        /// <summary>
-        /// Creates a new <see cref="ScoreSaberTopPlayedFeed"/>.
-        /// </summary>
-        /// <param name="settingsFactory"></param>
-        /// <param name="pageHandler"></param>
-        /// <param name="webClient"></param>
-        /// <param name="logFactory"></param>
-        public ScoreSaberTopPlayedFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
-        {
+
         }
         /// <inheritdoc/>
         public override string FeedId => $"{ServiceId}.TopPlayed";
@@ -140,30 +101,17 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// <summary>
     /// This feed returns the songs that are highest ranked on ScoreSaber.
     /// </summary>
-    public class ScoreSaberTopRankedFeed : ScoreSaberFeed, IPagedFeed
+    public class ScoreSaberTopRankedFeed : ScoreSaberPagedFeed<ScoreSaberTopRankedSettings>
     {
         /// <summary>
         /// Creates a new <see cref="ScoreSaberTopRankedFeed"/>.
         /// </summary>
-        /// <param name="feedSettings"></param>
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        public ScoreSaberTopRankedFeed(ScoreSaberTopRankedSettings feedSettings, IScoreSaberPageHandler pageHandler,
+        public ScoreSaberTopRankedFeed(IScoreSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
-        {
-        }
-        /// <summary>
-        /// Creates a new <see cref="ScoreSaberTopRankedFeed"/>.
-        /// </summary>
-        /// <param name="settingsFactory"></param>
-        /// <param name="pageHandler"></param>
-        /// <param name="webClient"></param>
-        /// <param name="logFactory"></param>
-        public ScoreSaberTopRankedFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
         }
         /// <inheritdoc/>

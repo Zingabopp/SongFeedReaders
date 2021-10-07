@@ -1,4 +1,6 @@
 ﻿using SongFeedReaders.Feeds;
+using SongFeedReaders.Services;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -8,7 +10,7 @@ namespace SongFeedReaders.TestClient.ViewModels
     public class NavigationViewModel : ViewModelBase
     {
         private IFeed? _selectedFeed;
-
+        private readonly ISettingsFactory _settingsFactory;
         public IFeed? SelectedFeed
         {
             get { return _selectedFeed; }
@@ -17,7 +19,10 @@ namespace SongFeedReaders.TestClient.ViewModels
                 if (_selectedFeed == value) return;
                 _selectedFeed = value;
                 if (value != null)
-                    FeedViewModel = new FeedViewModel(value);
+                {
+                    var settings = _settingsFactory.GetSettings(value.FeedId);
+                    FeedViewModel = new FeedViewModel(value, settings);
+                }
                 else
                     FeedViewModel = null;
                 NotifyPropertyChanged();
@@ -29,8 +34,9 @@ namespace SongFeedReaders.TestClient.ViewModels
 
         public ObservableCollection<IFeed> Feeds { get; }
 
-        public NavigationViewModel(IEnumerable<IFeed> feeds)
+        public NavigationViewModel(IEnumerable<IFeed> feeds, ISettingsFactory settingsFactory)
         {
+            _settingsFactory = settingsFactory ?? throw new ArgumentNullException(nameof(settingsFactory));
             Feeds = new ObservableCollection<IFeed>(feeds);
             IFeed? first = Feeds.FirstOrDefault();
             if (first != null)

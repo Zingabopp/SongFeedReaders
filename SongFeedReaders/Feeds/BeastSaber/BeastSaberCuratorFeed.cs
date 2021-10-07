@@ -10,19 +10,12 @@ namespace SongFeedReaders.Feeds.BeastSaber
     /// <summary>
     /// A feed that reads songs uploaded by mappers a bsaber.com user is following.
     /// </summary>
-    public class BeastSaberCuratorFeed : BeastSaberFeed, IPagedFeed
+    public class BeastSaberCuratorFeed : BeastSaberPagedFeed<BeastSaberCuratorSettings>
     {
         /// <inheritdoc/>
-        public BeastSaberCuratorFeed(BeastSaberCuratorSettings feedSettings, IBeastSaberPageHandler pageHandler,
+        public BeastSaberCuratorFeed(IBeastSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
-        {
-        }
-
-        /// <inheritdoc/>
-        public BeastSaberCuratorFeed(ISettingsFactory settingsFactory, IBeastSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
         }
 
@@ -34,13 +27,9 @@ namespace SongFeedReaders.Feeds.BeastSaber
 
         /// <inheritdoc/>
         public override string Description => "Songs uploaded by mappers a user is following.";
-        /// <summary>
-        /// BeastSaber API pages start at 1.
-        /// </summary>
-        protected readonly int FeedStartingPage = 1;
 
         /// <inheritdoc/>
-        public Uri GetUriForPage(int page)
+        public override Uri GetUriForPage(int page)
         {
             EnsureValidSettings();
             return new Uri(BaseUri, $"wp-json/bsaber-api/songs/?bookmarked_by=curatorrecommended&page={page}");
@@ -61,21 +50,13 @@ namespace SongFeedReaders.Feeds.BeastSaber
         {
             if (FeedSettings == null)
                 throw new InvalidFeedSettingsException("FeedSettings is null.");
-            if (!(FeedSettings is BeastSaberCuratorSettings settings))
-            {
-                throw new InvalidFeedSettingsException($"Settings is the wrong type ({FeedSettings?.GetType().Name}), "
-                    + $"should be {nameof(BeastSaberCuratorSettings)}");
-
-            }
         }
 
         /// <inheritdoc/>
-        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator()
         {
             EnsureValidSettings();
-            BeastSaberCuratorSettings s = (BeastSaberCuratorSettings)settings;
-            return new PagedFeedAsyncEnumerator(this, s.StartingPage, FeedStartingPage,
-                Logger);
+            return new PagedFeedAsyncEnumerator(this, Logger);
         }
     }
 }

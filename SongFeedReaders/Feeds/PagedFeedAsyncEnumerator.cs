@@ -21,6 +21,10 @@ namespace SongFeedReaders.Feeds
         /// The first page of the feed.
         /// </summary>
         protected readonly int FeedFirstPage;
+        /// <summary>
+        /// Feed settings for the feed when this <see cref="PagedFeedAsyncEnumerator"/> was constructed.
+        /// </summary>
+        protected readonly IPagedFeedSettings feedSettings;
         private int currentPage;
         private Uri? LastFetchedUri;
 
@@ -28,26 +32,30 @@ namespace SongFeedReaders.Feeds
         /// Creates a new <see cref="PagedFeedAsyncEnumerator"/>.
         /// </summary>
         /// <param name="feed"></param>
-        /// <param name="feedFirstPage"></param>
-        /// <param name="startingPage"></param>
         /// <param name="logger"></param>
-        public PagedFeedAsyncEnumerator(IPagedFeed feed, int startingPage,
-            int feedFirstPage, ILogger? logger = null)
-            : this(feed, startingPage, feedFirstPage, false, logger)
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="FeedUninitializedException"></exception>
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        public PagedFeedAsyncEnumerator(IPagedFeed feed, ILogger? logger = null)
+            : this(feed, false, logger)
         {
         }
         /// <summary>
         /// Creates a new <see cref="PagedFeedAsyncEnumerator"/>.
         /// </summary>
         /// <param name="feed"></param>
-        /// <param name="startingPage"></param>
-        /// <param name="feedFirstPage"></param>
         /// <param name="cachePages"></param>
         /// <param name="logger"></param>
-        public PagedFeedAsyncEnumerator(IPagedFeed feed, int startingPage, 
-            int feedFirstPage, bool cachePages, ILogger? logger = null)
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="FeedUninitializedException"></exception>
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        public PagedFeedAsyncEnumerator(IPagedFeed feed, bool cachePages, ILogger? logger = null)
             : base(feed, cachePages, logger)
         {
+            feedSettings = feed.GetPagedFeedSettings()
+                ?? throw new InvalidFeedSettingsException(InvalidFeedSettingsException.NullMessage);
+            int feedFirstPage = feed.FeedStartingPage;
+            int startingPage = feedSettings.StartingPage;
             if (startingPage < feedFirstPage)
                 throw new ArgumentException($"startingPage '{startingPage}' can't be less than the feed's first page '{feedFirstPage}'");
             currentPage = startingPage - 1; // First MoveNext increments

@@ -12,6 +12,10 @@ namespace SongFeedReaders.Feeds
     public class InvalidFeedSettingsException : InvalidOperationException
     {
         /// <summary>
+        /// Default message for when the settings are null.
+        /// </summary>
+        public static readonly string NullMessage = "Settings cannot be null";
+        /// <summary>
         /// Initializes a new instance of the <see cref="InvalidFeedSettingsException"/> class.
         /// </summary>
         public InvalidFeedSettingsException()

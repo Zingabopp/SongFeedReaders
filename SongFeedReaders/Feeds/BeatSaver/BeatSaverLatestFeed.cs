@@ -11,32 +11,17 @@ namespace SongFeedReaders.Feeds.BeatSaver
     /// <summary>
     /// This feed returns the latest songs uploaded to Beat Saver.
     /// </summary>
-    public class BeatSaverLatestFeed : BeatSaverFeed, IDatedFeed
+    public class BeatSaverLatestFeed : BeatSaverFeed<BeatSaverLatestSettings>, IDatedFeed
     {
         /// <summary>
         /// Initializes a new <see cref="BeatSaverLatestFeed"/>.
         /// </summary>
-        /// <param name="feedSettings"></param>
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        public BeatSaverLatestFeed(BeatSaverLatestSettings feedSettings, IBeatSaverPageHandler pageHandler, 
+        public BeatSaverLatestFeed(IBeatSaverPageHandler pageHandler, 
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
-        {
-
-        }
-
-        /// <summary>
-        /// Initializes a new <see cref="BeatSaverLatestFeed"/>.
-        /// </summary>
-        /// <param name="settingsFactory"></param>
-        /// <param name="pageHandler"></param>
-        /// <param name="webClient"></param>
-        /// <param name="logFactory"></param>
-        public BeatSaverLatestFeed(ISettingsFactory settingsFactory, IBeatSaverPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
 
         }
@@ -92,10 +77,9 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
-        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator()
         {
-            if (!AreSettingsValid(settings))
-                throw new InvalidFeedSettingsException();
+            EnsureValidSettings();
             return new DatedFeedAsyncEnumerator(this, false, Logger);
         }
 

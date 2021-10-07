@@ -11,7 +11,8 @@ namespace SongFeedReaders.Feeds.BeastSaber
     /// <summary>
     /// Base class for Beast Saber feeds.
     /// </summary>
-    public abstract class BeastSaberFeed : FeedBase
+    public abstract class BeastSaberFeed<TFeedSettings> : FeedBase<TFeedSettings>
+        where TFeedSettings : class, IFeedSettings
     {
         private const string MIME_XML = "text/xml";
         private const string MIME_JSON = "application/json";
@@ -23,28 +24,14 @@ namespace SongFeedReaders.Feeds.BeastSaber
         protected static readonly Uri BaseUri = new Uri("https://bsaber.com/");
 
         /// <summary>
-        /// Initializes a new <see cref="BeastSaberFeed"/>.
+        /// Initializes a new <see cref="BeastSaberFeed{TFeedSettings}"/>.
         /// </summary>
-        /// <param name="feedSettings"></param>
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        public BeastSaberFeed(BeastSaberFeedSettings feedSettings, IBeastSaberPageHandler pageHandler,
+        public BeastSaberFeed(IBeastSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new <see cref="BeastSaberFeed"/>.
-        /// </summary>
-        /// <param name="settingsFactory"></param>
-        /// <param name="pageHandler"></param>
-        /// <param name="webClient"></param>
-        /// <param name="logFactory"></param>
-        public BeastSaberFeed(ISettingsFactory settingsFactory, IBeastSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
         }
 
@@ -63,5 +50,29 @@ namespace SongFeedReaders.Feeds.BeastSaber
             }
             return new PageContent(contentId, pageText);
         }
+    }
+    /// <summary>
+    /// Base class for BeastSaber paged feeds.
+    /// </summary>
+    /// <typeparam name="TFeedSettings"></typeparam>
+    public abstract class BeastSaberPagedFeed<TFeedSettings> : BeastSaberFeed<TFeedSettings>, IPagedFeed
+        where TFeedSettings : BeastSaberFeedSettings, IPagedFeedSettings
+    {
+        /// <inheritdoc/>
+        public BeastSaberPagedFeed(IBeastSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory = null)
+            : base(pageHandler, webClient, logFactory)
+        {
+        }
+
+        /// <inheritdoc/>
+        IPagedFeedSettings? IPagedFeed.GetPagedFeedSettings() => FeedSettings;
+        /// <summary>
+        /// BeastSaber API pages start at 1.
+        /// </summary>
+        public virtual int FeedStartingPage => 1;
+
+        /// <inheritdoc/>
+        public abstract Uri GetUriForPage(int page);
     }
 }

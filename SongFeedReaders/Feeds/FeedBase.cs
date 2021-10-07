@@ -14,7 +14,8 @@ namespace SongFeedReaders.Feeds
     /// <summary>
     /// Base class for an <see cref="IFeed"/>.
     /// </summary>
-    public abstract class FeedBase : IFeed
+    public abstract class FeedBase<TFeedSettings> : IFeed<TFeedSettings>
+        where TFeedSettings : class, IFeedSettings
     {
         private static readonly Task<bool> CompletedInitialization = Task.FromResult(true);
         /// <summary>
@@ -38,48 +39,33 @@ namespace SongFeedReaders.Feeds
         /// <inheritdoc/>
         public abstract string Description { get; }
         /// <inheritdoc/>
-        public virtual bool Initialized => true;
+        public virtual bool Initialized => FeedSettings != null;
         /// <inheritdoc/>
-        public IFeedSettings FeedSettings { get; set; }
+        IFeedSettings? IFeed.GetFeedSettings() => FeedSettings;
         /// <inheritdoc/>
-        public bool HasValidSettings => AreSettingsValid(FeedSettings);
+        public TFeedSettings? FeedSettings { get; protected set; }
+        /// <inheritdoc/>
+        public bool HasValidSettings => FeedSettings != null && AreSettingsValid(FeedSettings);
+
+
         /// <inheritdoc/>
         public abstract void EnsureValidSettings();
 
         /// <summary>
-        /// Initializes a new <see cref="FeedBase"/>.
+        /// Creates a new <see cref="FeedBase{TFeedSettings}"/>.
         /// </summary>
-        /// <param name="feedSettings"></param>
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        protected FeedBase(IFeedSettings feedSettings, IFeedPageHandler pageHandler,
+        protected FeedBase(IFeedPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
         {
-            FeedSettings = feedSettings ?? throw new ArgumentNullException(nameof(pageHandler));
             PageHandler = pageHandler ?? throw new ArgumentNullException(nameof(pageHandler));
             WebClient = webClient ?? throw new ArgumentNullException(nameof(webClient));
             Logger = logFactory?.GetLogger(GetType().Name);
         }
 
-        /// <summary>
-        /// Initializes a new <see cref="FeedBase"/>.
-        /// </summary>
-        /// <param name="settingsFactory"></param>
-        /// <param name="pageHandler"></param>
-        /// <param name="webClient"></param>
-        /// <param name="logFactory"></param>
-        /// <exception cref="ArgumentException"></exception>
-        /// <exception cref="ArgumentNullException"></exception>
-        protected FeedBase(ISettingsFactory settingsFactory, IFeedPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-        {
-            FeedSettings = settingsFactory.GetSettings(FeedId) ?? throw new ArgumentException($"Settings factory doesn't have settings registered with feed ID '{FeedId}'");
-            PageHandler = pageHandler ?? throw new ArgumentNullException(nameof(pageHandler));
-            WebClient = webClient ?? throw new ArgumentNullException(nameof(webClient));
-            Logger = logFactory?.GetLogger(GetType().Name);
-        }
         /// <summary>
         /// Returns a <see cref="PageContent"/> from <paramref name="responseContent"/>.
         /// </summary>
@@ -88,8 +74,23 @@ namespace SongFeedReaders.Feeds
         protected abstract Task<PageContent> GetPageContent(IWebResponseContent responseContent);
 
         /// <inheritdoc/>
-        public virtual Task InitializeAsync(CancellationToken cancellationToken)
-            => CompletedInitialization;
+        public virtual Task InitializeAsync(TFeedSettings feedSettings, CancellationToken cancellationToken)
+        {
+            FeedSettings = feedSettings ?? throw new ArgumentNullException(nameof(feedSettings));
+            EnsureValidSettings();
+            return CompletedInitialization;
+        }
+
+        Task IFeed.InitializeAsync(IFeedSettings feedSettings, CancellationToken cancellationToken)
+        {
+            if (feedSettings == null)
+                throw new ArgumentNullException(nameof(feedSettings));
+            if(feedSettings is TFeedSettings settings)
+            {
+                return InitializeAsync(settings, cancellationToken);
+            }
+            throw new InvalidFeedSettingsException($"{FeedId} does not accept settings of type '{feedSettings.GetType().Name}'.");
+        }
 
         /// <inheritdoc/>
         public virtual async Task<PageReadResult> GetPageAsync(Uri uri, CancellationToken cancellationToken)
@@ -136,15 +137,15 @@ namespace SongFeedReaders.Feeds
         /// <inheritdoc/>
         public virtual async Task<FeedResult> ReadAsync(IProgress<PageReadResult>? progress, CancellationToken cancellationToken)
         {
-            IFeedSettings settings = FeedSettings;
+            IFeedSettings settings = FeedSettings!; // EnsureValidSettings() checks for null.
             EnsureValidSettings();
             try
             {
                 if (!Initialized)
                 {
-                    await InitializeAsync(cancellationToken).ConfigureAwait(false);
+                    throw new FeedUninitializedException();
                 }
-                FeedAsyncEnumerator asyncEnumerator = GetAsyncEnumerator(settings);
+                FeedAsyncEnumerator asyncEnumerator = GetAsyncEnumerator();
                 List<PageReadResult> pageResults = new List<PageReadResult>();
                 int dictInitialSize = settings.MaxSongs > 0 ? settings.MaxSongs : 20;
                 Dictionary<string, ScrapedSong> acceptedSongs = new Dictionary<string, ScrapedSong>(dictInitialSize);
@@ -211,14 +212,7 @@ namespace SongFeedReaders.Feeds
         }
 
         /// <inheritdoc/>
-        public abstract FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings);
-
-        /// <inheritdoc/>
-        public virtual FeedAsyncEnumerator GetAsyncEnumerator()
-        {
-            EnsureValidSettings();
-            return GetAsyncEnumerator(FeedSettings);
-        }
+        public abstract FeedAsyncEnumerator GetAsyncEnumerator();
 
         /// <summary>
         /// Returns true if the settings are valid for this feed.
@@ -236,8 +230,8 @@ namespace SongFeedReaders.Feeds
         /// <exception cref="InvalidFeedSettingsException"></exception>
         protected virtual PageReadResult ParseSongsFromPage(PageContent content, Uri uri)
         {
-            EnsureValidSettings();
-            return PageHandler.Parse(content, uri, FeedSettings);
+            EnsureValidSettings(); // EnsureValidSettings() checks for null.
+            return PageHandler.Parse(content, uri, FeedSettings!);
         }
 
     }

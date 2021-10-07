@@ -19,14 +19,14 @@ namespace SongFeedReadersTests
         [TestMethod]
         public void ScoreSaberFeed_CreateUri()
         {
-            var feedNumber = ScoreSaberFeed.FeedNumber.LatestRanked;
+            var feedNumber = FeedNumber.LatestRanked;
             int songsPerPage = 50;
             int pageNum = 1;
             bool rankedOnly = true;
             string expectedUrl = "https://scoresaber.com/api.php?function=get-leaderboards" +
                 $"&cat={(int)feedNumber}&limit={songsPerPage}&page={pageNum}&ranked={(rankedOnly ? 1 : 0)}";
 
-            Uri uri = ScoreSaberFeed.CreateUri(feedNumber, pageNum, rankedOnly, songsPerPage);
+            Uri uri = ScoreSaberFeed<ScoreSaberFeedSettings>.CreateUri(feedNumber, pageNum, rankedOnly, songsPerPage);
             Assert.AreEqual(expectedUrl, uri.ToString());
         }
 
@@ -43,7 +43,8 @@ namespace SongFeedReadersTests
                 MaxSongs = maxSongs,
                 RankedOnly = true
             };
-            IFeed feed = new ScoreSaberLatestFeed(feedSettings, pageHandler, client, logFactory);
+            var feed = new ScoreSaberLatestFeed(pageHandler, client, logFactory);
+            await feed.InitializeAsync(feedSettings, CancellationToken.None);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();
@@ -67,7 +68,8 @@ namespace SongFeedReadersTests
                  },
                 MaxSongs = maxSongs
             };
-            IFeed feed = new BeatSaverLatestFeed(feedSettings, pageHandler, client, logFactory);
+            var feed = new BeatSaverLatestFeed(pageHandler, client, logFactory);
+            await feed.InitializeAsync(feedSettings, CancellationToken.None);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();
@@ -92,7 +94,8 @@ namespace SongFeedReadersTests
                 MaxSongs = maxSongs,
                 MapperName = "rustic"
             };
-            IFeed feed = new BeatSaverMapperFeed(feedSettings, pageHandler, client, logFactory);
+            var feed = new BeatSaverMapperFeed(pageHandler, client, logFactory);
+            await feed.InitializeAsync(feedSettings, CancellationToken.None);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();
@@ -113,7 +116,8 @@ namespace SongFeedReadersTests
                 Username = "Zingabopp",
                 MaxSongs = maxSongs
             };
-            IFeed feed = new BeastSaberFollowsFeed(feedSettings, pageHandler, client, logFactory);
+            var feed = new BeastSaberFollowsFeed(pageHandler, client, logFactory);
+            await feed.InitializeAsync(feedSettings, CancellationToken.None);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();
@@ -132,7 +136,8 @@ namespace SongFeedReadersTests
             {
                 MaxSongs = maxSongs
             };
-            IFeed feed = new BeastSaberCuratorFeed(feedSettings, pageHandler, client, logFactory);
+            var feed = new BeastSaberCuratorFeed(pageHandler, client, logFactory);
+            await feed.InitializeAsync(feedSettings, CancellationToken.None);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();
@@ -152,7 +157,8 @@ namespace SongFeedReadersTests
                 Username = "Zingabopp",
                 MaxSongs = maxSongs
             };
-            IFeed feed = new BeastSaberBookmarksFeed(feedSettings, pageHandler, client, logFactory);
+            var feed = new BeastSaberBookmarksFeed(pageHandler, client, logFactory);
+            await feed.InitializeAsync(feedSettings, CancellationToken.None);
             var result = await feed.ReadAsync(CancellationToken.None).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             var pages = result.GetResults().ToArray();

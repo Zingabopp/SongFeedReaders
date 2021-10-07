@@ -1,10 +1,9 @@
 ﻿using SongFeedReaders.Logging;
-using SongFeedReaders.Services;
 using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using WebUtilities;
@@ -14,16 +13,19 @@ namespace SongFeedReaders.Feeds.BeatSaver
     /// <summary>
     /// This feed returns songs uploaded by a specific Beat Saver user.
     /// </summary>
-    public class BeatSaverMapperFeed : BeatSaverFeed, IPagedFeed
+    public class BeatSaverMapperFeed : BeatSaverPagedFeed<BeatSaverMapperSettings>, INotifyPropertyChanged
     {
-        private BeatSaverMapperSettings MapperFeedSettings => (BeatSaverMapperSettings)FeedSettings;
         private readonly object _initializeLock = new object();
+        private Task? _initializeTask;
+        /// <inheritdoc/>
+        public event PropertyChangedEventHandler? PropertyChanged;
         /// <summary>
         /// A dictionary with Beat Saver username keys mapped to author IDs.
         /// </summary>
         protected static readonly ConcurrentDictionary<string, string> AuthorIdMap = new ConcurrentDictionary<string, string>();
 
         private string? _mapperId;
+
         /// <summary>
         /// Beat Saver ID for the mapper.
         /// </summary>
@@ -36,26 +38,12 @@ namespace SongFeedReaders.Feeds.BeatSaver
         /// <summary>
         /// Creates a new <see cref="BeatSaverMapperFeed"/>.
         /// </summary>
-        /// <param name="feedSettings"></param>
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        public BeatSaverMapperFeed(BeatSaverMapperSettings feedSettings, IBeatSaverPageHandler pageHandler,
+        public BeatSaverMapperFeed(IBeatSaverPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
-        {
-        }
-
-        /// <summary>
-        /// Creates a new <see cref="BeatSaverMapperFeed"/>.
-        /// </summary>
-        /// <param name="settingsFactory"></param>
-        /// <param name="pageHandler"></param>
-        /// <param name="webClient"></param>
-        /// <param name="logFactory"></param>
-        public BeatSaverMapperFeed(ISettingsFactory settingsFactory, IBeatSaverPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
         }
 
@@ -63,7 +51,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         public override string FeedId => $"{ServiceId}.Mapper";
 
         /// <inheritdoc/>
-        public override string DisplayName => $"Beat Saver Mapper: {MapperFeedSettings.MapperName}";
+        public override string DisplayName => $"Beat Saver Mapper: {FeedSettings?.MapperName ?? "<Uninitialized>"}";
 
         /// <inheritdoc/>
         public override string Description => "Songs uploaded by a specific mapper";
@@ -75,16 +63,24 @@ namespace SongFeedReaders.Feeds.BeatSaver
                 return !string.IsNullOrWhiteSpace(MapperId);
             }
         }
-        private Task? _initializeTask;
+
         /// <inheritdoc/>
-        public override Task InitializeAsync(CancellationToken cancellationToken)
+        public override int FeedStartingPage => 0;
+
+        /// <inheritdoc/>
+        public override Task InitializeAsync(BeatSaverMapperSettings feedSettings, CancellationToken cancellationToken)
         {
+            FeedSettings = feedSettings ?? throw new ArgumentNullException(nameof(feedSettings));
             EnsureValidSettings();
+            string mapperName = feedSettings.MapperName;
+            if (string.IsNullOrWhiteSpace(mapperName))
+                throw new InvalidFeedSettingsException("Mapper name cannot be null.");
+            NotifyPropertyChanged(nameof(DisplayName));
             lock (_initializeLock)
             {
-                if(_initializeTask == null || (_initializeTask.IsCompleted && !Initialized))
+                if (_initializeTask == null || (_initializeTask.IsCompleted && !Initialized))
                 {
-                    _initializeTask = GetAuthorIDAsync(MapperFeedSettings.MapperName, cancellationToken);
+                    _initializeTask = GetAuthorIDAsync(mapperName, cancellationToken);
                     return _initializeTask;
                 }
             }
@@ -99,14 +95,14 @@ namespace SongFeedReaders.Feeds.BeatSaver
         private async Task InitializeWaitAsync(CancellationToken cancellationToken)
         {
             TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
-            using var reg = cancellationToken.Register(() => tcs.TrySetCanceled());
+            using CancellationTokenRegistration reg = cancellationToken.Register(() => tcs.TrySetCanceled());
             await Task.WhenAny(_initializeTask, tcs.Task);
             tcs.TrySetResult(true);
         }
 
 
         /// <inheritdoc/>
-        public Uri GetUriForPage(int page)
+        public override Uri GetUriForPage(int page)
         {
             EnsureValidSettings();
             if (!Initialized)
@@ -137,13 +133,12 @@ namespace SongFeedReaders.Feeds.BeatSaver
         }
 
         /// <inheritdoc/>
-        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator()
         {
-            if (!AreSettingsValid(settings))
-                throw new InvalidFeedSettingsException();
-            if(!Initialized)
+            EnsureValidSettings();
+            if (!Initialized)
                 throw new FeedUninitializedException("The feed must be initialized before this operation can be performed.");
-            return new PagedFeedAsyncEnumerator(this, 1, 0, Logger);
+            return new PagedFeedAsyncEnumerator(this, Logger);
         }
 
 
@@ -167,7 +162,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
             }
             IBeatSaverPageHandler pageHandler = PageHandler as IBeatSaverPageHandler
                 ?? throw new InvalidOperationException("Unable to look up user ID: This feed's IPageHandler must be an IBeatSaverPageHandler");
-            
+
             Logger?.Debug($"Attempting ID lookup for the user '{userName}'.");
             Uri? sourceUri = new Uri(BeatSaverHelper.BeatSaverApiUri, $"users/name/{userName}");
             IWebResponseMessage? response = null;
@@ -192,7 +187,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
                 return mapperId;
 
             }
-            catch(PageParseException)
+            catch (PageParseException)
             {
                 throw;
             }
@@ -212,6 +207,13 @@ namespace SongFeedReaders.Feeds.BeatSaver
             {
                 response?.Dispose();
             }
+
         }
+        /// <summary>
+        /// Raises the <see cref="PropertyChanged"/> event with the given <paramref name="propertyName"/>.
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyPropertyChanged([CallerMemberName] string? propertyName = null)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

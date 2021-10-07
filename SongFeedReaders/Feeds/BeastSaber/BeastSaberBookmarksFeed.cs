@@ -12,19 +12,12 @@ namespace SongFeedReaders.Feeds.BeastSaber
     /// A feed that reads songs bookmarked by a bsaber.com user.
     /// </summary>
     [Feed(typeof(BeastSaberBookmarksSettings))]
-    public class BeastSaberBookmarksFeed : BeastSaberFeed, IPagedFeed
+    public class BeastSaberBookmarksFeed : BeastSaberPagedFeed<BeastSaberBookmarksSettings>
     {
         /// <inheritdoc/>
-        public BeastSaberBookmarksFeed(BeastSaberBookmarksSettings feedSettings, IBeastSaberPageHandler pageHandler,
+        public BeastSaberBookmarksFeed(IBeastSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
-        {
-        }
-
-        /// <inheritdoc/>
-        public BeastSaberBookmarksFeed(ISettingsFactory settingsFactory, IBeastSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
         }
 
@@ -36,31 +29,22 @@ namespace SongFeedReaders.Feeds.BeastSaber
 
         /// <inheritdoc/>
         public override string Description => "Songs bookmarked by a user.";
-        /// <summary>
-        /// BeastSaber API pages start at 1.
-        /// </summary>
-        protected readonly int FeedStartingPage = 1;
 
         /// <inheritdoc/>
-        public Uri GetUriForPage(int page)
+        public override Uri GetUriForPage(int page)
         {
             EnsureValidSettings();
-            BeastSaberBookmarksSettings s = (BeastSaberBookmarksSettings)FeedSettings;
+            BeastSaberBookmarksSettings s = FeedSettings!;
             return new Uri(BaseUri, $"wp-json/bsaber-api/songs/?bookmarked_by={s.Username}&page={page}");
         }
 
         /// <inheritdoc/>
         public override void EnsureValidSettings()
         {
-            IFeedSettings feedSettings = FeedSettings;
+            BeastSaberBookmarksSettings? feedSettings = FeedSettings;
             if (feedSettings == null)
                 throw new InvalidFeedSettingsException("Feed Settings is null.");
-
-            if (!(FeedSettings is BeastSaberBookmarksSettings bSettings))
-            {
-                throw new InvalidFeedSettingsException($"Feed settings '{feedSettings.GetType().Name}' is the wrong type for {GetType().Name}");
-            }
-            if (string.IsNullOrWhiteSpace(bSettings.Username))
+            if (string.IsNullOrWhiteSpace(feedSettings.Username))
             {
                 throw new InvalidFeedSettingsException("No Beast Saber username specified in settings.");
             }
@@ -77,12 +61,10 @@ namespace SongFeedReaders.Feeds.BeastSaber
         }
 
         /// <inheritdoc/>
-        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator()
         {
             EnsureValidSettings();
-            BeastSaberBookmarksSettings s = (BeastSaberBookmarksSettings)settings;
-            return new PagedFeedAsyncEnumerator(this, s.StartingPage, 
-                FeedStartingPage, Logger);
+            return new PagedFeedAsyncEnumerator(this, Logger);
         }
     }
 }

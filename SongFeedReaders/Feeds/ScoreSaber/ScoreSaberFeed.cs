@@ -9,9 +9,34 @@ using WebUtilities;
 namespace SongFeedReaders.Feeds.ScoreSaber
 {
     /// <summary>
+    /// ScoreSaber feed number. Replaces <see cref="ScoreSaberFeed{TFeedSettings}.CATKEY"/>
+    /// in <see cref="ScoreSaberFeed{TFeedSettings}.URL_TEMPLATE"/>.
+    /// </summary>
+    public enum FeedNumber
+    {
+        /// <summary>
+        /// Trending feed.
+        /// </summary>
+        Trending = 0,
+        /// <summary>
+        /// Latest ranked feed.
+        /// </summary>
+        LatestRanked = 1,
+        /// <summary>
+        /// Top played feed.
+        /// </summary>
+        TopPlayed = 2,
+        /// <summary>
+        /// Top ranked feed.
+        /// </summary>
+        TopRanked = 3
+    }
+
+    /// <summary>
     /// Base class for ScoreSaber feeds.
     /// </summary>
-    public abstract class ScoreSaberFeed : FeedBase
+    public abstract class ScoreSaberFeed<TFeedSettings> : FeedBase<TFeedSettings>
+        where TFeedSettings : ScoreSaberFeedSettings
     {
         /// <summary>
         /// Replace with page number in <see cref="URL_TEMPLATE"/>.
@@ -43,55 +68,6 @@ namespace SongFeedReaders.Feeds.ScoreSaber
             = "api.php?function=get-leaderboards&cat={0}&limit={1}&page={2}&ranked={3}";
 
         /// <summary>
-        /// ScoreSaber API pages start at 1.
-        /// </summary>
-        protected readonly int FeedStartingPage = 1;
-
-        /// <summary>
-        /// ScoreSaber feed number. Replaces <see cref="CATKEY"/> in <see cref="URL_TEMPLATE"/>.
-        /// </summary>
-        public enum FeedNumber
-        {
-            /// <summary>
-            /// Trending feed.
-            /// </summary>
-            Trending = 0,
-            /// <summary>
-            /// Latest ranked feed.
-            /// </summary>
-            LatestRanked = 1,
-            /// <summary>
-            /// Top played feed.
-            /// </summary>
-            TopPlayed = 2,
-            /// <summary>
-            /// Top ranked feed.
-            /// </summary>
-            TopRanked = 3
-        }
-        /// <inheritdoc/>
-        public override string ServiceId => "ScoreSaber";
-        /// <summary>
-        /// Base URI for bsaber.com
-        /// </summary>
-        protected static readonly Uri BaseUri = new Uri("https://scoresaber.com/");
-
-        /// <summary>
-        /// The <see cref="FeedNumber"/> associated with this <see cref="ScoreSaberFeed"/>.
-        /// </summary>
-        protected abstract FeedNumber Feed { get; }
-        /// <summary>
-        /// Settings for the feed.
-        /// </summary>
-        protected ScoreSaberFeedSettings ScoreSaberSettings => (ScoreSaberFeedSettings)FeedSettings;
-
-        /// <inheritdoc/>
-        public virtual Uri GetUriForPage(int page)
-        {
-            return CreateUri(Feed, page, ScoreSaberSettings.RankedOnly, ScoreSaberSettings.SongsPerPage);
-        }
-
-        /// <summary>
         /// Creates a ScoreSaber feed <see cref="Uri"/> for the given inputs.
         /// </summary>
         /// <param name="feedNumber"></param>
@@ -109,29 +85,27 @@ namespace SongFeedReaders.Feeds.ScoreSaber
             return new Uri(BaseUri, url);
         }
 
+
+        /// <inheritdoc/>
+        public override string ServiceId => "ScoreSaber";
         /// <summary>
-        /// Initializes a new <see cref="ScoreSaberFeed"/>.
+        /// Base URI for bsaber.com
         /// </summary>
-        /// <param name="feedSettings"></param>
-        /// <param name="pageHandler"></param>
-        /// <param name="webClient"></param>
-        /// <param name="logFactory"></param>
-        public ScoreSaberFeed(ScoreSaberFeedSettings feedSettings, IScoreSaberPageHandler pageHandler,
-            IWebClient webClient, ILogFactory? logFactory = null)
-            : base(feedSettings, pageHandler, webClient, logFactory)
-        {
-        }
+        protected static readonly Uri BaseUri = new Uri("https://scoresaber.com/");
 
         /// <summary>
-        /// Initializes a new <see cref="ScoreSaberFeed"/>.
+        /// The <see cref="FeedNumber"/> associated with this <see cref="ScoreSaberFeed{TFeedSettings}"/>.
         /// </summary>
-        /// <param name="settingsFactory"></param>
+        protected abstract FeedNumber Feed { get; }
+        /// <summary>
+        /// Initializes a new <see cref="ScoreSaberFeed{TFeedSettings}"/>.
+        /// </summary>
         /// <param name="pageHandler"></param>
         /// <param name="webClient"></param>
         /// <param name="logFactory"></param>
-        public ScoreSaberFeed(ISettingsFactory settingsFactory, IScoreSaberPageHandler pageHandler,
+        public ScoreSaberFeed(IScoreSaberPageHandler pageHandler,
             IWebClient webClient, ILogFactory? logFactory = null)
-            : base(settingsFactory, pageHandler, webClient, logFactory)
+            : base(pageHandler, webClient, logFactory)
         {
         }
 
@@ -156,24 +130,42 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         {
             if (FeedSettings == null)
                 throw new InvalidFeedSettingsException("FeedSettings is null.");
-            if (!(FeedSettings is ScoreSaberFeedSettings settings))
-            {
-                throw new InvalidFeedSettingsException($"Settings is the wrong type ({FeedSettings?.GetType().Name}), "
-                    + $"should be {nameof(ScoreSaberFeedSettings)}");
+        }
+    }
+    /// <summary>
+    /// Base class for ScoreSaber paged feeds.
+    /// </summary>
+    /// <typeparam name="TFeedSettings"></typeparam>
+    public abstract class ScoreSaberPagedFeed<TFeedSettings> : ScoreSaberFeed<TFeedSettings>, IPagedFeed
+        where TFeedSettings : ScoreSaberFeedSettings, IPagedFeedSettings
+    {
+        /// <inheritdoc/>
+        public ScoreSaberPagedFeed(IScoreSaberPageHandler pageHandler,
+            IWebClient webClient, ILogFactory? logFactory = null)
+            : base(pageHandler, webClient, logFactory)
+        {
+        }
+        /// <inheritdoc/>
+        IPagedFeedSettings? IPagedFeed.GetPagedFeedSettings() => FeedSettings;
+        /// <summary>
+        /// BeastSaber API pages start at 1.
+        /// </summary>
+        public virtual int FeedStartingPage => 1;
 
-            }
+        /// <inheritdoc/>
+        public virtual Uri GetUriForPage(int page)
+        {
+            EnsureValidSettings();
+            ScoreSaberFeedSettings settings = FeedSettings
+                ?? throw new InvalidFeedSettingsException(InvalidFeedSettingsException.NullMessage);
+            return CreateUri(Feed, page, settings.RankedOnly, settings.SongsPerPage);
         }
 
         /// <inheritdoc/>
-        public override FeedAsyncEnumerator GetAsyncEnumerator(IFeedSettings settings)
+        public override FeedAsyncEnumerator GetAsyncEnumerator()
         {
             EnsureValidSettings();
-            if(this is IPagedFeed pagedFeed)
-            {
-                return new PagedFeedAsyncEnumerator(pagedFeed, 
-                    ScoreSaberSettings.StartingPage, FeedStartingPage, Logger);
-            }
-            throw new NotImplementedException($"{FeedId} is not an IPagedFeed, this feed must override GetAsyncEnumerator.");
+            return new PagedFeedAsyncEnumerator(this, Logger);
         }
     }
 }
