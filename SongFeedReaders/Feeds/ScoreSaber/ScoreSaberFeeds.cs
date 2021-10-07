@@ -1,8 +1,5 @@
-﻿using SongFeedReaders.Logging;
-using SongFeedReaders.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SongFeedReaders.Attributes;
+using SongFeedReaders.Logging;
 using WebUtilities;
 
 namespace SongFeedReaders.Feeds.ScoreSaber
@@ -10,6 +7,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// <summary>
     /// This feed returns the songs that are trending on ScoreSaber.
     /// </summary>
+    [Feed(typeof(ScoreSaberTrendingSettings))]
     public class ScoreSaberTrendingFeed : ScoreSaberPagedFeed<ScoreSaberTrendingSettings>
     {
         /// <summary>
@@ -40,6 +38,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// <summary>
     /// This feed returns the songs that were recently ranked on ScoreSaber.
     /// </summary>
+    [Feed(typeof(ScoreSaberLatestSettings))]
     public class ScoreSaberLatestFeed : ScoreSaberPagedFeed<ScoreSaberLatestSettings>
     {
         /// <summary>
@@ -70,6 +69,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// <summary>
     /// This feed returns the songs that are the most played on ScoreSaber.
     /// </summary>
+    [Feed(typeof(ScoreSaberTopPlayedSettings))]
     public class ScoreSaberTopPlayedFeed : ScoreSaberPagedFeed<ScoreSaberTopPlayedSettings>
     {
         /// <summary>
@@ -101,6 +101,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
     /// <summary>
     /// This feed returns the songs that are highest ranked on ScoreSaber.
     /// </summary>
+    [Feed(typeof(ScoreSaberTopRankedSettings))]
     public class ScoreSaberTopRankedFeed : ScoreSaberPagedFeed<ScoreSaberTopRankedSettings>
     {
         /// <summary>
