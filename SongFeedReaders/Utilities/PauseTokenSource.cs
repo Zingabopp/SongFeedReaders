@@ -43,7 +43,7 @@ namespace SongFeedReaders.Utilities
             }
             return new PauseRegistration(guid, this);
         }
-
+        internal bool PauseRequested => !_pauseRequests.IsEmpty;
         internal Task GetPauseTask()
         {
             return _tcs.Task;
@@ -94,7 +94,7 @@ namespace SongFeedReaders.Utilities
         /// A <see cref="PauseToken"/> that will never be paused.
         /// </summary>
         public static PauseToken None => new PauseToken(null);
-        private PauseTokenSource? _source;
+        private readonly PauseTokenSource? _source;
         internal PauseToken(PauseTokenSource? source)
         {
             _source = source;
@@ -103,7 +103,16 @@ namespace SongFeedReaders.Utilities
         /// Returns true if this <see cref="PauseToken"/> can be in a paused state.
         /// </summary>
         public bool CanPause => _source != null;
-
+        /// <summary>
+        /// Returns true if the associated <see cref="PauseTokenSource"/> state is paused.
+        /// </summary>
+        public bool IsPauseRequested
+        {
+            get
+            {
+                return _source?.PauseRequested ?? false;
+            }
+        }
         /// <summary>
         /// Returns a <see cref="Task"/> that will complete when the associated <see cref="PauseTokenSource"/>
         /// is unpaused, or the given <paramref name="cancellationToken"/> is cancelled.
@@ -117,10 +126,16 @@ namespace SongFeedReaders.Utilities
             Task pauseTask = _source.GetPauseTask();
             if (pauseTask.IsCompleted)
                 return;
-            TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
-            using CancellationTokenRegistration reg = cancellationToken.Register(() => tcs.TrySetResult(false));
-            await Task.WhenAny(pauseTask, tcs.Task);
-            tcs.TrySetResult(true);
+            if (cancellationToken.CanBeCanceled)
+            {
+                TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
+                using CancellationTokenRegistration reg = cancellationToken.Register(() => tcs.TrySetResult(false));
+                if (!cancellationToken.IsCancellationRequested)
+                    await Task.WhenAny(pauseTask, tcs.Task).ConfigureAwait(false);
+                tcs.TrySetResult(true);
+            }
+            else
+                await pauseTask.ConfigureAwait(false);
         }
     }
 }

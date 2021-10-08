@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SongFeedReaders.Utilities;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -71,21 +72,23 @@ namespace SongFeedReaders.Feeds
         /// <summary>
         /// Reads the feed according to the current settings and returns a <see cref="FeedResult"/>.
         /// </summary>
+        /// <param name="pauseToken"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="InvalidFeedSettingsException"></exception>
         /// <exception cref="FeedUninitializedException"></exception>
-        Task<FeedResult> ReadAsync(CancellationToken cancellationToken);
+        Task<FeedResult> ReadAsync(PauseToken pauseToken, CancellationToken cancellationToken);
         /// <summary>
         /// Reads the feed according to the current settings with progress reports after every page
         /// and returns a <see cref="FeedResult"/>.
         /// </summary>
         /// <param name="progress"></param>
+        /// <param name="pauseToken"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="InvalidFeedSettingsException"></exception>
         /// <exception cref="FeedUninitializedException"></exception>
-        Task<FeedResult> ReadAsync(IProgress<PageReadResult> progress, CancellationToken cancellationToken);
+        Task<FeedResult> ReadAsync(IProgress<PageReadResult> progress, PauseToken pauseToken, CancellationToken cancellationToken);
 
         /// <summary>
         /// Gets a <see cref="FeedAsyncEnumerator"/> for this feed.

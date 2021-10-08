@@ -1,7 +1,9 @@
 ﻿using SongFeedReaders.Logging;
 using SongFeedReaders.Models;
+using SongFeedReaders.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using WebUtilities;
@@ -151,11 +153,11 @@ namespace SongFeedReaders.Feeds
         }
 
         /// <inheritdoc/>
-        public virtual Task<FeedResult> ReadAsync(CancellationToken cancellationToken)
-            => ReadAsync(null, cancellationToken);
+        public virtual Task<FeedResult> ReadAsync(PauseToken pauseToken, CancellationToken cancellationToken)
+            => ReadAsync(null, pauseToken, cancellationToken);
 
         /// <inheritdoc/>
-        public virtual async Task<FeedResult> ReadAsync(IProgress<PageReadResult>? progress, CancellationToken cancellationToken)
+        public virtual async Task<FeedResult> ReadAsync(IProgress<PageReadResult>? progress, PauseToken pauseToken, CancellationToken cancellationToken)
         {
             IFeedSettings settings = FeedSettings!; // EnsureValidSettings() checks for null.
             EnsureValidSettings();
@@ -176,6 +178,23 @@ namespace SongFeedReaders.Feeds
                 bool breakWhile = false;
                 while (!breakWhile && asyncEnumerator.CanMoveNext && !(lastResult?.IsLastPage ?? false))
                 {
+                    if (pauseToken.CanPause)
+                    {
+                        bool pauseRequested = pauseToken.IsPauseRequested;
+                        Stopwatch? sw = null;
+                        if (pauseRequested)
+                        {
+                            sw = new Stopwatch();
+                            sw.Start();
+                            Logger?.Debug($"Pause is requested.");
+                        }
+                        await pauseToken.WaitForPause(cancellationToken).ConfigureAwait(false);
+                        if (sw != null)
+                        {
+                            sw.Stop();
+                            Logger?.Debug($"Resumed after {sw.Elapsed.TotalSeconds} seconds");
+                        }
+                    }
                     lastResult = await asyncEnumerator.MoveNextAsync(cancellationToken).ConfigureAwait(false);
                     songCount += lastResult.SongCount;
                     pageResults.Add(lastResult);

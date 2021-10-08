@@ -39,7 +39,7 @@ namespace SongFeedReadersTests
 
             private string GetPrefix(LogLevel level, string? file, string? member, int line)
             {
-                return $"[{level} {ModuleName}->{member}:{line}]: ";
+                return $"[{level} @ {DateTime.Now.ToLongTimeString()} {ModuleName}->{member}:{line}]: ";
             }
         }
     }

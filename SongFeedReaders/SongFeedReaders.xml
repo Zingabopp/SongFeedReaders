@@ -1011,10 +1011,10 @@
         <member name="M:SongFeedReaders.Feeds.FeedBase`1.GetPageAsync(System.Uri,System.Threading.CancellationToken)">
             <inheritdoc/>
         </member>
-        <member name="M:SongFeedReaders.Feeds.FeedBase`1.ReadAsync(System.Threading.CancellationToken)">
+        <member name="M:SongFeedReaders.Feeds.FeedBase`1.ReadAsync(SongFeedReaders.Utilities.PauseToken,System.Threading.CancellationToken)">
             <inheritdoc/>
         </member>
-        <member name="M:SongFeedReaders.Feeds.FeedBase`1.ReadAsync(System.IProgress{SongFeedReaders.Feeds.PageReadResult},System.Threading.CancellationToken)">
+        <member name="M:SongFeedReaders.Feeds.FeedBase`1.ReadAsync(System.IProgress{SongFeedReaders.Feeds.PageReadResult},SongFeedReaders.Utilities.PauseToken,System.Threading.CancellationToken)">
             <inheritdoc/>
         </member>
         <member name="M:SongFeedReaders.Feeds.FeedBase`1.GetAsyncEnumerator">
@@ -1406,21 +1406,23 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
-        <member name="M:SongFeedReaders.Feeds.IFeed.ReadAsync(System.Threading.CancellationToken)">
+        <member name="M:SongFeedReaders.Feeds.IFeed.ReadAsync(SongFeedReaders.Utilities.PauseToken,System.Threading.CancellationToken)">
             <summary>
             Reads the feed according to the current settings and returns a <see cref="T:SongFeedReaders.Feeds.FeedResult"/>.
             </summary>
+            <param name="pauseToken"></param>
             <param name="cancellationToken"></param>
             <returns></returns>
             <exception cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException"></exception>
             <exception cref="T:SongFeedReaders.Feeds.FeedUninitializedException"></exception>
         </member>
-        <member name="M:SongFeedReaders.Feeds.IFeed.ReadAsync(System.IProgress{SongFeedReaders.Feeds.PageReadResult},System.Threading.CancellationToken)">
+        <member name="M:SongFeedReaders.Feeds.IFeed.ReadAsync(System.IProgress{SongFeedReaders.Feeds.PageReadResult},SongFeedReaders.Utilities.PauseToken,System.Threading.CancellationToken)">
             <summary>
             Reads the feed according to the current settings with progress reports after every page
             and returns a <see cref="T:SongFeedReaders.Feeds.FeedResult"/>.
             </summary>
             <param name="progress"></param>
+            <param name="pauseToken"></param>
             <param name="cancellationToken"></param>
             <returns></returns>
             <exception cref="T:SongFeedReaders.Feeds.InvalidFeedSettingsException"></exception>
@@ -3429,6 +3431,69 @@
             <param name="hash"></param>
             <returns></returns>
             <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:SongFeedReaders.Utilities.PauseTokenSource">
+            <summary>
+            Represents a central place to manage a paused state.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Utilities.PauseTokenSource.Token">
+            <summary>
+            Gets a <see cref="T:SongFeedReaders.Utilities.PauseToken"/> associated with this <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.PauseTokenSource.#ctor">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.PauseTokenSource.Pause">
+            <summary>
+            Requests a pause and returns a <see cref="T:SongFeedReaders.Utilities.PauseRegistration"/>.
+            All <see cref="T:SongFeedReaders.Utilities.PauseRegistration"/>s must be disposed to enter a resumed state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SongFeedReaders.Utilities.PauseRegistration">
+            <summary>
+            Represents a request to pause with the associated <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>.
+            Must be disposed for the <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/> to resume.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.PauseRegistration.Dispose">
+            <summary>
+            Disposes the registration, indicating to the <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>
+            that it can resume if there are no other active registrations.
+            </summary>
+        </member>
+        <member name="T:SongFeedReaders.Utilities.PauseToken">
+            <summary>
+            A token linked with a <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/> that provides a <see cref="T:System.Threading.Tasks.Task"/>
+            that will complete with then source is unpaused.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Utilities.PauseToken.None">
+            <summary>
+            A <see cref="T:SongFeedReaders.Utilities.PauseToken"/> that will never be paused.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Utilities.PauseToken.CanPause">
+            <summary>
+            Returns true if this <see cref="T:SongFeedReaders.Utilities.PauseToken"/> can be in a paused state.
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Utilities.PauseToken.IsPauseRequested">
+            <summary>
+            Returns true if the associated <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/> state is paused.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.PauseToken.WaitForPause(System.Threading.CancellationToken)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task"/> that will complete when the associated <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>
+            is unpaused, or the given <paramref name="cancellationToken"/> is cancelled.
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
         </member>
         <member name="T:SongFeedReaders.Utilities.Util">
             <summary>
