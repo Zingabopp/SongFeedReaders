@@ -55,7 +55,7 @@ namespace SongFeedReaders.TestClient.ViewModels
         }
 
         private FeedAsyncEnumerator? feedEnumerator;
-        public FeedViewModel(IFeed feed, IFeedSettings settings)
+        public FeedViewModel(IFeed feed)
         {
             Feed = feed ?? throw new ArgumentNullException(nameof(feed));
             Refresh = new RelayCommand(async () =>
@@ -66,7 +66,7 @@ namespace SongFeedReaders.TestClient.ViewModels
                 try
                 {
                     if (!feed.Initialized)
-                        await feed.InitializeAsync(settings, CancellationToken.None);
+                        await feed.InitializeAsync(CancellationToken.None);
                     feedEnumerator = feed.GetAsyncEnumerator();
                     CurrentResult = await feedEnumerator.MoveNextAsync();
                 }

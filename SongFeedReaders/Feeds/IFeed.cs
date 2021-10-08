@@ -42,13 +42,20 @@ namespace SongFeedReaders.Feeds
         /// Performs any work needed to initialize the feed.
         /// Implementing feeds should gracefully handle repeated calls.
         /// </summary>
-        /// <param name="feedSettings"></param>
         /// <param name="cancellationToken"></param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="InvalidFeedSettingsException"></exception>
         /// <exception cref="FeedInitializationException"></exception>
         /// <exception cref="OperationCanceledException"></exception>
-        Task InitializeAsync(IFeedSettings feedSettings, CancellationToken cancellationToken);
+        Task InitializeAsync(CancellationToken cancellationToken);
+        /// <summary>
+        /// Attempts to assign the given <paramref name="feedSettings"/>. Will return false
+        /// if settings have already been assigned.
+        /// </summary>
+        /// <param name="feedSettings"></param>
+        /// <returns></returns>
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        bool TryAssignSettings(IFeedSettings feedSettings);
         /// <summary>
         /// Throws an <see cref="InvalidFeedSettingsException"/> if the settings aren't valid for this feed.
         /// </summary>
@@ -100,17 +107,6 @@ namespace SongFeedReaders.Feeds
         /// Settings for the feed. Should only be null if <see cref="IFeed.Initialized"/> is false.
         /// </summary>
         TFeedSettings? FeedSettings { get; }
-        /// <summary>
-        /// Performs any work needed to initialize the feed.
-        /// Implementing feeds should gracefully handle repeated calls.
-        /// </summary>
-        /// <param name="feedSettings"></param>
-        /// <param name="cancellationToken"></param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="InvalidFeedSettingsException"></exception>
-        /// <exception cref="FeedInitializationException"></exception>
-        /// <exception cref="OperationCanceledException"></exception>
-        Task InitializeAsync(TFeedSettings feedSettings, CancellationToken cancellationToken);
 
     }
 }

@@ -71,20 +71,43 @@ namespace SongFeedReaders.Feeds
         protected abstract Task<PageContent> GetPageContent(IWebResponseContent responseContent);
 
         /// <inheritdoc/>
-        public virtual Task InitializeAsync(TFeedSettings feedSettings, CancellationToken cancellationToken)
+        public virtual Task InitializeAsync(CancellationToken cancellationToken)
         {
-            FeedSettings = feedSettings ?? throw new ArgumentNullException(nameof(feedSettings));
             EnsureValidSettings();
             return CompletedInitialization;
         }
 
-        Task IFeed.InitializeAsync(IFeedSettings feedSettings, CancellationToken cancellationToken)
+        /// <summary>
+        /// Attempts to assign the given <paramref name="feedSettings"/>. Will return false
+        /// if settings have already been assigned.
+        /// </summary>
+        /// <param name="feedSettings"></param>
+        /// <returns></returns>
+        /// <exception cref="InvalidFeedSettingsException"></exception>
+        public bool TryAssignSettings(TFeedSettings feedSettings)
         {
             if (feedSettings == null)
-                throw new ArgumentNullException(nameof(feedSettings));
+                return false;
+            FeedSettings ??= feedSettings;
+            try
+            {
+                EnsureValidSettings();
+            }
+            catch
+            {
+                FeedSettings = null;
+                throw;
+            }
+            return FeedSettings == feedSettings;
+        }
+        /// <inheritdoc/>
+        bool IFeed.TryAssignSettings(IFeedSettings feedSettings)
+        {
+            if (feedSettings == null)
+                return false;
             if (feedSettings is TFeedSettings settings)
             {
-                return InitializeAsync(settings, cancellationToken);
+                return TryAssignSettings(settings);
             }
             throw new InvalidFeedSettingsException($"{FeedId} does not accept settings of type '{feedSettings.GetType().Name}'.");
         }

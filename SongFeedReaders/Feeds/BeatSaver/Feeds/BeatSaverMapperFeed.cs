@@ -70,11 +70,10 @@ namespace SongFeedReaders.Feeds.BeatSaver
         public override int FeedStartingPage => 0;
 
         /// <inheritdoc/>
-        public override Task InitializeAsync(BeatSaverMapperSettings feedSettings, CancellationToken cancellationToken)
+        public override Task InitializeAsync(CancellationToken cancellationToken)
         {
-            FeedSettings = feedSettings ?? throw new ArgumentNullException(nameof(feedSettings));
             EnsureValidSettings();
-            string mapperName = feedSettings.MapperName;
+            string mapperName = FeedSettings?.MapperName!;
             if (string.IsNullOrWhiteSpace(mapperName))
                 throw new InvalidFeedSettingsException("Mapper name cannot be null.");
             NotifyPropertyChanged(nameof(DisplayName));

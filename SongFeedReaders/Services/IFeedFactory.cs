@@ -1,6 +1,7 @@
 ﻿using SongFeedReaders.Feeds;
 using System;
 using System.Runtime.Serialization;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SongFeedReaders.Services
@@ -18,17 +19,21 @@ namespace SongFeedReaders.Services
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="UnregisteredSettingsTypeException"></exception>
         /// <exception cref="FeedFactoryExecuteException"></exception>
+        /// <exception cref="FeedFactoryException"></exception>
         IFeed GetFeed(IFeedSettings settings);
         /// <summary>
         /// Returns an <see cref="IFeed"/> that has been initialized with the given <see cref="IFeedSettings"/>.
         /// </summary>
         /// <param name="settings"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="UnregisteredSettingsTypeException"></exception>
         /// <exception cref="FeedFactoryExecuteException"></exception>
+        /// <exception cref="FeedFactoryException"></exception>
         /// <exception cref="FeedInitializationException"></exception>
-        Task<IFeed> GetInitializedFeedAsync(IFeedSettings settings);
+        /// <exception cref="OperationCanceledException"></exception>
+        Task<IFeed> GetInitializedFeedAsync(IFeedSettings settings, CancellationToken cancellationToken);
         /// <summary>
         /// Returns true if the specified <see cref="IFeedSettings"/> is registered.
         /// </summary>
