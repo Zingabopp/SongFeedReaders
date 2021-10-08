@@ -42,14 +42,12 @@ namespace SongFeedReaders.Services
         bool SettingsTypeRegistered<TSettings>()
             where TSettings : IFeedSettings;
         /// <summary>
-        /// Returns true if the given <see cref="IFeedSettings"/> is registered.
+        /// Returns true if the given <see cref="IFeedSettings"/> type is registered.
         /// </summary>
-        /// <typeparam name="TSettings"></typeparam>
-        /// <param name="settings"></param>
+        /// <param name="settingsType"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
-        bool SettingsTypeRegistered<TSettings>(TSettings settings)
-            where TSettings : IFeedSettings;
+        bool SettingsTypeRegistered(Type settingsType);
     }
 
     /// <summary>

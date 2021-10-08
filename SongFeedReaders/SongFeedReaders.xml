@@ -2815,6 +2815,49 @@
             <param name="other"></param>
             <param name="updateJson"></param>
         </member>
+        <member name="T:SongFeedReaders.Services.FeedFactoryBase">
+            <summary>
+            Base class for a basic <see cref="T:SongFeedReaders.Services.IFeedFactory"/>.
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.AddAttributedFeeds(System.Reflection.Assembly)">
+            <summary>
+            Registers all <see cref="T:SongFeedReaders.Feeds.IFeed"/>s tagged with <see cref="T:SongFeedReaders.Attributes.FeedAttribute"/>
+            from the given <see cref="T:System.Reflection.Assembly"/>.
+            </summary>
+            <param name="assembly"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.RegisterSettingsType(System.Type,System.Type)">
+            <summary>
+            Registers an <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/> type for the given <see cref="T:SongFeedReaders.Feeds.IFeed"/> type.
+            </summary>
+            <param name="settingsType"></param>
+            <param name="feedType"></param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.InstantiateFeed(System.Type)">
+            <summary>
+            Attempts to instantiate an <see cref="T:SongFeedReaders.Feeds.IFeed"/> of the given <paramref name="feedType"/>.
+            <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/> should not be assigned in most cases.
+            Return null if the feed type could not be instantiated.
+            </summary>
+            <param name="feedType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.GetFeed(SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.GetInitializedFeedAsync(SongFeedReaders.Feeds.IFeedSettings,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.SettingsTypeRegistered``1">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.SettingsTypeRegistered(System.Type)">
+            <inheritdoc/>
+        </member>
         <member name="T:SongFeedReaders.Services.IFeedFactory">
             <summary>
             A factory to generate <see cref="T:SongFeedReaders.Feeds.IFeed"/> for a given <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/>.
@@ -2852,12 +2895,11 @@
             <typeparam name="TSettings"></typeparam>
             <returns></returns>
         </member>
-        <member name="M:SongFeedReaders.Services.IFeedFactory.SettingsTypeRegistered``1(``0)">
+        <member name="M:SongFeedReaders.Services.IFeedFactory.SettingsTypeRegistered(System.Type)">
             <summary>
-            Returns true if the given <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/> is registered.
+            Returns true if the given <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/> type is registered.
             </summary>
-            <typeparam name="TSettings"></typeparam>
-            <param name="settings"></param>
+            <param name="settingsType"></param>
             <returns></returns>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
