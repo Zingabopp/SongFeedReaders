@@ -1,19 +1,12 @@
-﻿using SongFeedReaders.Attributes;
-using SongFeedReaders.Feeds;
+﻿using SongFeedReaders.Feeds;
 using SongFeedReaders.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace SongFeedReaders.TestClient
 {
     internal class TestFeedFactory : FeedFactoryBase
     {
-        private IServiceProvider _serviceProvider;
+        private readonly IServiceProvider _serviceProvider;
         public TestFeedFactory(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));

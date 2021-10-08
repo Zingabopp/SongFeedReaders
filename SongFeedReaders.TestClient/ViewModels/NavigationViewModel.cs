@@ -36,7 +36,7 @@ namespace SongFeedReaders.TestClient.ViewModels
         public NavigationViewModel(IFeedFactory feedFactory, IEnumerable<IFeedSettings> settings)
         {
             _feeds = feedFactory ?? throw new ArgumentNullException(nameof(feedFactory));
-            
+
             Feeds = new ObservableCollection<IFeed>(settings.Select(s => feedFactory.GetFeed(s)));
             IFeed? first = Feeds.FirstOrDefault();
             if (first != null)

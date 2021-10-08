@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -30,7 +29,7 @@ namespace SongFeedReaders.Services
                 throw new ArgumentNullException(nameof(assembly));
             int feedsAdded = 0;
 
-            foreach (var type in assembly.GetTypes()
+            foreach (Type? type in assembly.GetTypes()
                 .Where(t => typeof(IFeed).IsAssignableFrom(t) && t.GetCustomAttribute<FeedAttribute>() != null))
             {
                 FeedAttribute? att = type.GetCustomAttribute<FeedAttribute>();

@@ -9,7 +9,6 @@ using SongFeedReaders.Services;
 using SongFeedReaders.TestClient.ViewModels;
 using SongFeedReaders.TestClient.Views;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
@@ -60,7 +59,7 @@ namespace SongFeedReaders.TestClient
         /// <param name="services"></param>
         private static void ConfigureFeeds(ServiceCollection services)
         {
-            foreach (var type in typeof(IFeed).Assembly.GetTypes().Where(t => t.GetCustomAttribute<FeedAttribute>() != null))
+            foreach (Type? type in typeof(IFeed).Assembly.GetTypes().Where(t => t.GetCustomAttribute<FeedAttribute>() != null))
             {
                 FeedAttribute? att = type.GetCustomAttribute<FeedAttribute>();
                 if (att != null)
