@@ -1,0 +1,94 @@
+{
+  "ResponseHeaders": {
+    "Date": [
+      "Sat, 16 Oct 2021 22:26:35 GMT"
+    ],
+    "Transfer-Encoding": [
+      "chunked"
+    ],
+    "Connection": [
+      "keep-alive"
+    ],
+    "CF-Ray": [
+      "69f4b5a6d9fb2bfb-ORD"
+    ],
+    "Cache-Control": [
+      "no-store, must-revalidate, no-cache"
+    ],
+    "Link": [
+      "<https://bsaber.com/wp-json/>; rel=\"https://api.w.org/\""
+    ],
+    "Set-Cookie": [
+      "PHPSESSID=kikkkjj0d75uk6mjh6n9hk08g2; path=/; secure; HttpOnly"
+    ],
+    "Strict-Transport-Security": [
+      "max-age=31557600; includeSubDomains"
+    ],
+    "CF-Cache-Status": [
+      "BYPASS"
+    ],
+    "Access-Control-Allow-Headers": [
+      "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type"
+    ],
+    "Access-Control-Expose-Headers": [
+      "X-WP-Total, X-WP-TotalPages, Link"
+    ],
+    "cf-apo-via": [
+      "origin,qs"
+    ],
+    "Content-Security-Policy": [
+      "upgrade-insecure-requests; default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ajax.cloudflare.com https://static.cloudflareinsights.com https://rum-static.pingdom.net/ https://cdn.oribi.io/ https://modelsaber.com/; script-src-elem 'self' https://stats.wp.com/ https://ajax.googleapis.com/ajax/libs/webfont/ https://stats.wp.com/w.js https://s0.wp.com/wp-content/ https://s1.wp.com/wp-content/ https://ssl.google-analytics.com/ga.js https://static.cloudflareinsights.com https://ajax.cloudflare.com/cdn-cgi/scripts/ https://cdn.oribi.io/Xy0yMDk3MjI0Mzg3/oribi.js https://cdnjs.cloudflare.com/ajax/libs/select2/ 'unsafe-inline'; style-src https://cdnjs.cloudflare.com https://fonts.googleapis.com https://use.fontawesome.com/releases/ https://s0.wp.com/ 'self' 'unsafe-inline'; img-src data:  https: 'self' https://avatars.dicebear.com/v2/avataaars/; object-src 'none'; base-uri 'self'; connect-src https: 'self' https://gw.oribi.io/event; font-src https: data: https://cdnjs.cloudflare.com https://fonts.gstatic.com 'self'; frame-src 'self' https://akismet.com/ https://widgets.wp.com/ https://jetpack.wordpress.com/ https://*.youtube.com/ https://*.youtube-nocookie.com/ https://youtu.be/ https://skystudioapps.com/ https://modelsaber.com/ https://discord.com/ https://scoresaber.com/ modelsaber:; media-src https://cdn.beatmaps.io https://cdn.beatsaver.com 'self' blob:; frame-ancestors 'self' https://www.questmodding.com"
+    ],
+    "Expect-CT": [
+      "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+    ],
+    "Permissions-Policy": [
+      "geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self \"https://skystudioapps.com\"),payment=(self)"
+    ],
+    "Pragma": [
+      "no-cache"
+    ],
+    "Referrer-Policy": [
+      "strict-origin-when-cross-origin"
+    ],
+    "X-Content-Type-Options": [
+      "nosniff",
+      "nosniff"
+    ],
+    "X-Frame-Options": [
+      "SAMEORIGIN"
+    ],
+    "X-Robots-Tag": [
+      "noindex"
+    ],
+    "X-Trace": [
+      "2B31240FFEED6EF8DA44C30AF195F4C06B845942F74C92D404C2763C2500"
+    ],
+    "X-WP-Cache": [
+      "BYPASS"
+    ],
+    "X-XSS-Protection": [
+      "1; mode=block"
+    ],
+    "Report-To": [
+      "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=3ANIvnARmRnLo5HGGUThGKLIB22esZJohQcNguCT4HmMua4sZTnCykOb%2B9QHog5RC2dcZhNvFTSWGQcvfN2qbhcz1dqekOE9z2xFyCN6%2Ft8ntgikFq6fTbAPxNA%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+    ],
+    "NEL": [
+      "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+    ],
+    "Server": [
+      "cloudflare"
+    ]
+  },
+  "ContentHeaders": {
+    "Content-Type": [
+      "application/json; charset=UTF-8"
+    ],
+    "Expires": [
+      "Thu, 19 Nov 1981 08:52:00 GMT"
+    ]
+  },
+  "StatusCode": 200,
+  "ContentType": null,
+  "ContentLengthOverride": -1
+}

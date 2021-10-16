@@ -1,0 +1,1776 @@
+{
+    "docs": [
+        {
+            "id": "17b62",
+            "name": "Wolfgang Gartner & Kill The Noise - Battlestations",
+            "description": "Collab with Rexxz\r\nhttps://www.youtube.com/watch?v=IuOo-MBMnec",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 129.1,
+                "duration": 252,
+                "songName": "Battlestations",
+                "songSubName": "",
+                "songAuthorName": "Wolfgang Gartner & Kill The Noise",
+                "levelAuthorName": "Rexxzi & Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 669,
+                "upvotes": 43,
+                "downvotes": 2,
+                "score": 0.8117
+            },
+            "uploaded": "2021-05-08T18:52:19.401Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "d766afa87f788ff709d50feb0772f3b4f1f0fe3b",
+                    "key": "17b62",
+                    "state": "Published",
+                    "createdAt": "2021-05-08T18:52:19.401Z",
+                    "sageScore": 7,
+                    "diffs": [
+                        {
+                            "njs": 17.0,
+                            "offset": -0.3,
+                            "notes": 0,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 0.0,
+                            "length": 0.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 8711,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 0.0,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.3,
+                            "notes": 787,
+                            "bombs": 12,
+                            "obstacles": 186,
+                            "nps": 3.368,
+                            "length": 502.75,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 8711,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 233.656,
+                            "paritySummary": {
+                                "errors": 16,
+                                "warns": 16,
+                                "resets": 1
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/d766afa87f788ff709d50feb0772f3b4f1f0fe3b.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/d766afa87f788ff709d50feb0772f3b4f1f0fe3b.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/d766afa87f788ff709d50feb0772f3b4f1f0fe3b.mp3"
+                }
+            ],
+            "createdAt": "2021-05-08T18:52:19.401Z",
+            "updatedAt": "2021-05-08T18:52:19.401Z",
+            "lastPublishedAt": "2021-05-08T18:52:19.401Z"
+        },
+        {
+            "id": "17885",
+            "name": "Loudar - Loom (Lobro's Theme) [Remix]",
+            "description": "https://www.youtube.com/watch?v=07YRoF2dX4U\n\nPlatform manual download: https://modelsaber.com/Platforms/?id=1620134912&pc\nBackup download for the platform: https://drive.google.com/file/d/1bGv10ULjlQJYSN050NWarmNp7MZgDF2O/view?usp=sharing\n\nCustom platform by AkaRaiden, album art by Max Level Adventures.",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 98.0,
+                "duration": 171,
+                "songName": "Loom [Remix]",
+                "songSubName": "Lobro's Theme",
+                "songAuthorName": "Loudar",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 446,
+                "upvotes": 38,
+                "downvotes": 4,
+                "score": 0.7743
+            },
+            "uploaded": "2021-05-04T13:59:30.237Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "910dc2d34ea865466bde4ff0d1f12258af815cd8",
+                    "key": "17885",
+                    "state": "Published",
+                    "createdAt": "2021-05-04T13:59:30.237Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 0,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 0.0,
+                            "length": 0.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 4841,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 0.0,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 15.0,
+                            "offset": 1.0,
+                            "notes": 363,
+                            "bombs": 0,
+                            "obstacles": 56,
+                            "nps": 2.246,
+                            "length": 264.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 4841,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 161.633,
+                            "paritySummary": {
+                                "errors": 21,
+                                "warns": 17,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": 1.0,
+                            "notes": 400,
+                            "bombs": 0,
+                            "obstacles": 57,
+                            "nps": 2.475,
+                            "length": 264.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 4841,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 161.633,
+                            "paritySummary": {
+                                "errors": 18,
+                                "warns": 12,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": 1.0,
+                            "notes": 508,
+                            "bombs": 0,
+                            "obstacles": 38,
+                            "nps": 3.143,
+                            "length": 264.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 4841,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 161.633,
+                            "paritySummary": {
+                                "errors": 33,
+                                "warns": 30,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/910dc2d34ea865466bde4ff0d1f12258af815cd8.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/910dc2d34ea865466bde4ff0d1f12258af815cd8.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/910dc2d34ea865466bde4ff0d1f12258af815cd8.mp3"
+                }
+            ],
+            "createdAt": "2021-05-04T13:59:30.237Z",
+            "updatedAt": "2021-05-04T13:59:30.237Z",
+            "lastPublishedAt": "2021-05-04T13:59:30.237Z"
+        },
+        {
+            "id": "14fd0",
+            "name": "In This Moment - God is She",
+            "description": "https://www.youtube.com/watch?v=R2vNCmbktbk",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 132.0,
+                "duration": 279,
+                "songName": "God is She",
+                "songSubName": "",
+                "songAuthorName": "In This Moment",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 753,
+                "upvotes": 39,
+                "downvotes": 3,
+                "score": 0.7904
+            },
+            "uploaded": "2021-03-04T20:31:29.882Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "a418c44776ef6c38b897faa8dd26da68bddfac54",
+                    "key": "14fd0",
+                    "state": "Published",
+                    "createdAt": "2021-03-04T20:31:29.882Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 17.0,
+                            "offset": 0.5,
+                            "notes": 799,
+                            "bombs": 0,
+                            "obstacles": 60,
+                            "nps": 2.933,
+                            "length": 599.333,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 9192,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 272.424,
+                            "paritySummary": {
+                                "errors": 44,
+                                "warns": 27,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/a418c44776ef6c38b897faa8dd26da68bddfac54.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/a418c44776ef6c38b897faa8dd26da68bddfac54.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/a418c44776ef6c38b897faa8dd26da68bddfac54.mp3"
+                }
+            ],
+            "createdAt": "2021-03-04T20:31:29.882Z",
+            "updatedAt": "2021-03-04T20:31:29.882Z",
+            "lastPublishedAt": "2021-03-04T20:31:29.882Z"
+        },
+        {
+            "id": "12799",
+            "name": "Apashe - Distance (Buunshin Remix)",
+            "description": "https://www.youtube.com/watch?v=YpNsEsRw23I",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 172.0,
+                "duration": 207,
+                "songName": "Distance",
+                "songSubName": "Buunshin Remix",
+                "songAuthorName": "Apashe",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 490,
+                "upvotes": 44,
+                "downvotes": 8,
+                "score": 0.7414
+            },
+            "uploaded": "2021-01-10T20:11:50.752Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "e2c3a4f87cc356e9ede480341ee3c29a4a9477be",
+                    "key": "12799",
+                    "state": "Published",
+                    "createdAt": "2021-01-10T20:11:50.752Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 18.0,
+                            "offset": 1.0,
+                            "notes": 510,
+                            "bombs": 0,
+                            "obstacles": 452,
+                            "nps": 2.629,
+                            "length": 556.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 10814,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 193.953,
+                            "paritySummary": {
+                                "errors": 40,
+                                "warns": 20,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/e2c3a4f87cc356e9ede480341ee3c29a4a9477be.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/e2c3a4f87cc356e9ede480341ee3c29a4a9477be.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/e2c3a4f87cc356e9ede480341ee3c29a4a9477be.mp3"
+                }
+            ],
+            "createdAt": "2021-01-10T20:11:50.752Z",
+            "updatedAt": "2021-01-10T20:11:50.752Z",
+            "lastPublishedAt": "2021-01-10T20:11:50.752Z"
+        },
+        {
+            "id": "11f8e",
+            "name": "C418 - Aria Math (Protostar Remix)",
+            "description": "Use BigMirror Environment. Noodle Extensions and Chroma required.\n\nhttps://www.youtube.com/watch?v=rNuFAnpUa3s",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 174.0,
+                "duration": 300,
+                "songName": "Aria Math",
+                "songSubName": "Protostar Remix",
+                "songAuthorName": "C418",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 4192,
+                "upvotes": 478,
+                "downvotes": 16,
+                "score": 0.8954
+            },
+            "uploaded": "2020-12-23T21:21:18.226Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "4fcf74e665cb3f63306d59e6d37936a050778b21",
+                    "key": "11f8e",
+                    "state": "Published",
+                    "createdAt": "2020-12-23T21:21:18.226Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 17.0,
+                            "offset": 1.0,
+                            "notes": 0,
+                            "bombs": 0,
+                            "obstacles": 722,
+                            "nps": 0.0,
+                            "length": 0.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 10700,
+                            "chroma": true,
+                            "me": false,
+                            "ne": true,
+                            "cinema": false,
+                            "seconds": 0.0,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": 1.0,
+                            "notes": 419,
+                            "bombs": 0,
+                            "obstacles": 722,
+                            "nps": 1.523,
+                            "length": 798.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 10700,
+                            "chroma": true,
+                            "me": false,
+                            "ne": true,
+                            "cinema": false,
+                            "seconds": 275.172,
+                            "paritySummary": {
+                                "errors": 40,
+                                "warns": 32,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/4fcf74e665cb3f63306d59e6d37936a050778b21.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/4fcf74e665cb3f63306d59e6d37936a050778b21.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/4fcf74e665cb3f63306d59e6d37936a050778b21.mp3"
+                }
+            ],
+            "createdAt": "2020-12-23T21:21:18.226Z",
+            "updatedAt": "2020-12-23T21:21:18.226Z",
+            "lastPublishedAt": "2020-12-23T21:21:18.226Z"
+        },
+        {
+            "id": "11f8d",
+            "name": "Essenger - After Dark (Protostar Remix)",
+            "description": "https://www.youtube.com/watch?v=f2iRFTIsnWk",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 174.0,
+                "duration": 269,
+                "songName": "After Dark",
+                "songSubName": "Protostar Remix",
+                "songAuthorName": "Essenger",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 633,
+                "upvotes": 87,
+                "downvotes": 8,
+                "score": 0.8106
+            },
+            "uploaded": "2020-12-23T21:19:51.668Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "6def2538cde03d8d3611503407b176f7b664be84",
+                    "key": "11f8d",
+                    "state": "Published",
+                    "createdAt": "2020-12-23T21:19:51.668Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 12.0,
+                            "offset": 0.5,
+                            "notes": 469,
+                            "bombs": 0,
+                            "obstacles": 370,
+                            "nps": 1.773,
+                            "length": 767.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 14333,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 264.483,
+                            "paritySummary": {
+                                "errors": 41,
+                                "warns": 25,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 13.0,
+                            "offset": 0.0,
+                            "notes": 633,
+                            "bombs": 2,
+                            "obstacles": 366,
+                            "nps": 2.39,
+                            "length": 768.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 14333,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 264.828,
+                            "paritySummary": {
+                                "errors": 18,
+                                "warns": 8,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": 1.0,
+                            "notes": 797,
+                            "bombs": 18,
+                            "obstacles": 363,
+                            "nps": 3.01,
+                            "length": 768.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 14381,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 264.828,
+                            "paritySummary": {
+                                "errors": 35,
+                                "warns": 15,
+                                "resets": 2
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/6def2538cde03d8d3611503407b176f7b664be84.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/6def2538cde03d8d3611503407b176f7b664be84.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/6def2538cde03d8d3611503407b176f7b664be84.mp3"
+                }
+            ],
+            "createdAt": "2020-12-23T21:19:51.668Z",
+            "updatedAt": "2020-12-23T21:19:51.668Z",
+            "lastPublishedAt": "2020-12-23T21:19:51.668Z"
+        },
+        {
+            "id": "f4e7",
+            "name": "Netsky - Work It Out ft. Digital Farm Animals",
+            "description": "https://www.youtube.com/watch?v=BrirYnfub44",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 172.0,
+                "duration": 199,
+                "songName": "Work It Out",
+                "songSubName": "ft. Digital Farm Animals",
+                "songAuthorName": "Netsky",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 639,
+                "upvotes": 39,
+                "downvotes": 3,
+                "score": 0.7904
+            },
+            "uploaded": "2020-09-28T21:06:20.497Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "2f86a1f1c903ecc2b01a33af4cf3b8fe71058d96",
+                    "key": "f4e7",
+                    "state": "Published",
+                    "createdAt": "2020-09-28T21:06:20.497Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 18.0,
+                            "offset": 0.5,
+                            "notes": 558,
+                            "bombs": 0,
+                            "obstacles": 114,
+                            "nps": 3.571,
+                            "length": 448.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 4485,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 156.279,
+                            "paritySummary": {
+                                "errors": 23,
+                                "warns": 60,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/2f86a1f1c903ecc2b01a33af4cf3b8fe71058d96.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/2f86a1f1c903ecc2b01a33af4cf3b8fe71058d96.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/2f86a1f1c903ecc2b01a33af4cf3b8fe71058d96.mp3"
+                }
+            ],
+            "createdAt": "2020-09-28T21:06:20.497Z",
+            "updatedAt": "2020-09-28T21:06:20.497Z",
+            "lastPublishedAt": "2020-09-28T21:06:20.497Z"
+        },
+        {
+            "id": "ee61",
+            "name": "Justin OH & Nitro Fun - Killswitch",
+            "description": "Collaboration with Rex.\r\nhttps://www.youtube.com/watch?v=F7VrXsL_gAk",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 101.0,
+                "duration": 187,
+                "songName": "Killswitch",
+                "songSubName": "",
+                "songAuthorName": "Justin OH & Nitro Fun",
+                "levelAuthorName": "Rexxz & Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 272,
+                "upvotes": 67,
+                "downvotes": 7,
+                "score": 0.7949
+            },
+            "uploaded": "2020-09-19T19:03:09.315Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "3948c505653ec48afe1973fecd486d432ed04525",
+                    "key": "ee61",
+                    "state": "Published",
+                    "createdAt": "2020-09-19T19:03:09.315Z",
+                    "sageScore": 7,
+                    "diffs": [
+                        {
+                            "njs": 19.0,
+                            "offset": 0.5,
+                            "notes": 0,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 0.0,
+                            "length": 0.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 6520,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 0.0,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 19.0,
+                            "offset": 0.5,
+                            "notes": 543,
+                            "bombs": 0,
+                            "obstacles": 205,
+                            "nps": 3.174,
+                            "length": 288.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 6520,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 171.089,
+                            "paritySummary": {
+                                "errors": 13,
+                                "warns": 34,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/3948c505653ec48afe1973fecd486d432ed04525.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/3948c505653ec48afe1973fecd486d432ed04525.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/3948c505653ec48afe1973fecd486d432ed04525.mp3"
+                }
+            ],
+            "createdAt": "2020-09-19T19:03:09.315Z",
+            "updatedAt": "2020-09-19T19:03:09.315Z",
+            "lastPublishedAt": "2020-09-19T19:03:09.315Z"
+        },
+        {
+            "id": "ec23",
+            "name": "Protostar - Heads Will Roll (D&B Bootleg)",
+            "description": "https://www.youtube.com/watch?v=WPSpGizz-vA",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 174.0,
+                "duration": 190,
+                "songName": "Heads Will Roll",
+                "songSubName": "Protostar Bootleg",
+                "songAuthorName": "Protostar",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1687,
+                "upvotes": 737,
+                "downvotes": 47,
+                "score": 0.8809
+            },
+            "uploaded": "2020-09-16T16:59:47.146Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "77fc5e35bc2fd8d9d50071d7b36571326037939e",
+                    "key": "ec23",
+                    "state": "Published",
+                    "createdAt": "2020-09-16T16:59:47.146Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 13.0,
+                            "offset": 0.5,
+                            "notes": 547,
+                            "bombs": 0,
+                            "obstacles": 157,
+                            "nps": 3.101,
+                            "length": 511.5,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 7018,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 176.379,
+                            "paritySummary": {
+                                "errors": 41,
+                                "warns": 39,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": 1.0,
+                            "notes": 678,
+                            "bombs": 0,
+                            "obstacles": 152,
+                            "nps": 3.84,
+                            "length": 512.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 7018,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 176.552,
+                            "paritySummary": {
+                                "errors": 29,
+                                "warns": 25,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 19.0,
+                            "offset": 0.5,
+                            "notes": 742,
+                            "bombs": 0,
+                            "obstacles": 182,
+                            "nps": 4.205,
+                            "length": 511.75,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 7017,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 176.466,
+                            "paritySummary": {
+                                "errors": 45,
+                                "warns": 50,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/77fc5e35bc2fd8d9d50071d7b36571326037939e.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/77fc5e35bc2fd8d9d50071d7b36571326037939e.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/77fc5e35bc2fd8d9d50071d7b36571326037939e.mp3"
+                }
+            ],
+            "createdAt": "2020-09-16T16:59:47.146Z",
+            "updatedAt": "2020-09-16T16:59:47.146Z",
+            "lastPublishedAt": "2020-09-16T16:59:47.146Z"
+        },
+        {
+            "id": "d427",
+            "name": "Axtasia - Spectrum",
+            "description": "https://www.youtube.com/watch?v=ENzujz37OTc",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 126.0,
+                "duration": 183,
+                "songName": "Spectrum",
+                "songSubName": "",
+                "songAuthorName": "Axtasia",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 250,
+                "upvotes": 112,
+                "downvotes": 7,
+                "score": 0.8368
+            },
+            "uploaded": "2020-08-11T20:06:15.731Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "7412d155ae0515cbf8076b2c04654a001e7b0abf",
+                    "key": "d427",
+                    "state": "Published",
+                    "createdAt": "2020-08-11T20:06:15.731Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 19.0,
+                            "offset": 0.5,
+                            "notes": 701,
+                            "bombs": 6,
+                            "obstacles": 71,
+                            "nps": 4.0,
+                            "length": 368.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 7221,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 175.238,
+                            "paritySummary": {
+                                "errors": 37,
+                                "warns": 66,
+                                "resets": 1
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/7412d155ae0515cbf8076b2c04654a001e7b0abf.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/7412d155ae0515cbf8076b2c04654a001e7b0abf.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/7412d155ae0515cbf8076b2c04654a001e7b0abf.mp3"
+                }
+            ],
+            "createdAt": "2020-08-11T20:06:15.731Z",
+            "updatedAt": "2020-08-11T20:06:15.731Z",
+            "lastPublishedAt": "2020-08-11T20:06:15.731Z"
+        },
+        {
+            "id": "d361",
+            "name": "Protostar - Without You (feat. Megan Lenius)",
+            "description": "https://www.youtube.com/watch?v=1GEpawyKz5s",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 174.0,
+                "duration": 215,
+                "songName": "Without You",
+                "songSubName": "feat. Megan Lenius",
+                "songAuthorName": "Protostar",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 390,
+                "upvotes": 222,
+                "downvotes": 23,
+                "score": 0.8287
+            },
+            "uploaded": "2020-08-10T18:46:41.234Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "cc97bd96393e4950d5385d186f9f8520f7725d43",
+                    "key": "d361",
+                    "state": "Published",
+                    "createdAt": "2020-08-10T18:46:41.234Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 14.0,
+                            "offset": 1.0,
+                            "notes": 652,
+                            "bombs": 0,
+                            "obstacles": 336,
+                            "nps": 3.329,
+                            "length": 568.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 5698,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 195.862,
+                            "paritySummary": {
+                                "errors": 28,
+                                "warns": 27,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": 0.5,
+                            "notes": 785,
+                            "bombs": 0,
+                            "obstacles": 360,
+                            "nps": 4.008,
+                            "length": 568.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 5698,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 195.862,
+                            "paritySummary": {
+                                "errors": 26,
+                                "warns": 39,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 19.0,
+                            "offset": 0.5,
+                            "notes": 975,
+                            "bombs": 0,
+                            "obstacles": 315,
+                            "nps": 4.978,
+                            "length": 568.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 5701,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 195.862,
+                            "paritySummary": {
+                                "errors": 43,
+                                "warns": 61,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/cc97bd96393e4950d5385d186f9f8520f7725d43.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/cc97bd96393e4950d5385d186f9f8520f7725d43.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/cc97bd96393e4950d5385d186f9f8520f7725d43.mp3"
+                }
+            ],
+            "createdAt": "2020-08-10T18:46:41.234Z",
+            "updatedAt": "2020-08-10T18:46:41.234Z",
+            "lastPublishedAt": "2020-08-10T18:46:41.234Z"
+        },
+        {
+            "id": "a337",
+            "name": "Glacier & Omni - Void",
+            "description": "https://www.youtube.com/watch?v=zeHkMc8DnXI",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 190.0,
+                "duration": 213,
+                "songName": "Void",
+                "songSubName": "",
+                "songAuthorName": "Glacier & Omni",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 545,
+                "upvotes": 74,
+                "downvotes": 7,
+                "score": 0.8038
+            },
+            "uploaded": "2020-05-06T19:35:34.379Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "67bf290bac15d24e00e908b07da90a1f15c8d4ac",
+                    "key": "a337",
+                    "state": "Published",
+                    "createdAt": "2020-05-06T19:35:34.379Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 19.0,
+                            "offset": 1.0,
+                            "notes": 762,
+                            "bombs": 12,
+                            "obstacles": 68,
+                            "nps": 3.659,
+                            "length": 659.5,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 8167,
+                            "chroma": false,
+                            "me": false,
+                            "ne": true,
+                            "cinema": false,
+                            "seconds": 208.263,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/67bf290bac15d24e00e908b07da90a1f15c8d4ac.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/67bf290bac15d24e00e908b07da90a1f15c8d4ac.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/67bf290bac15d24e00e908b07da90a1f15c8d4ac.mp3"
+                }
+            ],
+            "createdAt": "2020-05-06T19:35:34.379Z",
+            "updatedAt": "2020-05-06T19:35:34.379Z",
+            "lastPublishedAt": "2020-05-06T19:35:34.379Z"
+        },
+        {
+            "id": "a25f",
+            "name": "Protostar - Galaxies",
+            "description": "https://www.youtube.com/watch?v=WQ4nVh8d2l4",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 176.0,
+                "duration": 223,
+                "songName": "Galaxies",
+                "songSubName": "",
+                "songAuthorName": "Protostar",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 838,
+                "upvotes": 732,
+                "downvotes": 30,
+                "score": 0.8982
+            },
+            "uploaded": "2020-05-04T17:19:08.261Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "d0e0f74d2f419ef0aeffd40722b9ee3ada1c12b3",
+                    "key": "a25f",
+                    "state": "Published",
+                    "createdAt": "2020-05-04T17:19:08.261Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 13.0,
+                            "offset": 0.0,
+                            "notes": 532,
+                            "bombs": 0,
+                            "obstacles": 53,
+                            "nps": 2.438,
+                            "length": 640.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 8493,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 218.182,
+                            "paritySummary": {
+                                "errors": 23,
+                                "warns": 14,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 15.0,
+                            "offset": 1.0,
+                            "notes": 620,
+                            "bombs": 0,
+                            "obstacles": 31,
+                            "nps": 2.842,
+                            "length": 640.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 8493,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 218.182,
+                            "paritySummary": {
+                                "errors": 31,
+                                "warns": 20,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 19.0,
+                            "offset": 0.5,
+                            "notes": 874,
+                            "bombs": 0,
+                            "obstacles": 68,
+                            "nps": 4.006,
+                            "length": 640.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 8494,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 218.182,
+                            "paritySummary": {
+                                "errors": 58,
+                                "warns": 42,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/d0e0f74d2f419ef0aeffd40722b9ee3ada1c12b3.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/d0e0f74d2f419ef0aeffd40722b9ee3ada1c12b3.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/d0e0f74d2f419ef0aeffd40722b9ee3ada1c12b3.mp3"
+                }
+            ],
+            "createdAt": "2020-05-04T17:19:08.261Z",
+            "updatedAt": "2020-05-04T17:19:08.261Z",
+            "lastPublishedAt": "2020-05-04T17:19:08.261Z"
+        },
+        {
+            "id": "9c65",
+            "name": "Protostar - SEQUENCE./TITAN (Part 1)",
+            "description": "https://www.youtube.com/watch?v=6IHH7wOV2EI",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 174.0,
+                "duration": 274,
+                "songName": "sequence.1/TITAN",
+                "songSubName": "",
+                "songAuthorName": "Protostar",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 284,
+                "upvotes": 194,
+                "downvotes": 14,
+                "score": 0.846
+            },
+            "uploaded": "2020-04-18T19:50:36.666Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "182d59ca44ccb6582223ca2be391be00dd94561e",
+                    "key": "9c65",
+                    "state": "Published",
+                    "createdAt": "2020-04-18T19:50:36.666Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": 0.0,
+                            "notes": 560,
+                            "bombs": 0,
+                            "obstacles": 8011,
+                            "nps": 2.231,
+                            "length": 728.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 10276,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 251.034,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/182d59ca44ccb6582223ca2be391be00dd94561e.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/182d59ca44ccb6582223ca2be391be00dd94561e.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/182d59ca44ccb6582223ca2be391be00dd94561e.mp3"
+                }
+            ],
+            "createdAt": "2020-04-18T19:50:36.666Z",
+            "updatedAt": "2020-04-18T19:50:36.666Z",
+            "lastPublishedAt": "2020-04-18T19:50:36.666Z"
+        },
+        {
+            "id": "9b40",
+            "name": "Glacier - Still",
+            "description": "",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 99.0,
+                "duration": 182,
+                "songName": "Still",
+                "songSubName": "",
+                "songAuthorName": "Glacier",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 375,
+                "upvotes": 162,
+                "downvotes": 15,
+                "score": 0.828
+            },
+            "uploaded": "2020-04-15T11:14:34.385Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "fa4ffbdb64e11512c74405a10d3ab22c6ff7d3de",
+                    "key": "9b40",
+                    "state": "Published",
+                    "createdAt": "2020-04-15T11:14:34.385Z",
+                    "sageScore": 7,
+                    "diffs": [
+                        {
+                            "njs": 22.0,
+                            "offset": 0.5,
+                            "notes": 525,
+                            "bombs": 0,
+                            "obstacles": 53,
+                            "nps": 3.132,
+                            "length": 275.145,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2837,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 166.754,
+                            "paritySummary": {
+                                "errors": 39,
+                                "warns": 42,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/fa4ffbdb64e11512c74405a10d3ab22c6ff7d3de.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/fa4ffbdb64e11512c74405a10d3ab22c6ff7d3de.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/fa4ffbdb64e11512c74405a10d3ab22c6ff7d3de.mp3"
+                }
+            ],
+            "createdAt": "2020-04-15T11:14:34.385Z",
+            "updatedAt": "2020-04-15T11:14:34.385Z",
+            "lastPublishedAt": "2020-04-15T11:14:34.385Z"
+        },
+        {
+            "id": "907a",
+            "name": "Zomboy - End Game (TYNAN Remix)",
+            "description": "Maps by JewelsVR, Ruckus and Rustic\r\nhttps://www.youtube.com/watch?v=yCDbRcQ8Smw",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 252,
+                "songName": "End Game",
+                "songSubName": "(TYNAN Remix)",
+                "songAuthorName": "Zomboy",
+                "levelAuthorName": "JewelsVR, Ruckus, Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1237,
+                "upvotes": 654,
+                "downvotes": 28,
+                "score": 0.8946
+            },
+            "uploaded": "2020-03-15T22:14:24.249Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "711bd9db9a1d0de684f11ae6ce332818ebdc57ed",
+                    "key": "907a",
+                    "state": "Published",
+                    "createdAt": "2020-03-15T22:14:24.249Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": 0.0,
+                            "notes": 611,
+                            "bombs": 0,
+                            "obstacles": 18002,
+                            "nps": 2.687,
+                            "length": 568.563,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 8220,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 227.425,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 20.0,
+                            "offset": 0.0,
+                            "notes": 882,
+                            "bombs": 0,
+                            "obstacles": 18002,
+                            "nps": 3.667,
+                            "length": 601.344,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 8218,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 240.538,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 20.0,
+                            "offset": -0.4,
+                            "notes": 1126,
+                            "bombs": 366,
+                            "obstacles": 83,
+                            "nps": 4.618,
+                            "length": 609.57,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 8218,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 243.828,
+                            "paritySummary": {
+                                "errors": 1,
+                                "warns": 3,
+                                "resets": 22
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/711bd9db9a1d0de684f11ae6ce332818ebdc57ed.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/711bd9db9a1d0de684f11ae6ce332818ebdc57ed.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/711bd9db9a1d0de684f11ae6ce332818ebdc57ed.mp3"
+                }
+            ],
+            "createdAt": "2020-03-15T22:14:24.249Z",
+            "updatedAt": "2020-03-15T22:14:24.249Z",
+            "lastPublishedAt": "2020-03-15T22:14:24.249Z"
+        },
+        {
+            "id": "8f28",
+            "name": "Teminite - State of Mind",
+            "description": "Reupload, Original upload March 9. 2020. Fixed some notes, map is now FCable :P\r\nhttps://www.youtube.com/watch?v=Z0pFFcf4IFs",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 265,
+                "songName": "State of Mind",
+                "songSubName": "",
+                "songAuthorName": "Teminite",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 733,
+                "upvotes": 492,
+                "downvotes": 10,
+                "score": 0.9063
+            },
+            "uploaded": "2020-03-11T10:39:12.136Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "73a1e97a5991be37bb00c077646c96246fa5d0f4",
+                    "key": "8f28",
+                    "state": "Published",
+                    "createdAt": "2020-03-11T10:39:12.136Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 18.0,
+                            "offset": 0.0,
+                            "notes": 610,
+                            "bombs": 0,
+                            "obstacles": 377,
+                            "nps": 2.504,
+                            "length": 609.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 6872,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 243.6,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/73a1e97a5991be37bb00c077646c96246fa5d0f4.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/73a1e97a5991be37bb00c077646c96246fa5d0f4.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/73a1e97a5991be37bb00c077646c96246fa5d0f4.mp3"
+                }
+            ],
+            "createdAt": "2020-03-11T10:39:12.136Z",
+            "updatedAt": "2020-03-11T10:39:12.136Z",
+            "lastPublishedAt": "2020-03-11T10:39:12.136Z"
+        },
+        {
+            "id": "8b81",
+            "name": "Stonebank - To The Top",
+            "description": "https://www.youtube.com/watch?v=2DwhNw_pGrg",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 128.0,
+                "duration": 187,
+                "songName": "To The Top",
+                "songSubName": "",
+                "songAuthorName": "Stonebank",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1542,
+                "upvotes": 904,
+                "downvotes": 12,
+                "score": 0.9244
+            },
+            "uploaded": "2020-02-28T15:53:21.930Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "7afc56e020bb12f1e91dc99b1107df830299cc98",
+                    "key": "8b81",
+                    "state": "Published",
+                    "createdAt": "2020-02-28T15:53:21.930Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": 1.0,
+                            "notes": 491,
+                            "bombs": 0,
+                            "obstacles": 2922,
+                            "nps": 2.942,
+                            "length": 356.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 5581,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 166.875,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/7afc56e020bb12f1e91dc99b1107df830299cc98.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/7afc56e020bb12f1e91dc99b1107df830299cc98.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/7afc56e020bb12f1e91dc99b1107df830299cc98.mp3"
+                }
+            ],
+            "createdAt": "2020-02-28T15:53:21.930Z",
+            "updatedAt": "2020-02-28T15:53:21.930Z",
+            "lastPublishedAt": "2020-02-28T15:53:21.930Z"
+        },
+        {
+            "id": "7a5d",
+            "name": "Static - The Fall",
+            "description": "https://www.youtube.com/watch?v=-26-nVwKpQo",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 210.0,
+                "duration": 150,
+                "songName": "The Fall",
+                "songSubName": "",
+                "songAuthorName": "Static",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1260,
+                "upvotes": 619,
+                "downvotes": 15,
+                "score": 0.9081
+            },
+            "uploaded": "2019-12-28T18:23:43.502Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "491debc2bdaf314a6f343a0593e3c9581b81c94a",
+                    "key": "7a5d",
+                    "state": "Published",
+                    "createdAt": "2019-12-28T18:23:43.502Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 21.0,
+                            "offset": 0.5,
+                            "notes": 448,
+                            "bombs": 0,
+                            "obstacles": 376,
+                            "nps": 3.294,
+                            "length": 476.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 7032,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 136.0,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/491debc2bdaf314a6f343a0593e3c9581b81c94a.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/491debc2bdaf314a6f343a0593e3c9581b81c94a.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/491debc2bdaf314a6f343a0593e3c9581b81c94a.mp3"
+                }
+            ],
+            "createdAt": "2019-12-28T18:23:43.502Z",
+            "updatedAt": "2019-12-28T18:23:43.502Z",
+            "lastPublishedAt": "2019-12-28T18:23:43.502Z"
+        },
+        {
+            "id": "79d7",
+            "name": "Bossfight - Sonder",
+            "description": "Expert only\r\nhttps://www.youtube.com/watch?v=AzkL1OApXC4",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 172.0,
+                "duration": 180,
+                "songName": "Sonder",
+                "songSubName": "",
+                "songAuthorName": "Bossfight",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 580,
+                "upvotes": 260,
+                "downvotes": 8,
+                "score": 0.8829
+            },
+            "uploaded": "2019-12-26T21:44:56.797Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "1c2b5175099ef201be07cb385e05a57d84e2cc63",
+                    "key": "79d7",
+                    "state": "Published",
+                    "createdAt": "2019-12-26T21:44:56.797Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 21.0,
+                            "offset": 0.0,
+                            "notes": 648,
+                            "bombs": 0,
+                            "obstacles": 158,
+                            "nps": 3.886,
+                            "length": 478.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 5180,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 166.744,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/1c2b5175099ef201be07cb385e05a57d84e2cc63.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/1c2b5175099ef201be07cb385e05a57d84e2cc63.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/1c2b5175099ef201be07cb385e05a57d84e2cc63.mp3"
+                }
+            ],
+            "createdAt": "2019-12-26T21:44:56.797Z",
+            "updatedAt": "2019-12-26T21:44:56.797Z",
+            "lastPublishedAt": "2019-12-26T21:44:56.797Z"
+        }
+    ]
+}

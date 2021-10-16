@@ -1,0 +1,27 @@
+{
+    "id": 12996,
+    "name": "rustic",
+    "uniqueSet": true,
+    "hash": "5cff0b7298cc5a672c84e8c4",
+    "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+    "stats": {
+        "totalUpvotes": 110162,
+        "totalDownvotes": 4561,
+        "totalMaps": 83,
+        "rankedMaps": 20,
+        "avgBpm": 141.95,
+        "avgScore": 86.5,
+        "avgDuration": 214.0,
+        "firstUpload": "2018-05-08T18:56:36Z",
+        "lastUpload": "2021-05-08T18:52:19.401Z",
+        "diffStats": {
+            "total": 173,
+            "easy": 7,
+            "normal": 23,
+            "hard": 56,
+            "expert": 75,
+            "expertPlus": 12
+        }
+    },
+    "type": "SIMPLE"
+}

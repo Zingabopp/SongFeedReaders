@@ -1,0 +1,30 @@
+{
+  "ResponseHeaders": {
+    "Server": [
+      "nginx"
+    ],
+    "Date": [
+      "Sat, 16 Oct 2021 21:47:01 GMT"
+    ],
+    "Connection": [
+      "keep-alive"
+    ],
+    "Access-Control-Allow-Origin": [
+      "*"
+    ],
+    "Server-Timing": [
+      "req;dur=4.245"
+    ]
+  },
+  "ContentHeaders": {
+    "Content-Type": [
+      "application/json; charset=UTF-8"
+    ],
+    "Content-Length": [
+      "62094"
+    ]
+  },
+  "StatusCode": 200,
+  "ContentType": null,
+  "ContentLengthOverride": -1
+}

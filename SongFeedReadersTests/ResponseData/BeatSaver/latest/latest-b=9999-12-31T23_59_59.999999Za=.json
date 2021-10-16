@@ -1,0 +1,1463 @@
+{
+    "docs": [
+        {
+            "id": "1d26f",
+            "name": "Rihanna - Disturbia (7_7 Bootleg)",
+            "description": "challenge map with epic one hands and epic slider spam",
+            "uploader": {
+                "id": 4285818,
+                "name": "vilawes",
+                "uniqueSet": true,
+                "hash": "5cff0b7598cc5a672c852aaf",
+                "avatar": "https://cdn.beatsaver.com/avatar/348917611150704641.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 280.0,
+                "duration": 109,
+                "songName": "Disturbia",
+                "songSubName": "(7_7 Bootleg)",
+                "songAuthorName": "Rihanna",
+                "levelAuthorName": "Vilawes"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2,
+                "upvotes": 0,
+                "downvotes": 0,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T21:43:26.323625Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "3fe1bde0fd43158f7f06c97321fd0afb8c02268d",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T21:38:33.143424Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": -1.5,
+                            "notes": 1518,
+                            "bombs": 0,
+                            "obstacles": 6,
+                            "nps": 15.541,
+                            "length": 455.813,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 5962,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 97.674,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 10,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/3fe1bde0fd43158f7f06c97321fd0afb8c02268d.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/3fe1bde0fd43158f7f06c97321fd0afb8c02268d.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/3fe1bde0fd43158f7f06c97321fd0afb8c02268d.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T21:38:33.143424Z",
+            "updatedAt": "2021-10-16T21:43:26.323625Z",
+            "lastPublishedAt": "2021-10-16T21:43:26.323625Z"
+        },
+        {
+            "id": "1d26e",
+            "name": "RECORD COMBO NO WAY!!!",
+            "description": "",
+            "uploader": {
+                "id": 4285046,
+                "name": "spookybeard",
+                "uniqueSet": true,
+                "hash": "5cff0b7698cc5a672c854a12",
+                "avatar": "https://cdn.beatsaver.com/avatar/282250845221814272.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 200.0,
+                "duration": 381,
+                "songName": "OMG RECORD COMBO",
+                "songSubName": "",
+                "songAuthorName": "Various Black",
+                "levelAuthorName": "SpookyBeard"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 28,
+                "upvotes": 0,
+                "downvotes": 0,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T21:21:14.738163Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "571886b2d14cd38f243e0c0cd29454781d9923bf",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T21:21:11.458030Z",
+                    "sageScore": 3,
+                    "diffs": [
+                        {
+                            "njs": 4.0,
+                            "offset": 4.2805624,
+                            "notes": 80080,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 213.344,
+                            "length": 1251.188,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 375.356,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/571886b2d14cd38f243e0c0cd29454781d9923bf.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/571886b2d14cd38f243e0c0cd29454781d9923bf.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/571886b2d14cd38f243e0c0cd29454781d9923bf.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T21:21:11.458030Z",
+            "updatedAt": "2021-10-16T21:21:14.738163Z",
+            "lastPublishedAt": "2021-10-16T21:21:14.738163Z"
+        },
+        {
+            "id": "1d26d",
+            "name": "Little Nii - This is Halloweeb (V2)",
+            "description": "#96\n\nRemap of the 2019 version. no challenge tech this time. probably going for submission for the bsmg halloween contest",
+            "uploader": {
+                "id": 4284294,
+                "name": "eop-glacier",
+                "uniqueSet": true,
+                "hash": "5d50e360adb1a20006305ca0",
+                "avatar": "https://cdn.beatsaver.com/avatar/459209214376804363.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 194.0,
+                "duration": 150,
+                "songName": "This is Halloweeb",
+                "songSubName": "",
+                "songAuthorName": "Little Nii",
+                "levelAuthorName": "EOP Glacier"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 47,
+                "upvotes": 1,
+                "downvotes": 0,
+                "score": 0.5942
+            },
+            "uploaded": "2021-10-16T21:18:45.122937Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "eb43da49373456e111631478a5fe11da25c1db41",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T21:17:22.371476Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 16.0,
+                            "offset": -0.25,
+                            "notes": 637,
+                            "bombs": 42,
+                            "obstacles": 80,
+                            "nps": 4.344,
+                            "length": 474.125,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 741,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 146.637,
+                            "paritySummary": {
+                                "errors": 2,
+                                "warns": 15,
+                                "resets": 2
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/eb43da49373456e111631478a5fe11da25c1db41.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/eb43da49373456e111631478a5fe11da25c1db41.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/eb43da49373456e111631478a5fe11da25c1db41.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T21:17:22.371476Z",
+            "updatedAt": "2021-10-16T21:18:45.122937Z",
+            "lastPublishedAt": "2021-10-16T21:18:45.122937Z"
+        },
+        {
+            "id": "1d267",
+            "name": "Stephen and the Colberts - Charlene Im Right Behind You",
+            "description": "",
+            "uploader": {
+                "id": 4293012,
+                "name": "essadis420",
+                "uniqueSet": true,
+                "avatar": "https://cdn.beatsaver.com/avatar/438173009484840962.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 109.0,
+                "duration": 76,
+                "songName": "Charlene (I'm Right Behind You)",
+                "songSubName": "",
+                "songAuthorName": "Stephen and the Colberts",
+                "levelAuthorName": "Essadis"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 23,
+                "upvotes": 0,
+                "downvotes": 0,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T20:51:18.845814Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "96da84841ae897a015b4c09aef2541209a899263",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T20:51:03.969241Z",
+                    "sageScore": 3,
+                    "diffs": [
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 204,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 2.841,
+                            "length": 130.469,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 653,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 71.818,
+                            "paritySummary": {
+                                "errors": 1,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/96da84841ae897a015b4c09aef2541209a899263.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/96da84841ae897a015b4c09aef2541209a899263.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/96da84841ae897a015b4c09aef2541209a899263.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T20:51:03.969241Z",
+            "updatedAt": "2021-10-16T20:51:18.845814Z",
+            "lastPublishedAt": "2021-10-16T20:51:18.845814Z"
+        },
+        {
+            "id": "1d266",
+            "name": "Hot Butter - Popcorn",
+            "description": "this was one of my earlier works tuned up and ready for you hope you enjoy",
+            "uploader": {
+                "id": 4293012,
+                "name": "essadis420",
+                "uniqueSet": true,
+                "avatar": "https://cdn.beatsaver.com/avatar/438173009484840962.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 137.0,
+                "duration": 155,
+                "songName": "Popcorn",
+                "songSubName": "",
+                "songAuthorName": "Hot Butter",
+                "levelAuthorName": "Essadis"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 40,
+                "upvotes": 0,
+                "downvotes": 0,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T20:48:15.171432Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "b55e3955aae9846c5c21486e117906daf8a3faea",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T20:47:55.961454Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 14.0,
+                            "offset": 0.0,
+                            "notes": 542,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 3.596,
+                            "length": 344.125,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1616,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 150.712,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/b55e3955aae9846c5c21486e117906daf8a3faea.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/b55e3955aae9846c5c21486e117906daf8a3faea.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/b55e3955aae9846c5c21486e117906daf8a3faea.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T20:47:55.961454Z",
+            "updatedAt": "2021-10-16T20:48:15.171432Z",
+            "lastPublishedAt": "2021-10-16T20:48:15.171432Z"
+        },
+        {
+            "id": "1d261",
+            "name": "Wanna play?",
+            "description": "",
+            "uploader": {
+                "id": 4284876,
+                "name": "fqrb",
+                "uniqueSet": true,
+                "hash": "60b377c2b85f2d00062f8cc4",
+                "avatar": "https://cdn.beatsaver.com/avatar/331490163739983872.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 200.0,
+                "duration": 203,
+                "songName": "Wanna Play?",
+                "songSubName": "",
+                "songAuthorName": "The Prophet",
+                "levelAuthorName": "fqrb"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 123,
+                "upvotes": 3,
+                "downvotes": 1,
+                "score": 0.596
+            },
+            "uploaded": "2021-10-16T19:57:49.436665Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "b0ea784d98e0ee8e2ef0c01417a0d8b51b8a0c26",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T19:57:38.830703Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 18.0,
+                            "offset": -0.1,
+                            "notes": 722,
+                            "bombs": 972,
+                            "obstacles": 96,
+                            "nps": 3.681,
+                            "length": 653.75,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 6217,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 196.125,
+                            "paritySummary": {
+                                "errors": 1,
+                                "warns": 0,
+                                "resets": 66
+                            }
+                        },
+                        {
+                            "njs": 21.0,
+                            "offset": -0.3,
+                            "notes": 995,
+                            "bombs": 898,
+                            "obstacles": 98,
+                            "nps": 5.072,
+                            "length": 653.875,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 6814,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 196.163,
+                            "paritySummary": {
+                                "errors": 1,
+                                "warns": 0,
+                                "resets": 79
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/b0ea784d98e0ee8e2ef0c01417a0d8b51b8a0c26.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/b0ea784d98e0ee8e2ef0c01417a0d8b51b8a0c26.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/b0ea784d98e0ee8e2ef0c01417a0d8b51b8a0c26.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T19:57:38.830703Z",
+            "updatedAt": "2021-10-16T19:57:49.436665Z",
+            "lastPublishedAt": "2021-10-16T19:57:49.436665Z"
+        },
+        {
+            "id": "1d25e",
+            "name": "[NE+CHROMA] I See A Dreamer",
+            "description": "This is my Firts map and Modchart!\nIt took me a lot to do it, I hope you enjoy it!\n\nI have re-uploaded it, correcting some problems with the offset of the notes\n\nPD: Much of the mapping is based on the i see a dreamer map from: V1N7L\n\n\nhttps://youtu.be/iuUKxbAhoXw",
+            "uploader": {
+                "id": 4298942,
+                "name": "bbynikk",
+                "uniqueSet": true,
+                "avatar": "https://cdn.beatsaver.com/avatar/830401036938248203.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 127.0,
+                "duration": 191,
+                "songName": "I See A Dreamer",
+                "songSubName": "",
+                "songAuthorName": "Cg5",
+                "levelAuthorName": "BBYNIKK"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 224,
+                "upvotes": 8,
+                "downvotes": 0,
+                "score": 0.7419
+            },
+            "uploaded": "2021-10-16T19:20:50.246384Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "80474b9f4db5947ea2c2f48a3161f3e56e78978f",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T19:20:44.732895Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 25.0,
+                            "offset": 1.0,
+                            "notes": 679,
+                            "bombs": 14,
+                            "obstacles": 123,
+                            "nps": 3.797,
+                            "length": 378.5,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 4847,
+                            "chroma": true,
+                            "me": false,
+                            "ne": true,
+                            "cinema": false,
+                            "seconds": 178.819,
+                            "paritySummary": {
+                                "errors": 10,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/80474b9f4db5947ea2c2f48a3161f3e56e78978f.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/80474b9f4db5947ea2c2f48a3161f3e56e78978f.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/80474b9f4db5947ea2c2f48a3161f3e56e78978f.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T19:20:44.732895Z",
+            "updatedAt": "2021-10-16T19:56:16.858382Z",
+            "lastPublishedAt": "2021-10-16T19:20:50.246384Z"
+        },
+        {
+            "id": "1d256",
+            "name": "Proselytism",
+            "description": "Looped for 30",
+            "uploader": {
+                "id": 2553,
+                "name": "scarabyte",
+                "uniqueSet": true,
+                "hash": "5f063d0c0ea71e00067973e7",
+                "avatar": "https://www.gravatar.com/avatar/5f063d0c0ea71e00067973e7?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 200.0,
+                "duration": 236,
+                "songName": "PROSELYTISM",
+                "songSubName": "Looped",
+                "songAuthorName": "The Quick Brown Fox (Looped by Scarabyte)",
+                "levelAuthorName": "Scarabyte"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 125,
+                "upvotes": 0,
+                "downvotes": 0,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T18:51:12.922234Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "6980b2e755204f5839c68a16ed2b518071e697a6",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T18:50:51.335941Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": -0.3,
+                            "notes": 2090,
+                            "bombs": 8,
+                            "obstacles": 211,
+                            "nps": 17.909,
+                            "length": 389.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 116.7,
+                            "paritySummary": {
+                                "errors": 996,
+                                "warns": 14,
+                                "resets": 1
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/6980b2e755204f5839c68a16ed2b518071e697a6.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/6980b2e755204f5839c68a16ed2b518071e697a6.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/6980b2e755204f5839c68a16ed2b518071e697a6.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T18:50:51.335941Z",
+            "updatedAt": "2021-10-16T18:51:12.922234Z",
+            "lastPublishedAt": "2021-10-16T18:51:12.922234Z"
+        },
+        {
+            "id": "1d255",
+            "name": "[NK] Bass Down Low",
+            "description": "Fun Geometry Dash inspired map. Bass down low NK remix fast paced Expert+ song. 140 bpm. Hope You enjoy playing :D.",
+            "uploader": {
+                "id": 83228,
+                "name": "hamberber",
+                "uniqueSet": true,
+                "hash": "60c153d9cd73ba00060d0066",
+                "avatar": "https://www.gravatar.com/avatar/60c153d9cd73ba00060d0066?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 140.0,
+                "duration": 153,
+                "songName": "[NK] Bass Down Low",
+                "songSubName": "",
+                "songAuthorName": "NK",
+                "levelAuthorName": "Hamberber"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 180,
+                "upvotes": 0,
+                "downvotes": 1,
+                "score": 0.4058
+            },
+            "uploaded": "2021-10-16T18:41:58.773892Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "87537021e2ab09fa84499e853279ea5249ad6d9e",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T18:41:51.849381Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 21.0,
+                            "offset": 0.0,
+                            "notes": 947,
+                            "bombs": 0,
+                            "obstacles": 19,
+                            "nps": 6.643,
+                            "length": 332.625,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 349,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 142.554,
+                            "paritySummary": {
+                                "errors": 10,
+                                "warns": 2,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/87537021e2ab09fa84499e853279ea5249ad6d9e.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/87537021e2ab09fa84499e853279ea5249ad6d9e.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/87537021e2ab09fa84499e853279ea5249ad6d9e.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T18:41:51.849381Z",
+            "updatedAt": "2021-10-16T18:41:58.773892Z",
+            "lastPublishedAt": "2021-10-16T18:41:58.773892Z"
+        },
+        {
+            "id": "1d251",
+            "name": "Everything Will Freeze - UNDEAD CORPORATION",
+            "description": "this do be a map B)\n",
+            "uploader": {
+                "id": 4284213,
+                "name": "cirzz0",
+                "uniqueSet": true,
+                "hash": "5ff4979b4671200008d0b50a",
+                "avatar": "https://cdn.beatsaver.com/avatar/477810162715852811.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 240.0,
+                "duration": 199,
+                "songName": "Everything Will Freeze",
+                "songSubName": "",
+                "songAuthorName": "UNDEAD CORPORATION",
+                "levelAuthorName": "Cirzzo"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 240,
+                "upvotes": 2,
+                "downvotes": 0,
+                "score": 0.6408
+            },
+            "uploaded": "2021-10-16T18:12:40.330493Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "605188fda34ebc8acb03cb6f42888aa951d7985d",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T18:12:36.526783Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 21.0,
+                            "offset": -0.24,
+                            "notes": 2499,
+                            "bombs": 42,
+                            "obstacles": 26,
+                            "nps": 12.948,
+                            "length": 772.031,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 8436,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 193.008,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 5
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/605188fda34ebc8acb03cb6f42888aa951d7985d.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/605188fda34ebc8acb03cb6f42888aa951d7985d.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/605188fda34ebc8acb03cb6f42888aa951d7985d.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T18:12:36.526783Z",
+            "updatedAt": "2021-10-16T18:39:23.914740Z",
+            "lastPublishedAt": "2021-10-16T18:12:40.330493Z"
+        },
+        {
+            "id": "1d250",
+            "name": "[Dance] Love You At 105° Japanese Version ",
+            "description": "A dance map of \"Love You At 105°\" Japanese Version.\n\nOriginal song: https://www.bilibili.com/video/BV1jK4y197Au\nHeavily inspired from this MMD video: https://www.youtube.com/watch?v=V3HHZpiXklE\n\n'Intended' way to play this map: https://www.twitch.tv/videos/1178557289 (I'll upload it on YouTube once the exclusivity period ends)\n\n(Note: This is some sort of semi-freestyle dance (and I'm bad at dancing anyway), so use the example purely as reference and dance however you want! Tag me @MentegaSennn (https://twitter.com/MentegaSennn) on Twitter and let me see your version of the dance)",
+            "uploader": {
+                "id": 4284263,
+                "name": "mentegagoreng",
+                "uniqueSet": true,
+                "hash": "5dc2902f5e46680006c355ae",
+                "avatar": "https://cdn.beatsaver.com/avatar/349956953252036622.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 137.0,
+                "duration": 196,
+                "songName": "Love You At 105°C",
+                "songSubName": "Japanese Version",
+                "songAuthorName": "Zao Dao Ji",
+                "levelAuthorName": "Mentega Goreng"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 136,
+                "upvotes": 1,
+                "downvotes": 1,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T18:10:03.686162Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "be3f3b84aa394b3343573b3d4ceef4d3a9a3a421",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T18:09:51.927874Z",
+                    "sageScore": 3,
+                    "diffs": [
+                        {
+                            "njs": 16.0,
+                            "offset": 0.0,
+                            "notes": 412,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 2.294,
+                            "length": 410.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 719,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 179.562,
+                            "paritySummary": {
+                                "errors": 47,
+                                "warns": 40,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/be3f3b84aa394b3343573b3d4ceef4d3a9a3a421.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/be3f3b84aa394b3343573b3d4ceef4d3a9a3a421.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/be3f3b84aa394b3343573b3d4ceef4d3a9a3a421.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T18:09:51.927874Z",
+            "updatedAt": "2021-10-16T18:13:22.024349Z",
+            "lastPublishedAt": "2021-10-16T18:10:03.686162Z"
+        },
+        {
+            "id": "1d249",
+            "name": "Last One Standing - Skylar Grey, Polo G, Mozzy, Eminem",
+            "description": "[Recommended mod: C H R O M A + enable ALL Effects]\n\n► Map Details:\n- Difficulty: Expert\n- Duration: 4:16\n- BPM: 155\n- Note Jump Speed: 20\n- Spawn Offset: -0.40\n- Total NPS: 4.89\n- Total Notes: 1255\n\nThanks to Z-ANESaber for doing some small edits ^^\n\nPlaythrough: https://youtu.be/X8j_WkSryWE",
+            "uploader": {
+                "id": 4286575,
+                "name": "faded99",
+                "uniqueSet": true,
+                "hash": "5db5bfa33e5dd60006175804",
+                "avatar": "https://cdn.beatsaver.com/avatar/375730504739061764.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 155.0,
+                "duration": 257,
+                "songName": "Last One Standing ",
+                "songSubName": "",
+                "songAuthorName": "Skylar Grey, Polo G, Mozzy, Eminem ",
+                "levelAuthorName": "Faded 99 & Z-ANESaber"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 260,
+                "upvotes": 4,
+                "downvotes": 1,
+                "score": 0.6251
+            },
+            "uploaded": "2021-10-16T17:25:38.974301Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "9760076384d991bc30a56f93c785404f7d0b9eb3",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T17:20:12.944093Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": -0.4,
+                            "notes": 1255,
+                            "bombs": 96,
+                            "obstacles": 8,
+                            "nps": 4.987,
+                            "length": 650.091,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 8932,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 251.648,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 5
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/9760076384d991bc30a56f93c785404f7d0b9eb3.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/9760076384d991bc30a56f93c785404f7d0b9eb3.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/9760076384d991bc30a56f93c785404f7d0b9eb3.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T17:20:12.944093Z",
+            "updatedAt": "2021-10-16T17:25:38.974301Z",
+            "lastPublishedAt": "2021-10-16T17:25:38.974301Z"
+        },
+        {
+            "id": "1d248",
+            "name": "Unveil - Creo",
+            "description": "",
+            "uploader": {
+                "id": 4298870,
+                "name": "PrymidProductions",
+                "uniqueSet": true,
+                "avatar": "https://cdn.beatsaver.com/avatar/4298870.jpg",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 100.0,
+                "duration": 88,
+                "songName": "Unveil",
+                "songSubName": "",
+                "songAuthorName": "Creo",
+                "levelAuthorName": "PrymidProductions"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 107,
+                "upvotes": 0,
+                "downvotes": 1,
+                "score": 0.4058
+            },
+            "uploaded": "2021-10-16T17:19:40.722715Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "a3dc51cefe3213e404a9d4e7ba40e16da3e4404d",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T17:19:30.669965Z",
+                    "sageScore": 2,
+                    "diffs": [
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 125,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 1.585,
+                            "length": 131.438,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 137,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 78.863,
+                            "paritySummary": {
+                                "errors": 11,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/a3dc51cefe3213e404a9d4e7ba40e16da3e4404d.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/a3dc51cefe3213e404a9d4e7ba40e16da3e4404d.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/a3dc51cefe3213e404a9d4e7ba40e16da3e4404d.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T17:19:30.669965Z",
+            "updatedAt": "2021-10-16T17:19:40.722715Z",
+            "lastPublishedAt": "2021-10-16T17:19:40.722715Z"
+        },
+        {
+            "id": "1d247",
+            "name": "That_Narwhal - Quad Solo",
+            "description": "Narhwal's amazing quad solo at senior night!",
+            "uploader": {
+                "id": 74998,
+                "name": "nolan121405",
+                "uniqueSet": true,
+                "hash": "5cff0b7498cc5a672c8500b1",
+                "avatar": "https://cdn.beatsaver.com/avatar/193032862352670721.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 196.5,
+                "duration": 12,
+                "songName": "Quad Solo",
+                "songSubName": "",
+                "songAuthorName": "That_Narwhal",
+                "levelAuthorName": "nolan121405"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 131,
+                "upvotes": 0,
+                "downvotes": 1,
+                "score": 0.4058
+            },
+            "uploaded": "2021-10-16T17:10:57.225819Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "d026e6f77c7a0d923f34b0bf20c7c24327612ae0",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T17:10:41.055775Z",
+                    "sageScore": 2,
+                    "diffs": [
+                        {
+                            "njs": 22.0,
+                            "offset": -0.45,
+                            "notes": 138,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 16.817,
+                            "length": 26.875,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 8.206,
+                            "paritySummary": {
+                                "errors": 12,
+                                "warns": 1,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/d026e6f77c7a0d923f34b0bf20c7c24327612ae0.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/d026e6f77c7a0d923f34b0bf20c7c24327612ae0.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/d026e6f77c7a0d923f34b0bf20c7c24327612ae0.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T17:10:41.055775Z",
+            "updatedAt": "2021-10-16T17:10:57.225819Z",
+            "lastPublishedAt": "2021-10-16T17:10:57.225819Z"
+        },
+        {
+            "id": "1d1a7",
+            "name": "Cuarteto de Nos - Fallaste Nostradamus",
+            "description": "Halloween-ish map.\nLights with Lolighter",
+            "uploader": {
+                "id": 4291747,
+                "name": "Groovy",
+                "uniqueSet": true,
+                "avatar": "https://cdn.beatsaver.com/avatar/4291747.jpg",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 110.0,
+                "duration": 182,
+                "songName": "Fallaste Nostradamus",
+                "songSubName": "",
+                "songAuthorName": "Cuarteto de Nos",
+                "levelAuthorName": "Groovy"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 100,
+                "upvotes": 0,
+                "downvotes": 0,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T16:32:07.958151Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "2c622e7d21315f59482a679c66c1ca1eadd91ee0",
+                    "state": "Published",
+                    "createdAt": "2021-10-15T18:05:40.473719Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 19.7,
+                            "offset": 0.0,
+                            "notes": 966,
+                            "bombs": 115,
+                            "obstacles": 52,
+                            "nps": 5.569,
+                            "length": 318.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 4304,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 173.455,
+                            "paritySummary": {
+                                "errors": 2,
+                                "warns": 30,
+                                "resets": 44
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/2c622e7d21315f59482a679c66c1ca1eadd91ee0.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/2c622e7d21315f59482a679c66c1ca1eadd91ee0.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/2c622e7d21315f59482a679c66c1ca1eadd91ee0.mp3"
+                }
+            ],
+            "createdAt": "2021-10-15T04:01:37.356377Z",
+            "updatedAt": "2021-10-16T16:32:07.958151Z",
+            "lastPublishedAt": "2021-10-16T16:32:07.958151Z"
+        },
+        {
+            "id": "1d241",
+            "name": "Kobaryo - Invisible Frenzy",
+            "description": "my first level that i actually published\n\nreupload 1 because i forgot to add lights \n--------------------------------------------------------------\nlights made with mma2 lightmap because i'm too lazy to make lights myself :DDDDDDDDD\n\n\n((((((not goin for rank )))))))))))))",
+            "uploader": {
+                "id": 4283426,
+                "name": "laaazi",
+                "uniqueSet": true,
+                "hash": "60d9459b686b9f0006a5fed9",
+                "avatar": "https://cdn.beatsaver.com/avatar/4283426.jpg",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 245.0,
+                "duration": 136,
+                "songName": "Invisible Frenzy",
+                "songSubName": "",
+                "songAuthorName": "Kobaryo",
+                "levelAuthorName": "laaazi"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 339,
+                "upvotes": 1,
+                "downvotes": 1,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T16:13:57.199610Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "e7f9af50fc95a3194fc3ed65dfaef4f7f1a94a4c",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T16:13:09.047779Z",
+                    "sageScore": 2,
+                    "diffs": [
+                        {
+                            "njs": 22.5,
+                            "offset": -0.15,
+                            "notes": 1524,
+                            "bombs": 731,
+                            "obstacles": 56,
+                            "nps": 11.605,
+                            "length": 536.25,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 2327,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 131.327,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 12
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/e7f9af50fc95a3194fc3ed65dfaef4f7f1a94a4c.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/e7f9af50fc95a3194fc3ed65dfaef4f7f1a94a4c.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/e7f9af50fc95a3194fc3ed65dfaef4f7f1a94a4c.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T16:13:09.047779Z",
+            "updatedAt": "2021-10-16T16:14:36.544390Z",
+            "lastPublishedAt": "2021-10-16T16:13:57.199610Z"
+        },
+        {
+            "id": "1d23e",
+            "name": "ungray days_tsumiki_with_yoshino",
+            "description": "Bang!Bang!\nMusic : ungray days by NOMELON NOLEMON\nhttps://youtu.be/UvF3Mwj5d4E\nVocal : yoshino\nhttps://www.nicovideo.jp/watch/sm37581288",
+            "uploader": {
+                "id": 4299074,
+                "name": "harman_smirnoff",
+                "uniqueSet": true,
+                "avatar": "https://www.gravatar.com/avatar/null?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 172.0,
+                "duration": 181,
+                "songName": "ungray days",
+                "songSubName": "",
+                "songAuthorName": "NOMELON NOLEMON_with_yoshino",
+                "levelAuthorName": "Harman_smirnoff"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 117,
+                "upvotes": 0,
+                "downvotes": 0,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T15:55:52.973528Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "0fa719ee8ff2207de9151fa36a83dc10fb176ff6",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T15:49:34.784682Z",
+                    "sageScore": 3,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": 0.0,
+                            "notes": 666,
+                            "bombs": 43,
+                            "obstacles": 31,
+                            "nps": 3.733,
+                            "length": 511.5,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 826,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 178.43,
+                            "paritySummary": {
+                                "errors": 80,
+                                "warns": 80,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/0fa719ee8ff2207de9151fa36a83dc10fb176ff6.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/0fa719ee8ff2207de9151fa36a83dc10fb176ff6.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/0fa719ee8ff2207de9151fa36a83dc10fb176ff6.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T15:45:31.074353Z",
+            "updatedAt": "2021-10-16T15:55:52.973528Z",
+            "lastPublishedAt": "2021-10-16T15:55:52.973528Z"
+        },
+        {
+            "id": "1d23f",
+            "name": "Skrillex & Wolfgang Gartner - The Devil's Den (VIP)",
+            "description": "Keep in mind that there's no mapping at all!",
+            "uploader": {
+                "id": 4284298,
+                "name": "infinitedevproyt",
+                "uniqueSet": true,
+                "hash": "602ddb7e46eb150006d9209e",
+                "avatar": "https://cdn.beatsaver.com/avatar/759246465397817384.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 128.0,
+                "duration": 294,
+                "songName": "The Devil's Den",
+                "songSubName": "(VIP) ft. Wolfgang Gartner",
+                "songAuthorName": "Skrillex",
+                "levelAuthorName": "UnderVoidless"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 185,
+                "upvotes": 0,
+                "downvotes": 0,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T15:47:03.894196Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "0da436987489bc8b885366f62d06b357b8e28366",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T15:46:56.380911Z",
+                    "sageScore": 7,
+                    "diffs": [
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 0,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 0.0,
+                            "length": 0.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 6796,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 0.0,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/0da436987489bc8b885366f62d06b357b8e28366.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/0da436987489bc8b885366f62d06b357b8e28366.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/0da436987489bc8b885366f62d06b357b8e28366.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T15:46:56.380911Z",
+            "updatedAt": "2021-10-16T15:47:03.894196Z",
+            "lastPublishedAt": "2021-10-16T15:47:03.894196Z"
+        },
+        {
+            "id": "1d23d",
+            "name": "sound of da police ((((((((NOT DONE ))))))))))))))))))",
+            "description": "",
+            "uploader": {
+                "id": 4296977,
+                "name": "sleffyyy--bs--4-digit-",
+                "uniqueSet": true,
+                "avatar": "https://cdn.beatsaver.com/avatar/806864047597289545.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 184.45,
+                "duration": 344,
+                "songName": "Sound Of Da Police ",
+                "songSubName": "Sound Of Da Police RMX",
+                "songAuthorName": "Zone-33",
+                "levelAuthorName": "sleffyyy"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 154,
+                "upvotes": 0,
+                "downvotes": 0,
+                "score": 0.5
+            },
+            "uploaded": "2021-10-16T15:22:54.235827Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "0865e5ddbcdc2b8edc35ed94fab75e6afa77c8fe",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T15:22:47.625136Z",
+                    "sageScore": 3,
+                    "diffs": [
+                        {
+                            "njs": 18.5,
+                            "offset": 0.0,
+                            "notes": 1023,
+                            "bombs": 36,
+                            "obstacles": 2,
+                            "nps": 9.341,
+                            "length": 336.672,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 109.516,
+                            "paritySummary": {
+                                "errors": 11,
+                                "warns": 0,
+                                "resets": 10
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/0865e5ddbcdc2b8edc35ed94fab75e6afa77c8fe.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/0865e5ddbcdc2b8edc35ed94fab75e6afa77c8fe.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/0865e5ddbcdc2b8edc35ed94fab75e6afa77c8fe.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T15:22:47.625136Z",
+            "updatedAt": "2021-10-16T15:22:54.235827Z",
+            "lastPublishedAt": "2021-10-16T15:22:54.235827Z"
+        },
+        {
+            "id": "1d23a",
+            "name": "ROCKY - 21st Century Humor But It's A Rave Song",
+            "description": "garbage mape i made for fun\n\ni love my own mapping\n\nranked expert+ solo and lawless on based hitbloq playlist",
+            "uploader": {
+                "id": 4284204,
+                "name": "Parapass",
+                "uniqueSet": true,
+                "hash": "5f1d7e99a51f7f0006f43e44",
+                "avatar": "https://cdn.beatsaver.com/avatar/617736281249677462.png",
+                "type": "DISCORD"
+            },
+            "metadata": {
+                "bpm": 199.97,
+                "duration": 41,
+                "songName": "21st Century Humor But It's a Rave Song",
+                "songSubName": "",
+                "songAuthorName": "ROCKY",
+                "levelAuthorName": "Parapass"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 165,
+                "upvotes": 0,
+                "downvotes": 1,
+                "score": 0.4058
+            },
+            "uploaded": "2021-10-16T15:04:53.921959Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "83997bdda63087ece572bee064e38272ffefdf83",
+                    "state": "Published",
+                    "createdAt": "2021-10-16T15:03:33.107606Z",
+                    "sageScore": 1,
+                    "diffs": [
+                        {
+                            "njs": 22.0,
+                            "offset": -0.3,
+                            "notes": 393,
+                            "bombs": 76,
+                            "obstacles": 0,
+                            "nps": 10.478,
+                            "length": 125.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 37.506,
+                            "paritySummary": {
+                                "errors": 9,
+                                "warns": 17,
+                                "resets": 8
+                            }
+                        },
+                        {
+                            "njs": 22.0,
+                            "offset": -0.5,
+                            "notes": 491,
+                            "bombs": 92,
+                            "obstacles": 1,
+                            "nps": 12.71,
+                            "length": 128.75,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 38.631,
+                            "paritySummary": {
+                                "errors": 20,
+                                "warns": 29,
+                                "resets": 4
+                            }
+                        },
+                        {
+                            "njs": 22.0,
+                            "offset": -0.5,
+                            "notes": 502,
+                            "bombs": 255,
+                            "obstacles": 1,
+                            "nps": 12.989,
+                            "length": 128.812,
+                            "characteristic": "Lawless",
+                            "difficulty": "ExpertPlus",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 38.649,
+                            "paritySummary": {
+                                "errors": 36,
+                                "warns": 28,
+                                "resets": 5
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/83997bdda63087ece572bee064e38272ffefdf83.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/83997bdda63087ece572bee064e38272ffefdf83.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/83997bdda63087ece572bee064e38272ffefdf83.mp3"
+                }
+            ],
+            "createdAt": "2021-10-16T15:03:33.107606Z",
+            "updatedAt": "2021-10-16T15:05:50.825800Z",
+            "lastPublishedAt": "2021-10-16T15:04:53.921959Z"
+        }
+    ]
+}

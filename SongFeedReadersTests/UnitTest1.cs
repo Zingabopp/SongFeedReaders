@@ -36,7 +36,7 @@ namespace SongFeedReadersTests
         public async Task TestScoreSaberLatest()
         {
             ILogFactory logFactory = Utilities.DefaultLogFactory;
-            IWebClient client = new HttpClientWrapper();
+            IWebClient client = MockClientSetup.GetMockClient();
             int maxSongs = 57;
             ScoreSaberPageHandler pageHandler = new ScoreSaberPageHandler();
             ScoreSaberLatestSettings feedSettings = new ScoreSaberLatestSettings()
@@ -59,7 +59,7 @@ namespace SongFeedReadersTests
         public async Task TestBeatSaverLatest()
         {
             ILogFactory logFactory = Utilities.DefaultLogFactory;
-            IWebClient client = new HttpClientWrapper();
+            IWebClient client = MockClientSetup.GetMockClient();
             int maxSongs = 57;
             BeatSaverPageHandler pageHandler = new BeatSaverPageHandler();
             BeatSaverLatestSettings feedSettings = new BeatSaverLatestSettings()
@@ -85,7 +85,7 @@ namespace SongFeedReadersTests
         public async Task TestBeatSaverMapper()
         {
             ILogFactory logFactory = Utilities.DefaultLogFactory;
-            IWebClient client = new HttpClientWrapper();
+            IWebClient client = MockClientSetup.GetMockClient();
             int maxSongs = 57;
             BeatSaverPageHandler pageHandler = new BeatSaverPageHandler();
             BeatSaverMapperSettings feedSettings = new BeatSaverMapperSettings()
@@ -112,7 +112,7 @@ namespace SongFeedReadersTests
         public async Task TestBeastSaber_Follows()
         {
             ILogFactory logFactory = Utilities.DefaultLogFactory;
-            IWebClient client = new HttpClientWrapper();
+            IWebClient client = MockClientSetup.GetMockClient();
             int maxSongs = 57;
             BeastSaberPageHandler pageHandler = new BeastSaberPageHandler();
             BeastSaberFollowsSettings feedSettings = new BeastSaberFollowsSettings()
@@ -134,7 +134,7 @@ namespace SongFeedReadersTests
         public async Task TestBeastSaber_Curator()
         {
             ILogFactory logFactory = Utilities.DefaultLogFactory;
-            IWebClient client = new HttpClientWrapper();
+            IWebClient client = MockClientSetup.GetMockClient();
             int maxSongs = 57;
             BeastSaberPageHandler pageHandler = new BeastSaberPageHandler();
             BeastSaberCuratorSettings feedSettings = new BeastSaberCuratorSettings()
@@ -155,7 +155,7 @@ namespace SongFeedReadersTests
         public async Task TestBeastSaber_Bookmarks()
         {
             ILogFactory logFactory = Utilities.DefaultLogFactory;
-            IWebClient client = new HttpClientWrapper();
+            IWebClient client = MockClientSetup.GetMockClient();
             int maxSongs = 57;
             BeastSaberPageHandler pageHandler = new BeastSaberPageHandler();
             BeastSaberBookmarksSettings feedSettings = new BeastSaberBookmarksSettings()
@@ -179,7 +179,7 @@ namespace SongFeedReadersTests
         public async Task TestPause_BeastSaber_Curator()
         {
             ILogFactory logFactory = Utilities.DefaultLogFactory;
-            IWebClient client = new HttpClientWrapper();
+            IWebClient client = MockClientSetup.GetMockClient();
             var logger = logFactory.GetLogger();
             PauseTokenSource pts = new PauseTokenSource();
             int maxSongs = 100;

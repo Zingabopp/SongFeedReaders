@@ -1,0 +1,2093 @@
+{
+    "docs": [
+        {
+            "id": "20f2",
+            "name": "KUURO - Possession",
+            "description": "Expert / Hard / Normal",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 112.0,
+                "duration": 192,
+                "songName": "Possession",
+                "songSubName": "KUURO",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1302,
+                "upvotes": 244,
+                "downvotes": 21,
+                "score": 0.8424
+            },
+            "uploaded": "2018-11-18T19:35:48Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "0b0d524ef57b0356f0664d43891abd3db6a5fdab",
+                    "key": "20f2",
+                    "state": "Published",
+                    "createdAt": "2018-11-18T19:35:48Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 268,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 1.563,
+                            "length": 320.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 2047,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 171.429,
+                            "paritySummary": {
+                                "errors": 18,
+                                "warns": 23,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 334,
+                            "bombs": 0,
+                            "obstacles": 6,
+                            "nps": 1.948,
+                            "length": 320.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2047,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 171.429,
+                            "paritySummary": {
+                                "errors": 27,
+                                "warns": 25,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 14.0,
+                            "offset": 0.0,
+                            "notes": 379,
+                            "bombs": 0,
+                            "obstacles": 31,
+                            "nps": 2.211,
+                            "length": 320.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2097,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 171.429,
+                            "paritySummary": {
+                                "errors": 34,
+                                "warns": 21,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/0b0d524ef57b0356f0664d43891abd3db6a5fdab.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/0b0d524ef57b0356f0664d43891abd3db6a5fdab.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/0b0d524ef57b0356f0664d43891abd3db6a5fdab.mp3"
+                }
+            ],
+            "createdAt": "2018-11-18T19:35:48Z",
+            "updatedAt": "2018-11-18T19:35:48Z",
+            "lastPublishedAt": "2018-11-18T19:35:48Z"
+        },
+        {
+            "id": "1ff0",
+            "name": "Flux Pavilion - I can't stop | 100k Contest",
+            "description": "This is one of the 22 maps that were mapped for the 100k Contest where you can win over $7,000 in prizes. Go to https://bsaber.com/100k-contest/ to register!",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 140.0,
+                "duration": 148,
+                "songName": "I can't stop",
+                "songSubName": "Flux Pavilion",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 13859,
+                "upvotes": 4413,
+                "downvotes": 144,
+                "score": 0.9313
+            },
+            "uploaded": "2018-11-12T17:55:03Z",
+            "automapper": false,
+            "ranked": true,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "8d9df176c94ecf5c7725457525b6f959f5ef9296",
+                    "key": "1ff0",
+                    "state": "Published",
+                    "createdAt": "2018-11-12T17:55:03Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 145,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 1.057,
+                            "length": 320.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 1045,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 137.143,
+                            "paritySummary": {
+                                "errors": 52,
+                                "warns": 3,
+                                "resets": 0
+                            },
+                            "stars": 0.69
+                        },
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 212,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 1.546,
+                            "length": 320.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 137.143,
+                            "paritySummary": {
+                                "errors": 8,
+                                "warns": 17,
+                                "resets": 0
+                            },
+                            "stars": 0.92
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 342,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 2.509,
+                            "length": 318.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2634,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 136.286,
+                            "paritySummary": {
+                                "errors": 5,
+                                "warns": 29,
+                                "resets": 0
+                            },
+                            "stars": 1.78
+                        },
+                        {
+                            "njs": 14.0,
+                            "offset": 0.0,
+                            "notes": 372,
+                            "bombs": 0,
+                            "obstacles": 15,
+                            "nps": 2.73,
+                            "length": 318.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2634,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 136.286,
+                            "paritySummary": {
+                                "errors": 17,
+                                "warns": 34,
+                                "resets": 0
+                            },
+                            "stars": 1.78
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/8d9df176c94ecf5c7725457525b6f959f5ef9296.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/8d9df176c94ecf5c7725457525b6f959f5ef9296.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/8d9df176c94ecf5c7725457525b6f959f5ef9296.mp3"
+                }
+            ],
+            "createdAt": "2018-11-12T17:55:03Z",
+            "updatedAt": "2018-11-12T17:55:03Z",
+            "lastPublishedAt": "2018-11-12T17:55:03Z"
+        },
+        {
+            "id": "1fef",
+            "name": "Imagine Dragons - Believer (100k ver.) | 100k Contest",
+            "description": "This is one of the 22 maps that were mapped for the 100k Contest where you can win over $7,000 in prizes. Go to https://bsaber.com/100k-contest/ to register!",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 125.0,
+                "duration": 205,
+                "songName": "Believer (100k ver.)",
+                "songSubName": "Imagine Dragons",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 48789,
+                "upvotes": 17147,
+                "downvotes": 383,
+                "score": 0.9529
+            },
+            "uploaded": "2018-11-12T17:53:58Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "9a7a5beadfdd1c7c0f137ecba6e5f6ff377eb390",
+                    "key": "1fef",
+                    "state": "Published",
+                    "createdAt": "2018-11-12T17:53:58Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 216,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 1.09,
+                            "length": 413.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 3418,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 198.24,
+                            "paritySummary": {
+                                "errors": 42,
+                                "warns": 14,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 388,
+                            "bombs": 0,
+                            "obstacles": 8,
+                            "nps": 1.957,
+                            "length": 413.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 3418,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 198.24,
+                            "paritySummary": {
+                                "errors": 18,
+                                "warns": 21,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 514,
+                            "bombs": 0,
+                            "obstacles": 10,
+                            "nps": 2.593,
+                            "length": 413.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 3418,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 198.24,
+                            "paritySummary": {
+                                "errors": 57,
+                                "warns": 59,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 560,
+                            "bombs": 0,
+                            "obstacles": 12,
+                            "nps": 2.825,
+                            "length": 413.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 3430,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 198.24,
+                            "paritySummary": {
+                                "errors": 102,
+                                "warns": 70,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/9a7a5beadfdd1c7c0f137ecba6e5f6ff377eb390.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/9a7a5beadfdd1c7c0f137ecba6e5f6ff377eb390.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/9a7a5beadfdd1c7c0f137ecba6e5f6ff377eb390.mp3"
+                }
+            ],
+            "createdAt": "2018-11-12T17:53:58Z",
+            "updatedAt": "2018-11-12T17:53:58Z",
+            "lastPublishedAt": "2018-11-12T17:53:58Z"
+        },
+        {
+            "id": "1b41",
+            "name": "[HallowBeats] Omnitica - Halloweekend",
+            "description": "Expert / Hard / Normal / Easy\r\nhttps://www.youtube.com/watch?v=OZdOslqPQLM",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 145.0,
+                "duration": 233,
+                "songName": "Halloweekend",
+                "songSubName": "Omnitica",
+                "songAuthorName": "(HallowBeats) Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2134,
+                "upvotes": 210,
+                "downvotes": 7,
+                "score": 0.8753
+            },
+            "uploaded": "2018-10-20T14:59:13Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "299f8ab07a7d28ae18310eb4cd689137e6a781db",
+                    "key": "1b41",
+                    "state": "Published",
+                    "createdAt": "2018-10-20T14:59:13Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 323,
+                            "bombs": 0,
+                            "obstacles": 2,
+                            "nps": 1.43,
+                            "length": 546.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 2883,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 225.931,
+                            "paritySummary": {
+                                "errors": 39,
+                                "warns": 24,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 444,
+                            "bombs": 0,
+                            "obstacles": 2,
+                            "nps": 1.965,
+                            "length": 546.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 2883,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 225.931,
+                            "paritySummary": {
+                                "errors": 33,
+                                "warns": 47,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 574,
+                            "bombs": 0,
+                            "obstacles": 2,
+                            "nps": 2.541,
+                            "length": 546.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2883,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 225.931,
+                            "paritySummary": {
+                                "errors": 14,
+                                "warns": 55,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 13.0,
+                            "offset": 0.0,
+                            "notes": 672,
+                            "bombs": 0,
+                            "obstacles": 11,
+                            "nps": 2.974,
+                            "length": 546.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2883,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 225.931,
+                            "paritySummary": {
+                                "errors": 22,
+                                "warns": 83,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/299f8ab07a7d28ae18310eb4cd689137e6a781db.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/299f8ab07a7d28ae18310eb4cd689137e6a781db.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/299f8ab07a7d28ae18310eb4cd689137e6a781db.mp3"
+                }
+            ],
+            "createdAt": "2018-10-20T14:59:13Z",
+            "updatedAt": "2018-10-20T14:59:13Z",
+            "lastPublishedAt": "2018-10-20T14:59:13Z"
+        },
+        {
+            "id": "1957",
+            "name": "Noisestorm - Timewarp",
+            "description": "Collaboration between Rustic & Fafurion\r\nhttps://www.youtube.com/watch?v=w3EVzAgji8M",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 128.0,
+                "duration": 281,
+                "songName": "Timewarp",
+                "songSubName": "Noisestorm",
+                "songAuthorName": "Rustic and Fafurion",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 601,
+                "upvotes": 455,
+                "downvotes": 12,
+                "score": 0.8998
+            },
+            "uploaded": "2018-10-08T17:38:34Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "abd161f3af4c583c96882961260ae391a5760b72",
+                    "key": "1957",
+                    "state": "Published",
+                    "createdAt": "2018-10-08T17:38:34Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 13.0,
+                            "offset": 0.0,
+                            "notes": 1034,
+                            "bombs": 0,
+                            "obstacles": 84,
+                            "nps": 3.742,
+                            "length": 589.5,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 4114,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 276.328,
+                            "paritySummary": {
+                                "errors": 60,
+                                "warns": 84,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/abd161f3af4c583c96882961260ae391a5760b72.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/abd161f3af4c583c96882961260ae391a5760b72.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/abd161f3af4c583c96882961260ae391a5760b72.mp3"
+                }
+            ],
+            "createdAt": "2018-10-08T17:38:34Z",
+            "updatedAt": "2018-10-08T17:38:34Z",
+            "lastPublishedAt": "2018-10-08T17:38:34Z"
+        },
+        {
+            "id": "18a6",
+            "name": "DJ Fresh - Louder (Doctor P & Flux Pavilion Remix)",
+            "description": "Expert / Hard / Normal\r\nhttps://www.youtube.com/watch?v=rfR4cbnB7T8",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 140.0,
+                "duration": 128,
+                "songName": "Louder (Doctor P & Flux Pavilion Remix)",
+                "songSubName": "DJ Fresh",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 3138,
+                "upvotes": 1174,
+                "downvotes": 34,
+                "score": 0.9161
+            },
+            "uploaded": "2018-10-04T12:37:14Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "6b2cdc3638c97881753d83308c13eda1a490f0b2",
+                    "key": "18a6",
+                    "state": "Published",
+                    "createdAt": "2018-10-04T12:37:14Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 249,
+                            "bombs": 0,
+                            "obstacles": 1,
+                            "nps": 2.06,
+                            "length": 282.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 2076,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 120.857,
+                            "paritySummary": {
+                                "errors": 10,
+                                "warns": 27,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 305,
+                            "bombs": 0,
+                            "obstacles": 2,
+                            "nps": 2.524,
+                            "length": 282.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2076,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 120.857,
+                            "paritySummary": {
+                                "errors": 10,
+                                "warns": 39,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 14.0,
+                            "offset": 0.0,
+                            "notes": 380,
+                            "bombs": 0,
+                            "obstacles": 14,
+                            "nps": 3.144,
+                            "length": 282.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2364,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 120.857,
+                            "paritySummary": {
+                                "errors": 11,
+                                "warns": 43,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/6b2cdc3638c97881753d83308c13eda1a490f0b2.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/6b2cdc3638c97881753d83308c13eda1a490f0b2.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/6b2cdc3638c97881753d83308c13eda1a490f0b2.mp3"
+                }
+            ],
+            "createdAt": "2018-10-04T12:37:14Z",
+            "updatedAt": "2018-10-04T12:37:14Z",
+            "lastPublishedAt": "2018-10-04T12:37:14Z"
+        },
+        {
+            "id": "15b1",
+            "name": "Varien - Blood Hunter",
+            "description": "Expert+ only\r\nhttps://www.youtube.com/watch?v=zXQOdBnr4-w",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 180.0,
+                "duration": 185,
+                "songName": "Blood Hunter",
+                "songSubName": "Varien",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 3889,
+                "upvotes": 1002,
+                "downvotes": 198,
+                "score": 0.7954
+            },
+            "uploaded": "2018-09-18T20:23:07Z",
+            "automapper": false,
+            "ranked": true,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "d06a8564708c3acef7fb889a194614f176236e4c",
+                    "key": "15b1",
+                    "state": "Published",
+                    "createdAt": "2018-09-18T20:23:07Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 14.0,
+                            "offset": 0.0,
+                            "notes": 642,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 3.54,
+                            "length": 544.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 1849,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 181.333,
+                            "paritySummary": {
+                                "errors": 30,
+                                "warns": 65,
+                                "resets": 0
+                            },
+                            "stars": 3.07
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/d06a8564708c3acef7fb889a194614f176236e4c.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/d06a8564708c3acef7fb889a194614f176236e4c.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/d06a8564708c3acef7fb889a194614f176236e4c.mp3"
+                }
+            ],
+            "createdAt": "2018-09-18T20:23:07Z",
+            "updatedAt": "2018-09-18T20:23:07Z",
+            "lastPublishedAt": "2018-09-18T20:23:07Z"
+        },
+        {
+            "id": "14bd",
+            "name": "Starship - We Built This City",
+            "description": "Collab map between BennyDaBeast, Rustic and GreatYazer\r\nExper / Hard / Normal\r\nhttps://www.youtube.com/watch?v=KnLnUBIbfbM\r\nhttps://streamable.com/s8xvc",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 143.0,
+                "duration": 298,
+                "songName": "We Built this City",
+                "songSubName": "Starship",
+                "songAuthorName": "GreatYazer, Rustic, BennyDaBeast",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 11478,
+                "upvotes": 3589,
+                "downvotes": 146,
+                "score": 0.9222
+            },
+            "uploaded": "2018-09-12T19:05:18Z",
+            "automapper": false,
+            "ranked": true,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "477fac9561e8931c7efaf49faa065611348f159d",
+                    "key": "14bd",
+                    "state": "Published",
+                    "createdAt": "2018-09-12T19:05:18Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 472,
+                            "bombs": 26,
+                            "obstacles": 32,
+                            "nps": 1.64,
+                            "length": 686.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 1843,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 287.832,
+                            "paritySummary": {
+                                "errors": 64,
+                                "warns": 56,
+                                "resets": 0
+                            },
+                            "stars": 1.03
+                        },
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 759,
+                            "bombs": 26,
+                            "obstacles": 34,
+                            "nps": 2.633,
+                            "length": 687.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 1843,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 288.252,
+                            "paritySummary": {
+                                "errors": 69,
+                                "warns": 90,
+                                "resets": 0
+                            },
+                            "stars": 1.66
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 967,
+                            "bombs": 26,
+                            "obstacles": 36,
+                            "nps": 3.355,
+                            "length": 687.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1843,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 288.252,
+                            "paritySummary": {
+                                "errors": 71,
+                                "warns": 126,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/477fac9561e8931c7efaf49faa065611348f159d.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/477fac9561e8931c7efaf49faa065611348f159d.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/477fac9561e8931c7efaf49faa065611348f159d.mp3"
+                }
+            ],
+            "createdAt": "2018-09-12T19:05:18Z",
+            "updatedAt": "2018-09-12T19:05:18Z",
+            "lastPublishedAt": "2018-09-12T19:05:18Z"
+        },
+        {
+            "id": "1483",
+            "name": "SLANDER & Crankdat - Kneel Before Me (Feat. Asking Alexandria)",
+            "description": "Expert / Hard / Normal\r\nhttps://www.youtube.com/watch?v=FjLpfY7975Q",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 184,
+                "songName": "Kneel Before Me",
+                "songSubName": "SLANDER, Crankdat, Feat. Asking Alexandria",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2760,
+                "upvotes": 389,
+                "downvotes": 40,
+                "score": 0.8412
+            },
+            "uploaded": "2018-09-10T16:59:07Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "a652ca4279092625957bfd3aa839a4a0c528e7b7",
+                    "key": "1483",
+                    "state": "Published",
+                    "createdAt": "2018-09-10T16:59:07Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 247,
+                            "bombs": 0,
+                            "obstacles": 6,
+                            "nps": 1.429,
+                            "length": 432.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 1501,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 172.8,
+                            "paritySummary": {
+                                "errors": 7,
+                                "warns": 19,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 367,
+                            "bombs": 0,
+                            "obstacles": 10,
+                            "nps": 2.124,
+                            "length": 432.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 1501,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 172.8,
+                            "paritySummary": {
+                                "errors": 13,
+                                "warns": 23,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 404,
+                            "bombs": 0,
+                            "obstacles": 10,
+                            "nps": 2.338,
+                            "length": 432.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1390,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 172.8,
+                            "paritySummary": {
+                                "errors": 20,
+                                "warns": 36,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/a652ca4279092625957bfd3aa839a4a0c528e7b7.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/a652ca4279092625957bfd3aa839a4a0c528e7b7.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/a652ca4279092625957bfd3aa839a4a0c528e7b7.mp3"
+                }
+            ],
+            "createdAt": "2018-09-10T16:59:07Z",
+            "updatedAt": "2018-09-10T16:59:07Z",
+            "lastPublishedAt": "2018-09-10T16:59:07Z"
+        },
+        {
+            "id": "12ec",
+            "name": "Stonebank - What's Going Down",
+            "description": "Expert / Hard",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 126.0,
+                "duration": 276,
+                "songName": "What's Going Down",
+                "songSubName": "Stonebank",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2577,
+                "upvotes": 428,
+                "downvotes": 42,
+                "score": 0.8463
+            },
+            "uploaded": "2018-09-01T13:08:06Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "936a4adf6c6b13e5cf92446438cc9453ca27aaf6",
+                    "key": "12ec",
+                    "state": "Published",
+                    "createdAt": "2018-09-01T13:08:06Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 419,
+                            "bombs": 0,
+                            "obstacles": 2,
+                            "nps": 1.617,
+                            "length": 544.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2614,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 259.048,
+                            "paritySummary": {
+                                "errors": 16,
+                                "warns": 25,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 546,
+                            "bombs": 0,
+                            "obstacles": 4,
+                            "nps": 2.108,
+                            "length": 544.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2614,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 259.048,
+                            "paritySummary": {
+                                "errors": 23,
+                                "warns": 40,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/936a4adf6c6b13e5cf92446438cc9453ca27aaf6.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/936a4adf6c6b13e5cf92446438cc9453ca27aaf6.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/936a4adf6c6b13e5cf92446438cc9453ca27aaf6.mp3"
+                }
+            ],
+            "createdAt": "2018-09-01T13:08:06Z",
+            "updatedAt": "2018-09-01T13:08:06Z",
+            "lastPublishedAt": "2018-09-01T13:08:06Z"
+        },
+        {
+            "id": "12d0",
+            "name": "Au5 - Crossroad (feat. Danyka Nadeau)",
+            "description": "Expert / Hard",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 128.0,
+                "duration": 419,
+                "songName": "Crossroad",
+                "songSubName": "Au5 Feat. Danyka Nadeau",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2615,
+                "upvotes": 590,
+                "downvotes": 48,
+                "score": 0.864
+            },
+            "uploaded": "2018-08-31T20:19:04Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "c267019c068f6fe80ba8e6f45b08c3f9847bf40f",
+                    "key": "12d0",
+                    "state": "Published",
+                    "createdAt": "2018-08-31T20:19:04Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 623,
+                            "bombs": 0,
+                            "obstacles": 11,
+                            "nps": 1.653,
+                            "length": 804.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2098,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 376.875,
+                            "paritySummary": {
+                                "errors": 32,
+                                "warns": 40,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 747,
+                            "bombs": 0,
+                            "obstacles": 11,
+                            "nps": 1.982,
+                            "length": 804.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2098,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 376.875,
+                            "paritySummary": {
+                                "errors": 32,
+                                "warns": 65,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/c267019c068f6fe80ba8e6f45b08c3f9847bf40f.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/c267019c068f6fe80ba8e6f45b08c3f9847bf40f.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/c267019c068f6fe80ba8e6f45b08c3f9847bf40f.mp3"
+                }
+            ],
+            "createdAt": "2018-08-31T20:19:04Z",
+            "updatedAt": "2018-08-31T20:19:04Z",
+            "lastPublishedAt": "2018-08-31T20:19:04Z"
+        },
+        {
+            "id": "121f",
+            "name": "Skillet - Feel Invincible",
+            "description": "Expert / Hard\r\nhttps://www.youtube.com/watch?v=nq-Qul4XxbE",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 126.0,
+                "duration": 227,
+                "songName": "Feel Invincible",
+                "songSubName": "Skillet",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 29651,
+                "upvotes": 9728,
+                "downvotes": 157,
+                "score": 0.9538
+            },
+            "uploaded": "2018-08-27T16:47:05Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "2e9ab6e1fb8055649e241cade98b018926cc93a8",
+                    "key": "121f",
+                    "state": "Published",
+                    "createdAt": "2018-08-27T16:47:05Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 620,
+                            "bombs": 0,
+                            "obstacles": 10,
+                            "nps": 2.764,
+                            "length": 471.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 1654,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 224.286,
+                            "paritySummary": {
+                                "errors": 15,
+                                "warns": 58,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 738,
+                            "bombs": 0,
+                            "obstacles": 11,
+                            "nps": 3.29,
+                            "length": 471.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1654,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 224.286,
+                            "paritySummary": {
+                                "errors": 21,
+                                "warns": 72,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/2e9ab6e1fb8055649e241cade98b018926cc93a8.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/2e9ab6e1fb8055649e241cade98b018926cc93a8.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/2e9ab6e1fb8055649e241cade98b018926cc93a8.mp3"
+                }
+            ],
+            "createdAt": "2018-08-27T16:47:05Z",
+            "updatedAt": "2018-08-27T16:47:05Z",
+            "lastPublishedAt": "2018-08-27T16:47:05Z"
+        },
+        {
+            "id": "eba",
+            "name": "MDK & Neowing - Final Smash",
+            "description": "Expert / Hard / Normal\r\nhttps://www.youtube.com/watch?v=cIU5SigrSzs",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 128.0,
+                "duration": 206,
+                "songName": "Final Smash",
+                "songSubName": "MDK & Neowing",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2771,
+                "upvotes": 920,
+                "downvotes": 25,
+                "score": 0.9134
+            },
+            "uploaded": "2018-08-09T17:47:47Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "4bf8f5f56737a484ec4b842c87a9d3d1c8702785",
+                    "key": "eba",
+                    "state": "Published",
+                    "createdAt": "2018-08-09T17:47:47Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 356,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 1.823,
+                            "length": 416.625,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 2495,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 195.293,
+                            "paritySummary": {
+                                "errors": 7,
+                                "warns": 29,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 493,
+                            "bombs": 0,
+                            "obstacles": 13,
+                            "nps": 2.516,
+                            "length": 418.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2495,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 195.938,
+                            "paritySummary": {
+                                "errors": 5,
+                                "warns": 29,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 659,
+                            "bombs": 0,
+                            "obstacles": 14,
+                            "nps": 3.363,
+                            "length": 418.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2545,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 195.938,
+                            "paritySummary": {
+                                "errors": 8,
+                                "warns": 76,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/4bf8f5f56737a484ec4b842c87a9d3d1c8702785.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/4bf8f5f56737a484ec4b842c87a9d3d1c8702785.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/4bf8f5f56737a484ec4b842c87a9d3d1c8702785.mp3"
+                }
+            ],
+            "createdAt": "2018-08-09T17:47:47Z",
+            "updatedAt": "2018-08-09T17:47:47Z",
+            "lastPublishedAt": "2018-08-09T17:47:47Z"
+        },
+        {
+            "id": "b64",
+            "name": "MDK & Dex Arson - Resolution",
+            "description": "Expert / Hard / Normal\r\nwww.youtube.com/watch?v=40Pq1C7efTQ",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 235,
+                "songName": "Resolution",
+                "songSubName": "MDK & Dex Arson",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2475,
+                "upvotes": 466,
+                "downvotes": 36,
+                "score": 0.8624
+            },
+            "uploaded": "2018-07-23T16:32:00Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "89c174d6628704cd3606e142f60b1a17f2cd608a",
+                    "key": "b64",
+                    "state": "Published",
+                    "createdAt": "2018-07-23T16:32:00Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 292,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 1.267,
+                            "length": 576.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 2138,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 230.4,
+                            "paritySummary": {
+                                "errors": 4,
+                                "warns": 29,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 490,
+                            "bombs": 0,
+                            "obstacles": 11,
+                            "nps": 2.13,
+                            "length": 575.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2138,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 230.0,
+                            "paritySummary": {
+                                "errors": 13,
+                                "warns": 48,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 623,
+                            "bombs": 0,
+                            "obstacles": 15,
+                            "nps": 2.704,
+                            "length": 576.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2138,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 230.4,
+                            "paritySummary": {
+                                "errors": 19,
+                                "warns": 75,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/89c174d6628704cd3606e142f60b1a17f2cd608a.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/89c174d6628704cd3606e142f60b1a17f2cd608a.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/89c174d6628704cd3606e142f60b1a17f2cd608a.mp3"
+                }
+            ],
+            "createdAt": "2018-07-23T16:32:00Z",
+            "updatedAt": "2018-07-23T16:32:00Z",
+            "lastPublishedAt": "2018-07-23T16:32:00Z"
+        },
+        {
+            "id": "acf",
+            "name": "EC2 - Prototyperaptor - Still Waiting",
+            "description": "Expert / Hard\r\nPart of the Electric City 2 song pack\r\nhttps://youtu.be/uCekFFk_nWA?t=4m29s",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 125.0,
+                "duration": 286,
+                "songName": "EC2 - Still Waiting",
+                "songSubName": "Prototyperaptor",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 5788,
+                "upvotes": 1952,
+                "downvotes": 56,
+                "score": 0.9243
+            },
+            "uploaded": "2018-07-20T22:07:52Z",
+            "automapper": false,
+            "ranked": true,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "32ae684f553e7fa90d1e5325bd54581c0afd37fa",
+                    "key": "acf",
+                    "state": "Published",
+                    "createdAt": "2018-07-20T22:07:52Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 604,
+                            "bombs": 0,
+                            "obstacles": 19,
+                            "nps": 2.192,
+                            "length": 572.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2545,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 274.56,
+                            "paritySummary": {
+                                "errors": 7,
+                                "warns": 33,
+                                "resets": 0
+                            },
+                            "stars": 1.18
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 902,
+                            "bombs": 0,
+                            "obstacles": 35,
+                            "nps": 3.274,
+                            "length": 572.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2545,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 274.56,
+                            "paritySummary": {
+                                "errors": 19,
+                                "warns": 65,
+                                "resets": 0
+                            },
+                            "stars": 1.99
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/32ae684f553e7fa90d1e5325bd54581c0afd37fa.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/32ae684f553e7fa90d1e5325bd54581c0afd37fa.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/32ae684f553e7fa90d1e5325bd54581c0afd37fa.mp3"
+                }
+            ],
+            "createdAt": "2018-07-20T22:07:52Z",
+            "updatedAt": "2018-07-20T22:07:52Z",
+            "lastPublishedAt": "2018-07-20T22:07:52Z"
+        },
+        {
+            "id": "ace",
+            "name": "EC2 - Gareth Emery Standerwick - Saving Light (NWYR Remix) Feat. Haliene",
+            "description": "Expert / Hard\r\nPart of the Electric City 2 song pack\r\nhttps://youtu.be/uCekFFk_nWA?t=3m23s",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 130.0,
+                "duration": 181,
+                "songName": "EC2 - Saving Light (NWYR Remix)",
+                "songSubName": "Gareth Emery Standerwick",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2589,
+                "upvotes": 510,
+                "downvotes": 28,
+                "score": 0.8805
+            },
+            "uploaded": "2018-07-20T22:07:24Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "b4d4941a6aa83156253e273eb9aa35ed2b59dec6",
+                    "key": "ace",
+                    "state": "Published",
+                    "createdAt": "2018-07-20T22:07:24Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 231,
+                            "bombs": 0,
+                            "obstacles": 7,
+                            "nps": 1.386,
+                            "length": 361.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 1178,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 166.615,
+                            "paritySummary": {
+                                "errors": 6,
+                                "warns": 27,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 392,
+                            "bombs": 0,
+                            "obstacles": 13,
+                            "nps": 2.353,
+                            "length": 361.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1178,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 166.615,
+                            "paritySummary": {
+                                "errors": 15,
+                                "warns": 38,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/b4d4941a6aa83156253e273eb9aa35ed2b59dec6.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/b4d4941a6aa83156253e273eb9aa35ed2b59dec6.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/b4d4941a6aa83156253e273eb9aa35ed2b59dec6.mp3"
+                }
+            ],
+            "createdAt": "2018-07-20T22:07:24Z",
+            "updatedAt": "2018-07-20T22:07:24Z",
+            "lastPublishedAt": "2018-07-20T22:07:24Z"
+        },
+        {
+            "id": "acd",
+            "name": "EC2 - Delta Heavy - I Need You",
+            "description": "Expert / Hard\r\nPart of the Electric City 2 song pack\r\nhttps://youtu.be/uCekFFk_nWA?t=2m39s",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 174.0,
+                "duration": 261,
+                "songName": "EC2 - I Need You",
+                "songSubName": "Delta Heavy",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2737,
+                "upvotes": 699,
+                "downvotes": 40,
+                "score": 0.8849
+            },
+            "uploaded": "2018-07-20T22:06:47Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "a015e641df8d4f9122783290c6b9789bb8139ccb",
+                    "key": "acd",
+                    "state": "Published",
+                    "createdAt": "2018-07-20T22:06:47Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 440,
+                            "bombs": 0,
+                            "obstacles": 8,
+                            "nps": 1.813,
+                            "length": 704.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2477,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 242.759,
+                            "paritySummary": {
+                                "errors": 15,
+                                "warns": 53,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 810,
+                            "bombs": 0,
+                            "obstacles": 16,
+                            "nps": 3.337,
+                            "length": 704.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2477,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 242.759,
+                            "paritySummary": {
+                                "errors": 26,
+                                "warns": 77,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/a015e641df8d4f9122783290c6b9789bb8139ccb.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/a015e641df8d4f9122783290c6b9789bb8139ccb.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/a015e641df8d4f9122783290c6b9789bb8139ccb.mp3"
+                }
+            ],
+            "createdAt": "2018-07-20T22:06:47Z",
+            "updatedAt": "2018-07-20T22:06:47Z",
+            "lastPublishedAt": "2018-07-20T22:06:47Z"
+        },
+        {
+            "id": "acc",
+            "name": "EC2 - LoaX & R3SPAWN - Hijacked",
+            "description": "Expert / Hard\r\nPart of the Electric City 2 song pack\r\nhttps://youtu.be/uCekFFk_nWA?t=1m45s",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 128.0,
+                "duration": 167,
+                "songName": "EC2 - Hijacked",
+                "songSubName": "LoaX, R3SPAWN",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2516,
+                "upvotes": 436,
+                "downvotes": 9,
+                "score": 0.9033
+            },
+            "uploaded": "2018-07-20T22:06:20Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "51fd77ac15caa76d11152b4a6a1822374954f122",
+                    "key": "acc",
+                    "state": "Published",
+                    "createdAt": "2018-07-20T22:06:20Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 309,
+                            "bombs": 0,
+                            "obstacles": 13,
+                            "nps": 1.962,
+                            "length": 336.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 1837,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 157.5,
+                            "paritySummary": {
+                                "errors": 7,
+                                "warns": 39,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 541,
+                            "bombs": 0,
+                            "obstacles": 23,
+                            "nps": 3.435,
+                            "length": 336.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1837,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 157.5,
+                            "paritySummary": {
+                                "errors": 27,
+                                "warns": 56,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/51fd77ac15caa76d11152b4a6a1822374954f122.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/51fd77ac15caa76d11152b4a6a1822374954f122.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/51fd77ac15caa76d11152b4a6a1822374954f122.mp3"
+                }
+            ],
+            "createdAt": "2018-07-20T22:06:20Z",
+            "updatedAt": "2018-07-20T22:06:20Z",
+            "lastPublishedAt": "2018-07-20T22:06:20Z"
+        },
+        {
+            "id": "aca",
+            "name": "EC2 - Stonebank - Chokehold feat. Concept",
+            "description": "Expert / Hard\r\nPart of the Electric City 2 song pack\r\nhttps://youtu.be/uCekFFk_nWA?t=58s",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 110.0,
+                "duration": 264,
+                "songName": "EC2 - Chokehold",
+                "songSubName": "Stonebank",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2685,
+                "upvotes": 664,
+                "downvotes": 24,
+                "score": 0.9001
+            },
+            "uploaded": "2018-07-20T22:05:40Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "7da5de5859ee0838f0b60d3334a1dc711da73e92",
+                    "key": "aca",
+                    "state": "Published",
+                    "createdAt": "2018-07-20T22:05:40Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 440,
+                            "bombs": 0,
+                            "obstacles": 22,
+                            "nps": 1.801,
+                            "length": 448.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2104,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 244.364,
+                            "paritySummary": {
+                                "errors": 14,
+                                "warns": 40,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 701,
+                            "bombs": 0,
+                            "obstacles": 35,
+                            "nps": 2.869,
+                            "length": 448.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2104,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 244.364,
+                            "paritySummary": {
+                                "errors": 32,
+                                "warns": 87,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/7da5de5859ee0838f0b60d3334a1dc711da73e92.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/7da5de5859ee0838f0b60d3334a1dc711da73e92.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/7da5de5859ee0838f0b60d3334a1dc711da73e92.mp3"
+                }
+            ],
+            "createdAt": "2018-07-20T22:05:40Z",
+            "updatedAt": "2018-07-20T22:05:40Z",
+            "lastPublishedAt": "2018-07-20T22:05:40Z"
+        },
+        {
+            "id": "ac9",
+            "name": "EC2 - Dyro - Bring it Down",
+            "description": "Expert / Hard\r\nPart of the Electric City 2 song pack",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 126.0,
+                "duration": 185,
+                "songName": "EC2 - Bring it Down",
+                "songSubName": "Dyro",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2547,
+                "upvotes": 544,
+                "downvotes": 20,
+                "score": 0.8956
+            },
+            "uploaded": "2018-07-20T22:05:14Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "5e2ce0fe900625c949e484fcac5497cbe8d605a0",
+                    "key": "ac9",
+                    "state": "Published",
+                    "createdAt": "2018-07-20T22:05:14Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.0,
+                            "notes": 333,
+                            "bombs": 0,
+                            "obstacles": 12,
+                            "nps": 1.9,
+                            "length": 368.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 1736,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 175.238,
+                            "paritySummary": {
+                                "errors": 8,
+                                "warns": 27,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 550,
+                            "bombs": 0,
+                            "obstacles": 14,
+                            "nps": 3.139,
+                            "length": 368.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1771,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 175.238,
+                            "paritySummary": {
+                                "errors": 10,
+                                "warns": 37,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/5e2ce0fe900625c949e484fcac5497cbe8d605a0.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/5e2ce0fe900625c949e484fcac5497cbe8d605a0.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/5e2ce0fe900625c949e484fcac5497cbe8d605a0.mp3"
+                }
+            ],
+            "createdAt": "2018-07-20T22:05:14Z",
+            "updatedAt": "2018-07-20T22:05:14Z",
+            "lastPublishedAt": "2018-07-20T22:05:14Z"
+        }
+    ]
+}

@@ -1,0 +1,1798 @@
+{
+    "docs": [
+        {
+            "id": "6bfa",
+            "name": "Approaching Nirvana - Alone",
+            "description": "https://www.youtube.com/watch?v=lZvGn7RUC7c",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 128.0,
+                "duration": 170,
+                "songName": "Alone",
+                "songSubName": "",
+                "songAuthorName": "Approaching Nirvana",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2252,
+                "upvotes": 1043,
+                "downvotes": 21,
+                "score": 0.9214
+            },
+            "uploaded": "2019-10-24T19:54:05.671Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "ccf70e940a4ec45c70a8f3ae7be18a2ea771461d",
+                    "key": "6bfa",
+                    "state": "Published",
+                    "createdAt": "2019-10-24T19:54:05.671Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 18.0,
+                            "offset": 0.0,
+                            "notes": 416,
+                            "bombs": 0,
+                            "obstacles": 1689,
+                            "nps": 2.558,
+                            "length": 347.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 3383,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 162.656,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/ccf70e940a4ec45c70a8f3ae7be18a2ea771461d.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/ccf70e940a4ec45c70a8f3ae7be18a2ea771461d.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/ccf70e940a4ec45c70a8f3ae7be18a2ea771461d.mp3"
+                }
+            ],
+            "createdAt": "2019-10-24T19:54:05.671Z",
+            "updatedAt": "2019-10-24T19:54:05.671Z",
+            "lastPublishedAt": "2019-10-24T19:54:05.671Z"
+        },
+        {
+            "id": "6b55",
+            "name": "ABIS & Signal & Tasha Baxter - The Wall (Buunshin Remix)",
+            "description": "https://youtu.be/xEowRTlHvuI",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 172.0,
+                "duration": 271,
+                "songName": "The Wall",
+                "songSubName": "(Buunshin Remix)",
+                "songAuthorName": "ABIS & Signal & Tasha Baxter",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 9827,
+                "upvotes": 4727,
+                "downvotes": 63,
+                "score": 0.9489
+            },
+            "uploaded": "2019-10-21T13:30:47.405Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "e855d1a7b17904322aa3ebaf3bb002421bce568a",
+                    "key": "6b55",
+                    "state": "Published",
+                    "createdAt": "2019-10-21T13:30:47.405Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": 0.0,
+                            "notes": 449,
+                            "bombs": 0,
+                            "obstacles": 9581,
+                            "nps": 1.828,
+                            "length": 704.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 7859,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 245.581,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 20.0,
+                            "offset": 0.0,
+                            "notes": 606,
+                            "bombs": 0,
+                            "obstacles": 9589,
+                            "nps": 2.468,
+                            "length": 704.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 7808,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 245.581,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/e855d1a7b17904322aa3ebaf3bb002421bce568a.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/e855d1a7b17904322aa3ebaf3bb002421bce568a.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/e855d1a7b17904322aa3ebaf3bb002421bce568a.mp3"
+                }
+            ],
+            "createdAt": "2019-10-21T13:30:47.405Z",
+            "updatedAt": "2019-10-21T13:30:47.405Z",
+            "lastPublishedAt": "2019-10-21T13:30:47.405Z"
+        },
+        {
+            "id": "68f4",
+            "name": "Ehrling - Palm Trees",
+            "description": "Expert / Hard / Normal\r\nMade for HeyFalcon",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 122.0,
+                "duration": 167,
+                "songName": "Palm Trees",
+                "songSubName": "",
+                "songAuthorName": "Ehrling",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 4785,
+                "upvotes": 2361,
+                "downvotes": 33,
+                "score": 0.9395
+            },
+            "uploaded": "2019-10-10T18:18:18.093Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "6eef9850cfeb43d14c66323cfbae50d8532c9c43",
+                    "key": "68f4",
+                    "state": "Published",
+                    "createdAt": "2019-10-10T18:18:18.093Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 257,
+                            "bombs": 0,
+                            "obstacles": 4876,
+                            "nps": 1.574,
+                            "length": 332.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 1638,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 163.279,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 14.0,
+                            "offset": 0.0,
+                            "notes": 336,
+                            "bombs": 0,
+                            "obstacles": 4876,
+                            "nps": 2.058,
+                            "length": 332.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 1638,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 163.279,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": 0.0,
+                            "notes": 337,
+                            "bombs": 0,
+                            "obstacles": 4876,
+                            "nps": 2.064,
+                            "length": 332.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1694,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 163.279,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/6eef9850cfeb43d14c66323cfbae50d8532c9c43.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/6eef9850cfeb43d14c66323cfbae50d8532c9c43.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/6eef9850cfeb43d14c66323cfbae50d8532c9c43.mp3"
+                }
+            ],
+            "createdAt": "2019-10-10T18:18:18.093Z",
+            "updatedAt": "2019-10-10T18:18:18.093Z",
+            "lastPublishedAt": "2019-10-10T18:18:18.093Z"
+        },
+        {
+            "id": "645a",
+            "name": "1788-L - A B Y S S",
+            "description": "",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 177.0,
+                "duration": 179,
+                "songName": "A B Y S S",
+                "songSubName": "",
+                "songAuthorName": "1788-L",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1758,
+                "upvotes": 987,
+                "downvotes": 24,
+                "score": 0.9169
+            },
+            "uploaded": "2019-09-18T18:07:03.444Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "5f85d131f63c7415967ba4414abef741686ece9c",
+                    "key": "645a",
+                    "state": "Published",
+                    "createdAt": "2019-09-18T18:07:03.444Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": 0.0,
+                            "notes": 553,
+                            "bombs": 0,
+                            "obstacles": 3106,
+                            "nps": 3.224,
+                            "length": 506.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 9089,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 171.525,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/5f85d131f63c7415967ba4414abef741686ece9c.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/5f85d131f63c7415967ba4414abef741686ece9c.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/5f85d131f63c7415967ba4414abef741686ece9c.mp3"
+                }
+            ],
+            "createdAt": "2019-09-18T18:07:03.444Z",
+            "updatedAt": "2019-09-18T18:07:03.444Z",
+            "lastPublishedAt": "2019-09-18T18:07:03.444Z"
+        },
+        {
+            "id": "6360",
+            "name": "Shirobon - Into the Zone",
+            "description": "",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 122.0,
+                "duration": 180,
+                "songName": "Into the Zone",
+                "songSubName": "",
+                "songAuthorName": "Shirobon",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2922,
+                "upvotes": 1323,
+                "downvotes": 17,
+                "score": 0.9315
+            },
+            "uploaded": "2019-09-14T17:32:19.835Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "c22b89db9dfef084c62412def48cdace57226f5e",
+                    "key": "6360",
+                    "state": "Published",
+                    "createdAt": "2019-09-14T17:32:19.835Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 18.0,
+                            "offset": 0.0,
+                            "notes": 428,
+                            "bombs": 0,
+                            "obstacles": 615,
+                            "nps": 2.67,
+                            "length": 326.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 5077,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 160.328,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/c22b89db9dfef084c62412def48cdace57226f5e.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/c22b89db9dfef084c62412def48cdace57226f5e.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/c22b89db9dfef084c62412def48cdace57226f5e.mp3"
+                }
+            ],
+            "createdAt": "2019-09-14T17:32:19.835Z",
+            "updatedAt": "2019-09-14T17:32:19.835Z",
+            "lastPublishedAt": "2019-09-14T17:32:19.835Z"
+        },
+        {
+            "id": "618a",
+            "name": "Teminite - Party Time",
+            "description": "Expert only\r\n",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 125.0,
+                "duration": 271,
+                "songName": "Party Time",
+                "songSubName": "",
+                "songAuthorName": "Teminite",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2356,
+                "upvotes": 1065,
+                "downvotes": 24,
+                "score": 0.9197
+            },
+            "uploaded": "2019-09-05T20:33:35.424Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "05aa128214d1adc3ca599a0475b6c422debc08e0",
+                    "key": "618a",
+                    "state": "Published",
+                    "createdAt": "2019-09-05T20:33:35.424Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 18.0,
+                            "offset": 0.0,
+                            "notes": 953,
+                            "bombs": 112,
+                            "obstacles": 1389,
+                            "nps": 3.65,
+                            "length": 544.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 7206,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 261.12,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/05aa128214d1adc3ca599a0475b6c422debc08e0.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/05aa128214d1adc3ca599a0475b6c422debc08e0.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/05aa128214d1adc3ca599a0475b6c422debc08e0.mp3"
+                }
+            ],
+            "createdAt": "2019-09-05T20:33:35.424Z",
+            "updatedAt": "2019-09-05T20:33:35.424Z",
+            "lastPublishedAt": "2019-09-05T20:33:35.424Z"
+        },
+        {
+            "id": "5e76",
+            "name": "Overthrow the Pressure (Gaszia Flip) - Boys Noize & RL Grime",
+            "description": "Expert (6 lanes) / Expert\r\nhttps://youtu.be/hdFN1PjBxNw",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 105.0,
+                "duration": 182,
+                "songName": "Overthrow the Pressure (Gaszia Flip)",
+                "songSubName": "",
+                "songAuthorName": "Boys Noize x RL Grime",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 289,
+                "upvotes": 182,
+                "downvotes": 8,
+                "score": 0.8637
+            },
+            "uploaded": "2019-08-22T09:15:15.103Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "3b7f1126b61f6477ad3546d9036d4d06be2a2b3c",
+                    "key": "5e76",
+                    "state": "Published",
+                    "createdAt": "2019-08-22T09:15:15.103Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": 1.0,
+                            "notes": 505,
+                            "bombs": 0,
+                            "obstacles": 44,
+                            "nps": 2.986,
+                            "length": 296.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 5192,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 169.143,
+                            "paritySummary": {
+                                "errors": 44,
+                                "warns": 25,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 20.0,
+                            "offset": 1.0,
+                            "notes": 507,
+                            "bombs": 0,
+                            "obstacles": 104,
+                            "nps": 2.997,
+                            "length": 296.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 5192,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 169.143,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/3b7f1126b61f6477ad3546d9036d4d06be2a2b3c.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/3b7f1126b61f6477ad3546d9036d4d06be2a2b3c.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/3b7f1126b61f6477ad3546d9036d4d06be2a2b3c.mp3"
+                }
+            ],
+            "createdAt": "2019-08-22T09:15:15.103Z",
+            "updatedAt": "2019-08-22T09:15:15.103Z",
+            "lastPublishedAt": "2019-08-22T09:15:15.103Z"
+        },
+        {
+            "id": "5c6b",
+            "name": "Muse - New Born",
+            "description": "Expert / Hard\nhttps://www.youtube.com/watch?v=qW5fPUgDQ0I\n",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 153.0,
+                "duration": 367,
+                "songName": "New Born",
+                "songSubName": "",
+                "songAuthorName": "Muse",
+                "levelAuthorName": "Rustic (RGG Commission)"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1843,
+                "upvotes": 369,
+                "downvotes": 28,
+                "score": 0.8586
+            },
+            "uploaded": "2019-08-12T07:26:31.161Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "301675eff854fb4888a94739e3d1da696018378e",
+                    "key": "5c6b",
+                    "state": "Published",
+                    "createdAt": "2019-08-12T07:26:31.161Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 15.0,
+                            "offset": 0.0,
+                            "notes": 1117,
+                            "bombs": 0,
+                            "obstacles": 199,
+                            "nps": 3.347,
+                            "length": 850.984,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 6194,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 333.719,
+                            "paritySummary": {
+                                "errors": 110,
+                                "warns": 86,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": 0.0,
+                            "notes": 1449,
+                            "bombs": 0,
+                            "obstacles": 194,
+                            "nps": 4.342,
+                            "length": 850.984,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 6194,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 333.719,
+                            "paritySummary": {
+                                "errors": 106,
+                                "warns": 109,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/301675eff854fb4888a94739e3d1da696018378e.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/301675eff854fb4888a94739e3d1da696018378e.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/301675eff854fb4888a94739e3d1da696018378e.mp3"
+                }
+            ],
+            "createdAt": "2019-08-12T07:26:31.161Z",
+            "updatedAt": "2019-08-12T07:26:31.161Z",
+            "lastPublishedAt": "2019-08-12T07:26:31.161Z"
+        },
+        {
+            "id": "5728",
+            "name": "Bossfight - U got me",
+            "description": "Expert+ / Expert / Hard\r\n(Reupload 15/17/19, fixed noteJumpStartBeatOffset on expert+)",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 186,
+                "songName": "U Got Me",
+                "songSubName": "",
+                "songAuthorName": "Bossfight",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 816,
+                "upvotes": 579,
+                "downvotes": 24,
+                "score": 0.8932
+            },
+            "uploaded": "2019-07-15T08:10:41.775Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "5616af185fc5f473f7326f7001026521f967132e",
+                    "key": "5728",
+                    "state": "Published",
+                    "createdAt": "2019-07-15T08:10:41.775Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 12.0,
+                            "offset": 1.0,
+                            "notes": 414,
+                            "bombs": 0,
+                            "obstacles": 22,
+                            "nps": 2.31,
+                            "length": 448.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 4797,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 179.2,
+                            "paritySummary": {
+                                "errors": 44,
+                                "warns": 54,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 14.0,
+                            "offset": 1.0,
+                            "notes": 512,
+                            "bombs": 0,
+                            "obstacles": 29,
+                            "nps": 2.857,
+                            "length": 448.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 4797,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 179.2,
+                            "paritySummary": {
+                                "errors": 56,
+                                "warns": 28,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": 0.0,
+                            "notes": 612,
+                            "bombs": 0,
+                            "obstacles": 54,
+                            "nps": 3.415,
+                            "length": 448.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 4797,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 179.2,
+                            "paritySummary": {
+                                "errors": 59,
+                                "warns": 42,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/5616af185fc5f473f7326f7001026521f967132e.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/5616af185fc5f473f7326f7001026521f967132e.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/5616af185fc5f473f7326f7001026521f967132e.mp3"
+                }
+            ],
+            "createdAt": "2019-07-15T08:10:41.775Z",
+            "updatedAt": "2019-07-15T08:10:41.775Z",
+            "lastPublishedAt": "2019-07-15T08:10:41.775Z"
+        },
+        {
+            "id": "56ff",
+            "name": "Xilent - Code Blood",
+            "description": "Expert / Hard\nhttps://youtu.be/l4uexwVnrAg\n(Reupload - Added \"Mapping Extensions\" requirement)",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 208,
+                "songName": "Code Blood",
+                "songSubName": "",
+                "songAuthorName": "Xilent",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1336,
+                "upvotes": 517,
+                "downvotes": 19,
+                "score": 0.8945
+            },
+            "uploaded": "2019-07-14T15:32:26.244Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "74575254ae759f3f836eb521b4b80093ca52cd3d",
+                    "key": "56ff",
+                    "state": "Published",
+                    "createdAt": "2019-07-14T15:32:26.244Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 15.0,
+                            "offset": 0.0,
+                            "notes": 471,
+                            "bombs": 0,
+                            "obstacles": 784,
+                            "nps": 2.453,
+                            "length": 480.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 8440,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 192.0,
+                            "paritySummary": {
+                                "errors": 45,
+                                "warns": 32,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": 0.0,
+                            "notes": 569,
+                            "bombs": 0,
+                            "obstacles": 784,
+                            "nps": 2.964,
+                            "length": 480.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 8440,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 192.0,
+                            "paritySummary": {
+                                "errors": 53,
+                                "warns": 53,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/74575254ae759f3f836eb521b4b80093ca52cd3d.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/74575254ae759f3f836eb521b4b80093ca52cd3d.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/74575254ae759f3f836eb521b4b80093ca52cd3d.mp3"
+                }
+            ],
+            "createdAt": "2019-07-14T15:32:26.244Z",
+            "updatedAt": "2019-07-14T15:32:26.244Z",
+            "lastPublishedAt": "2019-07-14T15:32:26.244Z"
+        },
+        {
+            "id": "56fe",
+            "name": "Xilent - The Darkness",
+            "description": "Expert / Hard\nhttps://www.youtube.com/watch?v=QihiHZm6JeI\n(Reupload - Added \"Mapping Extensions\" requirement)",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 227,
+                "songName": "The Darkness",
+                "songSubName": "",
+                "songAuthorName": "Xilent",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1517,
+                "upvotes": 538,
+                "downvotes": 13,
+                "score": 0.9052
+            },
+            "uploaded": "2019-07-14T15:31:26.512Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "8c260c424d2c5601f6d64139715f935f704e4b29",
+                    "key": "56fe",
+                    "state": "Published",
+                    "createdAt": "2019-07-14T15:31:26.512Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 11.0,
+                            "offset": 0.0,
+                            "notes": 428,
+                            "bombs": 0,
+                            "obstacles": 1003,
+                            "nps": 1.985,
+                            "length": 539.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 7034,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 215.6,
+                            "paritySummary": {
+                                "errors": 36,
+                                "warns": 51,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 19.0,
+                            "offset": 0.0,
+                            "notes": 538,
+                            "bombs": 0,
+                            "obstacles": 1003,
+                            "nps": 2.495,
+                            "length": 539.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 7034,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 215.6,
+                            "paritySummary": {
+                                "errors": 50,
+                                "warns": 80,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/8c260c424d2c5601f6d64139715f935f704e4b29.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/8c260c424d2c5601f6d64139715f935f704e4b29.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/8c260c424d2c5601f6d64139715f935f704e4b29.mp3"
+                }
+            ],
+            "createdAt": "2019-07-14T15:31:26.512Z",
+            "updatedAt": "2019-07-14T15:31:26.512Z",
+            "lastPublishedAt": "2019-07-14T15:31:26.512Z"
+        },
+        {
+            "id": "56fd",
+            "name": "Xilent - Blue Shadows",
+            "description": "Expert / Hard\nhttps://youtu.be/PA8Rf1OKolI\n(Reupload - Added \"Mapping Extensions\" requirement)",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 194,
+                "songName": "Blue Shadows",
+                "songSubName": "",
+                "songAuthorName": "Xilent",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1686,
+                "upvotes": 522,
+                "downvotes": 30,
+                "score": 0.8791
+            },
+            "uploaded": "2019-07-14T15:30:51.408Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "c85c16376dfa3bed7288fcaa68297f151224567b",
+                    "key": "56fd",
+                    "state": "Published",
+                    "createdAt": "2019-07-14T15:30:51.408Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 12.0,
+                            "offset": 0.0,
+                            "notes": 416,
+                            "bombs": 0,
+                            "obstacles": 1096,
+                            "nps": 2.369,
+                            "length": 439.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 7675,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 175.6,
+                            "paritySummary": {
+                                "errors": 58,
+                                "warns": 44,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": 0.0,
+                            "notes": 665,
+                            "bombs": 0,
+                            "obstacles": 1096,
+                            "nps": 3.787,
+                            "length": 439.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 7675,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 175.6,
+                            "paritySummary": {
+                                "errors": 57,
+                                "warns": 43,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/c85c16376dfa3bed7288fcaa68297f151224567b.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/c85c16376dfa3bed7288fcaa68297f151224567b.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/c85c16376dfa3bed7288fcaa68297f151224567b.mp3"
+                }
+            ],
+            "createdAt": "2019-07-14T15:30:51.408Z",
+            "updatedAt": "2019-07-14T15:30:51.408Z",
+            "lastPublishedAt": "2019-07-14T15:30:51.408Z"
+        },
+        {
+            "id": "56fc",
+            "name": "Xilent - You Rise",
+            "description": "Expert / Hard\nhttps://youtu.be/ESJys1XAwjY\n(Reupload - Added \"Mapping Extensions\" requirement)",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 213,
+                "songName": "You Rise",
+                "songSubName": "",
+                "songAuthorName": "Xilent",
+                "levelAuthorName": "Rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 1373,
+                "upvotes": 488,
+                "downvotes": 17,
+                "score": 0.8948
+            },
+            "uploaded": "2019-07-14T15:30:06.277Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "efdc54725bca3471366b81e757978b17d03e05cc",
+                    "key": "56fc",
+                    "state": "Published",
+                    "createdAt": "2019-07-14T15:30:06.277Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 13.0,
+                            "offset": 1.0,
+                            "notes": 499,
+                            "bombs": 125,
+                            "obstacles": 620,
+                            "nps": 2.456,
+                            "length": 508.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 7141,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 203.2,
+                            "paritySummary": {
+                                "errors": 61,
+                                "warns": 37,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": 0.0,
+                            "notes": 628,
+                            "bombs": 125,
+                            "obstacles": 620,
+                            "nps": 3.091,
+                            "length": 508.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 7141,
+                            "chroma": false,
+                            "me": true,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 203.2,
+                            "paritySummary": {
+                                "errors": 54,
+                                "warns": 49,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/efdc54725bca3471366b81e757978b17d03e05cc.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/efdc54725bca3471366b81e757978b17d03e05cc.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/efdc54725bca3471366b81e757978b17d03e05cc.mp3"
+                }
+            ],
+            "createdAt": "2019-07-14T15:30:06.277Z",
+            "updatedAt": "2019-07-14T15:30:06.277Z",
+            "lastPublishedAt": "2019-07-14T15:30:06.277Z"
+        },
+        {
+            "id": "4bc8",
+            "name": "Mashd N Kutcher, AVADOX & Nick Havsen - Warfare",
+            "description": "Expert+\r\nhttps://youtu.be/Wvl85MDk8GQ",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 133,
+                "songName": "Warfare",
+                "songSubName": "Mashd N Kutcher, AVADOX & Nick Havsen",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 166,
+                "upvotes": 169,
+                "downvotes": 14,
+                "score": 0.8354
+            },
+            "uploaded": "2019-05-10T06:57:15Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "429d0f52d9ec40c4b47187cae3e7b72a5db97531",
+                    "key": "4bc8",
+                    "state": "Published",
+                    "createdAt": "2019-05-10T06:57:15Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 21.0,
+                            "offset": 0.0,
+                            "notes": 559,
+                            "bombs": 0,
+                            "obstacles": 259,
+                            "nps": 4.479,
+                            "length": 312.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 5044,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 124.8,
+                            "paritySummary": {
+                                "errors": 34,
+                                "warns": 52,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/429d0f52d9ec40c4b47187cae3e7b72a5db97531.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/429d0f52d9ec40c4b47187cae3e7b72a5db97531.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/429d0f52d9ec40c4b47187cae3e7b72a5db97531.mp3"
+                }
+            ],
+            "createdAt": "2019-05-10T06:57:15Z",
+            "updatedAt": "2019-05-10T06:57:15Z",
+            "lastPublishedAt": "2019-05-10T06:57:15Z"
+        },
+        {
+            "id": "4ab4",
+            "name": "Xilent - Mass Creation Ft. Youthstar",
+            "description": "Collaboration with Heisenberg. Expert / Hard / Normal\r\nhttps://www.youtube.com/watch?v=Kar7A1IHD8I",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 140.0,
+                "duration": 255,
+                "songName": "Mass Creation",
+                "songSubName": "Xilent Ft. Youthstar",
+                "songAuthorName": "Rustic & Heisenberg",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 499,
+                "upvotes": 136,
+                "downvotes": 16,
+                "score": 0.8079
+            },
+            "uploaded": "2019-05-05T09:42:30Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "3520768849ba7128ed10069ca5e2fd0aa4633c6f",
+                    "key": "4ab4",
+                    "state": "Published",
+                    "createdAt": "2019-05-05T09:42:30Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 13.0,
+                            "offset": 1.0,
+                            "notes": 588,
+                            "bombs": 89,
+                            "obstacles": 340,
+                            "nps": 2.369,
+                            "length": 579.2,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 12301,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 248.228,
+                            "paritySummary": {
+                                "errors": 49,
+                                "warns": 40,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 14.0,
+                            "offset": 1.0,
+                            "notes": 661,
+                            "bombs": 108,
+                            "obstacles": 360,
+                            "nps": 2.663,
+                            "length": 579.2,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 12301,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 248.228,
+                            "paritySummary": {
+                                "errors": 51,
+                                "warns": 38,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": 0.0,
+                            "notes": 783,
+                            "bombs": 126,
+                            "obstacles": 364,
+                            "nps": 3.154,
+                            "length": 579.2,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 12301,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 248.228,
+                            "paritySummary": {
+                                "errors": 35,
+                                "warns": 51,
+                                "resets": 7
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/3520768849ba7128ed10069ca5e2fd0aa4633c6f.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/3520768849ba7128ed10069ca5e2fd0aa4633c6f.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/3520768849ba7128ed10069ca5e2fd0aa4633c6f.mp3"
+                }
+            ],
+            "createdAt": "2019-05-05T09:42:30Z",
+            "updatedAt": "2019-05-05T09:42:30Z",
+            "lastPublishedAt": "2019-05-05T09:42:30Z"
+        },
+        {
+            "id": "4834",
+            "name": "Approaching Nirvana - Fragments",
+            "description": "Expert / Hard\r\nhttps://youtu.be/mKOhhlehhOw",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 174.0,
+                "duration": 154,
+                "songName": "Fragments",
+                "songSubName": "Approaching Nirvana",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 427,
+                "upvotes": 238,
+                "downvotes": 5,
+                "score": 0.8878
+            },
+            "uploaded": "2019-04-24T20:47:05Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "700d50135ca29f269f34dd52e58bb1870ddc1b69",
+                    "key": "4834",
+                    "state": "Published",
+                    "createdAt": "2019-04-24T20:47:05Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 14.0,
+                            "offset": 1.0,
+                            "notes": 367,
+                            "bombs": 0,
+                            "obstacles": 37,
+                            "nps": 2.558,
+                            "length": 416.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 4807,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 143.448,
+                            "paritySummary": {
+                                "errors": 32,
+                                "warns": 28,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": 1.0,
+                            "notes": 546,
+                            "bombs": 0,
+                            "obstacles": 44,
+                            "nps": 3.806,
+                            "length": 416.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 4807,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 143.448,
+                            "paritySummary": {
+                                "errors": 44,
+                                "warns": 40,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/700d50135ca29f269f34dd52e58bb1870ddc1b69.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/700d50135ca29f269f34dd52e58bb1870ddc1b69.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/700d50135ca29f269f34dd52e58bb1870ddc1b69.mp3"
+                }
+            ],
+            "createdAt": "2019-04-24T20:47:05Z",
+            "updatedAt": "2019-04-24T20:47:05Z",
+            "lastPublishedAt": "2019-04-24T20:47:05Z"
+        },
+        {
+            "id": "47fa",
+            "name": "Approaching Nirvana - Another World",
+            "description": "Expert / Hard / Normal\r\nhttps://www.youtube.com/watch?v=x1AJKvnjG2w",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 140.0,
+                "duration": 175,
+                "songName": "Another World",
+                "songSubName": "Approaching Nirvana",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 362,
+                "upvotes": 238,
+                "downvotes": 6,
+                "score": 0.8847
+            },
+            "uploaded": "2019-04-23T13:45:08Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "53356b0deed2d8d51d46c4939ffd411fe339ecb8",
+                    "key": "47fa",
+                    "state": "Published",
+                    "createdAt": "2019-04-23T13:45:08Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 1.0,
+                            "notes": 358,
+                            "bombs": 0,
+                            "obstacles": 24,
+                            "nps": 2.175,
+                            "length": 384.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 2026,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 164.571,
+                            "paritySummary": {
+                                "errors": 46,
+                                "warns": 40,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 1.0,
+                            "notes": 409,
+                            "bombs": 0,
+                            "obstacles": 25,
+                            "nps": 2.485,
+                            "length": 384.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2026,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 164.571,
+                            "paritySummary": {
+                                "errors": 49,
+                                "warns": 41,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": 1.0,
+                            "notes": 447,
+                            "bombs": 0,
+                            "obstacles": 28,
+                            "nps": 2.716,
+                            "length": 384.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2026,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 164.571,
+                            "paritySummary": {
+                                "errors": 48,
+                                "warns": 35,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/53356b0deed2d8d51d46c4939ffd411fe339ecb8.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/53356b0deed2d8d51d46c4939ffd411fe339ecb8.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/53356b0deed2d8d51d46c4939ffd411fe339ecb8.mp3"
+                }
+            ],
+            "createdAt": "2019-04-23T13:45:08Z",
+            "updatedAt": "2019-04-23T13:45:08Z",
+            "lastPublishedAt": "2019-04-23T13:45:08Z"
+        },
+        {
+            "id": "442e",
+            "name": "Muzzy & Teddy Killerz - Shut it Down",
+            "description": "Expert+ / Expert\r\nhttps://www.youtube.com/watch?v=Pw6dZ8-Ctz0",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 175.0,
+                "duration": 215,
+                "songName": "Shut it Down",
+                "songSubName": "Muzzy & Teddy Killerz",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2739,
+                "upvotes": 621,
+                "downvotes": 37,
+                "score": 0.8809
+            },
+            "uploaded": "2019-04-07T21:08:19Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "7c8386fe26e465cb134f0052e57227dd6311849c",
+                    "key": "442e",
+                    "state": "Published",
+                    "createdAt": "2019-04-07T21:08:19Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 13.0,
+                            "offset": 0.0,
+                            "notes": 768,
+                            "bombs": 0,
+                            "obstacles": 55,
+                            "nps": 3.672,
+                            "length": 610.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 8687,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 209.143,
+                            "paritySummary": {
+                                "errors": 80,
+                                "warns": 71,
+                                "resets": 0
+                            }
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": 1.0,
+                            "notes": 826,
+                            "bombs": 0,
+                            "obstacles": 55,
+                            "nps": 3.949,
+                            "length": 610.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 8687,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 209.143,
+                            "paritySummary": {
+                                "errors": 83,
+                                "warns": 58,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/7c8386fe26e465cb134f0052e57227dd6311849c.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/7c8386fe26e465cb134f0052e57227dd6311849c.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/7c8386fe26e465cb134f0052e57227dd6311849c.mp3"
+                }
+            ],
+            "createdAt": "2019-04-07T21:08:19Z",
+            "updatedAt": "2019-04-07T21:08:19Z",
+            "lastPublishedAt": "2019-04-07T21:08:19Z"
+        },
+        {
+            "id": "37b6",
+            "name": "MYRNE & Grant - Fault (Feat. McCall)",
+            "description": "Expert+\r\nhttps://www.youtube.com/watch?v=Yyx60gy4viI",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 98.0,
+                "duration": 240,
+                "songName": "Fault",
+                "songSubName": "MYRNE & Grant Feat. McCall",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 259,
+                "upvotes": 97,
+                "downvotes": 9,
+                "score": 0.8134
+            },
+            "uploaded": "2019-02-19T09:14:29Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "a2f48c09714389f37ea3fa1e905005ad457ea5fc",
+                    "key": "37b6",
+                    "state": "Published",
+                    "createdAt": "2019-02-19T09:14:29Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 19.0,
+                            "offset": 1.0,
+                            "notes": 662,
+                            "bombs": 0,
+                            "obstacles": 58,
+                            "nps": 2.819,
+                            "length": 383.5,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 3379,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 234.796,
+                            "paritySummary": {
+                                "errors": 74,
+                                "warns": 71,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/a2f48c09714389f37ea3fa1e905005ad457ea5fc.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/a2f48c09714389f37ea3fa1e905005ad457ea5fc.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/a2f48c09714389f37ea3fa1e905005ad457ea5fc.mp3"
+                }
+            ],
+            "createdAt": "2019-02-19T09:14:29Z",
+            "updatedAt": "2019-02-19T09:14:29Z",
+            "lastPublishedAt": "2019-02-19T09:14:29Z"
+        },
+        {
+            "id": "3781",
+            "name": "Lookas - Can't Get Enough",
+            "description": "Expert +\r\nhttps://www.youtube.com/watch?v=4ljjnlEZcV4",
+            "uploader": {
+                "id": 12996,
+                "name": "rustic",
+                "uniqueSet": true,
+                "hash": "5cff0b7298cc5a672c84e8c4",
+                "avatar": "https://www.gravatar.com/avatar/5cff0b7298cc5a672c84e8c4?d=retro",
+                "type": "SIMPLE"
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 193,
+                "songName": "Can't Get Enough",
+                "songSubName": "Lookas",
+                "songAuthorName": "Rustic",
+                "levelAuthorName": "rustic"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 2341,
+                "upvotes": 295,
+                "downvotes": 66,
+                "score": 0.7633
+            },
+            "uploaded": "2019-02-18T20:31:46Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "82ff9811ce5c699b852d5d7174ae8b93792cc97c",
+                    "key": "3781",
+                    "state": "Published",
+                    "createdAt": "2019-02-18T20:31:46Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 21.0,
+                            "offset": 1.0,
+                            "notes": 607,
+                            "bombs": 0,
+                            "obstacles": 45,
+                            "nps": 3.27,
+                            "length": 464.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 4311,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 185.6,
+                            "paritySummary": {
+                                "errors": 40,
+                                "warns": 41,
+                                "resets": 0
+                            }
+                        }
+                    ],
+                    "downloadURL": "https://na.cdn.beatsaver.com/82ff9811ce5c699b852d5d7174ae8b93792cc97c.zip",
+                    "coverURL": "https://na.cdn.beatsaver.com/82ff9811ce5c699b852d5d7174ae8b93792cc97c.jpg",
+                    "previewURL": "https://na.cdn.beatsaver.com/82ff9811ce5c699b852d5d7174ae8b93792cc97c.mp3"
+                }
+            ],
+            "createdAt": "2019-02-18T20:31:46Z",
+            "updatedAt": "2019-02-18T20:31:46Z",
+            "lastPublishedAt": "2019-02-18T20:31:46Z"
+        }
+    ]
+}
