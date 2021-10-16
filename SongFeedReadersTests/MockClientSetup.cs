@@ -127,7 +127,10 @@ namespace SongFeedReadersTests
         {
             Directory.CreateDirectory("ResponseData");
             return new MockClient("ResponseData", UriToPath)
-            ;//.WithRecordingClient(new HttpClientWrapper("SongFeedReaders.Tests/1.0.0"));
+#if !NCRUNCH
+            //.WithRecordingClient(new HttpClientWrapper("SongFeedReaders.Tests/1.0.0"));
+#endif
+                ;
         }
 
 
