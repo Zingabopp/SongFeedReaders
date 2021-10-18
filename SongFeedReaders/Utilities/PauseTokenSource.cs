@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SongFeedReaders.Logging;
+using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,10 +9,19 @@ namespace SongFeedReaders.Utilities
     /// <summary>
     /// Represents a central place to manage a paused state.
     /// </summary>
-    public class PauseTokenSource
+    public sealed class PauseTokenSource
     {
         private readonly object _lock = new object();
+        private readonly ILogger? _logger;
         private TaskCompletionSource<bool> _tcs = new TaskCompletionSource<bool>();
+        /// <summary>
+        /// Raised the status changes to paused.
+        /// </summary>
+        public event EventHandler? Paused;
+        /// <summary>
+        /// Raised when the last pause token is disposed.
+        /// </summary>
+        public event EventHandler? Resumed;
         private readonly ConcurrentDictionary<Guid, object?> _pauseRequests = new ConcurrentDictionary<Guid, object?>();
         /// <summary>
         /// Gets a <see cref="PauseToken"/> associated with this <see cref="PauseTokenSource"/>
@@ -25,20 +35,42 @@ namespace SongFeedReaders.Utilities
             _tcs.TrySetResult(true);
         }
         /// <summary>
+        /// Creates a new <see cref="PauseTokenSource"/>.
+        /// </summary>
+        /// <param name="logFactory"></param>
+        public PauseTokenSource(ILogFactory logFactory)
+            : this()
+        {
+            _logger = logFactory.GetLogger(GetType().Name);
+        }
+        /// <summary>
+        /// Creates a new <see cref="PauseTokenSource"/>.
+        /// </summary>
+        /// <param name="logger"></param>
+        public PauseTokenSource(ILogger logger)
+            : this()
+        {
+            _logger = logger;
+        }
+        /// <summary>
         /// Requests a pause and returns a <see cref="PauseRegistration"/>.
         /// All <see cref="PauseRegistration"/>s must be disposed to enter a resumed state.
         /// </summary>
         /// <returns></returns>
         public PauseRegistration Pause()
         {
-            Guid guid = new Guid();
-            while (!_pauseRequests.TryAdd(guid, null)) { guid = new Guid(); }
+            Guid guid = Guid.NewGuid();
+            while (!_pauseRequests.TryAdd(guid, null)) { guid = Guid.NewGuid(); }
+#if DEBUG || NCRUNCH
+            _logger?.Debug($"Paused requested. Current requests: {_pauseRequests.Count}");
+#endif
             lock (_lock)
             {
                 if (!_pauseRequests.IsEmpty && _tcs.Task.IsCompleted)
                 {
                     TaskCompletionSource<bool> newTcs = new TaskCompletionSource<bool>();
                     TaskCompletionSource<bool> oldTcs = Interlocked.Exchange(ref _tcs, newTcs);
+                    Paused?.RaiseEventSafe(this, nameof(Paused), _logger);
                 }
             }
             return new PauseRegistration(guid, this);
@@ -50,12 +82,16 @@ namespace SongFeedReaders.Utilities
         }
         internal void DisposeRegistration(Guid guid)
         {
-            _pauseRequests.TryRemove(guid, out _);
             lock (_lock)
             {
+                _pauseRequests.TryRemove(guid, out _);
+#if DEBUG || NCRUNCH
+                _logger?.Debug($"Paused disposed. Current requests: {_pauseRequests.Count}");
+#endif
                 if (_pauseRequests.IsEmpty)
                 {
                     _tcs.TrySetResult(true);
+                    Resumed?.RaiseEventSafe(this, nameof(Paused), _logger);
                 }
             }
         }
@@ -119,7 +155,7 @@ namespace SongFeedReaders.Utilities
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task WaitForPause(CancellationToken cancellationToken)
+        public async Task WaitForPauseAsync(CancellationToken cancellationToken)
         {
             if (!CanPause || _source == null)
                 return;

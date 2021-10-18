@@ -180,8 +180,17 @@ namespace SongFeedReadersTests
         {
             ILogFactory logFactory = Utilities.DefaultLogFactory;
             IWebClient client = MockClientSetup.GetMockClient();
-            var logger = logFactory.GetLogger();
-            PauseTokenSource pts = new PauseTokenSource();
+            var logger = logFactory.GetLogger(GetType().Name);
+            PauseTokenSource pts = new PauseTokenSource(logger);
+            CancellationTokenSource cts = new CancellationTokenSource();
+            pts.Paused += (s, e) =>
+            {
+                logger.Info($"----Paused-----");
+            };
+            pts.Resumed += (s, e) =>
+            {
+                logger.Info($"----Resumed----");
+            };
             int maxSongs = 100;
             BeastSaberPageHandler pageHandler = new BeastSaberPageHandler();
             BeastSaberCuratorSettings feedSettings = new BeastSaberCuratorSettings()
@@ -195,9 +204,11 @@ namespace SongFeedReadersTests
             {
                 logger.Info($"{r.SongsOnPage} songs read on page '{r.Uri}'");
                 using var reg = pts.Pause();
+                logger.Info($"Pausing for 2s");
                 await Task.Delay(2000);
+                logger.Info($"Finished pausing");
             });
-            FeedResult? result = await feed.ReadAsync(progress, pts.Token, CancellationToken.None).ConfigureAwait(false);
+            FeedResult? result = await feed.ReadAsync(progress, pts.Token, cts.Token).ConfigureAwait(false);
             Assert.IsTrue(result.Count > 0);
             PageReadResult[]? pages = result.GetResults().ToArray();
             SongFeedReaders.Models.ScrapedSong[]? songs = result.GetSongs().ToArray();

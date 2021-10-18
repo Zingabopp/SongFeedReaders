@@ -188,7 +188,7 @@ namespace SongFeedReaders.Feeds
                             sw.Start();
                             Logger?.Debug($"Pause is requested.");
                         }
-                        await pauseToken.WaitForPause(cancellationToken).ConfigureAwait(false);
+                        await pauseToken.WaitForPauseAsync(cancellationToken).ConfigureAwait(false);
                         if (sw != null)
                         {
                             sw.Stop();
