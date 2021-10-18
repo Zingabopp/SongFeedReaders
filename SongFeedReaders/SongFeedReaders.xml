@@ -3437,6 +3437,16 @@
             Represents a central place to manage a paused state.
             </summary>
         </member>
+        <member name="E:SongFeedReaders.Utilities.PauseTokenSource.Paused">
+            <summary>
+            Raised the status changes to paused.
+            </summary>
+        </member>
+        <member name="E:SongFeedReaders.Utilities.PauseTokenSource.Resumed">
+            <summary>
+            Raised when the last pause token is disposed.
+            </summary>
+        </member>
         <member name="P:SongFeedReaders.Utilities.PauseTokenSource.Token">
             <summary>
             Gets a <see cref="T:SongFeedReaders.Utilities.PauseToken"/> associated with this <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>
@@ -3446,6 +3456,18 @@
             <summary>
             Creates a new <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>.
             </summary>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.PauseTokenSource.#ctor(SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>.
+            </summary>
+            <param name="logFactory"></param>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.PauseTokenSource.#ctor(SongFeedReaders.Logging.ILogger)">
+            <summary>
+            Creates a new <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>.
+            </summary>
+            <param name="logger"></param>
         </member>
         <member name="M:SongFeedReaders.Utilities.PauseTokenSource.Pause">
             <summary>
@@ -3487,7 +3509,7 @@
             Returns true if the associated <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/> state is paused.
             </summary>
         </member>
-        <member name="M:SongFeedReaders.Utilities.PauseToken.WaitForPause(System.Threading.CancellationToken)">
+        <member name="M:SongFeedReaders.Utilities.PauseToken.WaitForPauseAsync(System.Threading.CancellationToken)">
             <summary>
             Returns a <see cref="T:System.Threading.Tasks.Task"/> that will complete when the associated <see cref="T:SongFeedReaders.Utilities.PauseTokenSource"/>
             is unpaused, or the given <paramref name="cancellationToken"/> is cancelled.
@@ -3513,6 +3535,26 @@
             </summary>
             <param name="dateTime"></param>
             <returns></returns>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.Util.RaiseEventSafe(System.EventHandler,System.Object,System.String,SongFeedReaders.Logging.ILogger)">
+            <summary>
+            Raises an event, catching any exceptions that occur, optionally logging any exceptions.
+            </summary>
+            <param name="e"></param>
+            <param name="sender"></param>
+            <param name="eventName"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SongFeedReaders.Utilities.Util.RaiseEventSafe``1(System.EventHandler{``0},System.Object,``0,System.String,SongFeedReaders.Logging.ILogger)">
+            <summary>
+            Raises an event, catching any exceptions that occur, optionally logging any exceptions.
+            </summary>
+            <typeparam name="TArgs"></typeparam>
+            <param name="e"></param>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <param name="eventName"></param>
+            <param name="logger"></param>
         </member>
     </members>
 </doc>
