@@ -13,7 +13,7 @@ namespace SongFeedReaders.Logging
         /// <summary>
         /// Settings for the logger.
         /// </summary>
-        protected LoggerSettings loggerSettings;
+        protected readonly LoggerSettings loggerSettings;
 
         /// <summary>
         /// Creates a new <see cref="FeedReaderLogger"/>.

@@ -8,7 +8,6 @@ namespace SongFeedReaders.Logging
     /// </summary>
     public interface ILogger
     {
-
         /// <summary>
         /// Logs a message at the given level.
         /// </summary>
