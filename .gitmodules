@@ -1,3 +1,3 @@
 [submodule "submodules/WebUtilities"]
 	path = submodules/WebUtilities
-	url = git@github.com:Zingabopp/WebUtilities.git
+	url = https://github.com/Zingabopp/WebUtilities.git
