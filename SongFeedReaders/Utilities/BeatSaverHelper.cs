@@ -30,7 +30,7 @@ namespace SongFeedReaders.Utilities
                     beatSaverUri = value;
                     beatSaverApiUri = new Uri($"{value.Scheme}://api.{value.Host}", UriKind.Absolute);
                     beatSaverDownloadUri = new Uri($"{value.Scheme}://cdn.{value.Host}", UriKind.Absolute);
-                    beatSaverDetailsFromKeyBaseUrl = new Uri(beatSaverApiUri, "/maps/beatsaver/");
+                    beatSaverDetailsFromKeyBaseUrl = new Uri(beatSaverApiUri, "/maps/id/");
                     beatSaverDetailsFromHashBaseUrl = new Uri(beatSaverApiUri, "/maps/hash/");
                 }
             }
