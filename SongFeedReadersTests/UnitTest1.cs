@@ -82,6 +82,29 @@ namespace SongFeedReadersTests
         }
 
         [TestMethod]
+        public async Task TestBeatSaverCurated()
+        {
+            ILogFactory logFactory = Utilities.DefaultLogFactory;
+            IWebClient client = MockClientSetup.GetMockClient();
+            int maxSongs = 57;
+            BeatSaverPageHandler pageHandler = new BeatSaverPageHandler();
+            BeatSaverCuratorSettings feedSettings = new BeatSaverCuratorSettings()
+            {
+                MaxSongs = maxSongs
+            };
+            BeatSaverCuratorFeed? feed = new BeatSaverCuratorFeed(pageHandler, client, logFactory);
+            feed.TryAssignSettings(feedSettings);
+            await feed.InitializeAsync(CancellationToken.None);
+            FeedResult? result = await feed.ReadAsync(PauseToken.None, CancellationToken.None).ConfigureAwait(false);
+            Assert.IsTrue(result.Count > 0);
+            PageReadResult[]? pages = result.GetResults().ToArray();
+            SongFeedReaders.Models.ScrapedSong[]? songs = result.GetSongs().ToArray();
+            Assert.IsTrue(pages.Length > 0);
+            Assert.AreEqual(maxSongs, songs.Length);
+            
+        }
+
+        [TestMethod]
         public async Task TestBeatSaverMapper()
         {
             ILogFactory logFactory = Utilities.DefaultLogFactory;

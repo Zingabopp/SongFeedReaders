@@ -50,9 +50,9 @@ namespace SongFeedReadersTests
                 var queries = GetQueries(uri);
                 string? before = queries["before"];
                 string? after = queries["after"];
-
-                path = Path.Combine(path, $"latest-b={before}a={after}".Replace(':', '_'));
-
+                
+                string prefix = queries.Get("sort") == "CURATED" ? "curated" : "latest";
+                path = Path.Combine(path, $"{prefix}-b={before}a={after}".Replace(':', '_'));
             }
             else
             {

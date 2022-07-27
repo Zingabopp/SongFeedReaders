@@ -1,0 +1,2560 @@
+{
+    "docs": [
+        {
+            "id": "28327",
+            "name": "Kankei Night Funky - Nanahoshi Kangen Gakudan feat.GUMI / カンケイナイトファンキー - ナナホシ管弦楽団",
+            "description": "",
+            "uploader": {
+                "id": 4285360,
+                "name": "kanahebi255",
+                "hash": "5eac2ace7abb000006be6e59",
+                "avatar": "https://cdn.beatsaver.com/avatar/412603693624590347.png",
+                "type": "DISCORD",
+                "curator": false
+            },
+            "metadata": {
+                "bpm": 216.0,
+                "duration": 216,
+                "songName": "Kankei Night Funky",
+                "songSubName": "",
+                "songAuthorName": "Nanahoshi Kangen Gakudan feat.GUMI",
+                "levelAuthorName": "Kanahebi"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 10,
+                "downvotes": 0,
+                "score": 0.7571
+            },
+            "uploaded": "2022-07-27T05:10:16.642822Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "a46182b7ca4be068672179bb4146a62d3574b0a0",
+                    "state": "Published",
+                    "createdAt": "2022-07-27T05:05:46.098297Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 17.0,
+                            "offset": 0.0,
+                            "notes": 1171,
+                            "bombs": 0,
+                            "obstacles": 107,
+                            "nps": 5.823,
+                            "length": 724.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 4618,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 201.111,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 5,
+                                "resets": 0
+                            },
+                            "maxScore": 1070075
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/a46182b7ca4be068672179bb4146a62d3574b0a0.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/a46182b7ca4be068672179bb4146a62d3574b0a0.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/a46182b7ca4be068672179bb4146a62d3574b0a0.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-27T16:41:12.639941Z",
+            "createdAt": "2022-07-27T05:05:46.098297Z",
+            "updatedAt": "2022-07-27T16:41:12.639941Z",
+            "lastPublishedAt": "2022-07-27T05:10:16.642822Z",
+            "tags": [
+                "balanced",
+                "tech",
+                "vocaloid"
+            ]
+        },
+        {
+            "id": "28337",
+            "name": "【Windows】RED_ZONE.exe",
+            "description": "cinema included\n\n【Windows】RED_ZONE.exeが本気を出したみたいです\nhttps://www.nicovideo.jp/watch/sm21191000",
+            "uploader": {
+                "id": 69424,
+                "name": "Ge2toro",
+                "hash": "6031ff00b85f2d00062bfdc9",
+                "avatar": "https://cdn.beatsaver.com/avatar/69424.jpg",
+                "type": "SIMPLE",
+                "curator": false
+            },
+            "metadata": {
+                "bpm": 165.0,
+                "duration": 111,
+                "songName": "RED_ZONE.exe",
+                "songSubName": "",
+                "songAuthorName": "YuZXs",
+                "levelAuthorName": "Ge2toro"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 13,
+                "downvotes": 0,
+                "score": 0.7741
+            },
+            "uploaded": "2022-07-27T10:05:13.321951Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "2fec0f60df38f98c20e118e90fd1379c39e019d6",
+                    "state": "Published",
+                    "createdAt": "2022-07-27T10:02:36.340285Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 16.0,
+                            "offset": 0.0,
+                            "notes": 552,
+                            "bombs": 13,
+                            "obstacles": 67,
+                            "nps": 5.271,
+                            "length": 288.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 4049,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": true,
+                            "seconds": 104.727,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 500595
+                        },
+                        {
+                            "njs": 19.0,
+                            "offset": -0.5,
+                            "notes": 884,
+                            "bombs": 44,
+                            "obstacles": 51,
+                            "nps": 8.441,
+                            "length": 288.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 4049,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": true,
+                            "seconds": 104.727,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 4
+                            },
+                            "maxScore": 806035
+                        },
+                        {
+                            "njs": 20.0,
+                            "offset": -0.65,
+                            "notes": 1033,
+                            "bombs": 53,
+                            "obstacles": 54,
+                            "nps": 9.864,
+                            "length": 288.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 4049,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": true,
+                            "seconds": 104.727,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 10
+                            },
+                            "maxScore": 943115
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/2fec0f60df38f98c20e118e90fd1379c39e019d6.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/2fec0f60df38f98c20e118e90fd1379c39e019d6.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/2fec0f60df38f98c20e118e90fd1379c39e019d6.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-27T16:40:45.821846Z",
+            "createdAt": "2022-07-27T10:02:36.340285Z",
+            "updatedAt": "2022-07-27T16:40:45.821846Z",
+            "lastPublishedAt": "2022-07-27T10:05:13.321951Z",
+            "tags": [
+                "speed",
+                "comedy-meme"
+            ]
+        },
+        {
+            "id": "2834a",
+            "name": "クランベリーパレード feat. 初音ミク&音街ウナ - 小宮かふぃー(Komiya Cofey)",
+            "description": "クランベリーパレード/初音ミク&音街ウナ　Cranberry parade/Hatsune Miku&Otomachi Una\nhttps://www.youtube.com/watch?v=NZSNURkWvhc\n\nThank yas for testplaying!!!",
+            "uploader": {
+                "id": 4284977,
+                "name": "misterlihao",
+                "hash": "603eeb4546eb150006d9e8c7",
+                "avatar": "https://cdn.beatsaver.com/avatar/638756917006696448.png",
+                "type": "DISCORD",
+                "curator": false
+            },
+            "metadata": {
+                "bpm": 236.0,
+                "duration": 208,
+                "songName": "クランベリーパレード",
+                "songSubName": "feat. 初音ミク&音街ウナ",
+                "songAuthorName": "Komiya Cofey",
+                "levelAuthorName": "misterlihao"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 5,
+                "downvotes": 0,
+                "score": 0.7084
+            },
+            "uploaded": "2022-07-27T14:51:22.893961Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "467fbd9f3551294a4120b2b27d890314082b2d97",
+                    "state": "Published",
+                    "createdAt": "2022-07-27T14:43:25.260280Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 15.0,
+                            "offset": -1.3,
+                            "notes": 793,
+                            "bombs": 8,
+                            "obstacles": 144,
+                            "nps": 3.951,
+                            "length": 789.438,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1298,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 200.705,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 3
+                            },
+                            "maxScore": 722315
+                        },
+                        {
+                            "njs": 17.5,
+                            "offset": -1.56,
+                            "notes": 1078,
+                            "bombs": 8,
+                            "obstacles": 144,
+                            "nps": 5.371,
+                            "length": 789.438,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 1298,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 200.705,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 2
+                            },
+                            "maxScore": 984515
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/467fbd9f3551294a4120b2b27d890314082b2d97.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/467fbd9f3551294a4120b2b27d890314082b2d97.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/467fbd9f3551294a4120b2b27d890314082b2d97.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-27T16:40:35.245668Z",
+            "createdAt": "2022-07-27T14:43:25.260280Z",
+            "updatedAt": "2022-07-27T16:40:35.245668Z",
+            "lastPublishedAt": "2022-07-27T14:51:22.893961Z",
+            "tags": [
+                "vocaloid",
+                "dance-style",
+                "balanced"
+            ]
+        },
+        {
+            "id": "282e9",
+            "name": "Laur - DANGEROOOOUS JUNGLE (Denyah's Short Ver)",
+            "description": "thanks complex you basically did this \n\nhitbox abuse my beloved",
+            "uploader": {
+                "id": 1834,
+                "name": "denyah_",
+                "hash": "5dbcd0d55e46680006bf6fdb",
+                "avatar": "https://cdn.beatsaver.com/avatar/1834.jpg",
+                "type": "SIMPLE",
+                "curator": false
+            },
+            "metadata": {
+                "bpm": 320.0,
+                "duration": 65,
+                "songName": "DANGEROOOOUS JUNGLE",
+                "songSubName": "",
+                "songAuthorName": "Laur",
+                "levelAuthorName": "Denyah_"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 6,
+                "downvotes": 3,
+                "score": 0.5833
+            },
+            "uploaded": "2022-07-26T15:34:45.209734Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "c5c80fee94efc769b5a3ab2f2d4fe6b971df4c98",
+                    "state": "Published",
+                    "createdAt": "2022-07-26T15:24:33.884384Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 20.0,
+                            "offset": -1.3,
+                            "notes": 633,
+                            "bombs": 48,
+                            "obstacles": 94,
+                            "nps": 10.355,
+                            "length": 326.031,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 2232,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 61.131,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 16,
+                                "resets": 12
+                            },
+                            "maxScore": 575115
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/c5c80fee94efc769b5a3ab2f2d4fe6b971df4c98.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/c5c80fee94efc769b5a3ab2f2d4fe6b971df4c98.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/c5c80fee94efc769b5a3ab2f2d4fe6b971df4c98.mp3"
+                }
+            ],
+            "curator": {
+                "id": 4284445,
+                "name": "emilia",
+                "hash": "5cff0b7898cc5a672c856ed3",
+                "avatar": "https://cdn.beatsaver.com/avatar/423941577996501005.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-27T08:11:58.333696Z",
+            "createdAt": "2022-07-26T15:24:33.884384Z",
+            "updatedAt": "2022-07-27T08:11:58.333696Z",
+            "lastPublishedAt": "2022-07-26T15:34:45.209734Z",
+            "tags": [
+                "tech",
+                "speed",
+                "speedcore"
+            ]
+        },
+        {
+            "id": "2830b",
+            "name": "Empire Ants - Gorillaz",
+            "description": "Mapped by ramenator05. Uses mapping version 3 (arcs and chains)\n\nThis is my favorite song of all time and I'm really happy with how it turned out. \n\nMy hope is that playing this map will give you the same feeling this song gives me. \n\nThanks to @swukpuff for playtesting",
+            "uploader": {
+                "id": 4232648,
+                "name": "ramenator05",
+                "hash": "60ecf439686b9f0006a67a41",
+                "avatar": "https://cdn.beatsaver.com/avatar/4232648.jpg",
+                "type": "SIMPLE",
+                "curator": false
+            },
+            "metadata": {
+                "bpm": 99.45,
+                "duration": 286,
+                "songName": "Empire Ants - Gorillaz",
+                "songSubName": "",
+                "songAuthorName": "Gorillaz",
+                "levelAuthorName": "ramenator05"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 12,
+                "downvotes": 3,
+                "score": 0.6698
+            },
+            "uploaded": "2022-07-26T22:32:00.756935Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "47d74cb4ac8c3c8db3991edd724e3398d287b6bd",
+                    "state": "Published",
+                    "createdAt": "2022-07-26T22:29:28.506715Z",
+                    "sageScore": 2,
+                    "diffs": [
+                        {
+                            "njs": 15.0,
+                            "offset": 0.4,
+                            "notes": 486,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 1.74,
+                            "length": 463.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 3389,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 279.336,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 459375
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": 0.3,
+                            "notes": 620,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 2.226,
+                            "length": 461.75,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 3389,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 278.582,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 612805
+                        },
+                        {
+                            "njs": 19.0,
+                            "offset": 0.3,
+                            "notes": 634,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 2.276,
+                            "length": 461.75,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 3389,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 278.582,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 626245
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/47d74cb4ac8c3c8db3991edd724e3398d287b6bd.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/47d74cb4ac8c3c8db3991edd724e3398d287b6bd.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/47d74cb4ac8c3c8db3991edd724e3398d287b6bd.mp3"
+                }
+            ],
+            "curator": {
+                "id": 32269,
+                "name": "maybeemae",
+                "hash": "5e1123516d774b0006a953ec",
+                "avatar": "https://cdn.beatsaver.com/avatar/32269.jpg",
+                "type": "SIMPLE",
+                "curator": true
+            },
+            "curatedAt": "2022-07-27T05:15:48.354983Z",
+            "createdAt": "2022-07-26T22:29:28.506715Z",
+            "updatedAt": "2022-07-27T05:15:48.354983Z",
+            "lastPublishedAt": "2022-07-26T22:32:00.756935Z",
+            "tags": [
+                "balanced",
+                "dance-style",
+                "pop",
+                "ambient"
+            ]
+        },
+        {
+            "id": "282ba",
+            "name": "Giga - CH4NGE (Finana Ryugu Cover)",
+            "description": "Man this is such a good cover, tried to have this as more of a successor to tsunami with techier mapping.",
+            "uploader": {
+                "id": 4284782,
+                "name": "ashad",
+                "hash": "5cff0b7498cc5a672c850a45",
+                "avatar": "https://cdn.beatsaver.com/avatar/264896450788327424.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 115.0,
+                "duration": 136,
+                "songName": "CH4NGE",
+                "songSubName": "(Finana Ryugu Cover)",
+                "songAuthorName": "Giga",
+                "levelAuthorName": "shad"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 17,
+                "downvotes": 1,
+                "score": 0.7613
+            },
+            "uploaded": "2022-07-26T19:16:00.908884Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "3eb7fdf9ad13934dd06f1be7ca6ebe77d6ab4d32",
+                    "state": "Published",
+                    "createdAt": "2022-07-26T00:11:08.956179Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 13.0,
+                            "offset": 0.3,
+                            "notes": 210,
+                            "bombs": 0,
+                            "obstacles": 17,
+                            "nps": 1.623,
+                            "length": 248.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 29751,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": true,
+                            "seconds": 129.391,
+                            "paritySummary": {
+                                "errors": 2,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 185955
+                        },
+                        {
+                            "njs": 14.0,
+                            "offset": -0.215,
+                            "notes": 294,
+                            "bombs": 8,
+                            "obstacles": 100,
+                            "nps": 2.272,
+                            "length": 248.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 29752,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": true,
+                            "seconds": 129.391,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 263235
+                        },
+                        {
+                            "njs": 15.0,
+                            "offset": -0.525,
+                            "notes": 354,
+                            "bombs": 16,
+                            "obstacles": 130,
+                            "nps": 2.736,
+                            "length": 248.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 29752,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": true,
+                            "seconds": 129.391,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 318435
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": -0.8,
+                            "notes": 401,
+                            "bombs": 16,
+                            "obstacles": 162,
+                            "nps": 3.099,
+                            "length": 248.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 29752,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": true,
+                            "seconds": 129.391,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 361675
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.925,
+                            "notes": 490,
+                            "bombs": 16,
+                            "obstacles": 213,
+                            "nps": 3.787,
+                            "length": 248.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 29752,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": true,
+                            "seconds": 129.391,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 3,
+                                "resets": 1
+                            },
+                            "maxScore": 443555
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/3eb7fdf9ad13934dd06f1be7ca6ebe77d6ab4d32.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/3eb7fdf9ad13934dd06f1be7ca6ebe77d6ab4d32.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/3eb7fdf9ad13934dd06f1be7ca6ebe77d6ab4d32.mp3"
+                }
+            ],
+            "curator": {
+                "id": 4284201,
+                "name": "nitronik.exe",
+                "hash": "5cff0b7798cc5a672c855d84",
+                "avatar": "https://cdn.beatsaver.com/avatar/428230049704181760.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-26T19:53:33.409187Z",
+            "createdAt": "2022-07-26T00:11:08.956179Z",
+            "updatedAt": "2022-07-26T19:53:33.409187Z",
+            "lastPublishedAt": "2022-07-26T19:16:00.908884Z"
+        },
+        {
+            "id": "2796c",
+            "name": "[Chroma] S3RL - Doki Doki ドキドキ ft. Kawaiiconic",
+            "description": "Thanks to S3RL for letting us map his track! https://fanlink.to/S3RL\nBuy it here: https://djs3rl.com/shop/songs\n\nPreview: https://youtu.be/JrpC2iEYcls\n\nMapping Credits:\n@xScaramouche (Expert++/Expert+)\n@Alice (Expert-Normal, Lightshow)\n\nhave a nice day :D",
+            "uploader": {
+                "id": 4284904,
+                "name": "xScaramouche",
+                "hash": "5cff0b7798cc5a672c8558ed",
+                "avatar": "https://cdn.beatsaver.com/avatar/227538798387527680.png",
+                "type": "DISCORD",
+                "curator": false,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 175.0,
+                "duration": 181,
+                "songName": "Doki Doki ドキドキ",
+                "songSubName": "ft. Kawaiiconic",
+                "songAuthorName": "S3RL",
+                "levelAuthorName": "xScaramouche & Alice"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 26,
+                "downvotes": 1,
+                "score": 0.7932
+            },
+            "uploaded": "2022-07-26T18:00:00.909226Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "6f0eb7e9c585f2f7d7659469a0453b3d050d88a2",
+                    "state": "Published",
+                    "createdAt": "2022-07-25T05:01:35.784300Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 12.0,
+                            "offset": -0.75,
+                            "notes": 362,
+                            "bombs": 94,
+                            "obstacles": 111,
+                            "nps": 2.046,
+                            "length": 516.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 44573,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 176.914,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 9
+                            },
+                            "maxScore": 325795
+                        },
+                        {
+                            "njs": 13.0,
+                            "offset": -1.25,
+                            "notes": 528,
+                            "bombs": 91,
+                            "obstacles": 94,
+                            "nps": 2.984,
+                            "length": 516.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 44573,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 176.914,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 3
+                            },
+                            "maxScore": 478515
+                        },
+                        {
+                            "njs": 15.0,
+                            "offset": 0.05,
+                            "notes": 665,
+                            "bombs": 250,
+                            "obstacles": 142,
+                            "nps": 3.758,
+                            "length": 516.083,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 44573,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 176.943,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 36
+                            },
+                            "maxScore": 604555
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.22,
+                            "notes": 951,
+                            "bombs": 0,
+                            "obstacles": 317,
+                            "nps": 5.339,
+                            "length": 519.5,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 44573,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 178.114,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 1,
+                                "resets": 0
+                            },
+                            "maxScore": 867675
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": -0.42,
+                            "notes": 1096,
+                            "bombs": 0,
+                            "obstacles": 333,
+                            "nps": 6.153,
+                            "length": 519.5,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 44573,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 178.114,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 13,
+                                "resets": 0
+                            },
+                            "maxScore": 1001075
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/6f0eb7e9c585f2f7d7659469a0453b3d050d88a2.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/6f0eb7e9c585f2f7d7659469a0453b3d050d88a2.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/6f0eb7e9c585f2f7d7659469a0453b3d050d88a2.mp3"
+                }
+            ],
+            "curator": {
+                "id": 4284201,
+                "name": "nitronik.exe",
+                "hash": "5cff0b7798cc5a672c855d84",
+                "avatar": "https://cdn.beatsaver.com/avatar/428230049704181760.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-26T18:24:17.783940Z",
+            "createdAt": "2022-07-09T03:37:07.939740Z",
+            "updatedAt": "2022-07-26T18:24:17.783940Z",
+            "lastPublishedAt": "2022-07-26T18:00:00.909226Z",
+            "tags": [
+                "tech",
+                "balanced",
+                "hardcore",
+                "electronic"
+            ]
+        },
+        {
+            "id": "282a4",
+            "name": "[Fitbeat] Calvin Harris - We'll Be Coming Back (feat. Example)",
+            "description": "Preview: https://www.youtube.com/watch?v=-Hw7yvsAeno\n\nMy second fitbeat and second Calvin Harris map (first artist to be mapped twice by me)! Had plenty of fun mapping this song since it reminds me to my highscool days. Decided to release this as last map before my holiday and break from Beat Saber/map releases, so hopefully I'll be coming back one day (pun definitely intended) and this won’t be my last map 💀.\n\nThanks @Alice, @namaki_mono, Catse, and Tastum for the informal feedback and playtest!\n\nAlso, it says back room, not bathroom. I’m not a bathroom mapper!\n\nFeel free to give feedback on:\n- https://twitch.tv/daftmaple, or\n- https://twitter.com/daftmaple",
+            "uploader": {
+                "id": 4297603,
+                "name": "DaftMaple",
+                "avatar": "https://cdn.beatsaver.com/avatar/4297603.jpg",
+                "type": "SIMPLE",
+                "curator": false,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 128.0,
+                "duration": 235,
+                "songName": "We'll Be Coming Back",
+                "songSubName": "(feat. Example)",
+                "songAuthorName": "Calvin Harris",
+                "levelAuthorName": "DaftMaple"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 14,
+                "downvotes": 1,
+                "score": 0.7453
+            },
+            "uploaded": "2022-07-26T09:36:19.786721Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "c74ddf54ec34dd86c5dfe1fd600696f49607c81f",
+                    "state": "Published",
+                    "createdAt": "2022-07-26T09:34:02.084590Z",
+                    "sageScore": 3,
+                    "diffs": [
+                        {
+                            "njs": 15.0,
+                            "offset": -0.5,
+                            "notes": 604,
+                            "bombs": 15,
+                            "obstacles": 245,
+                            "nps": 2.739,
+                            "length": 470.5,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 5372,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 220.547,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 5
+                            },
+                            "maxScore": 548435
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": -0.65,
+                            "notes": 770,
+                            "bombs": 23,
+                            "obstacles": 305,
+                            "nps": 3.48,
+                            "length": 472.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 5372,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 221.25,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 5
+                            },
+                            "maxScore": 701155
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.75,
+                            "notes": 915,
+                            "bombs": 43,
+                            "obstacles": 282,
+                            "nps": 4.136,
+                            "length": 472.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 5372,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 221.25,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 14,
+                                "resets": 12
+                            },
+                            "maxScore": 834555
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/c74ddf54ec34dd86c5dfe1fd600696f49607c81f.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/c74ddf54ec34dd86c5dfe1fd600696f49607c81f.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/c74ddf54ec34dd86c5dfe1fd600696f49607c81f.mp3"
+                }
+            ],
+            "curator": {
+                "id": 32269,
+                "name": "maybeemae",
+                "hash": "5e1123516d774b0006a953ec",
+                "avatar": "https://cdn.beatsaver.com/avatar/32269.jpg",
+                "type": "SIMPLE",
+                "curator": true
+            },
+            "curatedAt": "2022-07-26T14:13:34.738575Z",
+            "createdAt": "2022-07-25T19:06:30.124686Z",
+            "updatedAt": "2022-07-27T13:08:26.028515Z",
+            "lastPublishedAt": "2022-07-26T09:36:19.786721Z",
+            "tags": [
+                "fitness",
+                "dance-style",
+                "electronic",
+                "house"
+            ]
+        },
+        {
+            "id": "282b1",
+            "name": "Uso - SID (TV Size) [Fullmetal Alchemist: Brotherhood Ending 1] (Cinema)",
+            "description": "Poodle and lower V3 Arc diff as usual. Lights are very basic since Cinema is expected to be used (love the ending 1 video).\n\nI wasn't happy with the audio quality of the tv edit mp3 so the map used the full song flac. Which I edited to be similar to the TV sized version. So yes I know its not exactly the same as the ending 1 but close enough.\n\nLove FMA Brotherhood and might do some more in the future.\n\nThanks for the playtests LassoCatsidy!",
+            "uploader": {
+                "id": 4280701,
+                "name": "rategyro",
+                "hash": "605e50f0cd73ba00060a45e3",
+                "avatar": "https://cdn.beatsaver.com/avatar/138351191028400128.png",
+                "type": "DISCORD",
+                "curator": true
+            },
+            "metadata": {
+                "bpm": 90.0,
+                "duration": 93,
+                "songName": "Uso (TV Sized)",
+                "songSubName": "Fullmetal Alchemist Brotherhood",
+                "songAuthorName": "SID",
+                "levelAuthorName": "RateGyro"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 17,
+                "downvotes": 2,
+                "score": 0.7345
+            },
+            "uploaded": "2022-07-25T23:44:30.740930Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "676d65d87bee4f2f882c4fab33309a70b628d040",
+                    "state": "Published",
+                    "createdAt": "2022-07-25T21:51:31.882347Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 17.0,
+                            "offset": -0.1,
+                            "notes": 276,
+                            "bombs": 0,
+                            "obstacles": 18,
+                            "nps": 3.089,
+                            "length": 134.031,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 719,
+                            "chroma": false,
+                            "me": false,
+                            "ne": true,
+                            "cinema": true,
+                            "seconds": 89.354,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 246675
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.2,
+                            "notes": 982,
+                            "bombs": 0,
+                            "obstacles": 18,
+                            "nps": 10.99,
+                            "length": 134.031,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 719,
+                            "chroma": false,
+                            "me": false,
+                            "ne": true,
+                            "cinema": true,
+                            "seconds": 89.354,
+                            "paritySummary": {
+                                "errors": 1,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 896195
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/676d65d87bee4f2f882c4fab33309a70b628d040.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/676d65d87bee4f2f882c4fab33309a70b628d040.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/676d65d87bee4f2f882c4fab33309a70b628d040.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-26T14:01:17.449844Z",
+            "createdAt": "2022-07-25T21:51:31.882347Z",
+            "updatedAt": "2022-07-26T14:01:17.449844Z",
+            "lastPublishedAt": "2022-07-25T23:44:30.740930Z",
+            "tags": [
+                "balanced",
+                "anime"
+            ]
+        },
+        {
+            "id": "282d7",
+            "name": "Life is Beautiful - ReoNa",
+            "description": "",
+            "uploader": {
+                "id": 4319249,
+                "name": "pupupi",
+                "avatar": "https://www.gravatar.com/avatar/null?d=retro",
+                "type": "SIMPLE",
+                "curator": false
+            },
+            "metadata": {
+                "bpm": 130.0,
+                "duration": 210,
+                "songName": "Life is Beautiful",
+                "songSubName": "",
+                "songAuthorName": "ReoNa",
+                "levelAuthorName": "pupupi"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 36,
+                "downvotes": 0,
+                "score": 0.8314
+            },
+            "uploaded": "2022-07-26T07:37:42.424943Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "b04ad88584e8b595d1fb86ede2a546d1cb2ae904",
+                    "state": "Published",
+                    "createdAt": "2022-07-26T07:37:30.606365Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 18.0,
+                            "offset": -0.87,
+                            "notes": 891,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 4.353,
+                            "length": 443.5,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 2768,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 204.692,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 812475
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/b04ad88584e8b595d1fb86ede2a546d1cb2ae904.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/b04ad88584e8b595d1fb86ede2a546d1cb2ae904.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/b04ad88584e8b595d1fb86ede2a546d1cb2ae904.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-26T10:12:40.323727Z",
+            "createdAt": "2022-07-26T07:37:30.606365Z",
+            "updatedAt": "2022-07-26T10:12:40.323727Z",
+            "lastPublishedAt": "2022-07-26T07:37:42.424943Z",
+            "tags": [
+                "j-pop"
+            ]
+        },
+        {
+            "id": "282bd",
+            "name": "[Fitbeat] Becky G - Break a Sweat",
+            "description": "*Baby break a sweat*\n\nI hope you're ready for leg day. \nIncludes my typical dodge walls, techy angles, bomb resets and giant swings. Custom vanilla lights.\n\nExpert+ Preview: https://youtu.be/e4UD5yUIFlA\n\nMap stats:\nEx+ | 4.7 NPS | 30 squats/minute (~104 total)\nEx | 3.8 NPS | 19 squats/minute (~65 total)\nH | 3.5 NPS | 15 squats/minute (~55 total)\n\nThanks to these playtesters for helping me polish it up!\n(Please yell at me if I forgot to add you)\nTastum (https://www.twitch.tv/tastum)\nIrahi (https://beatsaver.com/profile/4285641)\nDeeDee (https://beatsaver.com/profile/4284746)\n\n\nFeel free to send any feedback to me on Discord - Scarladore#9351",
+            "uploader": {
+                "id": 4284798,
+                "name": "Scarladore",
+                "hash": "60bf6856b85f2d00062fd145",
+                "avatar": "https://cdn.beatsaver.com/avatar/270984335107162124.png",
+                "type": "DISCORD",
+                "curator": false,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 109.0,
+                "duration": 207,
+                "songName": "Break a Sweat [Fitbeat]",
+                "songSubName": "",
+                "songAuthorName": "Becky G",
+                "levelAuthorName": "Scarladore"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 15,
+                "downvotes": 1,
+                "score": 0.751
+            },
+            "uploaded": "2022-07-26T01:38:20.136582Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "acd6da7281da69b4dd4601cae2cb98b7a7ec728e",
+                    "state": "Published",
+                    "createdAt": "2022-07-26T01:36:45.725809Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 14.0,
+                            "offset": -0.6,
+                            "notes": 711,
+                            "bombs": 0,
+                            "obstacles": 233,
+                            "nps": 3.51,
+                            "length": 368.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 2740,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 202.569,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 646875
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": -0.8,
+                            "notes": 776,
+                            "bombs": 0,
+                            "obstacles": 336,
+                            "nps": 3.831,
+                            "length": 368.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 2739,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 202.569,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 706675
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": 0.06,
+                            "notes": 958,
+                            "bombs": 65,
+                            "obstacles": 436,
+                            "nps": 4.729,
+                            "length": 368.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 2739,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 202.569,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 3,
+                                "resets": 10
+                            },
+                            "maxScore": 874115
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/acd6da7281da69b4dd4601cae2cb98b7a7ec728e.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/acd6da7281da69b4dd4601cae2cb98b7a7ec728e.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/acd6da7281da69b4dd4601cae2cb98b7a7ec728e.mp3"
+                }
+            ],
+            "curator": {
+                "id": 32269,
+                "name": "maybeemae",
+                "hash": "5e1123516d774b0006a953ec",
+                "avatar": "https://cdn.beatsaver.com/avatar/32269.jpg",
+                "type": "SIMPLE",
+                "curator": true
+            },
+            "curatedAt": "2022-07-26T01:57:40.906071Z",
+            "createdAt": "2022-07-26T01:29:17.854362Z",
+            "updatedAt": "2022-07-26T01:57:40.906071Z",
+            "lastPublishedAt": "2022-07-26T01:38:20.136582Z",
+            "tags": [
+                "fitness",
+                "tech",
+                "pop",
+                "dance"
+            ]
+        },
+        {
+            "id": "2825e",
+            "name": "All About That Bass - Meghan Trainor",
+            "description": "",
+            "uploader": {
+                "id": 4319249,
+                "name": "pupupi",
+                "avatar": "https://www.gravatar.com/avatar/null?d=retro",
+                "type": "SIMPLE",
+                "curator": false
+            },
+            "metadata": {
+                "bpm": 134.0,
+                "duration": 189,
+                "songName": "All About That Bass",
+                "songSubName": "",
+                "songAuthorName": "Meghan Trainor",
+                "levelAuthorName": "pupupi"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 41,
+                "downvotes": 2,
+                "score": 0.8083
+            },
+            "uploaded": "2022-07-25T06:36:56.229720Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "3193281f0cae1632e3af4ee027257d2137abf07d",
+                    "state": "Published",
+                    "createdAt": "2022-07-25T06:36:46.523250Z",
+                    "sageScore": 5,
+                    "diffs": [
+                        {
+                            "njs": 16.0,
+                            "offset": -0.604,
+                            "notes": 843,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 4.542,
+                            "length": 414.517,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 3326,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 185.605,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 768315
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": -0.84,
+                            "notes": 923,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 4.973,
+                            "length": 414.508,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 3326,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 185.601,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 841915
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/3193281f0cae1632e3af4ee027257d2137abf07d.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/3193281f0cae1632e3af4ee027257d2137abf07d.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/3193281f0cae1632e3af4ee027257d2137abf07d.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-25T08:09:30.992901Z",
+            "createdAt": "2022-07-25T06:36:46.523250Z",
+            "updatedAt": "2022-07-26T01:48:15.951517Z",
+            "lastPublishedAt": "2022-07-26T01:48:15.951517Z",
+            "tags": [
+                "pop"
+            ]
+        },
+        {
+            "id": "2806d",
+            "name": "Meg & Dia - Monster (December Screams Embers Metal Cover)",
+            "description": "Ex+ got 300bpm bursts\nEx is ex+ without bursts and nerfed patterns\nBanger cover SourPls\n\nIncludes semi-custom lights\nand custom colors too!!\nSpooky environment recommended for the lights!\n\nreup to fix some stuff oops\n\nAny questions or suggestions DM me on Discord: Emy#0066 :D",
+            "uploader": {
+                "id": 4284445,
+                "name": "emilia",
+                "hash": "5cff0b7898cc5a672c856ed3",
+                "avatar": "https://cdn.beatsaver.com/avatar/423941577996501005.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 200.0,
+                "duration": 175,
+                "songName": "Monster",
+                "songSubName": "",
+                "songAuthorName": "December Screams Embers",
+                "levelAuthorName": "Emilia"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 12,
+                "downvotes": 0,
+                "score": 0.769
+            },
+            "uploaded": "2022-07-21T04:43:38.549252Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "cfb78f52e000d57eb75f932cb3b4322320a0ee2c",
+                    "state": "Published",
+                    "createdAt": "2022-07-21T18:23:01.351222Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 18.0,
+                            "offset": 0.1,
+                            "notes": 1072,
+                            "bombs": 20,
+                            "obstacles": 358,
+                            "nps": 6.581,
+                            "length": 542.969,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 4858,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 162.891,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 9
+                            },
+                            "maxScore": 978995
+                        },
+                        {
+                            "njs": 19.25,
+                            "offset": -0.2,
+                            "notes": 1082,
+                            "bombs": 20,
+                            "obstacles": 357,
+                            "nps": 6.642,
+                            "length": 542.969,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 4858,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 162.891,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 8
+                            },
+                            "maxScore": 988195
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/cfb78f52e000d57eb75f932cb3b4322320a0ee2c.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/cfb78f52e000d57eb75f932cb3b4322320a0ee2c.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/cfb78f52e000d57eb75f932cb3b4322320a0ee2c.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-25T06:13:48.811360Z",
+            "createdAt": "2022-07-21T04:43:19.620289Z",
+            "updatedAt": "2022-07-25T06:13:48.811360Z",
+            "lastPublishedAt": "2022-07-21T18:23:14.377033Z",
+            "tags": [
+                "balanced",
+                "rock",
+                "metal"
+            ]
+        },
+        {
+            "id": "280c2",
+            "name": "Stay With Me - Calvin Harris, Justin Timberlake, Halsey, Pharrell Williams",
+            "description": "Yo!\n\nI just wanted to make a map with this song because it's a good song, that's all. Enjoy!\nThanks to lucawieczorek and Dietah for playtesting!\n\nPlaythrough: https://youtu.be/hd1T19-rji0\n\n[Recommended mod: C H R O M A + enable ALL Effects]\n\n► Map Details:\n- Difficulty: Expert+\n- Duration: 3:50\n- BPM: 126\n- Note Jump Speed: 19\n- Spawn Offset: 0.15\n- Total NPS: 5.04\n- Total Notes: 1165\n",
+            "uploader": {
+                "id": 4286575,
+                "name": "faded99",
+                "hash": "5db5bfa33e5dd60006175804",
+                "avatar": "https://cdn.beatsaver.com/avatar/375730504739061764.png",
+                "type": "DISCORD",
+                "curator": false,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 126.0,
+                "duration": 231,
+                "songName": "Stay With Me",
+                "songSubName": "",
+                "songAuthorName": "Calvin Harris, Justin Timberlake, Halsey, Pharrell Williams",
+                "levelAuthorName": "Faded 99"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 24,
+                "downvotes": 1,
+                "score": 0.7875
+            },
+            "uploaded": "2022-07-22T17:42:41.622828Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "fb90bf1a9d147c9a7a7240934e7457a7277564ee",
+                    "state": "Published",
+                    "createdAt": "2022-07-22T17:05:45.475015Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 19.0,
+                            "offset": 0.1,
+                            "notes": 1165,
+                            "bombs": 19,
+                            "obstacles": 20,
+                            "nps": 5.105,
+                            "length": 479.25,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 9062,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 228.214,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 1,
+                                "resets": 7
+                            },
+                            "maxScore": 1064555
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/fb90bf1a9d147c9a7a7240934e7457a7277564ee.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/fb90bf1a9d147c9a7a7240934e7457a7277564ee.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/fb90bf1a9d147c9a7a7240934e7457a7277564ee.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-25T06:12:01.049068Z",
+            "createdAt": "2022-07-21T20:02:15.860475Z",
+            "updatedAt": "2022-07-25T06:12:01.049068Z",
+            "lastPublishedAt": "2022-07-22T17:42:41.622828Z",
+            "tags": [
+                "dance-style",
+                "tech",
+                "dance",
+                "pop"
+            ]
+        },
+        {
+            "id": "281cd",
+            "name": "Nathan Dawe & Ella Henderson - 21 Reasons",
+            "description": "",
+            "uploader": {
+                "id": 4285018,
+                "name": "majorpickle",
+                "hash": "5cff0b7398cc5a672c84f792",
+                "avatar": "https://cdn.beatsaver.com/avatar/450358937657671680.png",
+                "type": "DISCORD",
+                "curator": false
+            },
+            "metadata": {
+                "bpm": 124.0,
+                "duration": 155,
+                "songName": "21 Reasons",
+                "songSubName": "",
+                "songAuthorName": "Nathan Dawe & Ella Henderson",
+                "levelAuthorName": "Majorpickle"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 14,
+                "downvotes": 2,
+                "score": 0.7152
+            },
+            "uploaded": "2022-07-23T22:47:32.634649Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "919b848e69166ccca6d0e76960db7b0fed275008",
+                    "state": "Published",
+                    "createdAt": "2022-07-23T22:47:28.246221Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 19.0,
+                            "offset": 0.5,
+                            "notes": 578,
+                            "bombs": 0,
+                            "obstacles": 105,
+                            "nps": 3.829,
+                            "length": 312.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 925,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 150.968,
+                            "paritySummary": {
+                                "errors": 2,
+                                "warns": 1,
+                                "resets": 0
+                            },
+                            "maxScore": 524515
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/919b848e69166ccca6d0e76960db7b0fed275008.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/919b848e69166ccca6d0e76960db7b0fed275008.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/919b848e69166ccca6d0e76960db7b0fed275008.mp3"
+                }
+            ],
+            "curator": {
+                "id": 32269,
+                "name": "maybeemae",
+                "hash": "5e1123516d774b0006a953ec",
+                "avatar": "https://cdn.beatsaver.com/avatar/32269.jpg",
+                "type": "SIMPLE",
+                "curator": true
+            },
+            "curatedAt": "2022-07-24T19:33:20.132620Z",
+            "createdAt": "2022-07-23T22:47:28.246221Z",
+            "updatedAt": "2022-07-24T19:35:43.168140Z",
+            "lastPublishedAt": "2022-07-23T22:47:32.634649Z",
+            "tags": [
+                "dance-style",
+                "dance",
+                "pop"
+            ]
+        },
+        {
+            "id": "281c2",
+            "name": "I'll Go",
+            "description": "Contact Me On Discord: SpecVR#9344\nNoodle Extensions Discord: https://discord.gg/jRtgkc4MNS\nMade with ScuffedWalls: https://github.com/thelightdesigner/ScuffedWalls\nIf you wanna see what I've been up to its best to check here: https://twitter.com/SpecVR_\n\nDirect is a musician most renowned for his musical takes on popular genres like Garage, Ambience, Dance, and other Electronic Mediums. With a Monstercat career spanning over 10 years, and multiple singles & EPs under his belt, Direct brings his own unique feeling to his tracks that can never be experienced anywhere else.\n\nOfficially part of the Direct Map Pack, download here!\nhttps://beatsaver.com/playlists/6282\n",
+            "uploader": {
+                "id": 4284554,
+                "name": "SpecVR",
+                "hash": "5e7180bcd87e580006b2de98",
+                "avatar": "https://cdn.beatsaver.com/avatar/406233935933079562.png",
+                "type": "DISCORD",
+                "curator": false
+            },
+            "metadata": {
+                "bpm": 150.0,
+                "duration": 263,
+                "songName": "I'll Go",
+                "songSubName": "",
+                "songAuthorName": "Direct, Park Avenue",
+                "levelAuthorName": "Phøenix, SpecVR"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 19,
+                "downvotes": 2,
+                "score": 0.7451
+            },
+            "uploaded": "2022-07-24T01:04:00.923710Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "96679050542ba57a968988c034e3b83a063fafcc",
+                    "state": "Published",
+                    "createdAt": "2022-07-24T00:48:22.706496Z",
+                    "sageScore": 2,
+                    "diffs": [
+                        {
+                            "njs": 15.5,
+                            "offset": -0.3,
+                            "notes": 656,
+                            "bombs": 0,
+                            "obstacles": 16,
+                            "nps": 2.666,
+                            "length": 615.188,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 82637,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 246.075,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 596275
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.33,
+                            "notes": 672,
+                            "bombs": 0,
+                            "obstacles": 4,
+                            "nps": 2.731,
+                            "length": 615.188,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 82637,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 246.075,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 610995
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.33,
+                            "notes": 480,
+                            "bombs": 0,
+                            "obstacles": 6,
+                            "nps": 1.951,
+                            "length": 615.188,
+                            "characteristic": "OneSaber",
+                            "difficulty": "ExpertPlus",
+                            "events": 82638,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 246.075,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 434355
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": 0.0,
+                            "notes": 0,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 0.0,
+                            "length": 0.0,
+                            "characteristic": "Lightshow",
+                            "difficulty": "ExpertPlus",
+                            "events": 82637,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 0.0,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 0
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.33,
+                            "notes": 672,
+                            "bombs": 0,
+                            "obstacles": 878,
+                            "nps": 2.731,
+                            "length": 615.188,
+                            "characteristic": "Lawless",
+                            "difficulty": "ExpertPlus",
+                            "events": 82637,
+                            "chroma": true,
+                            "me": false,
+                            "ne": true,
+                            "cinema": false,
+                            "seconds": 246.075,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 610995
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/96679050542ba57a968988c034e3b83a063fafcc.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/96679050542ba57a968988c034e3b83a063fafcc.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/96679050542ba57a968988c034e3b83a063fafcc.mp3"
+                }
+            ],
+            "curator": {
+                "id": 4285122,
+                "name": "Lasso-Catsidy",
+                "avatar": "https://cdn.beatsaver.com/avatar/103363394374991872.png",
+                "type": "DISCORD",
+                "curator": true
+            },
+            "curatedAt": "2022-07-24T19:10:53.252443Z",
+            "createdAt": "2022-07-23T20:03:20.045080Z",
+            "updatedAt": "2022-07-24T19:10:53.252443Z",
+            "lastPublishedAt": "2022-07-24T17:00:00.924476Z",
+            "tags": [
+                "ambient",
+                "electronic"
+            ]
+        },
+        {
+            "id": "276b7",
+            "name": "[Chroma] Direct / Killabyte / Matt Van - One Less Star",
+            "description": "Direct is a musician most renowned for his musical takes on popular genres like Garage, Ambience, Dance, and other Electronic Mediums. With a Monstercat Career spanning over 10 years, and multiple single's & EP's under his belt, Direct brings his own unique feeling to his tracks that can never be experienced anywhere else.\n\nOfficially part of the Direct Map Pack, download here!\nhttps://beatsaver.com/playlists/6282\n\nPack List:\n1. Rift (Pack Intro)\n2. Cold Ground\n3. Memory\n4. Without U\n5. Elixir\n6. Mojito\n7. How Can It Be\n8. I'll Go\n9. One Less Star\n\nDifficulties: Expert, Expert+\nLength: 4:25\nBPM: 140\nNPS: Expert = 2.4, Expert+ = 3.0\n\nIf you have any feedback about this map (Positive / Negative) then feel free to reach out to me on discord! Phøenix#5713",
+            "uploader": {
+                "id": 4284947,
+                "name": "Phoenix_5",
+                "hash": "5fa08b5281e1d70006f1b322",
+                "avatar": "https://cdn.beatsaver.com/avatar/528695734862741515.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 140.0,
+                "duration": 266,
+                "songName": "One Less Star",
+                "songSubName": "",
+                "songAuthorName": "Direct, Killabyte, Matt Van",
+                "levelAuthorName": "Phøenix"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 12,
+                "downvotes": 1,
+                "score": 0.7319
+            },
+            "uploaded": "2022-07-24T17:00:00.924476Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "1bab9e9b62f2fd2a6fdf305878390d104d84a294",
+                    "state": "Published",
+                    "createdAt": "2022-07-05T22:26:34.389238Z",
+                    "sageScore": 3,
+                    "diffs": [
+                        {
+                            "njs": 15.0,
+                            "offset": -0.5,
+                            "notes": 639,
+                            "bombs": 0,
+                            "obstacles": 33,
+                            "nps": 2.559,
+                            "length": 582.656,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 119458,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 249.71,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 580635
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.75,
+                            "notes": 783,
+                            "bombs": 0,
+                            "obstacles": 33,
+                            "nps": 3.136,
+                            "length": 582.656,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 119458,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 249.71,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 713115
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": 0.0,
+                            "notes": 0,
+                            "bombs": 0,
+                            "obstacles": 0,
+                            "nps": 0.0,
+                            "length": 0.0,
+                            "characteristic": "Lightshow",
+                            "difficulty": "ExpertPlus",
+                            "events": 119458,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 0.0,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 0
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/1bab9e9b62f2fd2a6fdf305878390d104d84a294.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/1bab9e9b62f2fd2a6fdf305878390d104d84a294.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/1bab9e9b62f2fd2a6fdf305878390d104d84a294.mp3"
+                }
+            ],
+            "curator": {
+                "id": 32269,
+                "name": "maybeemae",
+                "hash": "5e1123516d774b0006a953ec",
+                "avatar": "https://cdn.beatsaver.com/avatar/32269.jpg",
+                "type": "SIMPLE",
+                "curator": true
+            },
+            "curatedAt": "2022-07-24T19:08:22.048194Z",
+            "createdAt": "2022-07-04T20:49:39.657638Z",
+            "updatedAt": "2022-07-24T19:08:22.048194Z",
+            "lastPublishedAt": "2022-07-24T17:00:00.924476Z",
+            "tags": [
+                "balanced",
+                "electronic",
+                "pop"
+            ]
+        },
+        {
+            "id": "2811a",
+            "name": "Run by Jive Me ",
+            "description": "Jive Me is an electronic music band from France and they make a wide variety of musical styles from Hip Hop to Electro Swing. \n\nRun is an electro swing song they made in 2019 and when I heard it I immediately thought it was a jammer.\n\nThank you so so much for these people for test playing my map and giving me amazing feedback to make this map better! You guys are absolutely amazing!!!\n\nAnd a huge shout out to Monstor for helping me with making the easy diff super fun!\n\nTastum http://twitch.tv/tastum\n\nScarladore: https://beatsaver.com/profile/4284798\n\nMonstor https://beatsaver.com/profile/4234636\n",
+            "uploader": {
+                "id": 4284746,
+                "name": "Dee-Dee",
+                "avatar": "https://cdn.beatsaver.com/avatar/834176526874181682.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 220.0,
+                "duration": 195,
+                "songName": "Run",
+                "songSubName": "",
+                "songAuthorName": "Jive Me",
+                "levelAuthorName": "DeeDee"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 34,
+                "downvotes": 1,
+                "score": 0.8111
+            },
+            "uploaded": "2022-07-22T14:48:03.672640Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "d2a2041b05ee0ac43718e8958984025381ec1bf3",
+                    "state": "Published",
+                    "createdAt": "2022-07-22T14:46:54.296076Z",
+                    "sageScore": 6,
+                    "diffs": [
+                        {
+                            "njs": 10.0,
+                            "offset": 0.9,
+                            "notes": 372,
+                            "bombs": 0,
+                            "obstacles": 302,
+                            "nps": 1.957,
+                            "length": 697.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 1510,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 190.091,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 334995
+                        },
+                        {
+                            "njs": 12.0,
+                            "offset": 0.1,
+                            "notes": 622,
+                            "bombs": 0,
+                            "obstacles": 280,
+                            "nps": 3.272,
+                            "length": 697.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 1511,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 190.091,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 564995
+                        },
+                        {
+                            "njs": 16.0,
+                            "offset": -0.99,
+                            "notes": 734,
+                            "bombs": 0,
+                            "obstacles": 345,
+                            "nps": 3.861,
+                            "length": 697.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 1510,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 190.091,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 668035
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": 0.4,
+                            "notes": 802,
+                            "bombs": 0,
+                            "obstacles": 330,
+                            "nps": 4.219,
+                            "length": 697.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 1510,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 190.091,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 730595
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": 0.2,
+                            "notes": 892,
+                            "bombs": 0,
+                            "obstacles": 334,
+                            "nps": 4.692,
+                            "length": 697.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 1508,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 190.091,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 813395
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/d2a2041b05ee0ac43718e8958984025381ec1bf3.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/d2a2041b05ee0ac43718e8958984025381ec1bf3.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/d2a2041b05ee0ac43718e8958984025381ec1bf3.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-24T05:24:31.036766Z",
+            "createdAt": "2022-07-22T14:46:54.296076Z",
+            "updatedAt": "2022-07-24T05:24:31.036766Z",
+            "lastPublishedAt": "2022-07-22T14:48:03.672640Z",
+            "tags": [
+                "balanced",
+                "dance-style",
+                "electronic",
+                "swing"
+            ]
+        },
+        {
+            "id": "2777c",
+            "name": "La+ Darknesss - Aien-Jihen",
+            "description": "刮目せよ！\n\nCollaboration Map: @take_nyan\n\n-Ex+(†Yes My Dark† [Gab's E+]) :  Mapped Gabriel\n-Ex(†accomplice† [Take's E+]) : Mapped take_nyan\n-Hard(Expert) : Mapped take_nyan\n-Normal(Hard) : Mapped Gabriel\n\nCustom lights by Chroma : Gabriel\n\n----------------------------------------------------------------------\n\nYou have improved this map for the better, thank you!\n\nRT Student MOD :Marsh\nRT MOD: Alice",
+            "uploader": {
+                "id": 4285647,
+                "name": "Gabriel",
+                "hash": "5e8153a82a340900068684a3",
+                "avatar": "https://cdn.beatsaver.com/avatar/687634266917437507.png",
+                "type": "DISCORD",
+                "curator": false,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 130.0,
+                "duration": 223,
+                "songName": "Aien-Jihen",
+                "songSubName": "",
+                "songAuthorName": "La+ Darknesss",
+                "levelAuthorName": "Gabriel & take_nyan"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 42,
+                "downvotes": 1,
+                "score": 0.8241
+            },
+            "uploaded": "2022-07-14T14:40:50.708167Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "d06bd638a1bbdbb907e4fe5ffa0f5e027e524c37",
+                    "state": "Published",
+                    "createdAt": "2022-07-14T15:09:17.136023Z",
+                    "diffs": [
+                        {
+                            "njs": 15.5,
+                            "offset": -0.392,
+                            "notes": 623,
+                            "bombs": 47,
+                            "obstacles": 355,
+                            "nps": 3.075,
+                            "length": 439.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 68392,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 202.615,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 10
+                            },
+                            "maxScore": 565915
+                        },
+                        {
+                            "njs": 17.0,
+                            "offset": -0.662,
+                            "notes": 814,
+                            "bombs": 4,
+                            "obstacles": 182,
+                            "nps": 4.017,
+                            "length": 439.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 68392,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 202.615,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 4,
+                                "resets": 1
+                            },
+                            "maxScore": 741635
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": -0.796,
+                            "notes": 1098,
+                            "bombs": 12,
+                            "obstacles": 158,
+                            "nps": 5.419,
+                            "length": 439.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 68392,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 202.615,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 1
+                            },
+                            "maxScore": 1002915
+                        },
+                        {
+                            "njs": 18.0,
+                            "offset": -0.8,
+                            "notes": 1094,
+                            "bombs": 334,
+                            "obstacles": 280,
+                            "nps": 5.279,
+                            "length": 449.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 68392,
+                            "chroma": true,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 207.231,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 17,
+                                "resets": 9
+                            },
+                            "maxScore": 999235
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/d06bd638a1bbdbb907e4fe5ffa0f5e027e524c37.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/d06bd638a1bbdbb907e4fe5ffa0f5e027e524c37.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/d06bd638a1bbdbb907e4fe5ffa0f5e027e524c37.mp3"
+                }
+            ],
+            "curator": {
+                "id": 4284782,
+                "name": "ashad",
+                "hash": "5cff0b7498cc5a672c850a45",
+                "avatar": "https://cdn.beatsaver.com/avatar/264896450788327424.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-24T05:11:41.883935Z",
+            "createdAt": "2022-07-06T03:34:55.806576Z",
+            "updatedAt": "2022-07-24T05:11:41.883935Z",
+            "lastPublishedAt": "2022-07-14T15:09:37.696780Z",
+            "tags": [
+                "tech"
+            ]
+        },
+        {
+            "id": "2809f",
+            "name": "Alan Walker - Darkside ",
+            "description": "Full spread map with arcs and chains and my first v3 lightshow in the weave environment!\n\nI really hope you enjoy the map as I spent a very long time making it!  :D\n\nPlease feel free to leave feedback in the comments section of the video below!\n\nhttps://youtu.be/SWayb5L6qrk",
+            "uploader": {
+                "id": 4284802,
+                "name": "Fireluke_Gaming",
+                "hash": "609312a212772e0006e2dee4",
+                "avatar": "https://cdn.beatsaver.com/avatar/669570591530942474.png",
+                "type": "DISCORD",
+                "curator": false,
+                "verifiedMapper": true
+            },
+            "metadata": {
+                "bpm": 170.0,
+                "duration": 212,
+                "songName": "Darkside",
+                "songSubName": "(feat. Au/Ra and Tomine Harket)",
+                "songAuthorName": "Alan Walker",
+                "levelAuthorName": "Fireluke Gaming"
+            },
+            "stats": {
+                "plays": 0,
+                "downloads": 0,
+                "upvotes": 52,
+                "downvotes": 1,
+                "score": 0.8363
+            },
+            "uploaded": "2022-07-22T22:24:51.635594Z",
+            "automapper": false,
+            "ranked": false,
+            "qualified": false,
+            "versions": [
+                {
+                    "hash": "8a33aa89ee430981a1a0353b27fc79adc5be7ef1",
+                    "state": "Published",
+                    "createdAt": "2022-07-21T15:35:49.892143Z",
+                    "sageScore": 4,
+                    "diffs": [
+                        {
+                            "njs": 0.0,
+                            "offset": 0.0,
+                            "notes": 330,
+                            "bombs": 0,
+                            "obstacles": 34,
+                            "nps": 1.623,
+                            "length": 576.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Easy",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 203.294,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 296675
+                        },
+                        {
+                            "njs": 0.0,
+                            "offset": 0.0,
+                            "notes": 397,
+                            "bombs": 4,
+                            "obstacles": 36,
+                            "nps": 1.939,
+                            "length": 580.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Normal",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 204.706,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 358315
+                        },
+                        {
+                            "njs": 0.0,
+                            "offset": 0.0,
+                            "notes": 538,
+                            "bombs": 12,
+                            "obstacles": 9,
+                            "nps": 2.628,
+                            "length": 580.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Hard",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 204.706,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 489555
+                        },
+                        {
+                            "njs": 0.0,
+                            "offset": 0.0,
+                            "notes": 601,
+                            "bombs": 8,
+                            "obstacles": 9,
+                            "nps": 2.936,
+                            "length": 580.0,
+                            "characteristic": "Standard",
+                            "difficulty": "Expert",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 204.706,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 547515
+                        },
+                        {
+                            "njs": 0.0,
+                            "offset": 0.0,
+                            "notes": 740,
+                            "bombs": 4,
+                            "obstacles": 9,
+                            "nps": 3.615,
+                            "length": 580.0,
+                            "characteristic": "Standard",
+                            "difficulty": "ExpertPlus",
+                            "events": 0,
+                            "chroma": false,
+                            "me": false,
+                            "ne": false,
+                            "cinema": false,
+                            "seconds": 204.706,
+                            "paritySummary": {
+                                "errors": 0,
+                                "warns": 0,
+                                "resets": 0
+                            },
+                            "maxScore": 675735
+                        }
+                    ],
+                    "downloadURL": "https://r2cdn.beatsaver.com/8a33aa89ee430981a1a0353b27fc79adc5be7ef1.zip",
+                    "coverURL": "https://eu.cdn.beatsaver.com/8a33aa89ee430981a1a0353b27fc79adc5be7ef1.jpg",
+                    "previewURL": "https://eu.cdn.beatsaver.com/8a33aa89ee430981a1a0353b27fc79adc5be7ef1.mp3"
+                }
+            ],
+            "curator": {
+                "id": 58338,
+                "name": "Joetastic",
+                "hash": "5cff0b7498cc5a672c85050e",
+                "avatar": "https://cdn.beatsaver.com/avatar/227767566402191360.png",
+                "type": "DISCORD",
+                "curator": true,
+                "verifiedMapper": true
+            },
+            "curatedAt": "2022-07-24T05:10:09.793023Z",
+            "createdAt": "2022-07-21T15:35:49.892143Z",
+            "updatedAt": "2022-07-24T05:10:09.793023Z",
+            "lastPublishedAt": "2022-07-22T22:24:51.635594Z"
+        }
+    ]
+}
