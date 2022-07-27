@@ -12,7 +12,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         public override string FeedId => "BeatSaver.CuratorRecommended";
         
         /// <inheritdoc/>
-        public override int FeedIndex => 0;
+        public override int FeedIndex => 3;
 
         /// <inheritdoc/>
         public override int SongsPerPage => 20;

@@ -13,7 +13,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         public override string FeedId => "BeatSaver.Mapper";
 
         /// <inheritdoc/>
-        public override int FeedIndex => 0;
+        public override int FeedIndex => 2;
 
         /// <inheritdoc/>
         public override int SongsPerPage => 20;

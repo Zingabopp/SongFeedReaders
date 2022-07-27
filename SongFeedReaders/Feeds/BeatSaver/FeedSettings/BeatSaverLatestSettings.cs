@@ -11,7 +11,7 @@ namespace SongFeedReaders.Feeds.BeatSaver
         public override string FeedId => "BeatSaver.Latest";
 
         /// <inheritdoc/>
-        public override int FeedIndex => 0;
+        public override int FeedIndex => 1;
 
         /// <inheritdoc/>
         public override int SongsPerPage => 20;
