@@ -1,0 +1,33 @@
+{
+  "ResponseHeaders": {
+    "Server": [
+      "nginx"
+    ],
+    "Date": [
+      "Wed, 27 Jul 2022 18:16:28 GMT"
+    ],
+    "Connection": [
+      "keep-alive"
+    ],
+    "Access-Control-Allow-Origin": [
+      "*"
+    ],
+    "Server-Timing": [
+      "req;dur=7.307"
+    ],
+    "Strict-Transport-Security": [
+      "max-age=31536000; includeSubDomains; preload"
+    ]
+  },
+  "ContentHeaders": {
+    "Content-Type": [
+      "application/json; charset=UTF-8"
+    ],
+    "Content-Length": [
+      "104731"
+    ]
+  },
+  "StatusCode": 200,
+  "ContentType": null,
+  "ContentLengthOverride": -1
+}
