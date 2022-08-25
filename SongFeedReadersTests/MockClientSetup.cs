@@ -16,7 +16,7 @@ namespace SongFeedReadersTests
         /// Set to true to record live data to disk.
         /// Response data is saved to the output folder and must be copied to the project's data folder.
         /// </summary>
-        public static bool UseRecordingClient = false;
+        public static bool UseRecordingClient = true;
         public static string UriToPath(Uri uri)
         {
             string url = uri.ToString();
@@ -28,7 +28,24 @@ namespace SongFeedReadersTests
                 return BeastSaberUriToPath(uri);
             else if (server == "scoresaber.com")
                 return ScoreSaberUriToPath(uri);
+            else if(server == "raw.githubusercontent.com")
+                return GithubUserContent(uri);
             throw new ArgumentException($"Could not create a path for Uri '{uri}'", nameof(uri));
+        }
+
+        public static string GithubUserContent(Uri uri)
+        {
+            string path = "GithubUserContent";
+            string localPath = uri.LocalPath.TrimStart('/');
+            string[] parts = localPath.Split('/', StringSplitOptions.RemoveEmptyEntries);
+            if (parts.Length < 4)
+                throw new Exception("Path for GitHubUserContent in unexpected format");
+            string user = parts[0];
+            string repo = parts[1];
+            string branch = parts[2];
+            string file = parts[3];
+            path = Path.Combine(path, user, repo, branch, file);
+            return path;
         }
 
         private static string BeatSaverUriToPath(Uri uri)

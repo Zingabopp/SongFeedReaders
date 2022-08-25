@@ -1,0 +1,80 @@
+{
+  "ResponseHeaders": {
+    "Connection": [
+      "keep-alive"
+    ],
+    "Cache-Control": [
+      "max-age=300"
+    ],
+    "Content-Security-Policy": [
+      "default-src 'none'; style-src 'unsafe-inline'; sandbox"
+    ],
+    "ETag": [
+      "\"ffef270c1bb74ff6a5097ac082b21e695393d387be97981c11022c37ac9c6bf4\""
+    ],
+    "Strict-Transport-Security": [
+      "max-age=31536000"
+    ],
+    "X-Content-Type-Options": [
+      "nosniff"
+    ],
+    "X-Frame-Options": [
+      "deny"
+    ],
+    "X-XSS-Protection": [
+      "1; mode=block"
+    ],
+    "X-GitHub-Request-Id": [
+      "83D0:6C1B:4BD119:637257:63077C11"
+    ],
+    "Accept-Ranges": [
+      "bytes"
+    ],
+    "Date": [
+      "Thu, 25 Aug 2022 16:43:16 GMT"
+    ],
+    "Via": [
+      "1.1 varnish"
+    ],
+    "X-Served-By": [
+      "cache-chi-kigq8000137-CHI"
+    ],
+    "X-Cache": [
+      "HIT"
+    ],
+    "X-Cache-Hits": [
+      "0"
+    ],
+    "X-Timer": [
+      "S1661445797.896116,VS0,VE3"
+    ],
+    "Vary": [
+      "Authorization",
+      "Accept-Encoding",
+      "Origin"
+    ],
+    "Access-Control-Allow-Origin": [
+      "*"
+    ],
+    "X-Fastly-Request-ID": [
+      "9cfa8797c97aee49d41f86b384e09f89bcb71ded"
+    ],
+    "Source-Age": [
+      "216"
+    ]
+  },
+  "ContentHeaders": {
+    "Content-Length": [
+      "5491357"
+    ],
+    "Content-Type": [
+      "application/octet-stream"
+    ],
+    "Expires": [
+      "Thu, 25 Aug 2022 16:48:16 GMT"
+    ]
+  },
+  "StatusCode": 200,
+  "ContentType": null,
+  "ContentLengthOverride": -1
+}
