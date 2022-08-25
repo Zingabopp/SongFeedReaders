@@ -19,6 +19,7 @@ namespace SongFeedReaders.Services.SongInfoProviders
     public class AndruzzScrapedInfoProvider : SongInfoProviderBase
     {
         private const string ScrapedDataUrl = @"https://raw.githubusercontent.com/andruzzzhka/BeatSaberScrappedData/master/songDetails2.gz";
+        private const string CommitApiUrl = @"https://api.github.com/repos/andruzzzhka/BeatSaberScrappedData/commits"; // Metadata for latest commits
         private const string dataFileName = "songDetails2.gz";
         private Dictionary<string, ScrapedSong>? _byHash;
         private Dictionary<string, ScrapedSong>? _byKey;
