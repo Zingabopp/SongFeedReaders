@@ -12,6 +12,11 @@ namespace SongFeedReadersTests
 {
     internal static class MockClientSetup
     {
+        /// <summary>
+        /// Set to true to record live data to disk.
+        /// Response data is saved to the output folder and must be copied to the project's data folder.
+        /// </summary>
+        public static bool UseRecordingClient = false;
         public static string UriToPath(Uri uri)
         {
             string url = uri.ToString();
@@ -126,11 +131,12 @@ namespace SongFeedReadersTests
         public static IWebClient GetMockClient()
         {
             Directory.CreateDirectory("ResponseData");
-            return new MockClient("ResponseData", UriToPath)
+            var client = new MockClient("ResponseData", UriToPath);
 #if !NCRUNCH
-            //.WithRecordingClient(new HttpClientWrapper("SongFeedReaders.Tests/1.0.0"));
+            if(UseRecordingClient)
+                client = client.WithRecordingClient(new HttpClientWrapper("SongFeedReaders.Tests/1.0.0"));
 #endif
-                ;
+            return client;
         }
 
 

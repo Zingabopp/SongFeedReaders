@@ -23,7 +23,7 @@ namespace SongFeedReaders.Feeds.ScoreSaber
                 _startingPage = value;
             }
         }
-        private int _songsPerPage = 50;
+        private int _songsPerPage = 20;
 
         /// <inheritdoc/>
         public override int SongsPerPage
@@ -38,10 +38,10 @@ namespace SongFeedReaders.Feeds.ScoreSaber
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public void SetSongsPerPage(int value)
         {
-            if (value > 0)
+            if (value > 0 && value <= 20)
                 _songsPerPage = value;
             else
-                throw new ArgumentOutOfRangeException(nameof(value));
+                throw new ArgumentOutOfRangeException(nameof(value), "ScoreSaber SongsPerPage must be greater than 0 and not more than 20");
         }
 
         /// <summary>

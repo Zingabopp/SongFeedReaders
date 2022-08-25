@@ -80,9 +80,7 @@ namespace SongFeedReaders.TestClient
             services.AddSingleton<IFeedSettings>(new BeastSaberBookmarksSettings() { Username = "Zingabopp" });
             services.AddSingleton<IFeedSettings>(new BeastSaberFollowsSettings() { Username = "Zingabopp" });
             services.AddSingleton<IFeedSettings>(new BeastSaberCuratorSettings());
-            ScoreSaberLatestSettings? ssLS = new ScoreSaberLatestSettings();
-            ssLS.SetSongsPerPage(501);
-            services.AddSingleton<IFeedSettings>(ssLS);
+            services.AddSingleton<IFeedSettings>(new ScoreSaberLatestSettings());
             services.AddSingleton<IFeedSettings>(new ScoreSaberTrendingSettings());
             services.AddSingleton<IFeedSettings>(new ScoreSaberTopPlayedSettings());
             services.AddSingleton<IFeedSettings>(new ScoreSaberTopRankedSettings());
