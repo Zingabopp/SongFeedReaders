@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
-using System.Text;
 using WebUtilities;
 using WebUtilities.HttpClientWrapper;
 using WebUtilities.Mock.MockClient;
@@ -19,16 +17,14 @@ namespace SongFeedReadersTests
         public static bool UseRecordingClient = false;
         public static string UriToPath(Uri uri)
         {
-            string url = uri.ToString();
             string server = uri.Host;
-            string query = uri.Query;
             if (server == "api.beatsaver.com")
                 return BeatSaverUriToPath(uri);
             else if (server == "bsaber.com")
                 return BeastSaberUriToPath(uri);
             else if (server == "scoresaber.com")
                 return ScoreSaberUriToPath(uri);
-            else if(server == "raw.githubusercontent.com")
+            else if (server == "raw.githubusercontent.com")
                 return GithubUserContent(uri);
             throw new ArgumentException($"Could not create a path for Uri '{uri}'", nameof(uri));
         }
@@ -69,10 +65,10 @@ namespace SongFeedReadersTests
             else if (localPath.StartsWith("maps/latest"))
             {
                 path = Path.Combine(path, "latest");
-                var queries = GetQueries(uri);
+                NameValueCollection queries = GetQueries(uri);
                 string? before = queries["before"];
                 string? after = queries["after"];
-                
+
                 string prefix = queries.Get("sort") == "CURATED" ? "curated" : "latest";
                 path = Path.Combine(path, $"{prefix}-b={before}a={after}".Replace(':', '_'));
             }
@@ -80,23 +76,21 @@ namespace SongFeedReadersTests
             {
                 throw new ArgumentException($"Could not create a path for Uri '{uri}'", nameof(uri));
             }
-            path = path + ".json";
+            path += ".json";
             return path;
         }
 
         private static NameValueCollection GetQueries(Uri uri)
         {
             string query = uri.Query;
-            var collection = System.Web.HttpUtility.ParseQueryString(query);
+            NameValueCollection collection = System.Web.HttpUtility.ParseQueryString(query);
             return collection;
         }
 
         private static string ScoreSaberUriToPath(Uri uri)
         {
             string path = "ScoreSaber";
-            string localPath = uri.LocalPath.TrimStart('/');
-            string[] parts = localPath.Split('/', StringSplitOptions.RemoveEmptyEntries);
-            var queries = GetQueries(uri);
+            NameValueCollection queries = GetQueries(uri);
             string? feedNumber = queries["cat"];
             string feedName = feedNumber switch
             {
@@ -112,14 +106,13 @@ namespace SongFeedReadersTests
             if (limit != null)
                 limit = $"limit={limit}";
             path = Path.Combine(path, feedName, $"{feedName}-{string.Join("_", rankedOnly, limit)}_{page}");
-            path = path + ".json";
+            path += ".json";
             return path;
         }
         private static string BeastSaberUriToPath(Uri uri)
         {
             string path = "BeastSaber";
-            string localPath = uri.LocalPath.TrimStart('/');
-            var queries = GetQueries(uri);
+            NameValueCollection queries = GetQueries(uri);
             string? bookmarked_by = queries["bookmarked_by"];
             string? followed_by = queries["followed_by"];
             string username;
@@ -141,16 +134,16 @@ namespace SongFeedReadersTests
             if (count != null)
                 count = $"count={count}";
             path = Path.Combine(path, feedName, username, $"{username}-{string.Join("_", count, page)}");
-            path = path + ".json";
+            path += ".json";
             return path;
         }
 
         public static IWebClient GetMockClient()
         {
             Directory.CreateDirectory("ResponseData");
-            var client = new MockClient("ResponseData", UriToPath);
+            MockClient client = new MockClient("ResponseData", UriToPath);
 #if !NCRUNCH
-            if(UseRecordingClient)
+            if (UseRecordingClient)
                 client = client.WithRecordingClient(new HttpClientWrapper("SongFeedReaders.Tests/1.0.0"));
 #endif
             return client;
