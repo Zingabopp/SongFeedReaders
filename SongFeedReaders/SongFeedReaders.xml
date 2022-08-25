@@ -385,6 +385,29 @@
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverPageHandler.ParseUserIdFromPage(System.String)">
             <inheritdoc/>
         </member>
+        <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorSettings">
+            <summary>
+            Settings for Beat Saver Curator Recommended feed
+            </summary>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorSettings.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorSettings.FeedIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorSettings.SongsPerPage">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorSettings.StartingDate">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorSettings.EndingDate">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorSettings.Clone">
+            <inheritdoc/>
+        </member>
         <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestSettings">
             <summary>
             Settings for the Beat Saver Latest feed.
@@ -435,6 +458,40 @@
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when set to less than 1.</exception>
         </member>
         <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverMapperSettings.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed">
+            <summary>
+            This feed returns curator recommended songs from BeatSaver
+            </summary>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed.#ctor(SongFeedReaders.Feeds.BeatSaver.IBeatSaverPageHandler,WebUtilities.IWebClient,SongFeedReaders.Logging.ILogFactory)">
+            <summary>
+            Initializes a new <see cref="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed"/>.
+            </summary>
+            <param name="pageHandler"></param>
+            <param name="webClient"></param>
+            <param name="logFactory"></param>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed.FeedId">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed.DisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed.Description">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed.GetUriForDate(SongFeedReaders.Feeds.FeedDate)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed.AreSettingsValid(SongFeedReaders.Feeds.IFeedSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed.EnsureValidSettings">
+            <inheritdoc/>
+        </member>
+        <member name="M:SongFeedReaders.Feeds.BeatSaver.BeatSaverCuratorFeed.GetAsyncEnumerator">
             <inheritdoc/>
         </member>
         <member name="T:SongFeedReaders.Feeds.BeatSaver.BeatSaverLatestFeed">
