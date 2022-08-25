@@ -16,7 +16,7 @@ namespace SongFeedReadersTests
         /// Set to true to record live data to disk.
         /// Response data is saved to the output folder and must be copied to the project's data folder.
         /// </summary>
-        public static bool UseRecordingClient = true;
+        public static bool UseRecordingClient = false;
         public static string UriToPath(Uri uri)
         {
             string url = uri.ToString();
