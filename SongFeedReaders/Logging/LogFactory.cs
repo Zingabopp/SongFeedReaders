@@ -9,15 +9,18 @@ namespace SongFeedReaders.Logging
     /// </summary>
     public sealed class LogFactory : ILogFactory
     {
-        private readonly Func<string?, ILogger> Factory;
+        private readonly Func<ILoggerSettings, string?, ILogger> Factory;
+        private readonly ILoggerSettings _settings;
         /// <summary>
         /// Creates a new <see cref="LogFactory"/>.
         /// </summary>
         /// <param name="logFactory"></param>
+        /// <param name="loggerSettings"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        public LogFactory(Func<string?, ILogger> logFactory)
+        public LogFactory(Func<ILoggerSettings, string?, ILogger> logFactory, ILoggerSettings loggerSettings)
         {
             Factory = logFactory ?? throw new ArgumentNullException(nameof(logFactory));
+            _settings = loggerSettings ?? throw new ArgumentNullException(nameof(loggerSettings));
         }
 
         /// <inheritdoc/>
@@ -33,7 +36,7 @@ namespace SongFeedReaders.Logging
                 else
                     moduleName = declaringType.Name;
             }
-            return Factory(moduleName);
+            return Factory(_settings, moduleName);
         }
     }
 }

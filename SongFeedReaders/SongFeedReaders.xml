@@ -2492,11 +2492,12 @@
             A basic <see cref="T:SongFeedReaders.Logging.ILogFactory"/>.
             </summary>
         </member>
-        <member name="M:SongFeedReaders.Logging.LogFactory.#ctor(System.Func{System.String,SongFeedReaders.Logging.ILogger})">
+        <member name="M:SongFeedReaders.Logging.LogFactory.#ctor(System.Func{SongFeedReaders.Logging.ILoggerSettings,System.String,SongFeedReaders.Logging.ILogger},SongFeedReaders.Logging.ILoggerSettings)">
             <summary>
             Creates a new <see cref="T:SongFeedReaders.Logging.LogFactory"/>.
             </summary>
             <param name="logFactory"></param>
+            <param name="loggerSettings"></param>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="M:SongFeedReaders.Logging.LogFactory.GetLogger(System.String)">

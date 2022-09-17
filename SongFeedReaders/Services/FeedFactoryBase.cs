@@ -15,6 +15,17 @@ namespace SongFeedReaders.Services
     public abstract class FeedFactoryBase : IFeedFactory
     {
         private readonly Dictionary<Type, Type> _map = new Dictionary<Type, Type>();
+        /// <summary>
+        /// Gets all <see cref="IFeed"/> types with a <see cref="FeedAttribute"/>.
+        /// Returns a <see cref="KeyValuePair{TKey, TValue}"/> with the settings type as the key and feed type as the value
+        /// </summary>
+        /// <param name="assembly"></param>
+        /// <returns></returns>
+        public static IEnumerable<KeyValuePair<Type, Type>> GetAttributedFeeds(Assembly assembly)
+        {
+            return assembly.GetTypes().Where(t => typeof(IFeed).IsAssignableFrom(t) && t.GetCustomAttribute<FeedAttribute>() != null)
+                .Select(t => new KeyValuePair<Type, Type>(t.GetCustomAttribute<FeedAttribute>().SettingsType, t));
+        }
 
         /// <summary>
         /// Registers all <see cref="IFeed"/>s tagged with <see cref="FeedAttribute"/>
@@ -28,7 +39,7 @@ namespace SongFeedReaders.Services
             if (assembly == null)
                 throw new ArgumentNullException(nameof(assembly));
             int feedsAdded = 0;
-
+            /*
             foreach (Type? type in assembly.GetTypes()
                 .Where(t => typeof(IFeed).IsAssignableFrom(t) && t.GetCustomAttribute<FeedAttribute>() != null))
             {
@@ -40,8 +51,19 @@ namespace SongFeedReaders.Services
                     feedsAdded++;
                 }
             }
+            */
+            foreach (var pair in GetAttributedFeeds(assembly))
+            {
+                RegisterSettingsType(pair.Key, pair.Value);
+            }
             return feedsAdded;
         }
+        /// <summary>
+        /// Overrideable method for an action to take upon a feed type being registered./>
+        /// </summary>
+        /// <param name="feedType"></param>
+        /// <param name="settingsType"></param>
+        protected virtual void OnFeedTypeRegistered(Type feedType, Type settingsType) { }
 
         /// <summary>
         /// Registers an <see cref="IFeedSettings"/> type for the given <see cref="IFeed"/> type.
@@ -57,7 +79,18 @@ namespace SongFeedReaders.Services
                 throw new ArgumentException("feedType must implement IFeed", nameof(feedType));
 
             _map[settingsType] = feedType;
+            OnFeedTypeRegistered(feedType, settingsType);
         }
+        /// <summary>
+        /// Registers an <see cref="IFeedSettings"/> type for the given <see cref="IFeed"/> type.        /// 
+        /// </summary>
+        /// <typeparam name="TSettings"></typeparam>
+        /// <typeparam name="TFeed"></typeparam>
+        /// <exception cref="ArgumentException"></exception>
+        public void RegisterSettingsType<TSettings, TFeed>()
+            where TSettings : class, IFeedSettings
+            where TFeed : class, IFeed, new()
+            => RegisterSettingsType(typeof(TSettings), typeof(TFeed));
 
         /// <summary>
         /// Attempts to instantiate an <see cref="IFeed"/> of the given <paramref name="feedType"/>.
@@ -77,8 +110,10 @@ namespace SongFeedReaders.Services
             {
                 if (InstantiateFeed(feedType) is IFeed feed)
                 {
-                    feed.TryAssignSettings(settings);
-                    return feed;
+                    if (feed.TryAssignSettings(settings))
+                        return feed;
+                    else
+                        throw new FeedFactoryException($"Unable to assign feed settings of type '{settings.GetType().Name}' to a feed of type '{feed.GetType().Name}'");
                 }
                 throw new FeedFactoryException($"Feed type '{feedType.Name}' is not a registered service.");
             }
