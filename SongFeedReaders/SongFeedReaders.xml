@@ -2880,6 +2880,14 @@
             Base class for a basic <see cref="T:SongFeedReaders.Services.IFeedFactory"/>.
             </summary>
         </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.GetAttributedFeeds(System.Reflection.Assembly)">
+            <summary>
+            Gets all <see cref="T:SongFeedReaders.Feeds.IFeed"/> types with a <see cref="T:SongFeedReaders.Attributes.FeedAttribute"/>.
+            Returns a <see cref="T:System.Collections.Generic.KeyValuePair`2"/> with the settings type as the key and feed type as the value
+            </summary>
+            <param name="assembly"></param>
+            <returns></returns>
+        </member>
         <member name="M:SongFeedReaders.Services.FeedFactoryBase.AddAttributedFeeds(System.Reflection.Assembly)">
             <summary>
             Registers all <see cref="T:SongFeedReaders.Feeds.IFeed"/>s tagged with <see cref="T:SongFeedReaders.Attributes.FeedAttribute"/>
@@ -2889,12 +2897,27 @@
             <returns></returns>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.OnFeedTypeRegistered(System.Type,System.Type)">
+            <summary>
+            Overrideable method for an action to take upon a feed type being registered./>
+            </summary>
+            <param name="feedType"></param>
+            <param name="settingsType"></param>
+        </member>
         <member name="M:SongFeedReaders.Services.FeedFactoryBase.RegisterSettingsType(System.Type,System.Type)">
             <summary>
             Registers an <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/> type for the given <see cref="T:SongFeedReaders.Feeds.IFeed"/> type.
             </summary>
             <param name="settingsType"></param>
             <param name="feedType"></param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:SongFeedReaders.Services.FeedFactoryBase.RegisterSettingsType``2">
+            <summary>
+            Registers an <see cref="T:SongFeedReaders.Feeds.IFeedSettings"/> type for the given <see cref="T:SongFeedReaders.Feeds.IFeed"/> type.        /// 
+            </summary>
+            <typeparam name="TSettings"></typeparam>
+            <typeparam name="TFeed"></typeparam>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:SongFeedReaders.Services.FeedFactoryBase.InstantiateFeed(System.Type)">
