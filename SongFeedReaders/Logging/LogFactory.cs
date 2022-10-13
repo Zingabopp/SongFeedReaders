@@ -9,7 +9,7 @@ namespace SongFeedReaders.Logging
     /// </summary>
     public sealed class LogFactory : ILogFactory
     {
-        private readonly Func<ILoggerSettings, string?, ILogger> Factory;
+        private readonly Func<ILoggerSettings, string?, ILogger> _factory;
         private readonly ILoggerSettings _settings;
         /// <summary>
         /// Creates a new <see cref="LogFactory"/>.
@@ -19,24 +19,29 @@ namespace SongFeedReaders.Logging
         /// <exception cref="ArgumentNullException"></exception>
         public LogFactory(Func<ILoggerSettings, string?, ILogger> logFactory, ILoggerSettings loggerSettings)
         {
-            Factory = logFactory ?? throw new ArgumentNullException(nameof(logFactory));
+            _factory = logFactory ?? throw new ArgumentNullException(nameof(logFactory));
             _settings = loggerSettings ?? throw new ArgumentNullException(nameof(loggerSettings));
         }
 
         /// <inheritdoc/>
         public ILogger GetLogger(string? moduleName = null)
         {
-            if (moduleName == null)
+            if (moduleName != null)
             {
-                StackFrame frame = new StackFrame(1, false);
-                MethodBase method = frame.GetMethod();
-                Type declaringType = method.DeclaringType;
-                if (declaringType == null)
-                    moduleName = method.Name;
-                else
-                    moduleName = declaringType.Name;
+                return _factory(_settings, moduleName);
             }
-            return Factory(_settings, moduleName);
+
+            StackFrame frame = new StackFrame(1, false);
+            MethodBase method = frame.GetMethod();
+            Type? declaringType = method?.DeclaringType;
+            moduleName = declaringType == null 
+                ? method!.Name 
+                : declaringType.Name;
+            return _factory(_settings, moduleName);
         }
+
+        /// <inheritdoc/>
+        public ILogger GetLogger<T>()
+            => GetLogger(typeof(T).Name);
     }
 }
